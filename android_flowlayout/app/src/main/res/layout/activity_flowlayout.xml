@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".FlowlayoutActivity">
+
+    <top.zcwfeng.flowlayout.view.Flowlayout
+        android:id="@+id/zcw_flowlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="8dp"
+        >
+
+
+
+
+
+    </top.zcwfeng.flowlayout.view.Flowlayout>
+
+    <Button
+
+        android:id="@+id/add_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:onClick="addTag"
+        android:text="ADD TAG" />
+
+</LinearLayout>

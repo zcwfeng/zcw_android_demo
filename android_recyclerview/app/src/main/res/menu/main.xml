@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/add"
+        android:orderInCategory="100"
+        android:title="Add"
+        android:icon="@android:drawable/ic_menu_add"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/del"
+        android:orderInCategory="100"
+        android:title="Del"
+        android:icon="@android:drawable/ic_menu_delete"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/recycler_listview"
+        android:orderInCategory="100"
+        android:title="List"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/recycler_gridview"
+        android:orderInCategory="100"
+        android:title="Grid"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/recycler_hor_gridview"
+        android:orderInCategory="100"
+        android:title="HorGrid"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/recycler_staggerview"
+        android:orderInCategory="100"
+        android:title="Stagger"
+        app:showAsAction="never"/>
+</menu>

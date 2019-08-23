@@ -1,0 +1,27 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/zcw/dev/workspace_android/temp/zcw_android_demo/android_recyclerview/library/src/main/AndroidManifest.xml:2:1-9:12
+INJECTED from /Users/zcw/dev/workspace_android/temp/zcw_android_demo/android_recyclerview/library/src/main/AndroidManifest.xml:2:1-9:12
+INJECTED from /Users/zcw/dev/workspace_android/temp/zcw_android_demo/android_recyclerview/library/src/main/AndroidManifest.xml:2:1-9:12
+	package
+		ADDED from /Users/zcw/dev/workspace_android/temp/zcw_android_demo/android_recyclerview/library/src/main/AndroidManifest.xml:3:5-53
+		INJECTED from /Users/zcw/dev/workspace_android/temp/zcw_android_demo/android_recyclerview/library/src/main/AndroidManifest.xml
+		INJECTED from /Users/zcw/dev/workspace_android/temp/zcw_android_demo/android_recyclerview/library/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/zcw/dev/workspace_android/temp/zcw_android_demo/android_recyclerview/library/src/main/AndroidManifest.xml:2:11-69
+application
+ADDED from /Users/zcw/dev/workspace_android/temp/zcw_android_demo/android_recyclerview/library/src/main/AndroidManifest.xml:5:5-7:19
+uses-sdk
+INJECTED from /Users/zcw/dev/workspace_android/temp/zcw_android_demo/android_recyclerview/library/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/zcw/dev/workspace_android/temp/zcw_android_demo/android_recyclerview/library/src/main/AndroidManifest.xml
+INJECTED from /Users/zcw/dev/workspace_android/temp/zcw_android_demo/android_recyclerview/library/src/main/AndroidManifest.xml
+INJECTED from /Users/zcw/dev/workspace_android/temp/zcw_android_demo/android_recyclerview/library/src/main/AndroidManifest.xml
+INJECTED from /Users/zcw/dev/workspace_android/temp/zcw_android_demo/android_recyclerview/library/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/zcw/dev/workspace_android/temp/zcw_android_demo/android_recyclerview/library/src/main/AndroidManifest.xml
+		ADDED from /Users/zcw/dev/workspace_android/temp/zcw_android_demo/android_recyclerview/library/src/main/AndroidManifest.xml
+		INJECTED from /Users/zcw/dev/workspace_android/temp/zcw_android_demo/android_recyclerview/library/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/zcw/dev/workspace_android/temp/zcw_android_demo/android_recyclerview/library/src/main/AndroidManifest.xml
+		ADDED from /Users/zcw/dev/workspace_android/temp/zcw_android_demo/android_recyclerview/library/src/main/AndroidManifest.xml
+		INJECTED from /Users/zcw/dev/workspace_android/temp/zcw_android_demo/android_recyclerview/library/src/main/AndroidManifest.xml

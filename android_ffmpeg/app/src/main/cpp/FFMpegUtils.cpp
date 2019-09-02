@@ -15,7 +15,7 @@ JNIEXPORT void JNICALL Java_top_zcwfeng_zcwffmpeg_FFMpegUtils_logMetada
 //    2.解封装F
     AVFormatContext *p_format_ctx = avformat_alloc_context();
 //    3.打开
-    if(avformat_open_input(&p_format_ctx,filepath,NULL,NULL) < 0){
+    if(avformat_open_input(&p_format_ctx,filepath,NULL,NULL) != 0){
         LOGI("%s", "无法打开视频");
         return;
 

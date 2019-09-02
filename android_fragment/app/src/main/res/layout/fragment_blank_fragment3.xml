@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".BlankFragment3">
+
+  <Button
+      android:id="@+id/click_fragment3_btn"
+      android:text="Blank Fragment 3 Btn"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content" />
+
+
+  <Button
+      android:id="@+id/click_fragment3_btn2"
+      android:text="2222Blank Fragment 3 Btn"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content" />
+</LinearLayout>

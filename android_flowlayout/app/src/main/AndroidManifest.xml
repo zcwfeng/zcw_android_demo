@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".TagFlowLayoutActivity"></activity>
+        <activity android:name=".anim.AnimationActivity"></activity>
+        <activity android:name=".TagFlowLayoutActivity" />
         <activity android:name=".FlexBoxLayoutManagerActivity" />
         <activity android:name=".FlexBoxLayoutActivity" />
         <activity android:name=".FlowlayoutActivity" />

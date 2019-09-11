@@ -103,5 +103,19 @@ public class MethodInfo {
         builder.append("return false;\n}");
 
 
+        ///
+
+        builder.append("@Override\n ");
+        builder.append("public boolean needShowRationale(int requestCode,String[] permission) {\n");
+        builder.append("switch(requestCode) {");
+        for (int code : rationalMethodMap.keySet()) {
+            builder.append("case " + code + ":");
+            builder.append("return true;");
+        }
+        builder.append("}\n");
+        builder.append("return false;");
+        builder.append("  }\n");
+
+
     }
 }

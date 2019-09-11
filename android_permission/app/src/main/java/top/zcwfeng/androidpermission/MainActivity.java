@@ -1,8 +1,9 @@
 package top.zcwfeng.androidpermission;
 
-import android.Manifest;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
@@ -22,11 +23,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        PermissionHelper.requestPermission(this, new String[]{
-                Manifest.permission.WRITE_EXTERNAL_STORAGE,
-                Manifest.permission.RECORD_AUDIO,
-                        Manifest.permission.CAMERA },
-                RESULT_CODE_PERMISSION_WRITE_EXTERNAL_STORAGE);
+//        PermissionHelper.requestPermission(this, new String[]{
+//                Manifest.permission.WRITE_EXTERNAL_STORAGE,
+//                Manifest.permission.RECORD_AUDIO,
+//                        Manifest.permission.CAMERA },
+//                RESULT_CODE_PERMISSION_WRITE_EXTERNAL_STORAGE);
 
     }
 
@@ -93,6 +94,11 @@ public class MainActivity extends AppCompatActivity {
                 }).setCancelable(true).show();
     }
 
+
+    public void SecondTest(View view){
+        Intent intent = new Intent(this,SercondActivity.class);
+        startActivity(intent);
+    }
 
 
 }

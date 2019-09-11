@@ -28,4 +28,11 @@
         android:text="TO TagFlowLayout"
         android:onClick="TOTagFlowLayout"/>
 
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TO Animator"
+        android:onClick="TOAnimator"/>
+
 </LinearLayout>

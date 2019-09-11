@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">android_kotlin</string>
+    <string name="box_one">box_one</string>
+    <string name="box_two">box_two</string>
+    <string name="box_three">box_three</string>
+    <string name="box_four">box_four</string>
+    <string name="box_five">box_five</string>
+    <string name="how_to_play">How TO PLAY</string>
+    <string name="play_content">Content text</string>
+    <string name="button_black">BLACK</string>
+    <string name="button_red">RED</string>
+    <string name="button_green">GREEN</string>
+</resources>

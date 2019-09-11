@@ -6,6 +6,8 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import top.zcwfeng.flowlayout.anim.AnimationActivity;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,6 +33,10 @@ public class MainActivity extends AppCompatActivity {
     }
     public void TOTagFlowLayout(View view) {
         Intent intent = new Intent(MainActivity.this, TagFlowLayoutActivity.class);
+        startActivity(intent);
+    }
+    public void TOAnimator(View view) {
+        Intent intent = new Intent(MainActivity.this, AnimationActivity.class);
         startActivity(intent);
     }
 

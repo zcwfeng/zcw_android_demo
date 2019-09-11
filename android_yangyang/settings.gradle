@@ -1,0 +1,2 @@
+include ':app', ':libannotation', ':libcompiler', ':libpermissionhelper'
+rootProject.name='android_yangyang'

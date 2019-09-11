@@ -1,5 +1,6 @@
 package top.zcwfeng.libpermissionhelper;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.pm.PackageManager;
 import android.os.Build;
@@ -11,111 +12,78 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PermissionHelper {
-   public final static String SUFFIX = "$$PermissionProxy";
+    public final static String SUFFIX = "$$PermissionProxy";
 
     //给Activity用
-    public static void requestPermission(Activity activity,String[]permission,int requestCode){
-        doRequestPermission(activity,permission,requestCode);
+    public static void requestPermission(Activity activity,String[]permissions,int requestCode){
+        _requestPermissions(activity,requestCode,permissions);
     }
     //给fragment用
-    public static void requestPermission(Fragment fragment, String[]permission, int requestCode){
-        doRequestPermission(fragment.getActivity(),permission,requestCode);
+    public static void requestPermission(Fragment fragment, String[]permissions, int requestCode){
+        _requestPermissions(fragment.getActivity(),requestCode,permissions);
 
     }
 
     //查找proxy
     private static void doExecutGrant(Activity activity, String[] permission, int requestCode) {
-        PermissionProxy proxy = findProxy(activity);
+        PermissionProxy proxy = findPermissionProxy(activity);
         if(proxy != null) {
             proxy.grant(requestCode,activity,permission);
         }
     }
 
-    private static void doRequestPermission(Activity activity, String[] permission, int requestCode) {
 
-        if(Build.VERSION.SDK_INT <= Build.VERSION_CODES.M){
-            doExecutGrant(activity,permission,requestCode);
-            return;
+    private static boolean shoudShowPermissionRational(final Object context, final String[] permissions, final int requestCode) {
+
+        final Activity activity = Utils.getActivity(context);
+
+        PermissionProxy proxy = findPermissionProxy(activity);
+        if (permissions!=null && proxy!=null && !proxy.needShowRationale(requestCode, permissions)) return false;
+        List<String> rationalList = new ArrayList<>();
+        for (String permission : permissions) {
+            if (ActivityCompat.shouldShowRequestPermissionRationale(activity, permission)) {
+                rationalList.add(permission);
+            }
         }
 
-
-        boolean rational = shoudShowPermissionRational(activity,permission,requestCode);
-        if(rational) return;
-        //继续往下传
-        _doRequestPermission(activity,permission,requestCode);
-
-    }
-
-
-    private static void _doRequestPermission(Activity activity, String[] permission, int requestCode) {
-        List<String> deniedPermissions = findDeniePermission(activity,permission);
-        if(deniedPermissions.size() > 0) {
-            String[] denieds = new String[deniedPermissions.size()];
-            deniedPermissions.toArray(denieds);
-            ActivityCompat.requestPermissions(activity,permission,requestCode);
-        }else{
-            doExecutGrant(activity,permission,requestCode);
-        }
-    }
-
-    private static boolean shoudShowPermissionRational(final Activity activity, final String[] permissions, final int requestCode) {
-        PermissionProxy proxy = findProxy(activity);
-
-        final List<String> deniePermissions = findShouldShowPermission(activity,permissions);
-        if(!deniePermissions.isEmpty()) {
-            final String[] denied = new String[deniePermissions.size()];
-            deniePermissions.toArray(denied);
-
-            return proxy.rational(requestCode,activity,denied, new PermissionCallback() {
+        if(!rationalList.isEmpty()) {
+            return proxy.rational(requestCode,activity,permissions, new PermissionCallback() {
                 @Override
                 public void onRationalExecute() {
-                    ActivityCompat.requestPermissions(activity,denied,requestCode);
+                    _doRequestPermission(activity,permissions,requestCode);
                 }
             });
         }
-
         return false;
     }
 
-    private static List<String> findShouldShowPermission(Activity activity,String[] permissions) {
-        List<String> rational = new ArrayList<>();
-        for(String p:permissions){
-            if(ActivityCompat.shouldShowRequestPermissionRationale(activity,p)){
-                rational.add(p);
-            }
+    @TargetApi(value = Build.VERSION_CODES.M)
+    private static void _requestPermissions(Object object, int requestCode, String... permissions) {
+        if (!Utils.isOverMarshmallow()) {
+            doExecuteSuccess(object, requestCode, permissions);
+            return;
         }
-        return rational;
+
+        boolean rationale = shoudShowPermissionRational((Activity)object, permissions, requestCode);
+        if (rationale) {
+            return;
+        }
+
+        _doRequestPermission(object, permissions, requestCode);
     }
 
-
-    /**
-     *
-     * @param activity
-     * @param permissions
-     * @return
-     */
-    private static List<String> findDeniePermission(Activity activity,String[] permissions) {
-        List<String> denied = new ArrayList<>();
-        for(String p:permissions){
-            if(ActivityCompat.checkSelfPermission(activity,p) != PackageManager.PERMISSION_GRANTED){
-                denied.add(p);
-            }
-        }
-        return denied;
-    }
-
-
-
-    private static void doExecutDenied (Activity activity, String[] permission, int requestCode) {
-        PermissionProxy proxy = findProxy(activity);
-        if(proxy != null) {
-            proxy.denied(requestCode,activity,permission);
+    private static void _doRequestPermission(Object obj, String[] permissions, int requestCode) {
+        List<String> deniedPermissions = Utils.findDeniedPermissions(Utils.getActivity(obj), permissions);
+        if(deniedPermissions.size() > 0) {
+            ActivityCompat.requestPermissions(Utils.getActivity(obj),permissions,requestCode);
+        }else{
+            doExecutGrant(Utils.getActivity(obj),permissions,requestCode);
         }
     }
 
-    public static PermissionProxy   findProxy(Activity activity) {
-        Class<? extends Activity> clazz = activity.getClass();
+    public static PermissionProxy findPermissionProxy(Object activity) {
         try {
+            Class clazz = activity.getClass();
             Class forName = Class.forName(clazz.getName() + SUFFIX);
             return (PermissionProxy) forName.newInstance();
 
@@ -133,20 +101,44 @@ public class PermissionHelper {
 
 
     public static void onRequestPermissionsResult(Activity activity, int requestCode, String[] permissions, int[] grantResults) {
-        List<String> denied = new ArrayList<>();
-        List<String> grant = new ArrayList<>();
+        requestResult(activity, requestCode, permissions, grantResults);
+    }
 
-        for(int i=0;i<grantResults.length;i++) {
+    public static void onRequestPermissionsResult(Fragment fragment, int requestCode, String[] permissions, int[] grantResults) {
+        requestResult(fragment, requestCode, permissions, grantResults);
+    }
+
+    private static void requestResult(Object obj, int requestCode, String[] permissions, int[] grantResults) {
+        List<String> grant = new ArrayList<>();
+        List<String> denied = new ArrayList<>();
+        for (int i = 0; i < grantResults.length; i++) {
             String permission = permissions[i];
-            if(grantResults[i] != PackageManager.PERMISSION_GRANTED){
+
+            if (grantResults[i] != PackageManager.PERMISSION_GRANTED) {
                 denied.add(permission);
-            }else {
+            } else {
                 grant.add(permission);
             }
         }
-        if(grant.size() > 0){
-            doExecutGrant(activity,permissions,requestCode);
+
+        if (!grant.isEmpty()) {
+            doExecuteSuccess(obj, requestCode, grant.toArray(new String[grant.size()]));
         }
 
+        if (!denied.isEmpty()) {
+            doExecuteFail(obj, requestCode, grant.toArray(new String[denied.size()]));
+        }
     }
+
+
+    private static void doExecuteSuccess(Object context, int requestCode, String... permission) {
+        findPermissionProxy(context).grant(requestCode, context,permission);
+
+    }
+
+    private static void doExecuteFail(Object context, int requestCode, String... permission) {
+        findPermissionProxy(context).denied(requestCode,context, permission);
+    }
+
+
 }

@@ -8,6 +8,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import timber.log.Timber;
 import top.zcwfeng.libannotation.PermissionDenied;
 import top.zcwfeng.libannotation.PermissionGrant;
 import top.zcwfeng.libannotation.PermissionRational;
@@ -23,6 +24,9 @@ public class MainActivity extends AppCompatActivity {
         PermissionHelper.requestPermission(this, new String[]{
                         Manifest.permission.WRITE_EXTERNAL_STORAGE},
                 CommonConfig.RESULT_CODE_PERMISSION_WRITE_EXTERNAL_STORAGE);
+
+        Timber.tag("zzzzzz");
+        Timber.d("Activity Created");
 
     }
 

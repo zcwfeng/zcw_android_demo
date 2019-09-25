@@ -1,4 +1,6 @@
-package top.zcwfeng.dagger2;
+package top.zcwfeng.dagger2.user;
+
+import top.zcwfeng.dagger2.ApiService;
 
 public class UserManager {
     private ApiService apiService;

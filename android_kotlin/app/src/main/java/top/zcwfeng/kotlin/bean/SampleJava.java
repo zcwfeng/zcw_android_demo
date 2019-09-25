@@ -10,4 +10,6 @@ public class SampleJava {
         System.out.println(System.currentTimeMillis());
 
     }
+
+    public static String test = "ttt";
 }

@@ -1,4 +1,5 @@
-package top.zcwfeng.dagger2;
+package top.zcwfeng.dagger2.user;
 
 public class User {
+
 }

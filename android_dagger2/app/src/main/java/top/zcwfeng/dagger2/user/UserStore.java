@@ -1,7 +1,9 @@
-package top.zcwfeng.dagger2;
+package top.zcwfeng.dagger2.user;
 
 import android.content.Context;
 import android.util.Log;
+
+import top.zcwfeng.dagger2.Config;
 
 public class UserStore {
 

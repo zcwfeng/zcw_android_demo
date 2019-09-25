@@ -1,7 +1,13 @@
 package top.zcwfeng.kotlin.bean
 
 import java.io.File
+ private var a:Int = 0
+// protected var b:Int = 0
+internal var c:Int = 0
+public var d:Int = 0
+    private set
 
+private fun foo(){}
 class Sample {
 //    var view: View? = null
     val size = 18

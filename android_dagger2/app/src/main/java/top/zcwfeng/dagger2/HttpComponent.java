@@ -1,4 +1,7 @@
 package top.zcwfeng.dagger2;
 
-public class HttpComponent {
+import dagger.Component;
+
+@Component(modules = HttpModule.class)
+public interface HttpComponent {
 }

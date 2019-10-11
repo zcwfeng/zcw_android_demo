@@ -4,7 +4,7 @@ android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
     defaultConfig {
-        applicationId "com.example.android_lifecycle"
+        applicationId "com.example.android_apng"
         minSdkVersion 19
         targetSdkVersion 29
         versionCode 1
@@ -26,5 +26,4 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
-    implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
 }

@@ -7,8 +7,10 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.android_fresco.image.FrescoHelper;
+import com.example.android_fresco.image.ImagePipelineConfigFactory;
 import com.example.android_fresco.image.MeMeDraweeView;
 import com.example.android_fresco.image.ObjectAnimListenerAdapter;
+import com.facebook.drawee.backends.pipeline.Fresco;
 import com.facebook.drawee.controller.BaseControllerListener;
 import com.facebook.fresco.animation.drawable.AnimatedDrawable2;
 
@@ -18,12 +20,17 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        miaoWebpView = findViewById(R.id.first_webp_view);
-//        FrescoHelper.create(miaoWebpView)
-//                .controllerListener(new WebPControllerAdapter())
-//                .load(R.mipmap.grab_hot_rank_webp);
 
-        FrescoHelper.create(miaoWebpView).load("http://img3.imgtn.bdimg.com/it/u=33335323,2012764520&fm=26&gp=0.jpg");
+        Fresco.initialize(this, ImagePipelineConfigFactory.getOkHttpImagePipelineConfig(this));
+        MeMeDraweeView.initialize(Fresco.getDraweeControllerBuilderSupplier());
+        miaoWebpView = (MeMeDraweeView) findViewById(R.id.simple);
+
+
+        FrescoHelper.create(miaoWebpView)
+                .controllerListener(new WebPControllerAdapter())
+                .load(R.mipmap.grab_hot_rank_webp);
+//        FrescoHelper.create(miaoWebpView).load("http://bpic.588ku.com/element_origin_min_pic/01/61/73/385748db4cb62e0.jpg");
+
 
     }
 
@@ -44,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
     private class AnimListenerAdapter extends ObjectAnimListenerAdapter {
         @Override
         public void onAnimationStop(AnimatedDrawable2 drawable) {
-//            miaoWebpView.setVisibility(View.GONE);
+            miaoWebpView.setVisibility(View.GONE);
         }
     }
 }

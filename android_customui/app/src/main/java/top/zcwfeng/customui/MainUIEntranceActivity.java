@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.text.HtmlCompat;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
@@ -18,6 +19,8 @@ import android.text.style.ForegroundColorSpan;
 import android.text.style.StyleSpan;
 import android.view.View;
 import android.widget.TextView;
+
+import top.zcwfeng.customui.demo.DemoSpan;
 
 public class MainUIEntranceActivity extends AppCompatActivity {
     private TextView mTextView;
@@ -53,40 +56,15 @@ public class MainUIEntranceActivity extends AppCompatActivity {
 //        ssb.setSpan(colorSpan2, spannableString.length(), spannableString2.length() + spannableString.length() , Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
 
 
-        SetTextSpannable(new String[]{"设置文字的前景色为淡蓝色","dddddd"});
 
 
     }
 
 
-    private void SetTextSpannable(String[] ss) {
 
-        SpannableStringBuilder ssb = new SpannableStringBuilder();
-        for(String d:ss) {
-            ssb.append(d);
-        }
-        int start = 0;
-        int end = 0;
-        for(int i=0;i<ss.length;i++) {
-            if(i == 0) {
-                start = 0;
-                end = ss[i].length();
-            } else {
-                start = start + ss[i-1].length();
-                end = end +  ss[i].length();
-            }
-
-            AbsoluteSizeSpan AbsoluteSizeSpan = new AbsoluteSizeSpan(40);
-            ForegroundColorSpan colorSpan = new ForegroundColorSpan(Color.parseColor("#0099EE"));
-            ssb.setSpan(colorSpan, start, end, Spanned.SPAN_INCLUSIVE_INCLUSIVE);
-            ssb.setSpan(AbsoluteSizeSpan,start,end, Spanned.SPAN_INCLUSIVE_INCLUSIVE);
-        }
-
-        mTextView.setText(ssb);
-
-    }
 
     public void BottomSheetDialogFragment(View view){
-
+        Intent intent = new Intent(getApplicationContext(), DemoSpan.class);
+        startActivity(intent);
     }
 }

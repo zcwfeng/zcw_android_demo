@@ -2,6 +2,7 @@ package top.zcwfeng.kotlin.bean
 
 import kotlin.properties.Delegates
 import kotlin.reflect.KProperty
+import kotlinx.coroutines.*;
 
 interface Base{
     fun print()
@@ -88,14 +89,23 @@ fun example(computeFoo: () -> Foo) {
     }
 }
 
-fun main() {
-    classBy()
-    propertyBy()
-    layzyBy()
-    observableBy()
-    selfBy()
-    notnullBy()
 
+suspend fun main()  {
+    GlobalScope.launch {
+        repeat(1000) { i ->
+            println("I'm sleeping $i ...")
+            delay(500L)
+        }
+    }
+    delay(1300L) //
+}
+
+
+
+// 这是你的第一个挂起函数
+suspend fun doWorld() {
+    delay(1000L)
+    println("World!")
 }
 
 private fun notnullBy() {

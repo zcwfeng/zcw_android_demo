@@ -4,6 +4,7 @@ import android.graphics.Color;
 import android.text.Html;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
+import android.text.method.LinkMovementMethod;
 import android.text.style.AbsoluteSizeSpan;
 import android.text.style.ForegroundColorSpan;
 import android.util.Log;
@@ -42,6 +43,21 @@ public class SpanTextUtils {
         tv.setText(ssb);
 
         Log.e("toHtml-> " , ssb.toString() + "\n" + Html.toHtml(ssb));
+
+    }
+
+
+    public static void setTextSpannableClickable(TextView tv,String content){
+        SpannableStringBuilder ssb = new SpannableStringBuilder(content);
+//        CustomClickableSpan clickableSpan = new CustomClickableSpan("http://www.jianshu.com/users/dbae9ac95c78");
+        RadiusBackgroundSpan colorSpan = new RadiusBackgroundSpan(Color.parseColor("#AAFF0000"),10,48,Color.parseColor("#AA00FFFF"),5,2,1);
+
+//                RadiusBackgroundSpan_1 colorSpan = new RadiusBackgroundSpan_1(Color.parseColor("#AAFF0000"),Color.parseColor("#AA00FFFF"));
+//
+//        ssb.setSpan(clickableSpan, 0, ssb.length(), Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
+        ssb.setSpan(colorSpan,6,ssb.length(),Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
+        tv.setMovementMethod(LinkMovementMethod.getInstance());
+        tv.setText(ssb);
 
     }
 }

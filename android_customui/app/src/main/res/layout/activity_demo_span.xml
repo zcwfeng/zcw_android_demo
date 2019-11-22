@@ -25,6 +25,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 tools:text="demo"/>
+
+            <TextView
+                android:id="@+id/clickableSpan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="ClickableSpan"/>
         </LinearLayout>
     </ScrollView>
 

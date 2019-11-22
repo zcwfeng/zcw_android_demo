@@ -22,6 +22,7 @@ import top.zcwfeng.customui.baseui.spantext.SpanTextUtils;
 public class DemoSpan extends AppCompatActivity {
 
     TextView mTextViewCombin;
+    TextView mClickableSpan;
     List<SpanObj> mSpanObjs;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,8 +31,9 @@ public class DemoSpan extends AppCompatActivity {
         mSpanObjs = new ArrayList<>();
         initSpans();
         mTextViewCombin = findViewById(R.id.colorText);
-
+        mClickableSpan = findViewById(R.id.clickableSpan);
         SpanTextUtils.setTextSpannableCombin(mSpanObjs,mTextViewCombin);
+        SpanTextUtils.setTextSpannableClickable(mClickableSpan,"tttttt为文字设置点击事件");
 
     }
 
@@ -45,6 +47,9 @@ public class DemoSpan extends AppCompatActivity {
         spanObj2.setText("第二个文本色");
         spanObj2.setColor("#aaff00ff");
         spanObj2.setSize(50);
+
+
+
 
 
         mSpanObjs.add(spanObj);

@@ -1,10 +1,12 @@
 package top.zcwfeng.kotlin
 
+import android.app.DownloadManager
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import androidx.databinding.ObservableField
 import top.zcwfeng.kotlin.bean.MyName
 import top.zcwfeng.kotlin.databinding.ActivityMainBinding
 import java.util.*
@@ -13,7 +15,7 @@ class MainActivity : AppCompatActivity() {
 
 
     lateinit var databinding:ActivityMainBinding//null 安全检测
-    var myName:MyName = MyName("Alice")
+    var myName:MyName = MyName(ObservableField("Alice"))
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         databinding = DataBindingUtil.setContentView(this,R.layout.activity_main)
@@ -23,13 +25,8 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-
     }
 
-
-    suspend fun dostomething(foo:String):String{
-        return ""
-    }
 
     public fun goConstrantLayout(view:View){
 //        var intent:Intent = Intent(this,Main2Activity().javaClass)

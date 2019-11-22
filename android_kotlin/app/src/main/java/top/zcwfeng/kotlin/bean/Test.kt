@@ -3,6 +3,8 @@ package top.zcwfeng.kotlin.bean
 import kotlin.properties.Delegates
 import kotlin.reflect.KProperty
 import kotlinx.coroutines.*;
+import kotlin.system.measureNanoTime
+import kotlin.system.measureTimeMillis
 
 interface Base{
     fun print()
@@ -90,7 +92,79 @@ fun example(computeFoo: () -> Foo) {
 }
 
 
-suspend fun main()  {
+suspend fun doSomethingUsefulOne(): Int {
+    delay(1000L) // 假设我们在这里做了一些有用的事
+    return 13
+}
+
+suspend fun doSomethingUsefulTwo(): Int {
+    delay(1000L) // 假设我们在这里也做了一些有用的事
+    return 29
+}
+
+
+
+
+fun main()  {
+    testCoroutinAsync()
+
+}
+
+
+// somethingUsefulOneAsync 函数的返回值类型是 Deferred<Int>
+fun somethingUsefulOneAsync() = GlobalScope.async {
+    doSomethingUsefulOne()
+}
+
+// somethingUsefulTwoAsync 函数的返回值类型是 Deferred<Int>
+fun somethingUsefulTwoAsync() = GlobalScope.async {
+    doSomethingUsefulTwo()
+}
+
+fun testCoroutinAsync(){
+    val time = measureTimeMillis {
+        // 我们可以在协程外面启动异步执行
+        val one = somethingUsefulOneAsync()
+        val two = somethingUsefulTwoAsync()
+        // 但是等待结果必须调用其它的挂起或者阻塞
+        // 当我们等待结果的时候，这里我们使用 `runBlocking { …… }` 来阻塞主线程
+        runBlocking {
+            println("The answer is ${one.await() + two.await()}")
+        }
+    }
+    println("Completed in $time ms")
+}
+
+suspend fun testCoroutine(){
+    val time = measureNanoTime {
+        val one = doSomethingUsefulOne()
+        val two = doSomethingUsefulTwo()
+        println("The answer is ${one + two}")
+    }
+    println("Completed in $time ms")}
+
+suspend fun testCoroutine2(){
+    val job = GlobalScope.launch {
+        try {
+            repeat(1000) { i ->
+                println("job: I'm sleeping $i ...")
+                delay(500L)
+            }
+        } finally {
+            withContext(NonCancellable) {
+                println("job: I'm running finally")
+                delay(1000L)
+                println("job: And I've just delayed for 1 sec because I'm non-cancellable")
+            }
+        }
+    }
+    delay(1300L) // 延迟一段时间
+    println("main: I'm tired of waiting!")
+    job.cancelAndJoin() // 取消该作业并等待它结束
+    println("main: Now I can quit.")
+}
+
+suspend fun testXiecheng(){
     GlobalScope.launch {
         repeat(1000) { i ->
             println("I'm sleeping $i ...")

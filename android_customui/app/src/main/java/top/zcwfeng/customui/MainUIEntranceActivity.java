@@ -2,10 +2,12 @@ package top.zcwfeng.customui;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.text.HtmlCompat;
+import androidx.work.WorkManager;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.Html;
@@ -21,10 +23,12 @@ import android.view.View;
 import android.widget.TextView;
 
 import top.zcwfeng.customui.demo.DemoSpan;
+import top.zcwfeng.customui.demo.MyQueryHandler;
 
 public class MainUIEntranceActivity extends AppCompatActivity {
     private TextView mTextView;
     private Spanned mSpanned;
+
     @SuppressLint("WrongConstant")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,14 +60,18 @@ public class MainUIEntranceActivity extends AppCompatActivity {
 //        ssb.setSpan(colorSpan2, spannableString.length(), spannableString2.length() + spannableString.length() , Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
 
 
-
-
     }
 
 
+    private void testMyQueryHandler() {
+        MyQueryHandler queryHandler = new MyQueryHandler(getContentResolver());
+        String projection[] = {"a", "b"};
+        queryHandler.startQuery(234, "adapter", Uri.parse("uri"),
+                projection, null, null, "data desc");
+    }
 
 
-    public void BottomSheetDialogFragment(View view){
+    public void BottomSheetDialogFragment(View view) {
         Intent intent = new Intent(getApplicationContext(), DemoSpan.class);
         startActivity(intent);
     }

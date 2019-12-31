@@ -8,6 +8,9 @@ private constructor() {
 
     private var users: MutableList<User>? = null
 
+
+
+
     val formattedUserNames: List<String>
         get() {
             val userNames = ArrayList<String>(users!!.size)
@@ -50,7 +53,7 @@ private constructor() {
 
         private var INSTANCE: Repository? = null
 
-        val instance: Repository
+        val instance: Repository?
             get() {
                 if (INSTANCE == null) {
                     synchronized(Repository::class.java) {
@@ -59,7 +62,32 @@ private constructor() {
                         }
                     }
                 }
-                return instance
+                return INSTANCE
             }
+    }
+
+
+
+
+
+//    object Repository{
+//        private val _users = mutableListOf(User("Jane",""),User("John",""),User("Anne","Doe"))
+//        val users: List<User>
+//            get() = _users
+//        val formattedUserNames:List<String>
+//            get() = _users.map { user -> user.formattedName }
+//    }
+}
+
+
+val User.formattedName:String get() {
+    return if(lastName != null){
+        if(firstName != null) {
+            "$firstName $lastName"
+        } else {
+            lastName ?: "Unknown"
+        }
+    } else {
+        firstName ?: "Unknown"
     }
 }

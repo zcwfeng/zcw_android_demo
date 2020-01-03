@@ -64,4 +64,19 @@ dependencies {
     implementation "androidx.room:room-ktx:$room_version"
     // Test helpers
     testImplementation "androidx.room:room-testing:$room_version"
+    def dbflow_version = "5.0.0-alpha1"
+
+    kapt "com.github.agrosner.dbflow:processor:${dbflow_version}"
+
+    // Annotation Processor
+    // if only using Java, use this. If using Kotlin do NOT use this.
+    annotationProcessor "com.github.agrosner.dbflow:processor:${dbflow_version}"
+
+
+    // core set of libraries
+    implementation "com.github.agrosner.dbflow:core:${dbflow_version}"
+    implementation "com.github.agrosner.dbflow:lib:${dbflow_version}"
+
+
+
 }

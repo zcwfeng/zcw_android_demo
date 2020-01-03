@@ -3,9 +3,8 @@ package top.zcwfeng.kotlin.dao
 import androidx.room.Dao
 import androidx.room.Query
 import androidx.room.Transaction
+import kotlinx.coroutines.flow.Flow
 import top.zcwfeng.kotlin.bean.Dog
-import top.zcwfeng.kotlin.bean.DogAndOwner
-import top.zcwfeng.kotlin.bean.DogOwnerCrossRef
 import top.zcwfeng.kotlin.bean.OwnerWithDogs
 
 /**
@@ -31,6 +30,9 @@ interface QueryDao{
                 """
     )
     fun getDogsAndOwners(): List<OwnerWithDogs>
+
+    @Query("SELECT * FROM Dog")
+    fun getAllDogs(): Flow<List<Dog>>
 }
 
 

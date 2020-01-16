@@ -23,6 +23,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import top.zcwfeng.customui.demo.DemoSpan;
+import top.zcwfeng.customui.demo.LayoutActivity;
 import top.zcwfeng.customui.demo.MyQueryHandler;
 
 public class MainUIEntranceActivity extends AppCompatActivity {
@@ -60,6 +61,8 @@ public class MainUIEntranceActivity extends AppCompatActivity {
 //        ssb.setSpan(colorSpan2, spannableString.length(), spannableString2.length() + spannableString.length() , Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
 
 
+        // test
+        LayoutActivity.LayoutActivityInstance(this);
     }
 
 

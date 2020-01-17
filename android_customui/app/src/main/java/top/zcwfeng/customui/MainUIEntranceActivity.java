@@ -1,27 +1,18 @@
 package top.zcwfeng.customui;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.text.HtmlCompat;
-import androidx.work.WorkManager;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.graphics.Color;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
-import android.text.Html;
-import android.text.Spannable;
-import android.text.SpannableString;
-import android.text.SpannableStringBuilder;
+import android.os.SystemClock;
 import android.text.Spanned;
-import android.text.style.AbsoluteSizeSpan;
-import android.text.style.CharacterStyle;
-import android.text.style.ForegroundColorSpan;
-import android.text.style.StyleSpan;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import top.zcwfeng.aspectj.BehaviorTrace;
 import top.zcwfeng.customui.demo.DemoSpan;
 import top.zcwfeng.customui.demo.LayoutActivity;
 import top.zcwfeng.customui.demo.MyQueryHandler;
@@ -29,7 +20,7 @@ import top.zcwfeng.customui.demo.MyQueryHandler;
 public class MainUIEntranceActivity extends AppCompatActivity {
     private TextView mTextView;
     private Spanned mSpanned;
-
+    private final String TAG = "zcw";
     @SuppressLint("WrongConstant")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,14 +54,19 @@ public class MainUIEntranceActivity extends AppCompatActivity {
 
         // test
         LayoutActivity.LayoutActivityInstance(this);
+
+        testMyQueryHandler();
     }
 
 
+    @BehaviorTrace("TestAspectj")
     private void testMyQueryHandler() {
+        Log.i(TAG,"AspectJ...");
         MyQueryHandler queryHandler = new MyQueryHandler(getContentResolver());
         String projection[] = {"a", "b"};
         queryHandler.startQuery(234, "adapter", Uri.parse("uri"),
                 projection, null, null, "data desc");
+        SystemClock.sleep(20);
     }
 
 

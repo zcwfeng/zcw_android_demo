@@ -1,7 +1,5 @@
 package top.zcwfeng.customui;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.net.Uri;
@@ -11,6 +9,8 @@ import android.text.Spanned;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import top.zcwfeng.aspectj.BehaviorTrace;
 import top.zcwfeng.customui.demo.DemoSpan;
@@ -58,10 +58,25 @@ public class MainUIEntranceActivity extends AppCompatActivity {
         testMyQueryHandler();
     }
 
+    //语音消息
+    @BehaviorTrace("语音消息")
+    public void mAudio(View view) {
+        Log.d(TAG,"123123132");
+    }
+    //视频通话
+    @BehaviorTrace("视频通话")
+    public void mVideo(View view) {
+    }
+
+    //发表说说
+    @BehaviorTrace("发表说说")
+    public void saySomething(View view) {
+    }
+
 
     @BehaviorTrace("TestAspectj")
     private void testMyQueryHandler() {
-        Log.i(TAG,"AspectJ...");
+        Log.d(TAG,"AspectJ...");
         MyQueryHandler queryHandler = new MyQueryHandler(getContentResolver());
         String projection[] = {"a", "b"};
         queryHandler.startQuery(234, "adapter", Uri.parse("uri"),

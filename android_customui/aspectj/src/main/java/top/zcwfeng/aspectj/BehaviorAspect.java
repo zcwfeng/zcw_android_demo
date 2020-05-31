@@ -25,7 +25,7 @@ public class BehaviorAspect {
     //拦截方法
     @Around("annoHaviorTrace()")
     public Object weaveJoinPoint(ProceedingJoinPoint joinPoint) throws Throwable {
-        Log.i("zcw", "weaveJoinPoint");
+        Log.e("zcw", "weaveJoinPoint");
         //拿到方法的签名
         MethodSignature methodSignature = (MethodSignature) joinPoint.getSignature();
         //类名
@@ -44,7 +44,7 @@ public class BehaviorAspect {
 
         //方法执行后
         long duration = System.currentTimeMillis() - begin;
-        Log.i("zcw", String.format("功能：%s，%s的%s方法执行，耗时：%d ms", fun, className, methodName, duration));
+        Log.e("zcw", String.format("功能：%s，%s的%s方法执行，耗时：%d ms", fun, className, methodName, duration));
         return result;
     }
 }

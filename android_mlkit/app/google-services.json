@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "445070057572",
+    "firebase_url": "https://mlkitfun-579ef.firebaseio.com",
+    "project_id": "mlkitfun-579ef",
+    "storage_bucket": "mlkitfun-579ef.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:445070057572:android:8b9e758c7d8af01b41ff71",
+        "android_client_info": {
+          "package_name": "top.zcwfeng.android_mlkit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "445070057572-8lf2so7q9k5i6qehpfbse0ferv3348j5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBuHvG45JJoKRFxeLJuIRO3nqllKzmf7pQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "445070057572-8lf2so7q9k5i6qehpfbse0ferv3348j5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -41,9 +41,15 @@ dependencies {
     implementation "androidx.navigation:navigation-fragment:$nav_version"
     implementation "androidx.navigation:navigation-ui:$nav_version"
 
-    testImplementation 'junit:junit:4.12'
+
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation 'androidx.work:work-runtime:2.2.0'
     api project(':aspectj')
+
+    debugImplementation('com.squareup.leakcanary:leakcanary-android:2.3')
+    implementation 'com.squareup.leakcanary:leakcanary-object-watcher-android:2.3'
+    implementation 'org.ow2.asm:asm:8.0.1'
+    implementation 'org.ow2.asm:asm-commons:8.0.1'
+    implementation 'junit:junit:4.12'
 }

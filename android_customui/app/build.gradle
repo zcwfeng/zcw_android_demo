@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion 29
@@ -17,15 +18,18 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    buildFeatures{
+        dataBinding = true
+    }
+
     compileOptions {
         sourceCompatibility = 1.8
         targetCompatibility = 1.8
     }
+
+
 }
-
-
-
-
 
 
 def support_version = "28.0.0"
@@ -40,16 +44,20 @@ dependencies {
     // Java
     implementation "androidx.navigation:navigation-fragment:$nav_version"
     implementation "androidx.navigation:navigation-ui:$nav_version"
-
-
-    androidTestImplementation 'androidx.test:runner:1.2.0'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation 'androidx.work:work-runtime:2.2.0'
-    api project(':aspectj')
 
+    // aspectJ 测试
+    api project(':aspectj')
+    // 内存检测工具
     debugImplementation('com.squareup.leakcanary:leakcanary-android:2.3')
     implementation 'com.squareup.leakcanary:leakcanary-object-watcher-android:2.3'
+    // asm 插装工具
     implementation 'org.ow2.asm:asm:8.0.1'
     implementation 'org.ow2.asm:asm-commons:8.0.1'
+    // test 套件
     implementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    implementation 'com.google.code.gson:gson:2.8.6'
 }

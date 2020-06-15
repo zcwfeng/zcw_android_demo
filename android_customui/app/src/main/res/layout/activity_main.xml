@@ -7,6 +7,7 @@
     tools:context=".MainUIEntranceActivity">
 
     <ScrollView
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -30,7 +31,22 @@
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
                tools:text="demo"/>
+
+           <Button
+               android:layout_width="match_parent"
+               android:layout_height="60dp"
+               android:text="LeakCanary"
+               android:onClick="leakCanaryTest"/>
+
+
+           <Button
+               android:layout_width="match_parent"
+               android:layout_height="60dp"
+               android:text="httpTest"
+               android:onClick="httpTest"/>
        </LinearLayout>
+
+
     </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -13,6 +13,12 @@
         android:orientation="vertical"
         android:background="@mipmap/phone2_bg">
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DataBinding源码解析"
+            android:onClick="@{()->vm.startSecondActivity()}"/>
+
 
         <LinearLayout
             android:layout_width="fill_parent"
@@ -21,7 +27,6 @@
 
         <!-- 电话号码 -->
         <TextView
-            android:id="@+id/tv_phone"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:textSize="@dimen/activity_phone_tv"

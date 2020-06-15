@@ -37,6 +37,14 @@ public class MainViewModel extends AndroidViewModel {
         context.startActivity(intent);
     }
 
+    public void startSecondActivity(){
+        Intent intent = new Intent();
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.setClass(context,SecondActivity.class);
+        context.startActivity(intent);
+
+    }
+
 
     /**
      * 输入
@@ -65,5 +73,7 @@ public class MainViewModel extends AndroidViewModel {
     public void clear() {
         phoneInfo.setValue("");
     }
+
+
 
 }

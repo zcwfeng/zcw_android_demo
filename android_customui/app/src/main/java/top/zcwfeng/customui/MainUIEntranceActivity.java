@@ -14,8 +14,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import top.zcwfeng.aspectj.BehaviorTrace;
 import top.zcwfeng.customui.demo.DemoSpan;
-import top.zcwfeng.customui.demo.LayoutActivity;
 import top.zcwfeng.customui.demo.MyQueryHandler;
+import top.zcwfeng.customui.http.IDataListener;
+import top.zcwfeng.customui.http.NetFramework;
+import top.zcwfeng.customui.http.TestBean;
+import top.zcwfeng.customui.leakcanarytest.TestLeakCanary;
 
 public class MainUIEntranceActivity extends AppCompatActivity {
     private TextView mTextView;
@@ -24,7 +27,7 @@ public class MainUIEntranceActivity extends AppCompatActivity {
     @SuppressLint("WrongConstant")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mTextView = findViewById(R.id.colorText);
 
@@ -48,12 +51,12 @@ public class MainUIEntranceActivity extends AppCompatActivity {
 //        ssb.setSpan(AbsoluteSizeSpan1,0,spannableString.length(), Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
 //
 //
-//        ForegroundColorSpan colorSpan2 = new ForegroundColorSpan(Color.parseColor("#1Aff0000"));
+//        ForegroundColor  Span colorSpan2 = new ForegroundColorSpan(Color.parseColor("#1Aff0000"));
 //        ssb.setSpan(colorSpan2, spannableString.length(), spannableString2.length() + spannableString.length() , Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
 
 
         // test
-        LayoutActivity.LayoutActivityInstance(this);
+//        LayoutActivity.LayoutActivityInstance(this);
 
         testMyQueryHandler();
     }
@@ -88,5 +91,28 @@ public class MainUIEntranceActivity extends AppCompatActivity {
     public void BottomSheetDialogFragment(View view) {
         Intent intent = new Intent(getApplicationContext(), DemoSpan.class);
         startActivity(intent);
+    }
+
+    public void leakCanaryTest(View view) {
+        Intent intent = new Intent(getApplicationContext(), TestLeakCanary.class);
+        startActivity(intent);
+    }
+
+    public void httpTest(View view){
+//        String url ="https://www.baidu.com";
+//        String url = "http://www.httpbin.org/get";
+        String url = "http://www.httpbin.org/post";
+        NetFramework.sendJsonRequest(url, "", TestBean.class, new IDataListener<TestBean>() {
+
+            @Override
+            public void onSuccess(TestBean s) {
+                Log.i("zcw",s.toString());
+            }
+
+            @Override
+            public void onFailed() {
+                Log.e("zcw","--------onFailed");
+            }
+        });
     }
 }

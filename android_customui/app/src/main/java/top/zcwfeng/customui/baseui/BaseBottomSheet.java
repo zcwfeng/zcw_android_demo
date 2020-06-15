@@ -39,7 +39,6 @@ public abstract class BaseBottomSheet extends BottomSheetDialogFragment {
     public BaseBottomSheet() {
         super();
     }
-
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         return new BottomSheetDialog(getContext(), getTheme()) {

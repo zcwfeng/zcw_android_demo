@@ -7,3 +7,5 @@ data class MyName (
     var name: ObservableField<String> = ObservableField<String>(),
     var nickName:String=""
 )
+
+

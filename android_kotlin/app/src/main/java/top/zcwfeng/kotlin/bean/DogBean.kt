@@ -66,9 +66,10 @@ data class OwnerWithPups(
     )
     val dogs:List<Pup>
 )
-companion object {
-    /** 我是main入口函数 **/
-    @JvmStatic
-    fun main(args: Array<String>) {
-    }
-}
+
+//companion object {
+//    /** 我是main入口函数 **/
+//    @JvmStatic
+//    fun main(args: Array<String>) {
+//    }
+//}

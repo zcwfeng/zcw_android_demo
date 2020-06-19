@@ -7,7 +7,6 @@
     tools:context=".MainActivity">
 
     <Button
-        android:onClick="button_run_scheduler"
         android:id="@+id/button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -15,10 +14,20 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
+        android:onClick="button_run_scheduler"
         android:text="button_run_scheduler"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.050000012" />
+
+    <ImageView
+        android:id="@+id/action_image"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button"
+        tools:background="#ff0000" />
 </androidx.constraintlayout.widget.ConstraintLayout>

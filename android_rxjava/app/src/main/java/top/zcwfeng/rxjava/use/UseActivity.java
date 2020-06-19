@@ -184,6 +184,7 @@ public class UseActivity extends AppCompatActivity {
      * 3.马上登陆服务器操作
      * 4.登陆完成后，更新登陆的UI
      */
+    Disposable disposable;// 防止内存泄露
     ProgressDialog progressDialog;
     public void onComplexRequestThreadSchedule() {
         MyRetrofit.createRetrofit().create(IRequestNetWork.class)
@@ -213,6 +214,7 @@ public class UseActivity extends AppCompatActivity {
                     public void onSubscribe(Disposable d) {
                         progressDialog = new ProgressDialog(UseActivity.this);
                         progressDialog.show();
+                        disposable = d;
                     }
 
                     @Override
@@ -233,5 +235,15 @@ public class UseActivity extends AppCompatActivity {
                     }
         });
 
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if(disposable != null) {
+            if(!disposable.isDisposed()){
+                disposable.dispose();
+            }
+        }
     }
 }

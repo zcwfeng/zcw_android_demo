@@ -14,12 +14,20 @@ import java.util.concurrent.TimeUnit;
 import io.reactivex.Observable;
 import io.reactivex.ObservableSource;
 import io.reactivex.ObservableTransformer;
+import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Consumer;
 import io.reactivex.functions.Function;
 import io.reactivex.schedulers.Schedulers;
 import retrofit2.Retrofit;
 import top.zcwfeng.rxjava.R;
+import top.zcwfeng.rxjava.doonnext.IRequestNetWork;
+import top.zcwfeng.rxjava.doonnext.LoginRequest;
+import top.zcwfeng.rxjava.doonnext.LoginResponse;
+import top.zcwfeng.rxjava.doonnext.MyRetrofit;
+import top.zcwfeng.rxjava.doonnext.RegisterRequest;
+import top.zcwfeng.rxjava.doonnext.RegisterResponse;
 import top.zcwfeng.rxjava.retrofit.WanAndroidApi;
 import top.zcwfeng.rxjava.retrofit.bean.Bean;
 import top.zcwfeng.rxjava.retrofit.bean.ProjectBean;
@@ -162,5 +170,63 @@ public class UseActivity extends AppCompatActivity {
                         });
             }
         };
+    }
+
+
+    //--------doOnNext 对于特殊复杂请求的伪代码思路----------
+
+    /**
+     * 需求
+     * 弹出加载
+     * 1.请求服务器注册
+     * 2.注册完成功后，更新注册UI
+     * 3.马上登陆服务器操作
+     * 4.登陆完成后，更新登陆的UI
+     */
+    public void onComplexRequestThreadSchedule() {
+        MyRetrofit.createRetrofit().create(IRequestNetWork.class)
+                .registerAction(new RegisterRequest())//1.请求服务器注册
+                .subscribeOn(Schedulers.io())//上游数据io异步
+                .observeOn(AndroidSchedulers.mainThread())//下游主线程
+                // 目的是返回Observable 可以继续向下流
+                .doOnNext(new Consumer<RegisterResponse>() {
+                    @Override
+                    public void accept(RegisterResponse registerResponse) throws Exception {
+                        //2.注册完成功后，更新注册UI
+                    }
+                })
+                .observeOn(Schedulers.io())
+                // 3.马上登陆服务器操作
+                .flatMap(new Function<RegisterResponse, ObservableSource<LoginResponse>>() {
+                    @Override
+                    public ObservableSource<LoginResponse> apply(RegisterResponse registerResponse) throws Exception {
+                        Observable<LoginResponse> observable = MyRetrofit.createRetrofit().create(IRequestNetWork.class)
+                                .loginAction(new LoginRequest());
+                        return observable;
+                    }
+                })
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Observer<LoginResponse>() {
+                    @Override
+                    public void onSubscribe(Disposable d) {
+
+                    }
+
+                    @Override
+                    public void onNext(LoginResponse loginResponse) {
+                        //4.登陆完成后，更新登陆的UI
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+
+                    }
+
+                    @Override
+                    public void onComplete() {
+                        // 杀青
+                    }
+        });
+
     }
 }

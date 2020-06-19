@@ -31,12 +31,14 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    // 请求相关
     implementation 'io.reactivex.rxjava2:rxjava:2.2.0'
     implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
     implementation 'com.squareup.retrofit2:adapter-rxjava2:2.9.0'
     implementation 'com.jakewharton.rxbinding2:rxbinding:2.2.0'//操作功能防抖
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.7.2'
 
     implementation 'com.google.code.gson:gson:2.8.6'
     implementation 'com.facebook.stetho:stetho-okhttp3:1.5.1'

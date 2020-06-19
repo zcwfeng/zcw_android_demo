@@ -30,4 +30,13 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/button"
         tools:background="#ff0000" />
+
+    <Button
+        android:onClick="startUserActivity"
+        android:text="rx + retrofit"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/action_image"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"></Button>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,6 +1,7 @@
 package top.zcwfeng.rxjava;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
@@ -27,6 +28,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Function;
 import io.reactivex.schedulers.Schedulers;
+import top.zcwfeng.rxjava.use.UseActivity;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "RxAndroidSamples";
@@ -40,6 +42,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         image = findViewById(R.id.action_image);
 
+    }
+
+    public void startUserActivity(View view){
+        Intent intent = new Intent(this, UseActivity.class);
+        startActivity(intent);
     }
 
 

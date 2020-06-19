@@ -1,5 +1,6 @@
 package top.zcwfeng.rxjava.use;
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -183,6 +184,7 @@ public class UseActivity extends AppCompatActivity {
      * 3.马上登陆服务器操作
      * 4.登陆完成后，更新登陆的UI
      */
+    ProgressDialog progressDialog;
     public void onComplexRequestThreadSchedule() {
         MyRetrofit.createRetrofit().create(IRequestNetWork.class)
                 .registerAction(new RegisterRequest())//1.请求服务器注册
@@ -209,7 +211,8 @@ public class UseActivity extends AppCompatActivity {
                 .subscribe(new Observer<LoginResponse>() {
                     @Override
                     public void onSubscribe(Disposable d) {
-
+                        progressDialog = new ProgressDialog(UseActivity.this);
+                        progressDialog.show();
                     }
 
                     @Override
@@ -225,6 +228,8 @@ public class UseActivity extends AppCompatActivity {
                     @Override
                     public void onComplete() {
                         // 杀青
+                        if(progressDialog != null)
+                            progressDialog.dismiss();
                     }
         });
 

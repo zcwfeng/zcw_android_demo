@@ -13,6 +13,8 @@ import com.jakewharton.rxbinding2.view.RxView;
 import java.util.concurrent.TimeUnit;
 
 import io.reactivex.Observable;
+import io.reactivex.ObservableEmitter;
+import io.reactivex.ObservableOnSubscribe;
 import io.reactivex.ObservableSource;
 import io.reactivex.ObservableTransformer;
 import io.reactivex.Observer;
@@ -23,6 +25,7 @@ import io.reactivex.functions.Function;
 import io.reactivex.schedulers.Schedulers;
 import retrofit2.Retrofit;
 import top.zcwfeng.rxjava.R;
+import top.zcwfeng.rxjava.designpattern.custom.CustomRxView;
 import top.zcwfeng.rxjava.doonnext.IRequestNetWork;
 import top.zcwfeng.rxjava.doonnext.LoginRequest;
 import top.zcwfeng.rxjava.doonnext.LoginResponse;
@@ -42,6 +45,7 @@ public class UseActivity extends AppCompatActivity {
     Button button1;
     Button button2;
     Button button3;
+    Button custom;
 
 
     @Override
@@ -51,6 +55,7 @@ public class UseActivity extends AppCompatActivity {
         button1 = findViewById(R.id.use_rx_retrofit);
         button2 = findViewById(R.id.avoid_shake);
         button3 = findViewById(R.id.flat_map);
+
 
         Retrofit retrofit = HttpUtil.getOnLindeCookieRetrofit();
         api = retrofit.create(WanAndroidApi.class);
@@ -68,6 +73,32 @@ public class UseActivity extends AppCompatActivity {
         antiShakeActionUpdate();
 
 
+        antiShakeCustom();
+
+    }
+
+    private void antiShakeCustom() {
+        custom = findViewById(R.id.rx_custom);
+        Disposable disposable = CustomRxView.onClickProxy(custom).throttleFirst(2000, TimeUnit.MILLISECONDS)
+                .subscribe(new Consumer<Object>() {
+                    @Override
+                    public void accept(Object o) throws Exception {
+//                        Log.d(TAG, "accept: CustomRxView 防抖");
+
+                        Observable.create(new ObservableOnSubscribe<Object>() {
+                            @Override
+                            public void subscribe(ObservableEmitter<Object> emitter) throws Exception {
+                                emitter.onNext("David....");
+                            }
+                        }).subscribe(new Consumer<Object>() {
+                            @Override
+                            public void accept(Object o) throws Exception {
+                                Log.d(TAG, "accept: CustomRxView 防抖");
+
+                            }
+                        });
+                    }
+                });
     }
 
 
@@ -188,6 +219,7 @@ public class UseActivity extends AppCompatActivity {
      */
     Disposable disposable;// 防止内存泄露
     ProgressDialog progressDialog;
+
     public void onComplexRequestThreadSchedule() {
         MyRetrofit.createRetrofit().create(IRequestNetWork.class)
                 .registerAction(new RegisterRequest())//1.请求服务器注册
@@ -232,24 +264,24 @@ public class UseActivity extends AppCompatActivity {
                     @Override
                     public void onComplete() {
                         // 杀青
-                        if(progressDialog != null)
+                        if (progressDialog != null)
                             progressDialog.dismiss();
                     }
-        });
+                });
 
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if(disposable != null) {
-            if(!disposable.isDisposed()){
+        if (disposable != null) {
+            if (!disposable.isDisposed()) {
                 disposable.dispose();
             }
         }
     }
 
-    public void startHookTest(View view){
+    public void startHookTest(View view) {
         TestUtil.testStartActivity(this, RxSourceActivity.class);
     }
 }

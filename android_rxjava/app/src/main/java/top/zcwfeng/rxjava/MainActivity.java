@@ -28,6 +28,8 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Function;
 import io.reactivex.schedulers.Schedulers;
+import top.zcwfeng.rxjava.designpattern.UserPerson;
+import top.zcwfeng.rxjava.designpattern.WechatServerObservable;
 import top.zcwfeng.rxjava.use.UseActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -47,6 +49,28 @@ public class MainActivity extends AppCompatActivity {
     public void startUserActivity(View view){
         Intent intent = new Intent(this, UseActivity.class);
         startActivity(intent);
+    }
+
+    public void myRxDesignPatternObserve(View view){
+        String msg = "重大消息Android程序员必需要跟进学习Kotliin了！！!";
+        // 创建公众号服务
+        top.zcwfeng.rxjava.designpattern.Observable wechatServerObservable =
+                new WechatServerObservable();
+        // 创建用户观察者
+        UserPerson user = new UserPerson("David");
+        UserPerson user2 = new UserPerson("Lucy");
+        UserPerson user3 = new UserPerson("Lili");
+        UserPerson user4 = new UserPerson("Malong");
+        // 订阅 （订阅---还是被观察者，订阅观察者）
+        wechatServerObservable.addOberver(user);
+        wechatServerObservable.addOberver(user2);
+        wechatServerObservable.addOberver(user3);
+        wechatServerObservable.addOberver(user4);
+        // 发布消息
+        wechatServerObservable.pushMessages(msg);
+        ////////////
+        wechatServerObservable.removeObserver(user4);
+        wechatServerObservable.pushMessages(msg);
     }
 
 

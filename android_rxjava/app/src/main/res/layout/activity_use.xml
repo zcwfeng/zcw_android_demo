@@ -25,4 +25,14 @@
         android:layout_height="60dp"
         android:text="flatMap解嵌套" />
 
+
+    <Button
+        android:id="@+id/hook"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:onClick="startHookTest"
+        android:text="hook hook" />
+
+
+
 </LinearLayout>

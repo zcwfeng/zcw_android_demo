@@ -29,10 +29,12 @@ import top.zcwfeng.rxjava.doonnext.LoginResponse;
 import top.zcwfeng.rxjava.doonnext.MyRetrofit;
 import top.zcwfeng.rxjava.doonnext.RegisterRequest;
 import top.zcwfeng.rxjava.doonnext.RegisterResponse;
+import top.zcwfeng.rxjava.hook.RxSourceActivity;
 import top.zcwfeng.rxjava.retrofit.WanAndroidApi;
 import top.zcwfeng.rxjava.retrofit.bean.Bean;
 import top.zcwfeng.rxjava.retrofit.bean.ProjectBean;
 import top.zcwfeng.rxjava.util.HttpUtil;
+import top.zcwfeng.rxjava.util.TestUtil;
 
 public class UseActivity extends AppCompatActivity {
     private WanAndroidApi api;
@@ -245,5 +247,9 @@ public class UseActivity extends AppCompatActivity {
                 disposable.dispose();
             }
         }
+    }
+
+    public void startHookTest(View view){
+        TestUtil.testStartActivity(this, RxSourceActivity.class);
     }
 }

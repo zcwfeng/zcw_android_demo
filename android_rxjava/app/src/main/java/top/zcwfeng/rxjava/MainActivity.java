@@ -13,8 +13,11 @@ import android.text.TextPaint;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.material.snackbar.Snackbar;
 
 import java.io.InputStream;
 import java.net.HttpURLConnection;
@@ -34,7 +37,8 @@ import top.zcwfeng.rxjava.use.UseActivity;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "RxAndroidSamples";
-    final static String PATH = "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1794202421,3172844000&fm=26&gp=0.jpg";
+//    final static String PATH = "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1794202421,3172844000&fm=26&gp=0.jpg";
+    final static String PATH = "https://raw.githubusercontent.com/zcwfeng/zcw_android_demo/master/docs/rx/Rx_mind.png";
     private ImageView image;
     private ProgressDialog progressDialog;
 
@@ -44,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         image = findViewById(R.id.action_image);
 
+        Snackbar.make(getWindow().getDecorView(),"SnackBar Test....", Snackbar.LENGTH_LONG).show();
     }
 
     public void startUserActivity(View view){

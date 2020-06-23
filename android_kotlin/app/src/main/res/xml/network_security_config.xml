@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config xmlns:tools="http://schemas.android.com/tools">
+    <base-config
+        cleartextTrafficPermitted="true"
+        tools:ignore="InsecureBaseConfiguration" />
+</network-security-config>
+
+<!-- 
+	在AndroidManifest 加入 
+	android:networkSecurityConfig="@xml/network_security_config"
+-->
+

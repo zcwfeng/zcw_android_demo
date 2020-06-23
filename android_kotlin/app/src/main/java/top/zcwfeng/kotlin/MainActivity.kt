@@ -39,13 +39,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun testSecurity() {
-        TODO("Not yet implemented")
         readSecurity()
         writeSecurity()
     }
 
     private fun writeSecurity() {
-        TODO("Not yet implemented")
 
 //        // Although you can define your own key generation parameter specification, it's
 //        // recommended that you use the value specified here.
@@ -70,7 +68,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun readSecurity() {
-        TODO("Not yet implemented")
 
 //        // Although you can define your own key generation parameter specification, it's
 //        // recommended that you use the value specified here.

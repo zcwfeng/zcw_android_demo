@@ -3,4 +3,31 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+
+    <!-- 主色 -->
+    <color name="main_color">#24cfa2</color>
+    <color name="defualt_text_color">#636363</color>
+
+    <!-- 根布局的背景 -->
+    <color name="root_bg_color">#efeded</color>
+
+    <color name="white">#FFFFFF</color>
+
+    <!-- 线条的背景灰色 -->
+    <color name="gray">#F4F4F4</color>
+
+    <!-- 标题黑色 -->
+    <color name="title_black">#121212</color>
+
+    <!-- 头部颜色 -->
+    <color name="top_bg_color"> #323a45</color>
+
+    <!-- 深灰色 -->
+    <color name="main_digrey"> #999999</color>
+
+    <!-- 灰色 -->
+    <color name="main_gray"> #767676</color>
+
+    <!-- 无色 -->
+    <color name="no_color">#00000000</color>
 </resources>

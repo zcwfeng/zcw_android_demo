@@ -1,8 +1,32 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="magin_wide">16dp</dimen>
-    <dimen name="magin_half">8dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="box_text_size">24sp</dimen>
 
+    <!-- 默认的字体大小 -->
+    <dimen name="default_text_size">12sp</dimen>
+    <dimen name="title_bar_height">48.0dp</dimen>
+    <dimen name="title_main_text_size">18sp</dimen>
+
+    <!-- 比默认字体大小大一号 -->
+    <dimen name="text_size_oversize">13sp</dimen>
+
+    <!--
+    布局文件里面   @+id   ids  @id
+                    12sp  dimens.xml
+                    String
+    -->
+
+    <dimen name="ts1">10.0sp</dimen>
+    <dimen name="ts2">11.0sp</dimen>
+    <dimen name="ts3">12.0sp</dimen>
+    <dimen name="ts4">13.0sp</dimen>
+    <dimen name="ts5">14.0sp</dimen>
+    <dimen name="ts6">15.0sp</dimen>
+    <dimen name="ts7">16.0sp</dimen>
+    <dimen name="ts8">17.0sp</dimen>
+    <dimen name="ts9">18.0sp</dimen>
+    <dimen name="ts10">22.0sp</dimen>
 
 </resources>

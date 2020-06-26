@@ -21,8 +21,8 @@ public class MainActivity extends AppCompatActivity {
 //        mainViewModel = new ViewModelProvider(this, new ViewModelProvider.NewInstanceFactory()).get(MainViewModel.class);
         binding.setVm(mainViewModel);
         binding.setLifecycleOwner(this);
-
     }
+
 
 
 

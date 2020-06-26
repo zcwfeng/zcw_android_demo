@@ -29,6 +29,7 @@ public class SecondActivity extends AppCompatActivity {
             @Override
             public void run() {
                 user.setName(user.name + "1");
+
                 handler.postDelayed(this,1000);
             }
         });

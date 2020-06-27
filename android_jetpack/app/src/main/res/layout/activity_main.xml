@@ -19,6 +19,26 @@
             android:text="DataBinding源码解析"
             android:onClick="@{()->vm.startSecondActivity()}"/>
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ViewModel使用"
+            android:onClick="@{()->vm.startNameViewModelActivity()}"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LiveDataBus源码解析"
+            android:onClick="@{()->vm.startLiveDataBusActivity()}"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MVP架构"
+            android:onClick="@{()->vm.startMvpActivity()}"/>
+
+
+
 
         <LinearLayout
             android:layout_width="fill_parent"

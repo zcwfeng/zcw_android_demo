@@ -10,6 +10,11 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.MutableLiveData;
 
+import top.zcwfeng.jetpack.databinding.NameActivity;
+import top.zcwfeng.jetpack.livedata.TestLiveDataBusActivity;
+import top.zcwfeng.jetpack.mvp.MvpActivity;
+import top.zcwfeng.jetpack.utils.LiveDataBus;
+
 public class MainViewModel extends AndroidViewModel {
 
     public MutableLiveData<String> getPhoneInfo() {
@@ -37,12 +42,54 @@ public class MainViewModel extends AndroidViewModel {
         context.startActivity(intent);
     }
 
-    public void startSecondActivity(){
+    public void startSecondActivity() {
         Intent intent = new Intent();
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        intent.setClass(context,SecondActivity.class);
+        intent.setClass(context, SecondActivity.class);
         context.startActivity(intent);
 
+    }
+
+    public void startNameViewModelActivity() {
+        Intent intent = new Intent();
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.setClass(context, NameActivity.class);
+        context.startActivity(intent);
+
+    }
+
+    public void startMvpActivity() {
+        Intent intent = new Intent();
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.setClass(context, MvpActivity.class);
+        context.startActivity(intent);
+
+    }
+
+    public void startLiveDataBusActivity() {
+        //-> LiveDataBus 换成 LiveDataBusX 解决粘性
+        //-> 粘性数据执行
+        //-> new LiveData() ——> 绑定Observer —>  setValue(onChanged)    正常LiveDataBusX
+        //-> new LiveData() ——> setValue(onChanged) —> 绑定Observer     LiveDataBus
+        Intent intent = new Intent();
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.setClass(context, TestLiveDataBusActivity.class);
+        context.startActivity(intent);
+        new Thread() {
+            @Override
+            public void run() {
+                for (int i = 0; i < 10; i++) {
+                    //发送消息
+                    LiveDataBus.getInstance().with("data", String.class).postValue("David-LiveDataBus");
+                    try {
+                        Thread.sleep(5000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+
+                }
+            }
+        }.start();
     }
 
 
@@ -53,7 +100,7 @@ public class MainViewModel extends AndroidViewModel {
      */
     public void appendNumber(String number) {
 
-        phoneInfo.setValue(phoneInfo.getValue()+number); // 弊端 性能 sb去完成
+        phoneInfo.setValue(phoneInfo.getValue() + number); // 弊端 性能 sb去完成
 
     }
 
@@ -73,7 +120,6 @@ public class MainViewModel extends AndroidViewModel {
     public void clear() {
         phoneInfo.setValue("");
     }
-
 
 
 }

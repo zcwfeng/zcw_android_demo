@@ -16,9 +16,18 @@ public class User extends BaseObservable {
         notifyPropertyChanged(BR.name);
     }
 
+    public String password;
+
+    @Bindable
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
     public User(String name) {
         this.name = name;
     }
-
-
 }

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainPage1Fragment">
+
+    <fragment
+        android:id="@+id/mainPage1Fragment"
+        android:name="top.zcwfeng.jetpack.navigation.MainPage1Fragment"
+        android:label="fragment_main_page1"
+        tools:layout="@layout/fragment_main_page1" >
+        <action
+            android:id="@+id/fragment1_2"
+            app:destination="@id/mainPage2Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainPage2Fragment"
+        android:name="top.zcwfeng.jetpack.navigation.MainPage2Fragment"
+        android:label="fragment_main_page2"
+        tools:layout="@layout/fragment_main_page2" >
+        <action
+            android:id="@+id/fragment2_3"
+            app:destination="@id/mainPage3Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainPage3Fragment"
+        android:name="top.zcwfeng.jetpack.navigation.MainPage3Fragment"
+        android:label="fragment_main_page3"
+        tools:layout="@layout/fragment_main_page3" >
+        <action
+            android:id="@+id/fragment3_2"
+            app:destination="@id/mainPage2Fragment" />
+    </fragment>
+</navigation>

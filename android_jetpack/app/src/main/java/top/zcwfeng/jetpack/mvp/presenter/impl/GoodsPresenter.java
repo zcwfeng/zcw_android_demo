@@ -6,7 +6,6 @@ import androidx.lifecycle.LifecycleOwner;
 
 import java.util.List;
 
-import top.zcwfeng.jetpack.bean.Goods;
 import top.zcwfeng.jetpack.mvp.model.GoodsModel;
 import top.zcwfeng.jetpack.mvp.model.IGoodsModel;
 import top.zcwfeng.jetpack.mvp.presenter.BasePresenter;
@@ -23,7 +22,7 @@ public class GoodsPresenter<T extends IGoodsView> extends BasePresenter {
         if(iGoodsView !=null && iGoodsModel!=null){
             iGoodsModel.loadGoodsData(new IGoodsModel.OnLoadListener() {
                 @Override
-                public void onComplete(List<Goods> goods) {
+                public void onComplete(List goods) {
                     ((IGoodsView)iGoodsView.get()).showGoodsView(goods);
                 }
 

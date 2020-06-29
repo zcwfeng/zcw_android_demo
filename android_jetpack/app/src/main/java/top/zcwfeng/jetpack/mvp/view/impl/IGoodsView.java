@@ -2,7 +2,7 @@ package top.zcwfeng.jetpack.mvp.view.impl;
 
 import java.util.List;
 
-import top.zcwfeng.jetpack.bean.Goods;
+import top.zcwfeng.jetpack.mvp.db.Student;
 import top.zcwfeng.jetpack.mvp.view.IBaseView;
 
 /**
@@ -10,7 +10,7 @@ import top.zcwfeng.jetpack.mvp.view.IBaseView;
  */
 public interface IGoodsView extends IBaseView {
     //显示图片
-    void showGoodsView(List<Goods> goods);
+    void showGoodsView(List<Student> goods);
 
     //加载进度条
     //加载动画

@@ -36,7 +36,16 @@
             android:layout_height="wrap_content"
             android:text="MVP架构"
             android:onClick="@{()->vm.startMvpActivity()}"/>
-
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Room"
+            android:onClick="@{()->vm.startRoomActivity()}"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Navigation"
+            android:onClick="@{()->vm.startNavigationActivity()}"/>
 
 
 

@@ -13,6 +13,8 @@ import androidx.lifecycle.MutableLiveData;
 import top.zcwfeng.jetpack.databinding.NameActivity;
 import top.zcwfeng.jetpack.livedata.TestLiveDataBusActivity;
 import top.zcwfeng.jetpack.mvp.MvpActivity;
+import top.zcwfeng.jetpack.navigation.NavigationActivity;
+import top.zcwfeng.jetpack.room.RoomActivity;
 import top.zcwfeng.jetpack.utils.LiveDataBus;
 
 public class MainViewModel extends AndroidViewModel {
@@ -64,6 +66,21 @@ public class MainViewModel extends AndroidViewModel {
         intent.setClass(context, MvpActivity.class);
         context.startActivity(intent);
 
+    }
+
+    public void startRoomActivity() {
+        Intent intent = new Intent();
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.setClass(context, RoomActivity.class);
+        context.startActivity(intent);
+
+    }
+
+    public void startNavigationActivity(){
+        Intent intent = new Intent();
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.setClass(context, NavigationActivity.class);
+        context.startActivity(intent);
     }
 
     public void startLiveDataBusActivity() {

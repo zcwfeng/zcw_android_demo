@@ -2,12 +2,10 @@ package top.zcwfeng.jetpack.mvp.model;
 
 import java.util.List;
 
-import top.zcwfeng.jetpack.bean.Goods;
-
-public interface IGoodsModel {
+public interface IGoodsModel<T> {
     void loadGoodsData(OnLoadListener onLoadListener);
-    interface OnLoadListener{
-        void onComplete(List<Goods> goods);
+    interface OnLoadListener<T>{
+        void onComplete(List<T> goods);
         void onError(String msg);
     }
 }

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/test"
+    android:layout_height="match_parent"
+    android:background="@drawable/t_window_bg"
+    android:orientation="vertical">
+
+
+    <!--测试换肤==>图片-->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@mipmap/toolbar"/>
+
+
+    <Button
+        android:textColor="?colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="skinSelect"
+        android:text="选择皮肤"/>
+
+
+    <!--测试换肤==> viewPager 与 fragment-->
+    <top.zcwfeng.skin.widget.MyTabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:tabIndicatorColor="@color/tabSelectedTextColor"
+        app:tabTextColor="@color/tab_selector"/>
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+</LinearLayout>

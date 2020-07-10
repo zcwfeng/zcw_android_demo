@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="top.zcwfeng.taskdemo">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:taskAffinity="top.zcwfeng.taskdemo"
+        android:name="top.zcwfeng.taskdemo.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity android:name="top.zcwfeng.taskdemo.StandardAActivity" android:launchMode="standard"  android:taskAffinity="top.zcwfeng.taskdemo"/>
+        <activity android:name="top.zcwfeng.taskdemo.StandardBActivity" android:launchMode="standard"  android:taskAffinity="top.zcwfeng.taskdemo"/>
+        <activity android:name="top.zcwfeng.taskdemo.StandardCActivity" android:launchMode="standard" android:taskAffinity="top.zcwfeng.taskdemo.another" />
+
+        <activity android:name="top.zcwfeng.taskdemo.SingleTopAActivity" android:launchMode="singleTop"  android:taskAffinity="top.zcwfeng.taskdemo"/>
+        <activity android:name="top.zcwfeng.taskdemo.SingleTopBActivity" android:launchMode="singleTop"  android:taskAffinity="top.zcwfeng.taskdemo"/>
+        <activity android:name="top.zcwfeng.taskdemo.SingleTopCActivity" android:launchMode="singleTop" android:taskAffinity="top.zcwfeng.taskdemo.another" />
+
+        <activity android:name="top.zcwfeng.taskdemo.SingleTaskAActivity" android:launchMode="singleTask"  android:taskAffinity="top.zcwfeng.taskdemo"/>
+        <activity android:name="top.zcwfeng.taskdemo.SingleTaskBActivity" android:launchMode="singleTask"  android:taskAffinity="top.zcwfeng.taskdemo"/>
+        <activity android:name="top.zcwfeng.taskdemo.SingleTaskCActivity" android:launchMode="singleTask" android:taskAffinity="top.zcwfeng.taskdemo.another" />
+
+        <activity android:name="top.zcwfeng.taskdemo.SingleInstanceAActivity" android:launchMode="singleInstance"  android:taskAffinity="top.zcwfeng.taskdemo"/>
+        <activity android:name="top.zcwfeng.taskdemo.SingleInstanceBActivity" android:launchMode="singleInstance"  android:taskAffinity="top.zcwfeng.taskdemo"/>
+        <activity android:name="top.zcwfeng.taskdemo.SingleInstanceCActivity" android:launchMode="singleInstance" android:taskAffinity="top.zcwfeng.taskdemo.another" />
+
+
+        <activity android:name="top.zcwfeng.taskdemo.forwardresult.ForwardAActivity" android:label="forwardresult">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="top.zcwfeng.taskdemo.forwardresult.ForwardBActivity"/>
+        <activity android:name="top.zcwfeng.taskdemo.forwardresult.ForwardCActivity"/>
+
+    </application>
+
+
+</manifest>

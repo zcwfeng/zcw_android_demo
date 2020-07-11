@@ -19,7 +19,7 @@ class LoginModelImpl :LoginModel {
     ) {
 
         APIClient.instance.instanceRetrofit(WanAndroidApi::class.java)
-            . loginAction(username,password)
+            .loginAction(username,password)
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe(object: APIResponse<LoginRegisterResponse>(context){

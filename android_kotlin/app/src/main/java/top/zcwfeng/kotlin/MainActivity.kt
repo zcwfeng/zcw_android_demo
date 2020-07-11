@@ -6,10 +6,8 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.commit
-import com.dbflow5.config.FlowManager.context
 import top.zcwfeng.kotlin.databinding.ActivityMainBinding
 import top.zcwfeng.kotlin.ui.BlankFragment
-import java.io.File
 
 class MainActivity : AppCompatActivity() {
     lateinit var blankFragment: BlankFragment;
@@ -90,10 +88,15 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    public fun goConstrantLayout(view: View) {
+    fun goConstrantLayout(view: View) {
 //        var intent:Intent = Intent(this,Main2Activity().javaClass)
 //        startActivity(intent)
         var intent = Intent(this, Main2Activity::class.java)
+        startActivity(intent)
+    }
+
+    fun aidlClientTest(view: View) {
+        var intent = Intent(this, AidlClient::class.java)
         startActivity(intent)
     }
 

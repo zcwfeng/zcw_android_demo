@@ -1,5 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion 29
@@ -48,6 +49,7 @@ dependencies {
 
     // aspectJ 测试
     api project(':aspectj')
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     // 内存检测工具
     debugImplementation('com.squareup.leakcanary:leakcanary-android:2.3')
     implementation 'com.squareup.leakcanary:leakcanary-object-watcher-android:2.3'
@@ -60,4 +62,5 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
     implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'androidx.core:core-ktx:1.0.0-alpha3'
 }

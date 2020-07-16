@@ -44,6 +44,21 @@
                android:layout_height="60dp"
                android:text="httpTest"
                android:onClick="httpTest"/>
+           <Button
+               android:layout_width="match_parent"
+               android:layout_height="60dp"
+               android:text="testDispatchEvent"
+               android:onClick="testDispatchEvent"/>
+           <Button
+               android:layout_width="match_parent"
+               android:layout_height="60dp"
+               android:text="testSRLVPEvent"
+               android:onClick="testSRLVPEvent"/>
+           <Button
+               android:layout_width="match_parent"
+               android:layout_height="60dp"
+               android:text="View Entrance"
+               android:onClick="viewEntrance"/>
        </LinearLayout>
 
 

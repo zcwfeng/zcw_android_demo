@@ -7,6 +7,8 @@ import android.os.Bundle
 import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.ListView
+import top.zcwfeng.customui.baseui.view.activity.BigFishActivity
+import top.zcwfeng.customui.baseui.view.activity.DrawStudyActivity
 import top.zcwfeng.customui.baseui.view.activity.SimpleColorChangeActivity
 import top.zcwfeng.customui.baseui.view.activity.ViewPagerActivity
 
@@ -25,7 +27,9 @@ class ControllerFragment : ListFragment() {
                 "文字测量演示",  //1
                 "ViewPager+文字变色",  //2
                 "过渡绘制演示",  //3
-                "文字绘制补充说明")
+                "文字绘制补充说明",
+                "画大鱼",
+                "绘制练习")
         var arrayAdapter = activity?.let { ArrayAdapter(it, R.layout.simple_list_item_1, array) }
         listAdapter = arrayAdapter
     }
@@ -40,6 +44,17 @@ class ControllerFragment : ListFragment() {
 
             2 -> {
                 val intent = Intent(activity, ViewPagerActivity::class.java)
+                startActivity(intent)
+
+            }
+
+            5 -> {
+                val intent = Intent(activity, BigFishActivity::class.java)
+                startActivity(intent)
+
+            }
+            6 -> {
+                val intent = Intent(activity, DrawStudyActivity::class.java)
                 startActivity(intent)
 
             }

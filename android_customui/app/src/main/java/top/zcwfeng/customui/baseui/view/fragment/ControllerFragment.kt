@@ -7,10 +7,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.ListView
-import top.zcwfeng.customui.baseui.view.activity.BigFishActivity
-import top.zcwfeng.customui.baseui.view.activity.DrawStudyActivity
-import top.zcwfeng.customui.baseui.view.activity.SimpleColorChangeActivity
-import top.zcwfeng.customui.baseui.view.activity.ViewPagerActivity
+import top.zcwfeng.customui.baseui.view.activity.*
 
 
 /**
@@ -29,14 +26,15 @@ class ControllerFragment : ListFragment() {
                 "过渡绘制演示",  //3
                 "文字绘制补充说明",
                 "画大鱼",
-                "绘制练习")
+                "绘制练习",
+                "RecyclerView 吸顶")
         var arrayAdapter = activity?.let { ArrayAdapter(it, R.layout.simple_list_item_1, array) }
         listAdapter = arrayAdapter
     }
 
     override fun onListItemClick(l: ListView, v: View, position: Int, id: Long) {
         super.onListItemClick(l, v, position, id)
-        when(position){
+        when (position) {
             0 -> {
                 val intent = Intent(activity, SimpleColorChangeActivity::class.java)
                 startActivity(intent)
@@ -55,6 +53,11 @@ class ControllerFragment : ListFragment() {
             }
             6 -> {
                 val intent = Intent(activity, DrawStudyActivity::class.java)
+                startActivity(intent)
+
+            }
+            7 -> {
+                val intent = Intent(activity, RecyclerViewActivity::class.java)
                 startActivity(intent)
 
             }

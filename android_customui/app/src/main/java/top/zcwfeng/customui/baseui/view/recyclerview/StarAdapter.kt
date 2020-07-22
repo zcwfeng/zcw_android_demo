@@ -40,11 +40,7 @@ class StarAdapter(val starList: MutableList<Star>, val context: Context) : Recyc
     }
 
     fun getGroupName(position: Int): String {
-        return if(position < starList.size) {
-            starList[position].groupName
-        } else  {
-            ""
-        }
+         return   starList[position].groupName
     }
 
 

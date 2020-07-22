@@ -34,11 +34,11 @@ class StarDecoration(val context: Context) : RecyclerView.ItemDecoration() {
             for (i in 0 until count) {
                 // curView
                 val view = parent.getChildAt(i)
-                val positon = parent.getChildLayoutPosition(view)
-                val isGroupHead = starAdapter.isGroupHeader(positon)
+                val position = parent.getChildAdapterPosition(view)
+                val isGroupHead = starAdapter.isGroupHeader(position)
                 if (isGroupHead && view.top - groupHeaderHeight - parent.paddingTop >= 0) {
                     c.drawRect(left.toFloat(), (view.top - groupHeaderHeight).toFloat(), right.toFloat(), view.bottom.toFloat(), headPaint)
-                    val groupName = starAdapter.getGroupName(positon)
+                    val groupName = starAdapter.getGroupName(position)
                     textPaint.getTextBounds(groupName, 0, groupName.length, textRect);
                     c.drawText(groupName, (left + 20).toFloat(),
                             (view.top - groupHeaderHeight / 2 + textRect.height() / 2).toFloat(), textPaint)

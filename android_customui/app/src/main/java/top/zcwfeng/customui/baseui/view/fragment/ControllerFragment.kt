@@ -8,6 +8,7 @@ import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.ListView
 import top.zcwfeng.customui.baseui.view.activity.*
+import java.net.ResponseCache
 
 
 /**
@@ -27,7 +28,8 @@ class ControllerFragment : ListFragment() {
                 "文字绘制补充说明",
                 "画大鱼",
                 "绘制练习",
-                "RecyclerView 吸顶")
+                "RecyclerView 吸顶",
+                "RecyclerView 缓存分析")
         var arrayAdapter = activity?.let { ArrayAdapter(it, R.layout.simple_list_item_1, array) }
         listAdapter = arrayAdapter
     }
@@ -60,6 +62,10 @@ class ControllerFragment : ListFragment() {
                 val intent = Intent(activity, RecyclerViewActivity::class.java)
                 startActivity(intent)
 
+            }
+            8-> {
+                val intent = Intent(activity, RecyclerViewCacheActivity::class.java)
+                startActivity(intent)
             }
         }
     }

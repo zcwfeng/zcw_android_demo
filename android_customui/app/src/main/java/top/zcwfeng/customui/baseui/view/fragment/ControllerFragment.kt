@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.ListView
+import androidx.viewpager2.widget.ViewPager2
 import top.zcwfeng.customui.baseui.view.activity.*
 import java.net.ResponseCache
 
@@ -29,7 +30,9 @@ class ControllerFragment : ListFragment() {
                 "画大鱼",
                 "绘制练习",
                 "RecyclerView 吸顶",
-                "RecyclerView 缓存分析")
+                "RecyclerView 缓存分析",
+                "RecyclerView SlideCard",
+                "ViewPager&ViewPager2")
         var arrayAdapter = activity?.let { ArrayAdapter(it, R.layout.simple_list_item_1, array) }
         listAdapter = arrayAdapter
     }
@@ -63,8 +66,16 @@ class ControllerFragment : ListFragment() {
                 startActivity(intent)
 
             }
-            8-> {
+            8 -> {
                 val intent = Intent(activity, RecyclerViewCacheActivity::class.java)
+                startActivity(intent)
+            }
+            9 -> {
+                val intent = Intent(activity, SlideCardActivity::class.java)
+                startActivity(intent)
+            }
+            10 ->{
+                val intent = Intent(activity, ViewPager2Activity::class.java)
                 startActivity(intent)
             }
         }

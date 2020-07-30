@@ -14,7 +14,13 @@ class RecyclerViewCacheActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recycler_view_cache)
-        rv.layoutManager = GridLayoutManager(this,5)
+
+        val mLayoutManager = GridLayoutManager(this,5)
+
+        rv.layoutManager = mLayoutManager
+
+//        rv.setItemViewCacheSize(10)
+
         rv.addItemDecoration(DividerItemDecoration(this,LinearLayout.VERTICAL))
 
         var result: List<String> = (1..1000).map { it.toString() }

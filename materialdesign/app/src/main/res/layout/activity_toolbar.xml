@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".toolbar.ToolbarActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginBottom="16dp"
+        android:background="@color/black"
+        android:backgroundTint="@color/Blue200"
+        android:backgroundTintMode="src_over"
+        android:elevation="4dp"
+        app:logo="@drawable/ic_tool_logo"
+        app:navigationIcon="@mipmap/back_icon"
+        app:popupTheme="@style/ToolBarPopupTheme"
+        app:subtitle="副标题"
+        app:title="ToolBar展示">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="自定义标题"
+            android:textSize="16sp" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginBottom="16dp"
+        android:background="?attr/colorPrimary"
+        android:backgroundTint="@color/Blue200"
+        android:backgroundTintMode="src_over"
+        android:elevation="4dp"
+        app:logo="@drawable/ic_tool_logo"
+        app:navigationIcon="@mipmap/back_icon"
+        app:subtitle="副标题"
+        app:title="ToolBar展示">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="自定义标题"
+            android:textSize="16sp" />
+    </androidx.appcompat.widget.Toolbar>
+
+</LinearLayout>

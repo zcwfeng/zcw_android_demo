@@ -1,0 +1,27 @@
+<resources>
+\    <string name="app_name">materialdesign</string>
+    <string name="favorite">Favorite</string>
+    <string name="settings">Settings</string>
+    <string name="action_search">Search</string>
+    <string name="share">Share</string>
+    <string name="floatactionbutton_text">同学们好</string>
+    <string name="title_activity_tab">TabActivity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+
+    <string name="bt_text">同学们好，同学们辛苦了！！！</string>
+    <string name="title_activity_drawer_layout">DrawerLayoutActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="contenttv1">dsaflasdjkflwejrlwerwer</string>
+    <string name="contenttv">A flat robot head, a bright sea green semicircle with antennas and small holes for eyes. To the left of the head is the word android in a lowercase black sans serif font.A flat robot head, a bright sea green semicircle with antennas and small holes for eyes. To the left of the head is the word android in a lowercase black sans serif font.A flat robot head, a bright sea green semicircle with antennas and small holes for eyes. To the left of the head is the word android in a lowercase black sans serif font.A flat robot head, a bright sea green semicircle with antennas and small holes for eyes. To the left of the head is the word android in a lowercase black sans serif font.A flat robot head, a bright sea green semicircle with antennas and small holes for eyes. To the left of the head is the word android in a lowercase black sans serif font.A flat robot head, a bright sea green semicircle with antennas and small holes for eyes. To the left of the head is the word android in a lowercase black sans serif font.A flat robot head, a bright sea green semicircle with antennas and small holes for eyes. To the left of the head is the word android in a lowercase black sans serif font.A flat robot head, a bright sea green semicircle with antennas and small holes for eyes. To the left of the head is the word android in a lowercase black sans serif font.A flat robot head, a bright sea green semicircle with antennas and small holes for eyes. To the left of the head is the word android in a lowercase black sans serif font.A flat robot head, a bright sea green semicircle with antennas and small holes for eyes. To the left of the head is the word android in a lowercase black sans serif font.A flat robot head, a bright sea green semicircle with antennas and small holes for eyes. To the left of the head is the word android in a lowercase black sans serif font.A flat robot head, a bright sea green semicircle with antennas and small holes for eyes. To the left of the head is the word android in a lowercase black sans serif font.A flat robot head, a bright sea green semicircle with antennas and small holes for eyes. To the left of the head is the word android in a lowercase black sans serif font.A flat robot head, a bright sea green semicircle with antennas and small holes for eyes. To the left of the head is the word android in a lowercase black sans serif font.</string>
+    <string name="topStr">《将进酒》属汉乐府《鼓吹曲·铙歌》</string>
+</resources>

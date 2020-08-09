@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".snackbar.SnackBarActivity">
+
+    <Button
+        android:id="@+id/btnSnackBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Simple SnackBar" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:src="@drawable/ic_baseline_email_64"
+        app:elevation="2dp" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

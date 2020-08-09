@@ -32,7 +32,8 @@ class ControllerFragment : ListFragment() {
                 "RecyclerView 吸顶",
                 "RecyclerView 缓存分析",
                 "RecyclerView SlideCard",
-                "ViewPager&ViewPager2")
+                "ViewPager&ViewPager2",
+                "PhotoView 多点触摸")
         var arrayAdapter = activity?.let { ArrayAdapter(it, R.layout.simple_list_item_1, array) }
         listAdapter = arrayAdapter
     }
@@ -76,6 +77,10 @@ class ControllerFragment : ListFragment() {
             }
             10 ->{
                 val intent = Intent(activity, ViewPager2Activity::class.java)
+                startActivity(intent)
+            }
+            11 ->{
+                val intent = Intent(activity, PhotoViewActivity::class.java)
                 startActivity(intent)
             }
         }

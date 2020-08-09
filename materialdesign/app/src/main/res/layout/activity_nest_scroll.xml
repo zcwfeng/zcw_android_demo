@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<top.zcwfeng.materialdesign.nestedscroll.view.MyNestedScrollParentL xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".nestedscroll.activity.NestScrollActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f0f"
+        android:text="@string/topStr" />
+
+    <top.zcwfeng.materialdesign.nestedscroll.view.MyNestedScrollChildL
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/contenttv"
+            android:textColor="#f0f"
+            android:textSize="24sp" />
+
+    </top.zcwfeng.materialdesign.nestedscroll.view.MyNestedScrollChildL>
+
+</top.zcwfeng.materialdesign.nestedscroll.view.MyNestedScrollParentL>

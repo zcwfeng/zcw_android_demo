@@ -28,6 +28,7 @@ android {
 dependencies {
     implementation "androidx.appcompat:appcompat:$rootProject.androidXVersion"
     implementation "androidx.constraintlayout:constraintlayout:$rootProject.constraintlayout"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     annotationProcessor rootProject.googleAutoServiceDependency
     implementation rootProject.googleAutoServiceDependency
     api project(':common')

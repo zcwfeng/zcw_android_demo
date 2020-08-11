@@ -17,7 +17,13 @@ android {
         externalNativeBuild {
             cmake {
                 cppFlags "-std=c++11"
+                abiFilters "armeabi-v7a"
+                arguments "-DANDROID_STL=gnustl_static"
+
             }
+        }
+        ndk{
+            abiFilters 'armeabi-v7a'
         }
     }
 
@@ -29,7 +35,7 @@ android {
     }
     externalNativeBuild {
         cmake {
-            path "src/main/cpp/CMakeLists.txt"
+            path "CMakeLists.txt"
             version "3.10.2"
         }
     }
@@ -44,5 +50,5 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-
+    implementation 'com.rmtheis:tess-two:7.0.0'
 }

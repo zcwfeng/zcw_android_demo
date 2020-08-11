@@ -1,9 +1,9 @@
 package top.zcwfeng.jni
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
-import java.util.Date;
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -13,6 +13,11 @@ class MainActivity : AppCompatActivity() {
         // Example of a call to a native method
         sample_text.text = stringFromJNI()
         sample_text.text = testFromJNI()
+
+        sample_text.setOnClickListener {
+            var intent =Intent(this,OpenCVIDCard::class.java)
+            startActivity(intent)
+        }
     }
 
     /**

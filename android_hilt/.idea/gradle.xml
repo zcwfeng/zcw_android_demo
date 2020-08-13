@@ -11,7 +11,9 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/daggersample" />
+            <option value="$PROJECT_DIR$/hiltsample" />
+            <option value="$PROJECT_DIR$/koinsample" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

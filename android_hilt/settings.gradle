@@ -1,2 +1,4 @@
-include ':app'
+include ':koinsample'
+include ':daggersample'
+include ':hiltsample'
 rootProject.name = "android_hilt"

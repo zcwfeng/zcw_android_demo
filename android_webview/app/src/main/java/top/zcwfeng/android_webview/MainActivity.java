@@ -20,11 +20,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 IWebViewService webViewService = CommonServiceLoader.load(IWebViewService.class);
-                webViewService.startWebViewActivity(
-                        MainActivity.this,
-                        "https://www.baidu.com",
-                        "David baidu",
-                        true);
+//                webViewService.startWebViewActivity(
+//                        MainActivity.this,
+//                        "https://www.baidu.com",
+//                        "David baidu",
+//                        true);
+                webViewService.startDemoHtml(MainActivity.this);
             }
         });
     }

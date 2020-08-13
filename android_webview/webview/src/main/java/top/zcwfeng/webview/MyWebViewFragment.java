@@ -20,8 +20,6 @@ import top.zcwfeng.base.loadsir.ErrorCallback;
 import top.zcwfeng.base.loadsir.LoadingCallback;
 import top.zcwfeng.webview.databinding.FragmentMyWebViewBinding;
 import top.zcwfeng.webview.utils.Constants;
-import top.zcwfeng.webview.webchromeclient.MyWebViewChromeClient;
-import top.zcwfeng.webview.webviewclient.MyWebViewClient;
 
 public class MyWebViewFragment extends Fragment implements WebViewCallBack, OnRefreshListener {
     private String mUrl;
@@ -57,9 +55,9 @@ public class MyWebViewFragment extends Fragment implements WebViewCallBack, OnRe
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        mBinding = DataBindingUtil.inflate(inflater,R.layout.fragment_my_web_view, container, false);
-        mBinding.webview.getSettings().setJavaScriptEnabled(true);
+        mBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_my_web_view, container, false);
         mBinding.webview.loadUrl(mUrl);
+        mBinding.webview.registerWebViewCallback(this);
         mLoadService = LoadSir.getDefault().register(mBinding.smartrefreshlayout, new Callback.OnReloadListener() {
             @Override
             public void onReload(View v) {
@@ -68,8 +66,7 @@ public class MyWebViewFragment extends Fragment implements WebViewCallBack, OnRe
             }
         });
 
-        mBinding.webview.setWebViewClient(new MyWebViewClient(this));
-        mBinding.webview.setWebChromeClient(new MyWebViewChromeClient(this));
+
         mBinding.smartrefreshlayout.setOnRefreshListener(this);
         mBinding.smartrefreshlayout.setEnableRefresh(true);
         mBinding.smartrefreshlayout.setEnableLoadMore(false);

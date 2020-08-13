@@ -46,6 +46,24 @@ BaseApplication mApplication 都能通过它拿到context
     WebViewClient
     
     
-    todo 跨进程，命令模式，cookie
+    todo 跨进程，命令模式，cookie,webview+html+java+native 通信
+    webview 问题
+    1.内存占用 甚至几十兆  app进程 linux进程 jvm+webview
+    2.可靠，webview出了问题 不影响app 进程
     
+7.放入另外一个进程，跨进程方案，减少oom （推送，定位 等都是独立进程）
+  跨进程针对------activity 或 service   （fragment宿主是Activity）
+  
+8. showToast openActivity openDialog login等功能
+作为架构师 webview 不能每次都改
+
+一个接口：名字+操作 = 命令
+登陆：login_commond = login+parameters
+
+addJavaScriptInterface
+
+ios 只接受一个参数
+
+html 相当与client 发起命令如showToast
+
 -------------------------------

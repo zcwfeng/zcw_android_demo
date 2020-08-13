@@ -3,9 +3,12 @@
     package="top.zcwfeng.webview">
 
     <application android:usesCleartextTraffic="true">
-        <activity android:name=".WebviewActivity" android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity
+            android:name=".WebviewActivity"
+            android:process=":zcwfeng"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
     </application>
 
     <uses-permission android:name="android.permission.INTERNET" />
-
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 </manifest>

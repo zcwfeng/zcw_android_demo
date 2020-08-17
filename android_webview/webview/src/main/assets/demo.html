@@ -21,11 +21,33 @@
             console.log("callAppToast.");
             customjs.takeNativeAction("showToast", {message: "this is a message from html."});
         }
+        function openActivityA(){
+            console.log("openActivityA.");
+            customjs.takeNativeAction("openPage", {target_class: "top.zcwfeng.android_webview.MainProcessTestActivity"});
+        }
+        function openActivityB(){
+            console.log("openActivityB.");
+            customjs.takeNativeAction("openPage", {target_class: "top.zcwfeng.android_webview.MainProcessTestActivityB"});
+        }
+        function login(){
+            console.log("login.");
+            customjs.takeNativeActionWithCallback("login", {}, function(res) {
+                 var element = document.createElement("div");
+                 console.log("userName:\n" + res.accountName);
+                 element.appendChild(document.createTextNode("userName:\n" + res.accountName));
+                 document.getElementById('login_id').appendChild(element);
+            });
+        }
+
 
     </script>
     <script src="js/customjs.js" charset="utf-8"></script>
 </head>
 <body style="height: 100%;">
 <div class="item" style="font-size: 20px; color: #ffffff" onclick="callAppToast()">测试: showToast</div>
+<div class="item" style="font-size: 20px; color: #ffffff" onclick="openActivityA()">打开MainProcessTeset</div>
+<div class="item" style="font-size: 20px; color: #ffffff" onclick="openActivityB()">打开MainProcessTesetB</div>
+<div id="login_id" class="item" style="font-size: 20px; color: #ffffff" onclick="login()">登录并且返回结果</div>
+
 </body>
 </html>

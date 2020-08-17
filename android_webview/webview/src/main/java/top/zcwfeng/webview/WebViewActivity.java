@@ -21,7 +21,7 @@ public class WebviewActivity extends AppCompatActivity {
         mDataBinding = DataBindingUtil.setContentView(this, R.layout.activity_webview);
         mDataBinding.title.setText(getIntent().getStringExtra(Constants.TITLE));
         mDataBinding.actionBar.setVisibility(getIntent()
-                .getBooleanExtra(Constants.IS_SHOW_ACTION_BAR, false)
+                .getBooleanExtra(Constants.IS_SHOW_ACTION_BAR, true)
                 ? View.VISIBLE : View.GONE);
 
         mDataBinding.back.setOnClickListener(new View.OnClickListener() {

@@ -67,3 +67,9 @@ ios 只接受一个参数
 html 相当与client 发起命令如showToast
 
 -------------------------------
+
+5 个模块
+组件化 auto service
+跨进程 oom 可能行
+js->webviewprocess -> mainprocess -> webviewprocess -> js 
+支持扩展 命令模式,命令打开新页面，客户端代码不需要修改

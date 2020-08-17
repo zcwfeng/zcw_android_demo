@@ -55,10 +55,12 @@ public class MyWebViewFragment extends Fragment implements WebViewCallBack, OnRe
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        mBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_my_web_view, container, false);
-        mBinding.webview.loadUrl(mUrl);
+        mBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_my_web_view, container,
+                false);
         mBinding.webview.registerWebViewCallback(this);
-        mLoadService = LoadSir.getDefault().register(mBinding.smartrefreshlayout, new Callback.OnReloadListener() {
+        mBinding.webview.loadUrl(mUrl);
+        mLoadService = LoadSir.getDefault().register(mBinding.smartrefreshlayout,
+                new Callback.OnReloadListener() {
             @Override
             public void onReload(View v) {
                 mLoadService.showCallback(LoadingCallback.class);
@@ -68,7 +70,7 @@ public class MyWebViewFragment extends Fragment implements WebViewCallBack, OnRe
 
 
         mBinding.smartrefreshlayout.setOnRefreshListener(this);
-        mBinding.smartrefreshlayout.setEnableRefresh(true);
+        mBinding.smartrefreshlayout.setEnableRefresh(mCanNativeRefresh);
         mBinding.smartrefreshlayout.setEnableLoadMore(false);
         return mLoadService.getLoadLayout();
 

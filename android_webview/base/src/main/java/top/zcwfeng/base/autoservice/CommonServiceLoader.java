@@ -7,6 +7,11 @@ public final  class CommonServiceLoader {
     }
 
     public static<T> T load(Class<T> service){
-        return ServiceLoader.load(service).iterator().next();
+        try {
+            return ServiceLoader.load(service).iterator().next();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 }

@@ -6,11 +6,8 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.webkit.JavascriptInterface;
 import android.webkit.WebView;
-import android.widget.Toast;
 
 import com.google.gson.Gson;
-
-import java.util.Map;
 
 import top.zcwfeng.webview.WebViewCallBack;
 import top.zcwfeng.webview.bean.JsParam;
@@ -43,11 +40,13 @@ public class BaseWebView extends WebView {
     }
 
     private void init() {
+        // 千万注意这里别忘记
+        WebViewProcessCommandDispatcher.getInstance().initAidlConnect();
         WebViewDefaultSettings.getInstance().setSettings(this);
         addJavascriptInterface(this, "customwebview");
     }
 
-    public void registerWebViewCallback(WebViewCallBack webViewCallBack){
+    public void registerWebViewCallback(WebViewCallBack webViewCallBack) {
         setWebViewClient(new MyWebViewClient(webViewCallBack));
         setWebChromeClient(new MyWebViewChromeClient(webViewCallBack));
     }
@@ -59,12 +58,23 @@ public class BaseWebView extends WebView {
             final JsParam jsParamObject =
                     new Gson().fromJson(jsParam, JsParam.class);
             if (jsParamObject != null) {
-                if ("showToast".equalsIgnoreCase(jsParamObject.name)) {
-                    Toast.makeText(getContext(), String.valueOf(
-                            new Gson().fromJson(jsParamObject.param, Map.class)
-                    ), Toast.LENGTH_SHORT).show();
-                }
+                WebViewProcessCommandDispatcher.getInstance().executeCommand(jsParamObject.name
+                        , new Gson().toJson(jsParamObject.param),this);
+
             }
+        }
+    }
+
+    public void handleCallBack(final String callbackName,final String response){
+        if(!TextUtils.isEmpty(callbackName) && !TextUtils.isEmpty(response)){
+            post(new Runnable() {
+                @Override
+                public void run() {
+                    String jscode = "Javascript:customjs.callback('" + callbackName + "'," + response + ")";
+                    Log.e(TAG,"Android->JS handleCallBack:" + jscode);
+                    evaluateJavascript(jscode,null);
+                }
+            });
         }
     }
 }

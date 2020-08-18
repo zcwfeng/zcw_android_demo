@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import top.zcwfeng.activityhookdemo.databinding.ActivityMainBinding;
 import top.zcwfeng.activityhookdemo.hook.HookHelper;
+import top.zcwfeng.activityhookdemo.hook.HookHelper2;
 
 public class MainActivity extends AppCompatActivity {
     ActivityMainBinding mainBinding;
@@ -31,8 +32,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void onBtnHook4Clicked() {
-        HookHelper.hookAMSInterceptStartActivity();
-        HookHelper.hookH();
+//        HookHelper.hookAMSInterceptStartActivity();
+//        HookHelper.hookH();
+//        Intent intent = new Intent(this,TargetActivity.class);
+//        startActivity(intent);
+        HookHelper2.hookIActivityManager();
+        HookHelper2.hookHandler();
         Intent intent = new Intent(this,TargetActivity.class);
         startActivity(intent);
     }

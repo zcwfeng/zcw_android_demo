@@ -1,3 +1,5 @@
+include ':use_paging_pagekey'
+include ':use_paging_itemkey'
 include ':use_paging_db'
 include ':common'
 include ':base'

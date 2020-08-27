@@ -15,6 +15,8 @@
             <option value="$PROJECT_DIR$/base" />
             <option value="$PROJECT_DIR$/common" />
             <option value="$PROJECT_DIR$/use_paging_db" />
+            <option value="$PROJECT_DIR$/use_paging_itemkey" />
+            <option value="$PROJECT_DIR$/use_paging_pagekey" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

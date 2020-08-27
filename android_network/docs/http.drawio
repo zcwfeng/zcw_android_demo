@@ -1,0 +1,67 @@
+<mxfile host="2eb7a1a0-e042-45f5-b84d-9da5c8b4d52b" modified="2020-08-19T13:48:18.496Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.48.0 Chrome/78.0.3904.130 Electron/7.3.2 Safari/537.36" etag="2wdunNgoyXSmTYmYAZHN" version="13.1.3">
+    <diagram id="6hGFLwfOUW9BJ-s0fimq" name="Page-1">
+        <mxGraphModel dx="952" dy="685" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="30" y="60" width="300" height="480" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="ip" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0050ef;strokeColor=#001DBC;fontColor=#ffffff;" vertex="1" parent="1">
+                    <mxGeometry x="50" y="480" width="240" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="tcp&lt;span style=&quot;color: rgba(0 , 0 , 0 , 0) ; font-family: monospace ; font-size: 0px&quot;&gt;%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22ip%22%20style%3D%22rounded%3D0%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3BfillColor%3D%230050ef%3BstrokeColor%3D%23001DBC%3BfontColor%3D%23ffffff%3B%22%20vertex%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%2250%22%20y%3D%22480%22%20width%3D%22240%22%20height%3D%2231%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0050ef;strokeColor=#001DBC;fontColor=#ffffff;" vertex="1" parent="1">
+                    <mxGeometry x="50" y="440" width="240" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="ssl" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0050ef;strokeColor=#001DBC;fontColor=#ffffff;" vertex="1" parent="1">
+                    <mxGeometry x="50" y="400" width="240" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="http" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0050ef;strokeColor=#001DBC;fontColor=#ffffff;" vertex="1" parent="1">
+                    <mxGeometry x="50" y="360" width="240" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="OKHttp" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d80073;strokeColor=#A50040;fontColor=#ffffff;" vertex="1" parent="1">
+                    <mxGeometry x="50" y="230" width="240" height="121" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="Retrofit" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#008a00;strokeColor=#005700;fontColor=#ffffff;" vertex="1" parent="1">
+                    <mxGeometry x="60" y="140" width="90" height="81" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="拦截器" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f0a30a;strokeColor=#BD7000;fontColor=#ffffff;" vertex="1" parent="1">
+                    <mxGeometry x="60" y="240" width="70" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="拦截器" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f0a30a;strokeColor=#BD7000;fontColor=#ffffff;" vertex="1" parent="1">
+                    <mxGeometry x="180" y="240" width="70" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="RXJava&lt;br&gt;(对数据进行变换)&lt;br&gt;（线程切换）" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e51400;strokeColor=#B20000;fontColor=#ffffff;" vertex="1" parent="1">
+                    <mxGeometry x="181" y="140" width="129" height="81" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="www.baidu.com" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="600" y="60" width="120" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="www.douban.com" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="620" y="165" width="120" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="www.tencent.com" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="650" y="290.5" width="120" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="" style="endArrow=classic;html=1;entryX=1.011;entryY=0.452;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="13" target="2">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="460" y="380" as="sourcePoint"/>
+                        <mxPoint x="510" y="330" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="17" value="" style="endArrow=classic;html=1;exitX=1.001;exitY=0.783;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="2">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="460" y="380" as="sourcePoint"/>
+                        <mxPoint x="610" y="330" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="18" value="JavaBean" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+                    <mxGeometry x="340" y="229" width="70" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="Gson" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+                    <mxGeometry x="414" y="201" width="40" height="20" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

@@ -1,2 +1,5 @@
+include ':use_paging_db'
+include ':common'
+include ':base'
 include ':app'
 rootProject.name = "android_jetpack"

@@ -14,6 +14,7 @@ import top.zcwfeng.jetpack.databinding.NameActivity;
 import top.zcwfeng.jetpack.livedata.TestLiveDataBusActivity;
 import top.zcwfeng.jetpack.mvp.MvpActivity;
 import top.zcwfeng.jetpack.navigation.NavigationActivity;
+import top.zcwfeng.jetpack.paging.PagingActivity;
 import top.zcwfeng.jetpack.room.RoomActivity;
 import top.zcwfeng.jetpack.utils.LiveDataBus;
 
@@ -44,10 +45,16 @@ public class MainViewModel extends AndroidViewModel {
         context.startActivity(intent);
     }
 
-    public void startSecondActivity() {
+    public void startDatabindingDemoActivity() {
         Intent intent = new Intent();
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        intent.setClass(context, SecondActivity.class);
+        intent.setClass(context, MyDatabindDemoActivity.class);
+        context.startActivity(intent);
+    }
+    public void startPagingActivity() {
+        Intent intent = new Intent();
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.setClass(context, PagingActivity.class);
         context.startActivity(intent);
 
     }

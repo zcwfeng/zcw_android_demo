@@ -16,8 +16,13 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="Paging 使用"
+            android:onClick="@{()->vm.startPagingActivity()}"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="DataBinding源码解析"
-            android:onClick="@{()->vm.startSecondActivity()}"/>
+            android:onClick="@{()->vm.startDatabindingDemoActivity()}"/>
 
         <Button
             android:layout_width="wrap_content"
@@ -34,7 +39,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="MVP架构"
+            android:text="Livecycle LiveData MVP架构"
             android:onClick="@{()->vm.startMvpActivity()}"/>
         <Button
             android:layout_width="wrap_content"

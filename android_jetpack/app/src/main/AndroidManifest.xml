@@ -9,12 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".navigation.NavigationActivity"></activity>
+        <activity android:name=".paging.PagingActivity"></activity>
+        <activity android:name=".navigation.NavigationActivity" />
         <activity android:name=".room.RoomActivity" />
         <activity android:name=".mvp.MvpActivity" />
         <activity android:name=".databinding.NameActivity" />
         <activity android:name=".livedata.TestLiveDataBusActivity" />
-        <activity android:name=".SecondActivity" />
+        <activity android:name=".MyDatabindDemoActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,9 +24,9 @@
             </intent-filter>
         </activity>
     </application>
-    <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.WRITE_CONTACTS" />
-
     <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
 
 </manifest>

@@ -1,9 +1,11 @@
 package top.zcwfeng.jni
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
+
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,9 +17,17 @@ class MainActivity : AppCompatActivity() {
         sample_text.text = testFromJNI()
 
         sample_text.setOnClickListener {
-            var intent =Intent(this,OpenCVIDCard::class.java)
+            var intent = Intent(this, OpenCVIDCard::class.java)
             startActivity(intent)
         }
+
+        mmap_demo.setOnClickListener {
+            Log.e("zcw::","mmap----writeTest readTest")
+            writeTest()
+            readTest()
+        }
+
+
     }
 
     /**
@@ -25,7 +35,7 @@ class MainActivity : AppCompatActivity() {
      * which is packaged with this application.
      */
     external fun stringFromJNI(): String
-    external fun testFromJNI():String
+    external fun testFromJNI(): String
 
     companion object {
         // Used to load the 'native-lib' library on application startup.
@@ -33,4 +43,8 @@ class MainActivity : AppCompatActivity() {
             System.loadLibrary("native-lib")
         }
     }
+
+    external fun writeTest()
+
+    external fun readTest()
 }

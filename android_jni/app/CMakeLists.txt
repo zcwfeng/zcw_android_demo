@@ -9,7 +9,9 @@ include_directories(src/main/cpp/include)
 # 编译源文件
 #file(GLOB my_source_path src/main/cpp/*.cpp src/main/cpp/*.c)
 aux_source_directory(${CMAKE_SOURCE_DIR}/src/main/cpp my_source_path)
-add_library(native-lib SHARED ${my_source_path} )
+aux_source_directory(${CMAKE_SOURCE_DIR}/src/main/cpp/bzip2 SOURCES)
+
+add_library(native-lib SHARED ${my_source_path} ${SOURCES} )
 
 # Creates and names a library, sets it as either STATIC
 # or SHARED, and provides the relative paths to its source code.
@@ -48,10 +50,10 @@ set_target_properties(lib_opencv
 
 target_link_libraries( # Specifies the target library.
         native-lib
+
         log
         jnigraphics
         lib_opencv
-
         # Links the target library to the log library
         # included in the NDK.
         ${log-lib}

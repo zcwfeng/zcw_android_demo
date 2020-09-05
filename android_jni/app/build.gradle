@@ -16,12 +16,23 @@ android {
             cmake {
                 cppFlags "-std=c++11"
                 abiFilters "armeabi-v7a"
+
                 arguments "-DANDROID_STL=gnustl_static"
 
             }
         }
-        ndk{
+        ndk {
             abiFilters 'armeabi-v7a'
+
+        }
+    }
+
+
+
+    externalNativeBuild {
+        cmake {
+            path "CMakeLists.txt"
+            version "3.10.2"
         }
     }
 
@@ -31,12 +42,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-    externalNativeBuild {
-        cmake {
-            path "CMakeLists.txt"
-            version "3.10.2"
-        }
-    }
+
 }
 
 dependencies {

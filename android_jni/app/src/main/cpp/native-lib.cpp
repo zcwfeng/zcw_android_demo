@@ -136,3 +136,28 @@ Java_top_zcwfeng_jni_ImageProcess_getIdNumber(JNIEnv *env, jclass type, jobject 
 
 }
 }
+
+
+extern "C" {
+extern int m_patch_main(int argc, char *argv[]);
+}
+
+extern "C"
+JNIEXPORT jint JNICALL
+Java_top_zcwfeng_jni_BsPatchUtils_path(JNIEnv *env, jobject thiz, jstring old_apk, jstring new_apk,
+                                       jstring path) {
+    int argc = 4;
+    char * argv[argc];
+    argv[0] = "bspatch";
+
+    argv[1]= const_cast<char *>(env->GetStringUTFChars(old_apk, 0));
+    argv[2]= const_cast<char *>(env->GetStringUTFChars(new_apk, 0));
+    argv[3]= const_cast<char *>(env->GetStringUTFChars(path, 0));
+
+
+    int result = m_patch_main(argc,argv);
+    env->ReleaseStringUTFChars(old_apk,argv[1]);
+    env->ReleaseStringUTFChars(new_apk,argv[2]);
+    env->ReleaseStringUTFChars(path,argv[3]);
+    return result;
+}

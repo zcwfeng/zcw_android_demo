@@ -57,4 +57,11 @@
         android:onClick="testBackgroundWork7"
         />
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="bzdiff------差异测试"
+        android:onClick="testBackgroundWork7"
+        />
+
 </LinearLayout>

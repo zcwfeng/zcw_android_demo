@@ -11,11 +11,23 @@
         android:id="@+id/sample_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"/>
+        android:text="Hello World!" />
+
     <Button
         android:id="@+id/mmap_demo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="mmap读写demo"/>
+        android:text="mmap读写demo" />
+
+    <Button
+        android:id="@+id/bspatch_demo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="bspatch demo" />
+
+    <TextView
+        android:text="更新前~~~~~~~~~~~~~更新后"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

@@ -7,24 +7,56 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.bottomnavigation.BottomNavigationItemView;
 import com.google.android.material.bottomnavigation.BottomNavigationMenuView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.bottomnavigation.LabelVisibilityMode;
 
 import java.lang.reflect.Field;
 
 import q.rorbin.badgeview.QBadgeView;
+import top.zcwfeng.base.activity.MvvmActivity;
+import top.zcwfeng.base.viewmodel.MvvmBaseViewModel;
 import top.zcwfeng.news.databinding.ActivityMainBinding;
+import top.zcwfeng.news.homefragment.HomeFragment;
+import top.zcwfeng.news.otherfragments.AccountFragment;
+import top.zcwfeng.news.otherfragments.CategoryFragment;
+import top.zcwfeng.news.otherfragments.ServiceFragment;
 
-public class MainActivity extends AppCompatActivity {
-    ActivityMainBinding viewDataBinding;
+public class MainActivity extends MvvmActivity<ActivityMainBinding, MvvmBaseViewModel> {
+
+    private HomeFragment mHomeFragment = new HomeFragment();
+    private CategoryFragment mCategoryFragment = new CategoryFragment();
+    private ServiceFragment mServiceFragment = new ServiceFragment();
+    private AccountFragment mAccountFragment = new AccountFragment();
+    @Override
+    protected void onRetryBtnClick() {
+
+    }
+
+    @Override
+    public int getLayoutId() {
+        return R.layout.activity_main;
+    }
+
+    @Override
+    public MvvmBaseViewModel getViewModel() {
+        return null;
+    }
+
+    @Override
+    public int getBindingVariable() {
+        return 0;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        viewDataBinding = DataBindingUtil.setContentView(this,R.layout.activity_main);
         //Set Toolbar
         setSupportActionBar(viewDataBinding.toolbar);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
@@ -34,8 +66,66 @@ public class MainActivity extends AppCompatActivity {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             disableShiftMode(viewDataBinding.bottomView);
         }
+
+        viewDataBinding.bottomView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                Fragment fragment = null;
+                switch (menuItem.getItemId()) {
+                    case R.id.menu_home:
+                        fragment = mHomeFragment;
+                        break;
+                    case R.id.menu_categories:
+                        fragment = mCategoryFragment;
+                        break;
+                    case R.id.menu_services:
+                        fragment = mServiceFragment;
+                        break;
+                    case R.id.menu_account:
+                        fragment = mAccountFragment;
+                        break;
+                }
+                if(getSupportActionBar() != null) {
+                    getSupportActionBar().setTitle(menuItem.getTitle());
+                }
+                switchFragment(fromFragment, fragment);
+                fromFragment = fragment;
+                return true;
+            }
+        });
+        viewDataBinding.bottomView.setLabelVisibilityMode(LabelVisibilityMode.LABEL_VISIBILITY_LABELED);
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(viewDataBinding.container.getId(), mHomeFragment);
+        transaction.commit();
+        showBadgeView(3, 5);
     }
 
+
+    Fragment fromFragment = mHomeFragment;
+
+    private void switchFragment(Fragment from, Fragment to) {
+        if (from != to) {
+            FragmentManager manger = getSupportFragmentManager();
+            FragmentTransaction transaction = manger.beginTransaction();
+            if (!to.isAdded()) {
+                if (from != null) {
+                    transaction.hide(from);
+                }
+                if (to != null) {
+                    transaction.add(R.id.container, to).commit();
+                }
+
+            } else {
+                if (from != null) {
+                    transaction.hide(from);
+                }
+                if (to != null) {
+                    transaction.show(to).commit();
+                }
+
+            }
+        }
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

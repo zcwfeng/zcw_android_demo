@@ -1,3 +1,6 @@
+include ':common'
+include ':mnews'
+include ':network'
 include ':base'
 include ':app'
 rootProject.name = "android_news"

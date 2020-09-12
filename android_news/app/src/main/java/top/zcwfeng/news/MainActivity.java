@@ -12,6 +12,8 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.billy.cc.core.component.CC;
+import com.billy.cc.core.component.CCResult;
 import com.google.android.material.bottomnavigation.BottomNavigationItemView;
 import com.google.android.material.bottomnavigation.BottomNavigationMenuView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -23,14 +25,13 @@ import q.rorbin.badgeview.QBadgeView;
 import top.zcwfeng.base.activity.MvvmActivity;
 import top.zcwfeng.base.viewmodel.MvvmBaseViewModel;
 import top.zcwfeng.news.databinding.ActivityMainBinding;
-import top.zcwfeng.news.homefragment.HomeFragment;
 import top.zcwfeng.news.otherfragments.AccountFragment;
 import top.zcwfeng.news.otherfragments.CategoryFragment;
 import top.zcwfeng.news.otherfragments.ServiceFragment;
 
 public class MainActivity extends MvvmActivity<ActivityMainBinding, MvvmBaseViewModel> {
-
-    private HomeFragment mHomeFragment = new HomeFragment();
+    Fragment fromFragment;
+    private Fragment mHomeFragment;
     private CategoryFragment mCategoryFragment = new CategoryFragment();
     private ServiceFragment mServiceFragment = new ServiceFragment();
     private AccountFragment mAccountFragment = new AccountFragment();
@@ -57,6 +58,12 @@ public class MainActivity extends MvvmActivity<ActivityMainBinding, MvvmBaseView
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        CCResult result = CC.obtainBuilder("Mnews").setActionName("getHeadlineNewsFragment")
+                .build().call();
+        mHomeFragment = (Fragment)result.getDataMap().get("fragment");
+        fromFragment = mHomeFragment;
+
         //Set Toolbar
         setSupportActionBar(viewDataBinding.toolbar);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
@@ -101,7 +108,6 @@ public class MainActivity extends MvvmActivity<ActivityMainBinding, MvvmBaseView
     }
 
 
-    Fragment fromFragment = mHomeFragment;
 
     private void switchFragment(Fragment from, Fragment to) {
         if (from != to) {

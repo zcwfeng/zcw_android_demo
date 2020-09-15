@@ -14,8 +14,10 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/base" />
             <option value="$PROJECT_DIR$/common" />
+            <option value="$PROJECT_DIR$/customwebview" />
             <option value="$PROJECT_DIR$/mnews" />
             <option value="$PROJECT_DIR$/network" />
+            <option value="$PROJECT_DIR$/usercenter" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

@@ -3,6 +3,7 @@ package top.zcwfeng.news;
 import android.annotation.SuppressLint;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Trace;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -58,6 +59,7 @@ public class MainActivity extends MvvmActivity<ActivityMainBinding, MvvmBaseView
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Trace.beginSection("zcw_news_trace");
 
         CCResult result = CC.obtainBuilder("Mnews").setActionName("getHeadlineNewsFragment")
                 .build().call();
@@ -105,6 +107,8 @@ public class MainActivity extends MvvmActivity<ActivityMainBinding, MvvmBaseView
         transaction.replace(viewDataBinding.container.getId(), mHomeFragment);
         transaction.commit();
         showBadgeView(3, 5);
+        Trace.endSection();
+
     }
 
 
@@ -132,7 +136,6 @@ public class MainActivity extends MvvmActivity<ActivityMainBinding, MvvmBaseView
             }
         }
     }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.toolbar_menu, menu);

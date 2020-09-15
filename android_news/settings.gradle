@@ -1,6 +1,7 @@
-include ':common'
-include ':mnews'
-include ':network'
-include ':base'
-include ':app'
+
+gradle.ext.includeBaseSource = true
+if(gradle.ext.includeBaseSource){
+    include ':base'
+}
+include ':app',':customwebview',':common',':mnews',':network', ':usercenter'
 rootProject.name = "android_news"

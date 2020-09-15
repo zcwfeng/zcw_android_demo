@@ -7,6 +7,7 @@ import android.view.View;
 import top.zcwfeng.base.customview.BaseCustomView;
 import top.zcwfeng.common.R;
 import top.zcwfeng.common.databinding.TitleViewBinding;
+import top.zcwfeng.common.webview.WebActivity;
 
 /**
  * Created by Allen on 2017/7/20.
@@ -33,6 +34,6 @@ public class TitleView extends BaseCustomView<TitleViewBinding, TitleViewViewMod
 
     @Override
     public void onRootClick(View view) {
-//        WebActivity.startCommonWeb(view.getContext(), "", getViewModel().link);
+        WebActivity.startCommonWeb(view.getContext(), "", getViewModel().link);
     }
 }

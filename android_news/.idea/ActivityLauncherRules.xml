@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ActivityLauncherRules">
+    <option name="clearData" value="false" />
+    <option name="stopApp" value="false" />
+    <option name="selectedDeviceId" value="" />
+    <option name="selectedModule" value="" />
+    <option name="selectedProductVariantMap">
+      <map />
+    </option>
+    <option name="rules">
+      <list />
+    </option>
+  </component>
+</project>

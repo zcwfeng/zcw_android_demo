@@ -1,4 +1,4 @@
-package top.zcwfeng.common.views;
+package top.zcwfeng.common;
 
 import android.text.TextUtils;
 import android.view.View;

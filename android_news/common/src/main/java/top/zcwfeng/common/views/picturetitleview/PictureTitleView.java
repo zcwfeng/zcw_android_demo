@@ -7,6 +7,7 @@ import android.view.View;
 import top.zcwfeng.base.customview.BaseCustomView;
 import top.zcwfeng.common.R;
 import top.zcwfeng.common.databinding.PictureTitleViewBinding;
+import top.zcwfeng.common.webview.WebActivity;
 
 
 /**
@@ -34,6 +35,6 @@ public class PictureTitleView extends BaseCustomView<PictureTitleViewBinding, Pi
 
     @Override
     public void onRootClick(View view) {
-//        WebActivity.startCommonWeb(view.getContext(), "", getViewModel().link);
+        WebActivity.startCommonWeb(view.getContext(), "", getViewModel().link);
     }
 }

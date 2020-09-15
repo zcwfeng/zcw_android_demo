@@ -1,1 +1,2 @@
+include ':mvp_observer'
 include ':app'

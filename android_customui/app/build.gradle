@@ -66,4 +66,7 @@ dependencies {
     implementation 'com.github.bumptech.glide:glide:4.11.0'
     implementation 'androidx.cardview:cardview:1.0.0'
     api project(':robmoneydemo')
+
+    implementation 'com.badoo.mobile:android-weak-handler:1.1'
+
 }

@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".baseui.view.activity.PhotoViewActivity"></activity>
+        <activity android:name=".baseui.view.activity.ExampleWeakHandlerActivity"></activity>
+        <activity android:name=".baseui.view.activity.PhotoViewActivity" />
         <activity android:name=".baseui.view.activity.ViewPager2Activity" />
         <activity android:name=".baseui.view.activity.SlideCardActivity" />
         <activity android:name=".baseui.view.activity.RecyclerViewCacheActivity" />

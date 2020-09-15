@@ -33,7 +33,8 @@ class ControllerFragment : ListFragment() {
                 "RecyclerView 缓存分析",
                 "RecyclerView SlideCard",
                 "ViewPager&ViewPager2",
-                "PhotoView 多点触摸")
+                "PhotoView 多点触摸",
+                "Example WeakHandler Use")
         var arrayAdapter = activity?.let { ArrayAdapter(it, R.layout.simple_list_item_1, array) }
         listAdapter = arrayAdapter
     }
@@ -75,12 +76,16 @@ class ControllerFragment : ListFragment() {
                 val intent = Intent(activity, SlideCardActivity::class.java)
                 startActivity(intent)
             }
-            10 ->{
+            10 -> {
                 val intent = Intent(activity, ViewPager2Activity::class.java)
                 startActivity(intent)
             }
-            11 ->{
+            11 -> {
                 val intent = Intent(activity, PhotoViewActivity::class.java)
+                startActivity(intent)
+            }
+            12 -> {
+                val intent = Intent(activity, ExampleWeakHandlerActivity::class.java)
                 startActivity(intent)
             }
         }

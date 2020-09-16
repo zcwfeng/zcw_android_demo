@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:sharedUserId="android.uid.system"
+    package="com.xiangxue.pkmsdemo">
+    <!--
+        android:sharedUserId="android.uid.system" 当增加此 uid 后
+         需要 下面增加 android.permission.INSTALL_PACKAGES / android.permission.DELETE_PACKAGES
+
+         由于在上面增加了 android:sharedUserId="android.uid.system"
+
+         就需要 厂商的签名，需要厂商提供签名文件，而这个厂商的签名属于厂商的机密【platform.x509.pem platform.pem】，你是拿不到的
+            java -jar signapk.jar platform.x509.pem platform.pem  需要签名的apk   签名之后的apk，才能像MainActivity的那种方式安装
+
+         自我总结：
+                除非是做系统ROM定制的，做这种静默安装，厂商的签名，是非常容易的事情
+                否则 那就是扯淡的.........
+     -->
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.DELETE_PACKAGES" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.xiangxue.pkmsdemo.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

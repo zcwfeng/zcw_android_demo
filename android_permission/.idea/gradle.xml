@@ -15,6 +15,8 @@
             <option value="$PROJECT_DIR$/libannotation" />
             <option value="$PROJECT_DIR$/libcompiler" />
             <option value="$PROJECT_DIR$/libpermissionhelper" />
+            <option value="$PROJECT_DIR$/permission_aop" />
+            <option value="$PROJECT_DIR$/permission_demo" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

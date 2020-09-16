@@ -1,1 +1,3 @@
+include ':permission_aop'
+include ':permission_demo'
 include ':app', ':libannotation', ':libcompiler', ':libpermissionhelper'

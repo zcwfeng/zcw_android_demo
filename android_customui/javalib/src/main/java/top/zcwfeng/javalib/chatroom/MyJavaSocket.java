@@ -1,4 +1,4 @@
-package top.zcwfeng.javalib;
+package top.zcwfeng.javalib.chatroom;
 
 import java.net.InetAddress;
 import java.net.NetworkInterface;

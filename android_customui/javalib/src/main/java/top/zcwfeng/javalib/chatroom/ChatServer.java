@@ -1,4 +1,4 @@
-package top.zcwfeng.javalib;
+package top.zcwfeng.javalib.chatroom;
 
 import java.io.BufferedReader;
 import java.io.IOException;

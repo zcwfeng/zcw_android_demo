@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">matrixdemo</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="circle">圆形</string>
+    <string name="square">正方形</string>
+    <string name="rect">长方形</string>
+    <string name="round_rect">圆角矩形</string>
+    <string name="oval">椭圆形</string>
+    <string name="triangle">三角形</string>
+    <string name="pentagon">五角形</string>
+    <string name="title_activity_bitmap_draw">BitmapDrawActivity</string>
+    <string name="title_activity_canvas">CanvasActivity</string>
+    <string name="title_activity_matrixs">MatrixsActivity</string>
+    <string name="title_activity_canvas_stack">CanvasStackActivity</string>
+    <string name="title_activity_canvas_draw">CanvasDrawActivity</string>
+    <string name="title_activity_canvas_transformation">CanvasTransformationActivity</string>
+    <string name="title_activity_canvas_compose">CanvasComposeActivity</string>
+    <string name="title_activity_common_img_effect">CommonImgEffectActivity</string>
+    <string name="title_activity_text_draw">TextDrawActivity</string>
+    <string name="title_activity_self_drawable">SelfDrawableActivity</string>
+</resources>

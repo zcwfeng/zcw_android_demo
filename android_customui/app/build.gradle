@@ -74,4 +74,6 @@ dependencies {
 
     implementation 'com.badoo.mobile:android-weak-handler:1.1'
 
+    api project(':javalib')
+
 }

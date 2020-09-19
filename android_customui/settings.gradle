@@ -1,3 +1,4 @@
+include ':javalib'
 include ':robmoneydemo'
 include ':app', ':aspectj'
 rootProject.name='android_customui'

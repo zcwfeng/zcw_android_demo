@@ -16,3 +16,11 @@
 androidX
 
 UI 原理性的东西验证。个人用
+
+
+
+# 网络
+
+
+
+$$网络  \begin{cases} Socket聊天室测试 & \text{...}\\ UDP& \text{...} \\ HTTP\text{...}\end{cases}$$

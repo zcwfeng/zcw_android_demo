@@ -34,7 +34,8 @@ class ControllerFragment : ListFragment() {
                 "RecyclerView SlideCard",
                 "ViewPager&ViewPager2",
                 "PhotoView 多点触摸",
-                "Example WeakHandler Use")
+                "Example WeakHandler Use",
+                "Socket Client")
         var arrayAdapter = activity?.let { ArrayAdapter(it, R.layout.simple_list_item_1, array) }
         listAdapter = arrayAdapter
     }
@@ -86,6 +87,10 @@ class ControllerFragment : ListFragment() {
             }
             12 -> {
                 val intent = Intent(activity, ExampleWeakHandlerActivity::class.java)
+                startActivity(intent)
+            }
+            13 -> {
+                val intent = Intent(activity, SocetClientActiityJava::class.java)
                 startActivity(intent)
             }
         }

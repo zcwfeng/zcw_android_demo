@@ -1,6 +1,7 @@
 package top.zcwfeng.fragment;
 
 import android.os.Bundle;
+import android.os.PersistableBundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.widget.TextView;
@@ -38,6 +39,20 @@ public class MainActivity extends AppCompatActivity {
         navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
         initFragments();
+
+
+
+
+    }
+
+    @Override
+    public void onSaveInstanceState(@NonNull Bundle outState, @NonNull PersistableBundle outPersistentState) {
+        super.onSaveInstanceState(outState, outPersistentState);
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
     }
 
     private void initFragments() {
@@ -114,6 +129,24 @@ public class MainActivity extends AppCompatActivity {
 
         Fragment fragment= fragmentArrayList.get(i);
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+
+        // TODO: 2020/9/23 查看测试Fragment androidX 源代码入口
+//        ft.add()
+//        ft.remove();
+//        ft.replace();
+//        ft.hide();
+//        ft.show();
+        // TODO: 2020/9/23 导航相关
+//        ft.setPrimaryNavigationFragment();
+        // TODO: 2020/9/23 加入回退栈
+//        ft.addToBackStack();
+
+//        ft.commit()
+//        ft.commitAllowingStateLoss()
+//        ft.commitNow();
+//        ft.commitNowAllowingStateLoss();
+        // TODO: 2020/9/23 END
+
         if(null != mCurrentFragment) {
             ft.hide(mCurrentFragment);
             if (!fragment.isAdded()){
@@ -138,3 +171,4 @@ public class MainActivity extends AppCompatActivity {
 
     }
 }
+

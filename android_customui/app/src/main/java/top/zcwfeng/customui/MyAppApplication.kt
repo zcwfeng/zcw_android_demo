@@ -13,11 +13,11 @@ class MyAppApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        LeakCanary.config = LeakCanary.config.copy(
-                onHeapAnalyzedListener = LeakUpLoader()
-        )
+//        LeakCanary.config = LeakCanary.config.copy(
+//                onHeapAnalyzedListener = LeakUpLoader()
+//        )
 
-        registerActivityLifecycleCallbacks(MyActivityLifecycleCallback())
+//        registerActivityLifecycleCallbacks(MyActivityLifecycleCallback())
     }
 
     class LeakUpLoader : OnHeapAnalyzedListener {

@@ -61,11 +61,11 @@ suspend fun test3(){
     }
 }
 
-fun main(){
+suspend fun main(){
 //    runBlocking {
 //        test()
 //    }
 //    test1()
-//    test2()
-//    test3()
+//        test2()
+    test3()
 }

@@ -2,8 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="top.zcwfeng.customui">
 
+
     <application
-        android:name=".MyAppApplication"
+        android:name="top.zcwfeng.customui.MyAppApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -38,7 +39,8 @@
         </activity>
 
         <service
-            android:name=".socketdemo.SocketService" android:exported="true" android:enabled="true" />
+            android:name="top.zcwfeng.customui.socketdemo.SocketService"
+            android:process=":remote" />
     </application>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -61,8 +63,10 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <uses-permission android:name="android.permission.PHONE_STATE" />
+
 
 </manifest>

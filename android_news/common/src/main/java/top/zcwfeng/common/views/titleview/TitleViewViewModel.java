@@ -8,6 +8,5 @@ import top.zcwfeng.base.customview.BaseCustomViewModel;
  * 保留所有版权，未经允许请不要分享到互联网和其他人
  */
 public class TitleViewViewModel extends BaseCustomViewModel {
-    public String title;
     public String link;
 }

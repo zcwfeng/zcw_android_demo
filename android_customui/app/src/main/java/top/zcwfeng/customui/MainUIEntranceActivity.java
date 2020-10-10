@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 
 import top.zcwfeng.aspectj.BehaviorTrace;
 import top.zcwfeng.customui.baseui.dispatch.DispatchActivity;
@@ -52,6 +53,25 @@ public class MainUIEntranceActivity extends AppCompatActivity {
                 return false;
             }
         });
+
+
+        FragmentTransaction ft;
+        // TODO: 2020/9/23 查看测试Fragment androidX 源代码入口
+//        ft.add()
+//        ft.remove();
+//        ft.replace();
+//        ft.hide();
+//        ft.show();
+        // TODO: 2020/9/23 导航相关
+//        ft.setPrimaryNavigationFragment();
+        // TODO: 2020/9/23 加入回退栈
+//        ft.addToBackStack();
+
+//        ft.commit()
+        ft.commitAllowingStateLoss()
+//        ft.commitNow();
+//        ft.commitNowAllowingStateLoss();
+        // TODO: 2020/9/23 END
     }
 
     //语音消息

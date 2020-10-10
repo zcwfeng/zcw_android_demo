@@ -11,7 +11,13 @@ include_directories(src/main/cpp/include)
 aux_source_directory(${CMAKE_SOURCE_DIR}/src/main/cpp my_source_path)
 aux_source_directory(${CMAKE_SOURCE_DIR}/src/main/cpp/bzip2 SOURCES)
 
+
+
+
+
 add_library(native-lib SHARED ${my_source_path} ${SOURCES} )
+
+
 
 # Creates and names a library, sets it as either STATIC
 # or SHARED, and provides the relative paths to its source code.
@@ -58,3 +64,12 @@ target_link_libraries( # Specifies the target library.
         # included in the NDK.
         ${log-lib}
         )
+
+# 调试用 set 函数 可以调优设置
+# 开启输出详细的编译和链接信息
+set(CMAKE_VERBOSE_MAKEFILE on)
+message("zcw before")
+
+message(STATUS ${SOURCES})
+
+message(STATUS "zcw after")

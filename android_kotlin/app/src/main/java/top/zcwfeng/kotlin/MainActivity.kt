@@ -6,6 +6,7 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.commit
+import androidx.lifecycle.lifecycleScope
 import top.zcwfeng.kotlin.databinding.ActivityMainBinding
 import top.zcwfeng.kotlin.ui.BlankFragment
 
@@ -85,6 +86,7 @@ class MainActivity : AppCompatActivity() {
 //                "$working\n$line"
 //            }
 //        }
+
     }
 
 

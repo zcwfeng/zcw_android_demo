@@ -1,0 +1,141 @@
+import com.android.annotations.NonNull
+import com.android.build.api.transform.Format
+import com.android.build.api.transform.JarInput
+import com.android.build.api.transform.DirectoryInput
+import com.android.build.api.transform.Transform
+import com.android.build.api.transform.TransformException
+import com.android.build.api.transform.TransformInput
+import com.android.build.api.transform.TransformInvocation
+
+import com.android.build.gradle.internal.pipeline.TransformManager
+import com.android.build.api.transform.QualifiedContent.Scope
+import com.android.build.api.transform.QualifiedContent.ContentType
+import org.apache.commons.codec.digest.DigestUtils
+import java.util.jar.JarFile
+import java.util.jar.JarOutputStream
+import java.util.zip.ZipEntry
+import org.apache.commons.io.IOUtils
+import org.objectweb.asm.*
+import com.android.utils.FileUtils
+
+
+android.registerTransform(new MyTransform())
+
+class MyTransform extends Transform {
+
+    @Override
+    String getName() {
+        return "modifyDialog"
+    }
+
+    @Override
+    Set<ContentType> getInputTypes() {
+        return TransformManager.CONTENT_CLASS
+    }
+
+    @Override
+    Set<? super Scope> getScopes() {
+        return TransformManager.SCOPE_FULL_PROJECT
+    }
+
+    @Override
+    boolean isIncremental() {
+        return false
+    }
+
+    void transform(@NonNull TransformInvocation transformInvocation)
+            throws TransformException, InterruptedException, IOException {
+        super.transform(transformInvocation)
+        transformInvocation.inputs.each {
+            TransformInput input ->
+                input.directoryInputs.each {
+                    DirectoryInput dirInput ->
+                        def dirName = dirInput.name
+                        def md5Name = DigestUtils.md5Hex(dirInput.file.getAbsolutePath())
+                        def dest = transformInvocation.outputProvider.getContentLocation(dirName + md5Name,
+                                dirInput.contentTypes, dirInput.scopes,
+                                Format.DIRECTORY)
+                        println(dest)
+                        FileUtils.cleanOutputDir(dest)
+                        FileUtils.copyDirectory(dirInput.file, dest)
+                }
+                input.jarInputs.each {
+                    JarInput jarInput ->
+                        def jarName = jarInput.name
+                        def md5Name = DigestUtils.md5Hex(jarInput.file.getAbsolutePath())
+                        if (jarName.endsWith(".jar")) {
+                            jarName = jarName.substring(0, jarName.length() - 4)
+                        }
+                        //生成输出路径
+                        def dest = transformInvocation.outputProvider.getContentLocation(jarName + md5Name,
+                                jarInput.contentTypes, jarInput.scopes, Format.JAR)
+                        FileUtils.deleteIfExists(dest)
+                        println(dest)
+                        JarOutputStream jarOutputStream = new JarOutputStream(new FileOutputStream(dest))
+                        def jarFile = new JarFile(jarInput.file)
+                        def entries = jarFile.entries()
+                        while (entries.hasMoreElements()) {
+                            def entry = entries.nextElement()
+                            ZipEntry zipEntry = new ZipEntry(entry.name)
+                            jarOutputStream.putNextEntry(zipEntry)
+                            InputStream inputStream = jarFile.getInputStream(entry)
+                            byte[] sourceClassBytes = IOUtils.toByteArray(inputStream)
+                            if (entry.name == "dji/ux/c/q.class") {
+                                println("修改===========================")
+                                ClassWriter classWriter = new ClassWriter(ClassWriter.COMPUTE_MAXS)
+                                ClassVisitor adapter = new ClassFilterVisitor(classWriter)
+                                ClassReader cr = new ClassReader(sourceClassBytes)
+                                cr.accept(adapter, 0)
+                                byte[] newClassBytes = classWriter.toByteArray()
+                                println(sourceClassBytes.length)
+                                println(newClassBytes.length)
+                                jarOutputStream.write(newClassBytes)
+                            } else {
+                                jarOutputStream.write(sourceClassBytes)
+                            }
+                            jarOutputStream.closeEntry()
+                        }
+
+                        jarFile.close()
+                        jarOutputStream.close()
+                }
+        }
+    }
+}
+
+
+class ClassFilterVisitor extends ClassVisitor {
+
+    ClassFilterVisitor(ClassVisitor cv) {
+        super(Opcodes.ASM5, cv)
+    }
+
+    @Override
+    MethodVisitor visitMethod(int access, String name,
+                              String desc, String signature, String[] exceptions) {
+        MethodVisitor mv = super.visitMethod(access, name, desc, signature, exceptions)
+        if ("(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ldji/ux/internal/SlidingDialog\$OnEventListener;)Ldji/ux/internal/SlidingDialog;" == desc
+                && name == "a") {
+            ClearMethodAdapter clear = new ClearMethodAdapter(mv)
+            return clear
+        }
+        return mv
+    }
+
+}
+
+class ClearMethodAdapter extends MethodVisitor {
+
+
+    ClearMethodAdapter(MethodVisitor mv) {
+        super(Opcodes.ASM5, mv)
+    }
+
+    @Override
+    void visitMethodInsn(int opcode, String owner, String name, String desc, boolean itf) {
+        if("show" != name){
+            mv.visitMethodInsn(opcode, owner, name, desc, itf)
+        }
+    }
+
+}

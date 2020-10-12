@@ -1,0 +1,8 @@
+# ninja log v5
+6	531	1602391063	CMakeFiles/native-lib.dir/src/main/cpp/ThreadLock.cpp.o	1b0ef934ddba05a1
+0	533	1602391063	CMakeFiles/native-lib.dir/src/main/cpp/InterProcessLock.cpp.o	c94010ebcc6b8976
+3	1323	1602391064	CMakeFiles/native-lib.dir/src/main/cpp/MmapedFile.cpp.o	936c85866ae0f5fc
+7	1551	1602391064	CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o	aab7253ae415f706
+4	1576	1602391064	CMakeFiles/native-lib.dir/src/main/cpp/ProtoBuf.cpp.o	f80d410975440902
+1	2414	1602391065	CMakeFiles/native-lib.dir/src/main/cpp/MMKV.cpp.o	91f3e4ce7ca4ce0b
+2414	2598	1602391065	../../../../build/intermediates/cmake/debug/obj/x86/libnative-lib.so	32116f1459b4a06a

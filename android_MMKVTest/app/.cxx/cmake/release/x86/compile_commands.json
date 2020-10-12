@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/Users/zcw/dev/workspace_android/temp/zcw_android_demo/android_MMKVTest/app/.cxx/cmake/release/x86",
+  "command": "/Users/zcw/Android/android_SDK/sdk/ndk/17.2.4988734/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=i686-none-linux-android --gcc-toolchain=/Users/zcw/Android/android_SDK/sdk/ndk/17.2.4988734/toolchains/x86-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/zcw/Android/android_SDK/sdk/ndk/17.2.4988734/sysroot  -Dnative_lib_EXPORTS -isystem /Users/zcw/Android/android_SDK/sdk/ndk/17.2.4988734/sources/cxx-stl/llvm-libc++/include -isystem /Users/zcw/Android/android_SDK/sdk/ndk/17.2.4988734/sources/android/support/include -isystem /Users/zcw/Android/android_SDK/sdk/ndk/17.2.4988734/sources/cxx-stl/llvm-libc++abi/include  -isystem /Users/zcw/Android/android_SDK/sdk/ndk/17.2.4988734/sysroot/usr/include/i686-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11 -std=c++11 -O2 -DNDEBUG  -fPIC   -o CMakeFiles/native-lib.dir/src/main/cpp/native-lib.cpp.o -c /Users/zcw/dev/workspace_android/temp/zcw_android_demo/android_MMKVTest/app/src/main/cpp/native-lib.cpp",
+  "file": "/Users/zcw/dev/workspace_android/temp/zcw_android_demo/android_MMKVTest/app/src/main/cpp/native-lib.cpp"
+}
+]

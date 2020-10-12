@@ -20,7 +20,9 @@ int m_fd;
 extern "C"
 JNIEXPORT void JNICALL
 Java_top_zcwfeng_jni_MainActivity_writeTest(JNIEnv *env, jobject thiz) {
-    std::string file = "/sdcard/a.txt";
+//    std::string file = "/sdcard/a.txt";
+//  为了区分，以免和别的名字冲突a.txt
+    std::string file = "/sdcard/android_jni.txt";
 
 //打开文件
     m_fd = open(file.c_str(), O_RDWR | O_CREAT, S_IRWXU);

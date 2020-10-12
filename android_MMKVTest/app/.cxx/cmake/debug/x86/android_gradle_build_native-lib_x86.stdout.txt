@@ -1,0 +1,2 @@
+ninja: Entering directory `/Users/zcw/dev/workspace_android/temp/zcw_android_demo/android_MMKVTest/app/.cxx/cmake/debug/x86'
+ninja: no work to do.

@@ -1,0 +1,220 @@
+{
+  "abi": "X86",
+  "abiPlatformVersion": 21,
+  "buildSettings": {
+    "environmentVariables": []
+  },
+  "cmake": {
+    "cmakeArtifactsBaseFolder": "/Users/zcw/dev/workspace_android/temp/zcw_android_demo/android_MMKVTest/app/.cxx/cmake/debug/x86",
+    "cmakeServerLogFile": "/Users/zcw/dev/workspace_android/temp/zcw_android_demo/android_MMKVTest/app/.cxx/cmake/debug/x86/cmake_server_log.txt",
+    "cmakeWrappingBaseFolder": "/Users/zcw/dev/workspace_android/temp/zcw_android_demo/android_MMKVTest/app/.cxx/cxx/debug/x86",
+    "effectiveConfiguration": {
+      "name": "traditional-android-studio-cmake-environment",
+      "description": "Composite reified CMakeSettings configuration",
+      "generator": "Ninja",
+      "inheritEnvironments": [
+        "ndk"
+      ],
+      "buildRoot": "/Users/zcw/dev/workspace_android/temp/zcw_android_demo/android_MMKVTest/app/.cxx/cmake/debug/x86",
+      "cmakeToolchain": "/Users/zcw/Android/android_SDK/sdk/ndk/17.2.4988734/build/cmake/android.toolchain.cmake",
+      "cmakeExecutable": "/Users/zcw/Android/android_SDK/sdk/cmake/3.10.2.4988404/bin/cmake",
+      "variables": [
+        {
+          "name": "CMAKE_CXX_FLAGS",
+          "value": "-std\u003dc++11"
+        },
+        {
+          "name": "CMAKE_FIND_ROOT_PATH",
+          "value": "/Users/zcw/dev/workspace_android/temp/zcw_android_demo/android_MMKVTest/app/.cxx/cmake/debug/prefab/x86/prefab"
+        },
+        {
+          "name": "CMAKE_BUILD_TYPE",
+          "value": "Debug"
+        },
+        {
+          "name": "CMAKE_TOOLCHAIN_FILE",
+          "value": "/Users/zcw/Android/android_SDK/sdk/ndk/17.2.4988734/build/cmake/android.toolchain.cmake"
+        },
+        {
+          "name": "ANDROID_ABI",
+          "value": "x86"
+        },
+        {
+          "name": "ANDROID_NDK",
+          "value": "/Users/zcw/Android/android_SDK/sdk/ndk/17.2.4988734"
+        },
+        {
+          "name": "ANDROID_PLATFORM",
+          "value": "android-21"
+        },
+        {
+          "name": "CMAKE_ANDROID_ARCH_ABI",
+          "value": "x86"
+        },
+        {
+          "name": "CMAKE_ANDROID_NDK",
+          "value": "/Users/zcw/Android/android_SDK/sdk/ndk/17.2.4988734"
+        },
+        {
+          "name": "CMAKE_EXPORT_COMPILE_COMMANDS",
+          "value": "ON"
+        },
+        {
+          "name": "CMAKE_LIBRARY_OUTPUT_DIRECTORY",
+          "value": "/Users/zcw/dev/workspace_android/temp/zcw_android_demo/android_MMKVTest/app/build/intermediates/cmake/debug/obj/x86"
+        },
+        {
+          "name": "CMAKE_MAKE_PROGRAM",
+          "value": "/Users/zcw/Android/android_SDK/sdk/cmake/3.10.2.4988404/bin/ninja"
+        },
+        {
+          "name": "CMAKE_SYSTEM_NAME",
+          "value": "Android"
+        },
+        {
+          "name": "CMAKE_SYSTEM_VERSION",
+          "value": "21"
+        }
+      ]
+    }
+  },
+  "cxxBuildFolder": "/Users/zcw/dev/workspace_android/temp/zcw_android_demo/android_MMKVTest/app/.cxx/cmake/debug/x86",
+  "info": {
+    "abi": "X86",
+    "bitness": 32,
+    "deprecated": false,
+    "default": true
+  },
+  "originalCxxBuildFolder": "/Users/zcw/dev/workspace_android/temp/zcw_android_demo/android_MMKVTest/app/.cxx/cmake/debug/x86",
+  "variant": {
+    "buildSystemArgumentList": [],
+    "buildTargetSet": [],
+    "implicitBuildTargetSet": [],
+    "cFlagsList": [],
+    "cmakeSettingsConfiguration": "android-gradle-plugin-predetermined-name",
+    "cppFlagsList": [
+      "-std\u003dc++11"
+    ],
+    "isDebuggableEnabled": true,
+    "module": {
+      "buildSystem": "CMAKE",
+      "cmake": {
+        "cmakeExe": "/Users/zcw/Android/android_SDK/sdk/cmake/3.10.2.4988404/bin/cmake",
+        "minimumCmakeVersion": "3.10.2",
+        "ninjaExe": "/Users/zcw/Android/android_SDK/sdk/cmake/3.10.2.4988404/bin/ninja"
+      },
+      "cmakeToolchainFile": "/Users/zcw/Android/android_SDK/sdk/ndk/17.2.4988734/build/cmake/android.toolchain.cmake",
+      "cxxFolder": "/Users/zcw/dev/workspace_android/temp/zcw_android_demo/android_MMKVTest/app/.cxx",
+      "gradleModulePathName": ":app",
+      "intermediatesFolder": "/Users/zcw/dev/workspace_android/temp/zcw_android_demo/android_MMKVTest/app/build/intermediates",
+      "makeFile": "/Users/zcw/dev/workspace_android/temp/zcw_android_demo/android_MMKVTest/app/CMakeLists.txt",
+      "moduleBuildFile": "/Users/zcw/dev/workspace_android/temp/zcw_android_demo/android_MMKVTest/app/build.gradle",
+      "moduleRootFolder": "/Users/zcw/dev/workspace_android/temp/zcw_android_demo/android_MMKVTest/app",
+      "ndkDefaultAbiList": [
+        "ARMEABI_V7A",
+        "ARM64_V8A",
+        "X86",
+        "X86_64"
+      ],
+      "ndkFolder": "/Users/zcw/Android/android_SDK/sdk/ndk/17.2.4988734",
+      "ndkMetaAbiList": [
+        {
+          "abi": "ARMEABI_V7A",
+          "bitness": 32,
+          "deprecated": false,
+          "default": true
+        },
+        {
+          "abi": "ARM64_V8A",
+          "bitness": 64,
+          "deprecated": false,
+          "default": true
+        },
+        {
+          "abi": "X86",
+          "bitness": 32,
+          "deprecated": false,
+          "default": true
+        },
+        {
+          "abi": "X86_64",
+          "bitness": 64,
+          "deprecated": false,
+          "default": true
+        }
+      ],
+      "ndkMetaPlatforms": {
+        "min": 14,
+        "max": 28,
+        "aliases": {
+          "20": 19,
+          "25": 24,
+          "J": 16,
+          "J-MR1": 17,
+          "J-MR2": 18,
+          "K": 19,
+          "L": 21,
+          "L-MR1": 22,
+          "M": 23,
+          "N": 24,
+          "N-MR1": 24,
+          "O": 26,
+          "O-MR1": 27,
+          "P": 28
+        }
+      },
+      "ndkSupportedAbiList": [
+        "ARMEABI_V7A",
+        "ARM64_V8A",
+        "X86",
+        "X86_64"
+      ],
+      "ndkDefaultStl": "LIBCXX_STATIC",
+      "ndkVersion": "17.2.4988734",
+      "project": {
+        "compilerSettingsCacheFolder": "/Users/zcw/dev/workspace_android/temp/zcw_android_demo/android_MMKVTest/.cxx",
+        "cxxFolder": "/Users/zcw/dev/workspace_android/temp/zcw_android_demo/android_MMKVTest/.cxx",
+        "isBuildOnlyTargetAbiEnabled": true,
+        "isCmakeBuildCohabitationEnabled": false,
+        "isNativeCompilerSettingsCacheEnabled": false,
+        "rootBuildGradleFolder": "/Users/zcw/dev/workspace_android/temp/zcw_android_demo/android_MMKVTest",
+        "sdkFolder": "/Users/zcw/Android/android_SDK/sdk",
+        "isPrefabEnabled": false
+      },
+      "splitsAbiFilterSet": [],
+      "stlSharedObjectMap": {
+        "GNUSTL_SHARED": {
+          "ARMEABI_V7A": "/Users/zcw/Android/android_SDK/sdk/ndk/17.2.4988734/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/libgnustl_shared.so",
+          "ARM64_V8A": "/Users/zcw/Android/android_SDK/sdk/ndk/17.2.4988734/sources/cxx-stl/gnu-libstdc++/4.9/libs/arm64-v8a/libgnustl_shared.so",
+          "X86": "/Users/zcw/Android/android_SDK/sdk/ndk/17.2.4988734/sources/cxx-stl/gnu-libstdc++/4.9/libs/x86/libgnustl_shared.so",
+          "X86_64": "/Users/zcw/Android/android_SDK/sdk/ndk/17.2.4988734/sources/cxx-stl/gnu-libstdc++/4.9/libs/x86_64/libgnustl_shared.so"
+        },
+        "GNUSTL_STATIC": {},
+        "LIBCXX_SHARED": {
+          "ARMEABI_V7A": "/Users/zcw/Android/android_SDK/sdk/ndk/17.2.4988734/sources/cxx-stl/llvm-libc++/libs/armeabi-v7a/libc++_shared.so",
+          "ARM64_V8A": "/Users/zcw/Android/android_SDK/sdk/ndk/17.2.4988734/sources/cxx-stl/llvm-libc++/libs/arm64-v8a/libc++_shared.so",
+          "X86": "/Users/zcw/Android/android_SDK/sdk/ndk/17.2.4988734/sources/cxx-stl/llvm-libc++/libs/x86/libc++_shared.so",
+          "X86_64": "/Users/zcw/Android/android_SDK/sdk/ndk/17.2.4988734/sources/cxx-stl/llvm-libc++/libs/x86_64/libc++_shared.so"
+        },
+        "LIBCXX_STATIC": {},
+        "NONE": {},
+        "STLPORT_SHARED": {
+          "ARMEABI_V7A": "/Users/zcw/Android/android_SDK/sdk/ndk/17.2.4988734/sources/cxx-stl/stlport/libs/armeabi-v7a/libstlport_shared.so",
+          "ARM64_V8A": "/Users/zcw/Android/android_SDK/sdk/ndk/17.2.4988734/sources/cxx-stl/stlport/libs/arm64-v8a/libstlport_shared.so",
+          "X86": "/Users/zcw/Android/android_SDK/sdk/ndk/17.2.4988734/sources/cxx-stl/stlport/libs/x86/libstlport_shared.so",
+          "X86_64": "/Users/zcw/Android/android_SDK/sdk/ndk/17.2.4988734/sources/cxx-stl/stlport/libs/x86_64/libstlport_shared.so"
+        },
+        "STLPORT_STATIC": {},
+        "SYSTEM": {}
+      }
+    },
+    "objFolder": "/Users/zcw/dev/workspace_android/temp/zcw_android_demo/android_MMKVTest/app/build/intermediates/cmake/debug/obj",
+    "variantName": "debug",
+    "validAbiList": [
+      "X86"
+    ],
+    "prefabDirectory": "/Users/zcw/dev/workspace_android/temp/zcw_android_demo/android_MMKVTest/app/.cxx/cmake/debug/prefab",
+    "prefabPackageDirectoryList": []
+  },
+  "prefabFolder": "/Users/zcw/dev/workspace_android/temp/zcw_android_demo/android_MMKVTest/app/.cxx/cmake/debug/prefab/x86"
+}

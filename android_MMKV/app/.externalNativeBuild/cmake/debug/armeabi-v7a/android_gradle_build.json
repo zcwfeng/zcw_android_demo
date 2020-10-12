@@ -1,0 +1,65 @@
+{
+  "stringTable": {
+    "0": "/Users/zcw/dev/workspace_android/temp/zcw_android_demo/android_MMKV/app/.externalNativeBuild/cmake/debug/armeabi-v7a",
+    "1": "--target=armv7-none-linux-androideabi --gcc-toolchain=/Users/zcw/Android/android_SDK/sdk/ndk/17.2.4988734/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/zcw/Android/android_SDK/sdk/ndk/17.2.4988734/sysroot -Dnative_lib_EXPORTS -isystem /Users/zcw/Android/android_SDK/sdk/ndk/17.2.4988734/sources/cxx-stl/llvm-libc++/include -isystem /Users/zcw/Android/android_SDK/sdk/ndk/17.2.4988734/sources/android/support/include -isystem /Users/zcw/Android/android_SDK/sdk/ndk/17.2.4988734/sources/cxx-stl/llvm-libc++abi/include -isystem /Users/zcw/Android/android_SDK/sdk/ndk/17.2.4988734/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11 -O0 -fno-limit-debug-info -fPIC"
+  },
+  "buildFiles": [
+    "/Users/zcw/Android/android_SDK/sdk/ndk/17.2.4988734/build/cmake/android.toolchain.cmake",
+    "/Users/zcw/dev/workspace_android/temp/zcw_android_demo/android_MMKV/app/CMakeLists.txt"
+  ],
+  "cleanCommands": [
+    "/Users/zcw/Android/android_SDK/sdk/cmake/3.10.2.4988404/bin/cmake --build /Users/zcw/dev/workspace_android/temp/zcw_android_demo/android_MMKV/app/.externalNativeBuild/cmake/debug/armeabi-v7a --target clean"
+  ],
+  "libraries": {
+    "native-lib-Debug-armeabi-v7a": {
+      "buildCommand": "/Users/zcw/Android/android_SDK/sdk/cmake/3.10.2.4988404/bin/cmake --build /Users/zcw/dev/workspace_android/temp/zcw_android_demo/android_MMKV/app/.externalNativeBuild/cmake/debug/armeabi-v7a --target native-lib",
+      "buildType": "debug",
+      "toolchain": "964342693",
+      "abi": "armeabi-v7a",
+      "artifactName": "native-lib",
+      "files": [
+        {
+          "src": "/Users/zcw/dev/workspace_android/temp/zcw_android_demo/android_MMKV/app/src/main/cpp/InterProcessLock.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/Users/zcw/dev/workspace_android/temp/zcw_android_demo/android_MMKV/app/src/main/cpp/MMKV.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/Users/zcw/dev/workspace_android/temp/zcw_android_demo/android_MMKV/app/src/main/cpp/MmapedFile.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/Users/zcw/dev/workspace_android/temp/zcw_android_demo/android_MMKV/app/src/main/cpp/ProtoBuf.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/Users/zcw/dev/workspace_android/temp/zcw_android_demo/android_MMKV/app/src/main/cpp/ThreadLock.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
+          "src": "/Users/zcw/dev/workspace_android/temp/zcw_android_demo/android_MMKV/app/src/main/cpp/native-lib.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        }
+      ],
+      "headers": [],
+      "output": "/Users/zcw/dev/workspace_android/temp/zcw_android_demo/android_MMKV/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libnative-lib.so"
+    }
+  },
+  "toolchains": {
+    "964342693": {
+      "cppCompilerExecutable": "/Users/zcw/Android/android_SDK/sdk/ndk/17.2.4988734/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++"
+    }
+  },
+  "cFileExtensions": [],
+  "cppFileExtensions": [
+    "cpp"
+  ]
+}

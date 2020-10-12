@@ -1,0 +1,19 @@
+{
+  "buildFiles": [
+    "/Users/zcw/dev/workspace_android/temp/zcw_android_demo/android_MMKVTest/app/CMakeLists.txt",
+    "/Users/zcw/Android/android_SDK/sdk/ndk/17.2.4988734/build/cmake/android.toolchain.cmake"
+  ],
+  "cleanCommands": [
+    "/Users/zcw/Android/android_SDK/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/zcw/dev/workspace_android/temp/zcw_android_demo/android_MMKVTest/app/.cxx/cmake/debug/x86\" clean"
+  ],
+  "buildTargetsCommand": "/Users/zcw/Android/android_SDK/sdk/cmake/3.10.2.4988404/bin/ninja  -C \"/Users/zcw/dev/workspace_android/temp/zcw_android_demo/android_MMKVTest/app/.cxx/cmake/debug/x86\" {LIST_OF_TARGETS_TO_BUILD}",
+  "libraries": {
+    "native-lib-Debug-x86": {
+      "artifactName": "native-lib",
+      "buildCommand": "/Users/zcw/Android/android_SDK/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/zcw/dev/workspace_android/temp/zcw_android_demo/android_MMKVTest/app/.cxx/cmake/debug/x86\" native-lib",
+      "abi": "x86",
+      "output": "/Users/zcw/dev/workspace_android/temp/zcw_android_demo/android_MMKVTest/app/build/intermediates/cmake/debug/obj/x86/libnative-lib.so",
+      "runtimeFiles": []
+    }
+  }
+}

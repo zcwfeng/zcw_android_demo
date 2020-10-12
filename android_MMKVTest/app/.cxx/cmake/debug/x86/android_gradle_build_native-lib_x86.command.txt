@@ -1,0 +1,7 @@
+Executable : /Users/zcw/Android/android_SDK/sdk/cmake/3.10.2.4988404/bin/ninja
+arguments : 
+-C
+/Users/zcw/dev/workspace_android/temp/zcw_android_demo/android_MMKVTest/app/.cxx/cmake/debug/x86
+native-lib
+jvmArgs : 
+

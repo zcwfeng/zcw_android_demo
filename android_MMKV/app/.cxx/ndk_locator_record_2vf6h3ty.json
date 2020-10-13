@@ -1,0 +1,11 @@
+{
+  "ndk": "/Users/zcw/Android/android_SDK/sdk/ndk/17.2.4988734",
+  "revision": {
+    "mMajor": 17,
+    "mMinor": 2,
+    "mMicro": 4988734,
+    "mPreview": 0,
+    "mPrecision": "MICRO",
+    "mPreviewSeparator": " "
+  }
+}

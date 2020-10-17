@@ -59,6 +59,12 @@
                android:layout_height="60dp"
                android:text="View Entrance"
                android:onClick="viewEntrance"/>
+
+           <Button
+               android:layout_width="match_parent"
+               android:layout_height="60dp"
+               android:text="使用Tencent/MMKV"
+               android:onClick="useMMKV"/>
        </LinearLayout>
 
 

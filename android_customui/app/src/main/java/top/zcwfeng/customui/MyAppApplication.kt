@@ -4,6 +4,7 @@ import android.app.Activity
 import android.app.Application
 import android.os.Bundle
 import android.util.Log
+import com.tencent.mmkv.MMKV
 import leakcanary.DefaultOnHeapAnalyzedListener
 import leakcanary.LeakCanary
 import leakcanary.OnHeapAnalyzedListener
@@ -13,6 +14,10 @@ class MyAppApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
+        val rootDir = MMKV.initialize(this);
+
+        Log.e("MMKV","init root $rootDir")
+
 //        LeakCanary.config = LeakCanary.config.copy(
 //                onHeapAnalyzedListener = LeakUpLoader()
 //        )

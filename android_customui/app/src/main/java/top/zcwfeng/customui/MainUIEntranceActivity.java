@@ -13,6 +13,8 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.tencent.mmkv.MMKV;
+
 import top.zcwfeng.aspectj.BehaviorTrace;
 import top.zcwfeng.customui.baseui.dispatch.DispatchActivity;
 import top.zcwfeng.customui.baseui.srl_vp.SRL_VP_main;
@@ -68,7 +70,7 @@ public class MainUIEntranceActivity extends AppCompatActivity {
 //        ft.addToBackStack();
 
 //        ft.commit()
-        ft.commitAllowingStateLoss()
+//        ft.commitAllowingStateLoss()
 //        ft.commitNow();
 //        ft.commitNowAllowingStateLoss();
         // TODO: 2020/9/23 END
@@ -126,6 +128,21 @@ public class MainUIEntranceActivity extends AppCompatActivity {
 
     public void viewEntrance(View view) {
         innerStartActivity(ViewEntranceActivity.class);
+    }
+
+    public void useMMKV(View view) {
+        MMKV kv = MMKV.defaultMMKV();
+
+        kv.encode("bool", true);
+        boolean bValue = kv.decodeBool("bool");
+
+        kv.encode("int", Integer.MIN_VALUE);
+        int iValue = kv.decodeInt("int");
+
+        kv.encode("string", "Hello from mmkv");
+        String str = kv.decodeString("string");
+
+        Log.e("MMKV", "bValue: " + bValue + "iValue: " + iValue + "str: " + str);
     }
 
     public void httpTest(View view) {

@@ -1,8 +1,11 @@
 package top.zcwfeng.mnews.homefragment.headlinenews;
 
+import android.widget.Toast;
+
 import java.util.ArrayList;
 import java.util.List;
 
+import top.zcwfeng.base.BaseApplication;
 import top.zcwfeng.base.activity.IBaseView;
 import top.zcwfeng.base.model.BaseModel;
 import top.zcwfeng.base.viewmodel.MvvmBaseViewModel;
@@ -32,7 +35,7 @@ implements BaseModel.IModelListener<ArrayList<ChannelsModel.Channel>>{
 
     @Override
     public void onLoadFail(BaseModel model, String prompt) {
-
+        Toast.makeText(BaseApplication.sApplication, ""+prompt, Toast.LENGTH_SHORT).show();
     }
 
     public  interface IMainView extends IBaseView{

@@ -76,4 +76,9 @@ dependencies {
 
     api project(':javalib')
 
+
+    //MMKV 使用
+    implementation 'com.tencent:mmkv-static:1.2.2'
+
+
 }

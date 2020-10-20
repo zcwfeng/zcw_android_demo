@@ -5,6 +5,8 @@
 #ifndef ANDROID_GIFLIB_LOG_H
 #define ANDROID_GIFLIB_LOG_H
 #include <android/log.h>
+#define TAG "zcwfeng"
+#define LOG_DEBUG true
 
 #ifdef LOG_DEBUG
 #define LOGI(...) \

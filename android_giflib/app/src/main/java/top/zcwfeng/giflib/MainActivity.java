@@ -3,31 +3,33 @@ package top.zcwfeng.giflib;
 import android.Manifest;
 import android.os.Build;
 import android.os.Bundle;
+import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
 
-import top.zcwfeng.giflib.databinding.ActivityMainBinding;
 import top.zcwfeng.giflib.gif.GifDrawable;
 import top.zcwfeng.giflib.gif.GifFrame;
 
+//import top.zcwfeng.giflib.databinding.ActivityMainBinding;
+
 public class MainActivity extends AppCompatActivity {
 
-    static {
-        System.loadLibrary("native-lib");
-    }
 
-    ActivityMainBinding mainBinding;
 
+//    ActivityMainBinding mainBinding;
+    ImageView imageView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+//        mainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+        setContentView(R.layout.activity_main);
+        imageView = findViewById(R.id.image);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE}, 666);
+            requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                    Manifest.permission.READ_EXTERNAL_STORAGE}, 666);
         }
 
-        GifDrawable gifDrawable=null;
+        GifDrawable gifDrawable;
         try {
 
 //            File file = new File("a.txt");
@@ -36,9 +38,9 @@ public class MainActivity extends AppCompatActivity {
 //            fileInputStream.read(buffer,0,buffer.length);
 
 //            gifDrawable = new GifDrawable(GifFrame.decodeStream(getAssets().open("fire.gif")));
-//            gifDrawable = new GifDrawable(GifFrame.decodeStream(this,"time_1.gif"));
-            gifDrawable = new GifDrawable(GifFrame.decodeStream(null,"/sdcard/timg_2.gif"));
-            mainBinding.image.setImageDrawable(gifDrawable);
+            gifDrawable = new GifDrawable(GifFrame.decodeStream(this,"fire.gif"));
+//            gifDrawable = new GifDrawable(GifFrame.decodeStream(null,"/sdcard/timg_2.gif"));
+            imageView.setImageDrawable(gifDrawable);
             gifDrawable.start();
         } catch (Exception e) {
             e.printStackTrace();
@@ -46,6 +48,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public native String stringFromJNI();
+//    public native String stringFromJNI();
 
 }

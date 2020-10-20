@@ -19,7 +19,7 @@
  */
 
 static int readFunc(GifFileType *fileType, GifByteType *out, int size) {
-    JavaInputStream *stream = (JavaInputStream *) fileType->UserData;
+    JavaInputStream* stream = (JavaInputStream *) fileType->UserData;
     return (int) stream->read(out, size);
 }
 
@@ -31,6 +31,7 @@ static int readFunc1(GifFileType *fileType, GifByteType *out, int size) {
 static long getDelayMs(GraphicsControlBlock &block) {
     return block.DelayTime * 10;
 }
+
 
 GifFrame::GifFrame(JavaInputStream *stream) {
 //    int Error;
@@ -49,7 +50,7 @@ GifFrame::GifFrame(JavaInputStream *stream) {
 }
 
 
-GifFrame::GifFrame(JNIEnv *env, jobject assetManager, char *filename) {
+GifFrame::GifFrame(JNIEnv *env, jobject assetManager, const char *filename) {
 
     LOGI("assetManager: %p", assetManager);
     LOGI("filename: %s", filename);

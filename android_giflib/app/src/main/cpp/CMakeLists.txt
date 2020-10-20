@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.10.2)
-project("giflib")
+#project("giflib")
 
 file(GLOB libgif_src ${CMAKE_SOURCE_DIR}/giflib/*.c)
 
@@ -9,8 +9,8 @@ add_library(
         native-lib
         SHARED
         ${libgif_src}
-        GifFrame.cpp
         JavaInputStream.cpp
+        GifFrame.cpp
         native-lib.cpp)
 
 

@@ -9,14 +9,10 @@
 class JavaInputStream {
 public:
     JavaInputStream(JNIEnv* env,jobject inputStream,jbyteArray byteArray);
-
-    JavaInputStream(JNIEnv *mEnv, const _jobject *mInputStream, const _jbyteArray *mByteArray,
-                    const size_t mByteArrayLength);
-
     size_t read(void* buffer,size_t size);
 
 private:
-    JNIEnv *mEnv;
+    JNIEnv* mEnv;
     const jobject mInputStream;
     const jbyteArray mByteArray;
     const size_t mByteArrayLength;

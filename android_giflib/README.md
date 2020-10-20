@@ -35,5 +35,16 @@ libjnigraphics 库会公开允许访问 Java Bitmap 对象的像素缓冲区的 
 从 API 级别 8 开始提供。
 ```
 
+## 读取Asset
+
+https://developer.android.google.cn/ndk/reference/group/asset
+
+## 打Log
+
+```C++
+
+
+```
+
 ## 解码
 

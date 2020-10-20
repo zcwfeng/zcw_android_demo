@@ -18,13 +18,16 @@ public class GifFrame {
     //C++ 一帧的对象 指针
     long nativeHandle;
 
-    private GifFrame(int width, int height, int frameCount, long nativeHandle) {
+    private GifFrame(long nativeHandle,int width, int height, int frameCount) {
+        this.nativeHandle = nativeHandle;
         this.width = width;
         this.height = height;
         this.frameCount = frameCount;
-        this.nativeHandle = nativeHandle;
     }
-
+    public static GifFrame decodeStream(InputStream stream) {
+        byte[] buffer = new byte[16 * 1024];
+        return nativeDecodeStream(stream, buffer);
+    }
     public int getWidth() {
         return width;
     }
@@ -57,8 +60,5 @@ public class GifFrame {
         return nativeDecodeStreamJNI((context == null) ? null : context.getAssets(), fileName);
     }
 
-    public static GifFrame decodeStream(InputStream stream) {
-        byte[] buffer = new byte[16 * 1024];
-        return nativeDecodeStream(stream, buffer);
-    }
+
 }

@@ -38,13 +38,14 @@ class GifDrawable extends Drawable implements Animatable, Runnable {
     private GifFrame mGifFrame;
 
     public GifDrawable(GifFrame gifFrame) {
-        this.mGifFrame = gifFrame;
+        mGifFrame = gifFrame;
         width = mGifFrame.getWidth();
         height = mGifFrame.getHeight();
         frameCount = mGifFrame.getFrameCount();
         mBitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
         mPaint = new Paint();
         mPaint.setFilterBitmap(true);
+        frameIndex = 0;
         srcRect = new Rect(0, 0, width, height);
         mGifFrame.getFrame(mBitmap, getFrameIndex());
 
@@ -60,6 +61,7 @@ class GifDrawable extends Drawable implements Animatable, Runnable {
     public void start() {
         if (!isRunning()) {
             isRunning = true;
+            scheduleSelf(this,SystemClock.uptimeMillis());
         }
     }
 
@@ -67,6 +69,7 @@ class GifDrawable extends Drawable implements Animatable, Runnable {
     public void stop() {
         if (isRunning()) {
             isRunning = false;
+            unscheduleSelf(this);
 
         }
     }

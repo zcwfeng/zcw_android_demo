@@ -9,7 +9,7 @@
 class GifFrame {
 public:
     GifFrame(JavaInputStream* stream);
-    GifFrame(JNIEnv* env,jobject assetManager,char* filename);
+    GifFrame(JNIEnv* env,jobject assetManager,const char* filename);
     ~GifFrame();
 
     long loadFrame(JNIEnv* env,jobject bitmap,int frameIndex);

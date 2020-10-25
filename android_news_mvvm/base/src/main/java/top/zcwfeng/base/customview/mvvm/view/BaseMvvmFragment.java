@@ -53,7 +53,8 @@ class BaseMvvmFragment<VIEW extends ViewDataBinding, VIEWMODEL extends BaseMvvmV
                     ToastUtil.show("没有更多了");
                     break;
                 case REFRESH_ERROR:
-                    if (((List) viewModel.dataList.getValue()).size() == 0) {
+
+                    if ( viewModel.dataList.getValue() != null &&((List) viewModel.dataList.getValue()).size() == 0) {
                         mLoadService.showCallback(ErrorCallback.class);
                     } else {
                         if (viewModel.errMessage.getValue() != null) {

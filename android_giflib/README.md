@@ -8,7 +8,7 @@ java 端
 
 `GifFrame.java`
 
-```Java
+```
     private native long nativeGetFrame(long nativeHandle, Bitmap bitmap, int frameIndex);
 
     private static native GifFrame nativeDecodeStream(InputStream stream, byte[] buffer);
@@ -40,9 +40,23 @@ libjnigraphics 库会公开允许访问 Java Bitmap 对象的像素缓冲区的 
 https://developer.android.google.cn/ndk/reference/group/asset
 
 ## 打Log
+log.h
 
-```C++
+``` C++
 
+#ifndef ANDROID_GIFLIB_LOG_H
+#define ANDROID_GIFLIB_LOG_H
+#include <android/log.h>
+#define TAG "zcwfeng"
+#define LOG_DEBUG true
+
+#ifdef LOG_DEBUG
+#define LOGI(...) \
+        __android_log_print(ANDROID_LOG_INFO,TAG,__VA_ARGS__)
+#else
+#define LOGI(...)
+#endif
+#endif //ANDROID_GIFLIB_LOG_H
 
 ```
 

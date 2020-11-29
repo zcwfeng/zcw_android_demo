@@ -1,0 +1,6 @@
+include ':source_28_9_0'
+include ':source_26_8_0'
+include ':source23_6_0'
+include ':plugin'
+include ':app'
+rootProject.name = "android_plugin"

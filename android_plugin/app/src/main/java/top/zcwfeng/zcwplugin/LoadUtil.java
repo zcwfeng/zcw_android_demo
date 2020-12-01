@@ -1,9 +1,12 @@
 package top.zcwfeng.zcwplugin;
 
 import android.content.Context;
+import android.content.res.AssetManager;
+import android.content.res.Resources;
 
 import java.lang.reflect.Array;
 import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 
 import dalvik.system.DexClassLoader;
 
@@ -72,4 +75,44 @@ class LoadUtil {
             e.printStackTrace();
         }
     }
+
+    /*
+    源码
+     protected @Nullable AssetManager createAssetManager(@NonNull final ResourcesKey key) {
+        AssetManager assets = new AssetManager();
+
+        // resDir can be null if the 'android' package is creating a new Resources object.
+        // This is fine, since each AssetManager automatically loads the 'android' package
+        // already.
+        if (key.mResDir != null) {
+            if (assets.addAssetPath(key.mResDir) == 0) {
+                Log.e(TAG, "failed to add asset path " + key.mResDir);
+                return null;
+            }
+        }
+     */
+    public static Resources loadResource(Context context){
+        // assets.addAssetPath(key.mResDir) 源码
+        try {
+            AssetManager assetManager = AssetManager.class.newInstance();
+            // 让assetManager 对象加载的资源是插件
+            Method addAssetPathMethod = AssetManager.class.getMethod("addAssetPath", String.class);
+            addAssetPathMethod.invoke(assetManager, apkPath);
+
+            Resources resources = context.getResources();
+            // 加载插件资源Resource
+            return new Resources(assetManager,resources.getDisplayMetrics(),resources.getConfiguration());
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    // TODO: 2020/12/1 热修复
+
+    // so修复 nativeLibraryPathElement
+    // 普通代码 dexElements
+    // 资源修复 参考换肤
+
+
 }

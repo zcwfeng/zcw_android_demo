@@ -134,4 +134,8 @@ ClassLoader----DexPathList---Element----DexFile----BootClassLoader---VMClassLoad
 
 - 宿主启动插件的Activity
 
-- 宿主加载插件资源
+- 宿主加载插件资源(解决的思路)
+
+
+# TODO 10.0 以上的适配
+# TODO DroidPlugin 学习思想

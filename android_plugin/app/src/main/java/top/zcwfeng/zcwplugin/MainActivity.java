@@ -42,10 +42,10 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // TODO: 正常情况我们访问资源方式
-        String appName = getResources().getString(R.string.app_name);
+//        String appName = getResources().getString(R.string.app_name);
 //        InputStream is = getAssets().open("icon.png");
 
-
+        HotFixTest.test();
     }
 
 

@@ -10,6 +10,21 @@ class MyApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+
+        // TODO: 2020/12/2 hot fix test
+        // True test hotfix true plugin
+        if (false) {
+            LoadUtil.loadFix(this);
+
+        } else {
+
+            plugin();
+        }
+
+    }
+
+
+    public void plugin() {
         LoadUtil.load(this);
 
 
@@ -18,6 +33,7 @@ class MyApplication extends Application {
 
         HookUtils.hookAMS();
         HookUtils.hookHandler();
+
     }
 
     // TODO: 2020/12/1 尝试插件资源的加载 方案一

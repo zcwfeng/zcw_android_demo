@@ -45,7 +45,8 @@ public class MainActivity extends AppCompatActivity {
 //        String appName = getResources().getString(R.string.app_name);
 //        InputStream is = getAssets().open("icon.png");
 
-        HotFixTest.test();
+        // TODO: 2020/12/2 HotFix test
+//        HotFixTest.test();
     }
 
 

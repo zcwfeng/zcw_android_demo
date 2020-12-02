@@ -3,6 +3,7 @@ package top.zcwfeng.plugin;
 import android.content.Context;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.ContextThemeWrapper;
 
 import androidx.annotation.Nullable;
@@ -13,7 +14,7 @@ import java.lang.reflect.Field;
 public
 class BaseActivity extends AppCompatActivity {
     // TODO: 2020/12/1 测试方案三
-    protected Context context;
+    protected Context mContext;
 
 //    @Override
 //    public Resources getResources() {
@@ -35,13 +36,15 @@ class BaseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         Resources resources = LoadUtils.getResources(getApplication());
         // TODO: 2020/12/1 方案三 创建context，替换resource
-        context = new ContextThemeWrapper(getBaseContext(),0);
-        Class<? extends Context> clazz = context.getClass();
+        mContext = new ContextThemeWrapper(getBaseContext(),0);
+        Class<? extends Context> clazz = mContext.getClass();
         try {
             Field mResourcesField = clazz.getDeclaredField("mResources");
             mResourcesField.setAccessible(true);
-            mResourcesField.set(context, resources);
+            mResourcesField.set(mContext, resources);
+            Log.e("zcw_plugin","方案三 创建context，替换resource");
         } catch (Exception e) {
+            Log.e("zcw_plugin",e.getMessage());
             e.printStackTrace();
         }
     }

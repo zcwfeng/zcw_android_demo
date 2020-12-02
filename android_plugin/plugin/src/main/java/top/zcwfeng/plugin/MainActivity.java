@@ -15,15 +15,13 @@ public class MainActivity extends BaseActivity {
 
         // TODO: 2020/12/1 启动资源
 //                setContentView(R.layout.activity_main);
-
-
-
         Log.e("zcw_plugin" , "onCreate（），启动插件的Activity");
+
+        View view = LayoutInflater.from(mContext).inflate(R.layout.activity_main, null);
+        setContentView(view);
 
         Log.e("zcw_plugin" , "插件application:" + getApplication());
 
-        View view = LayoutInflater.from(context).inflate(R.layout.activity_main, null);
-        setContentView(view);
 
     }
 }

@@ -28,4 +28,6 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         //利用glViewport()设置Screen space的大小，在onSurfaceChanged中回调
         GLES20.glViewport(0, 0, width, height);
     }
+
+
 }

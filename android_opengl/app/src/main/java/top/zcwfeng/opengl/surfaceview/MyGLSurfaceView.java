@@ -4,7 +4,6 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
-import android.opengl.GLES20;
 import android.opengl.GLSurfaceView;
 import android.util.Log;
 import android.view.Surface;
@@ -105,3 +104,4 @@ public class MyGLSurfaceView extends GLSurfaceView implements SurfaceHolder.Call
         }
     }
 }
+

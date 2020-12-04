@@ -1,11 +1,11 @@
 package top.zcwfeng.opengl;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.opengl.GLSurfaceView;
 import android.os.Bundle;
 
-import top.zcwfeng.opengl.surfaceview.MyGLSurfaceView;
+import androidx.appcompat.app.AppCompatActivity;
+
+import top.zcwfeng.opengl.surfaceview.sample.MyGLSurfaceView;
 
 public class OpenGLSample01Activity extends AppCompatActivity {
 

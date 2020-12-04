@@ -1,4 +1,4 @@
-package top.zcwfeng.opengl.surfaceview;
+package top.zcwfeng.opengl.surfaceview.sample;
 
 import android.opengl.EGLConfig;
 import android.opengl.GLES20;

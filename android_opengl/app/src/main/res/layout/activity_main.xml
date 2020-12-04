@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
-    <TextView
+    android:layout_height="match_parent">
+  <!--  <TextView
         android:gravity="center"
         android:id="@+id/Test"
         android:layout_width="100dp"
@@ -13,16 +12,85 @@
         android:text="Test"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" />-->
 
-    <top.zcwfeng.opengl.surfaceview.CameraView
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <top.zcwfeng.opengl.widget.CameraView
+android:id="@+id/cameraView"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
+  <RadioGroup
+      android:id="@+id/rg_speed"
+      android:layout_width="wrap_content"
+      android:layout_height="35dp"
+      android:layout_above="@+id/btn_record"
+      android:layout_centerHorizontal="true"
+      android:layout_marginBottom="20dp"
+      android:background="@drawable/record_speed_background"
+      android:orientation="horizontal">
+
+    <RadioButton
+        android:id="@+id/btn_extra_slow"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/record_speed_button_background"
+        android:button="@null"
+        android:gravity="center"
+        android:text="极慢"
+        android:textColor="@drawable/record_speed_button_text" />
+
+    <RadioButton
+        android:id="@+id/btn_slow"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/record_speed_button_background"
+        android:button="@null"
+        android:gravity="center"
+        android:text="慢"
+        android:textColor="@drawable/record_speed_button_text" />
+
+    <RadioButton
+        android:id="@+id/btn_normal"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/record_speed_button_background"
+        android:button="@null"
+        android:checked="true"
+        android:gravity="center"
+        android:text="标准"
+        android:textColor="@drawable/record_speed_button_text" />
+
+    <RadioButton
+        android:id="@+id/btn_fast"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/record_speed_button_background"
+        android:button="@null"
+        android:gravity="center"
+        android:text="快"
+        android:textColor="@drawable/record_speed_button_text" />
+
+    <RadioButton
+        android:id="@+id/btn_extra_fast"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/record_speed_button_background"
+        android:button="@null"
+        android:gravity="center"
+        android:text="极快"
+        android:textColor="@drawable/record_speed_button_text" />
+  </RadioGroup>
+
+  <top.zcwfeng.opengl.widget.RecordButton
+      android:id="@+id/btn_record"
+      android:layout_width="80dp"
+      android:layout_height="80dp"
+      android:layout_alignParentBottom="true"
+      android:layout_centerHorizontal="true"
+      android:layout_marginBottom="20dp"
+      android:background="@drawable/record_button_background"
+      android:gravity="center"
+      android:text="按住拍"/>
 
 
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

@@ -1,4 +1,4 @@
-package top.zcwfeng.opengl.surfaceview;
+package top.zcwfeng.opengl.surfaceview.sample;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -8,6 +8,9 @@ import android.opengl.GLSurfaceView;
 import android.util.Log;
 import android.view.Surface;
 import android.view.SurfaceHolder;
+
+import top.zcwfeng.opengl.surfaceview.BaseRenderer;
+
 
 public class MyGLSurfaceView extends GLSurfaceView implements SurfaceHolder.Callback2 {
 

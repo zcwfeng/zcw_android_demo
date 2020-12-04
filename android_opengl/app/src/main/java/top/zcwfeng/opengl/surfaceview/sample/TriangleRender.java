@@ -1,4 +1,4 @@
-package top.zcwfeng.opengl.surfaceview;
+package top.zcwfeng.opengl.surfaceview.sample;
 
 import android.opengl.GLES20;
 import android.opengl.GLSurfaceView;
@@ -10,6 +10,8 @@ import java.nio.FloatBuffer;
 
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
+
+import top.zcwfeng.opengl.surfaceview.BaseRenderer;
 
 public class TriangleRender extends BaseRenderer implements GLSurfaceView.Renderer {
 

@@ -1,15 +1,21 @@
-package top.zcwfeng.opengl.surfaceview;
+package top.zcwfeng.opengl.widget;
 
+import android.content.Context;
 import android.graphics.SurfaceTexture;
+import android.opengl.EGL14;
 import android.opengl.GLSurfaceView;
 
 import androidx.camera.core.Preview;
 import androidx.lifecycle.LifecycleOwner;
 
+import java.io.IOException;
+
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 
+import top.zcwfeng.opengl.filter.CameraFilter;
 import top.zcwfeng.opengl.filter.ScreenFilter;
+import top.zcwfeng.opengl.record.MediaRecorder;
 import top.zcwfeng.opengl.utils.CameraHelper;
 
 // 回调方法在GLThread 里面，是个状态机，只能在重载方法写
@@ -21,6 +27,8 @@ class CameraRender implements GLSurfaceView.Renderer, Preview.OnPreviewOutputUpd
     // 摄像头的图像  用OpenGL ES 画出来
     private SurfaceTexture mCameraTexure;
     private ScreenFilter screenFilter;
+    private CameraFilter cameraFilter;
+    private MediaRecorder mRecorder;
     private int[] textures;
     float[] mtx = new float[16];
 
@@ -37,12 +45,19 @@ class CameraRender implements GLSurfaceView.Renderer, Preview.OnPreviewOutputUpd
         mCameraTexure.attachToGLContext(textures[0]);
         // 当摄像头数据有更新回调 onFrameAvailable
         mCameraTexure.setOnFrameAvailableListener(this);
-        screenFilter = new ScreenFilter(cameraView.getContext());
-
+        Context context = cameraView.getContext();
+        cameraFilter = new CameraFilter(context);
+        screenFilter = new ScreenFilter(context);
+        //录制视频的宽、高
+        mRecorder = new MediaRecorder(cameraView.getContext(), "/sdcard/a.mp4",
+                EGL14.eglGetCurrentContext(),
+                480, 640);
     }
 
     @Override
     public void onSurfaceChanged(GL10 gl, int width, int height) {
+        cameraFilter.setSize(width, height);
+
         screenFilter.setSize(width, height);
 
     }
@@ -54,8 +69,13 @@ class CameraRender implements GLSurfaceView.Renderer, Preview.OnPreviewOutputUpd
 
         mCameraTexure.getTransformMatrix(mtx);
 
-        screenFilter.setTransformMatrix(mtx);
-        screenFilter.onDraw(textures[0]);
+        cameraFilter.setTransformMatrix(mtx);
+
+        int id = cameraFilter.onDraw(textures[0]);// 这个返回的id就是FBO
+        screenFilter.onDraw(id);
+        // TODO: 2020/12/4 录制
+        mRecorder.fireFrame(id,mCameraTexure.getTimestamp());
+
     }
 
     @Override
@@ -67,18 +87,23 @@ class CameraRender implements GLSurfaceView.Renderer, Preview.OnPreviewOutputUpd
     @Override
     public void onUpdated(Preview.PreviewOutput output) {
         mCameraTexure = output.getSurfaceTexture();
-//        if (mCameraV.getSurfaceTexture() != surfaceTexture) {
-//            if (textureView.isAvailable()) {
-//                ViewGroup parent = (ViewGroup) displayer.getParent();
-//                parent.removeView(displayer);
-//                parent.addView(displayer, 0);
-//                parent.requestLayout(); }
-//                //设置布局中TextureView中的纹理画布完成预览
-//            textureView.setSurfaceTexture(mCameraTexure); }
-//        }
+
     }
 
     public void onSurfaceDestroyed() {
+        cameraFilter.release();
+        screenFilter.release();
+    }
 
+    public void startRecord(float speed) {
+        try {
+            mRecorder.start(speed);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void stopRecord() {
+        mRecorder.stop();
     }
 }

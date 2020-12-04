@@ -6,6 +6,9 @@
 opengl 使用
 ![opengl使用](./结构.png)
 
+FBO 
+![FBO 中间层](./FBO.png)
+
 # 知识点
 CameraX 获取图像
 

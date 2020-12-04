@@ -9,7 +9,7 @@ import javax.microedition.khronos.opengles.GL10;
 /**
  * create on 2020-04-17
  */
-class BaseRenderer implements GLSurfaceView.Renderer {
+public class BaseRenderer implements GLSurfaceView.Renderer {
 
     public int loadShader(int type, String shaderCode){
         //根据type创建顶点着色器或者片元着色器

@@ -9,14 +9,21 @@ import androidx.camera.core.Preview;
 import androidx.lifecycle.LifecycleOwner;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 
+import top.zcwfeng.opengl.filter.AbstractFilter;
+import top.zcwfeng.opengl.filter.BigEyeFilter;
 import top.zcwfeng.opengl.filter.CameraFilter;
+import top.zcwfeng.opengl.filter.FilterChain;
+import top.zcwfeng.opengl.filter.FilterContext;
 import top.zcwfeng.opengl.filter.ScreenFilter;
 import top.zcwfeng.opengl.record.MediaRecorder;
 import top.zcwfeng.opengl.utils.CameraHelper;
+import top.zcwfeng.opengl.utils.OpenGLUtils;
 
 // 回调方法在GLThread 里面，是个状态机，只能在重载方法写
 // 大小端排序 ByteBuffer
@@ -26,14 +33,16 @@ class CameraRender implements GLSurfaceView.Renderer, Preview.OnPreviewOutputUpd
     private CameraHelper cameraHelper;
     // 摄像头的图像  用OpenGL ES 画出来
     private SurfaceTexture mCameraTexure;
-    private ScreenFilter screenFilter;
-    private CameraFilter cameraFilter;
     private MediaRecorder mRecorder;
+    private FilterChain filterChain;
+
     private int[] textures;
     float[] mtx = new float[16];
 
     public CameraRender(CameraView cameraView) {
         this.cameraView = cameraView;
+        OpenGLUtils.copyAssets2SdCard(cameraView.getContext(), "lbpcascade_frontalface.xml", "/sdcard/lbpcascade_frontalface.xml");
+        OpenGLUtils.copyAssets2SdCard(cameraView.getContext(), "pd_2_00_pts5.dat", "/sdcard/pd_2_00_pts5.dat");
         LifecycleOwner lifecycleOwner = (LifecycleOwner) cameraView.getContext();
         cameraHelper = new CameraHelper(lifecycleOwner, this);
     }
@@ -46,8 +55,13 @@ class CameraRender implements GLSurfaceView.Renderer, Preview.OnPreviewOutputUpd
         // 当摄像头数据有更新回调 onFrameAvailable
         mCameraTexure.setOnFrameAvailableListener(this);
         Context context = cameraView.getContext();
-        cameraFilter = new CameraFilter(context);
-        screenFilter = new ScreenFilter(context);
+
+        List<AbstractFilter> filters = new ArrayList<>();
+        filters.add(new CameraFilter(context));
+        filters.add(new BigEyeFilter(context));
+        filters.add(new ScreenFilter(context));
+        filterChain = new FilterChain(filters, 0, new FilterContext());
+
         //录制视频的宽、高
         mRecorder = new MediaRecorder(cameraView.getContext(), "/sdcard/a.mp4",
                 EGL14.eglGetCurrentContext(),
@@ -56,9 +70,7 @@ class CameraRender implements GLSurfaceView.Renderer, Preview.OnPreviewOutputUpd
 
     @Override
     public void onSurfaceChanged(GL10 gl, int width, int height) {
-        cameraFilter.setSize(width, height);
-
-        screenFilter.setSize(width, height);
+        filterChain.setSize(width, height);
 
     }
 
@@ -69,10 +81,9 @@ class CameraRender implements GLSurfaceView.Renderer, Preview.OnPreviewOutputUpd
 
         mCameraTexure.getTransformMatrix(mtx);
 
-        cameraFilter.setTransformMatrix(mtx);
-
-        int id = cameraFilter.onDraw(textures[0]);// 这个返回的id就是FBO
-        screenFilter.onDraw(id);
+        filterChain.setTransformMatrix(mtx);
+        filterChain.setFace(cameraHelper.getFace());
+        int id = filterChain.proceed(textures[0]);// 这个返回的id就是FBO
         // TODO: 2020/12/4 录制
         mRecorder.fireFrame(id,mCameraTexure.getTimestamp());
 
@@ -91,8 +102,7 @@ class CameraRender implements GLSurfaceView.Renderer, Preview.OnPreviewOutputUpd
     }
 
     public void onSurfaceDestroyed() {
-        cameraFilter.release();
-        screenFilter.release();
+        filterChain.release();
     }
 
     public void startRecord(float speed) {

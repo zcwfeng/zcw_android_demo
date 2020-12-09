@@ -6,7 +6,7 @@ import android.opengl.GLES20;
 import top.zcwfeng.opengl.R;
 
 public
-class CameraFilter extends AbstractFboFilter {
+class CameraFilter extends AbstractFrameFilter {
 
     private float[] mtx;
     private int vMatrix;
@@ -23,13 +23,16 @@ class CameraFilter extends AbstractFboFilter {
     }
 
     @Override
+    public int onDraw(int texture, FilterChain filterChain) {
+        mtx = filterChain.filterContext.cameraMtx;
+        return super.onDraw(texture, filterChain);
+    }
+
+    @Override
     public void initGL(Context context, int vertexShaderId, int fragmentShaderId) {
         super.initGL(context, vertexShaderId, fragmentShaderId);
         vMatrix = GLES20.glGetUniformLocation(program, "vMatrix");
 
     }
 
-    public void setTransformMatrix(float[] mtx) {
-        this.mtx = mtx;
-    }
 }

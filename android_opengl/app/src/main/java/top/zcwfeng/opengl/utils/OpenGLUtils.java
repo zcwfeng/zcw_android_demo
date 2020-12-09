@@ -2,6 +2,7 @@ package top.zcwfeng.opengl.utils;
 
 import android.content.Context;
 import android.opengl.GLES20;
+import android.util.Log;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -119,6 +120,7 @@ public class OpenGLUtils {
         int[] status = new int[1];
         GLES20.glGetShaderiv(vShader, GLES20.GL_COMPILE_STATUS, status, 0);
         if (status[0] != GLES20.GL_TRUE) {
+            Log.e("zcw_opengl", "vSource--->" + vSource);
             //失败
             throw new IllegalStateException("load vertex shader:" + GLES20.glGetShaderInfoLog
                     (vShader));
@@ -137,9 +139,11 @@ public class OpenGLUtils {
         //查看配置 是否成功
         GLES20.glGetShaderiv(fShader, GLES20.GL_COMPILE_STATUS, status, 0);
         if (status[0] != GLES20.GL_TRUE) {
+            Log.e("zcw_opengl", "fSource--->" + fSource);
+
             //失败
             throw new IllegalStateException("load fragment shader:" + GLES20.glGetShaderInfoLog
-                    (vShader));
+                    (fShader));
         }
 
         /**

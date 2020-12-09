@@ -1,0 +1,20 @@
+apply plugin: 'groovy'
+
+repositories {
+    google()
+    jcenter()
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'com.android.tools.build:gradle:3.3.2'
+}
+
+sourceCompatibility = "8"
+targetCompatibility = "8"
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}

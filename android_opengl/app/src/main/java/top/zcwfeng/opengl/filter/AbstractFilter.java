@@ -12,8 +12,7 @@ import top.zcwfeng.opengl.utils.OpenGLUtils;
 public class AbstractFilter {
     FloatBuffer vertexBuffer; //顶点坐标缓存区
     FloatBuffer textureBuffer; // 纹理坐标
-    int mWidth;
-    int mHeight;
+
     int vPosition;
     int vCoord;
     int vTexture;
@@ -48,14 +47,13 @@ public class AbstractFilter {
         textureBuffer.clear();
         textureBuffer.put(OpenGLUtils.TEXURE);
     }
-    public void setSize(int width, int height) {
-        mWidth = width;
-        mHeight = height;
-    }
 
-    public int onDraw(int texture) {
+
+    public int onDraw(int texture, FilterChain filterChain) {
+        FilterContext filterContext = filterChain.filterContext;
+
         //设置绘制区域
-        GLES20.glViewport(0, 0, mWidth, mHeight);
+        GLES20.glViewport(0, 0, filterContext.width, filterContext.height);
 
 
         GLES20.glUseProgram(program);

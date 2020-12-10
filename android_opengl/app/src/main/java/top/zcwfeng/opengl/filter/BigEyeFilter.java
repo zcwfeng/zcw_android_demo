@@ -41,14 +41,22 @@ public class BigEyeFilter extends AbstractFrameFilter {
     }
 
     @Override
-    public void beforeDraw() {
-        super.beforeDraw();
+    public void beforeDraw(FilterContext filterContext) {
+        super.beforeDraw(filterContext);
+        Face face = filterContext.face;
 
         if (face == null) {
 //            Log.e("zcw_opengl","未识别到人脸");
+            left.clear();
+            left.put(0).put(0).position(0);
+            GLES20.glUniform2fv(left_eye, 1, left);
+
+            right.clear();
+            right.put(0).put(0).position(0);
+            GLES20.glUniform2fv(right_eye, 1, right);
             return;
         }
-        Log.e("zcw_opengl","是一个-------人脸");
+        Log.e("zcw_opengl","BigEyeFilter 是一个-------人脸");
 
         float x = face.left_x / face.imgWidth;
         float y = 1.0f - face.left_y / face.imgHeight;

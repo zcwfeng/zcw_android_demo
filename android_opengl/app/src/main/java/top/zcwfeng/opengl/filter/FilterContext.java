@@ -10,6 +10,12 @@ public class FilterContext {
 
     public int width;
     public int height;
+    public float beautyLevel;
+
+    public void setBeautyLevel(float beautyLevel) {
+        this.beautyLevel = beautyLevel;
+    }
+
 
     public void setSize(int width, int height) {
         this.width = width;

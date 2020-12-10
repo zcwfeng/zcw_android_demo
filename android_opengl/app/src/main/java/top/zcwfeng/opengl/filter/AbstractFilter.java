@@ -10,29 +10,30 @@ import java.nio.FloatBuffer;
 import top.zcwfeng.opengl.utils.OpenGLUtils;
 
 public class AbstractFilter {
-    FloatBuffer vertexBuffer; //顶点坐标缓存区
-    FloatBuffer textureBuffer; // 纹理坐标
+    protected FloatBuffer vertexBuffer; //顶点坐标缓存区
+    protected FloatBuffer textureBuffer; // 纹理坐标
+    protected int vPosition;
+    protected int vCoord;
+    protected int vTexture;
+    protected int program = -1;
 
-    int vPosition;
-    int vCoord;
-    int vTexture;
-    int vMatrix;
-    int program;
+    public AbstractFilter(Context context, int vertexShaderId, int fragmentShaderId) {
+        if (vertexShaderId != -1 && fragmentShaderId != -1) {
+            vertexBuffer = ByteBuffer.allocateDirect(4 * 4 * 2).order(ByteOrder.nativeOrder())
+                    .asFloatBuffer();
+            textureBuffer = ByteBuffer.allocateDirect(4 * 4 * 2).order(ByteOrder.nativeOrder())
+                    .asFloatBuffer();
 
-    public AbstractFilter(Context context,int vertexShaderId, int fragmentShaderId) {
-        vertexBuffer = ByteBuffer.allocateDirect(4 * 4 * 2).order(ByteOrder.nativeOrder())
-                .asFloatBuffer();
-        textureBuffer = ByteBuffer.allocateDirect(4 * 4 * 2).order(ByteOrder.nativeOrder())
-                .asFloatBuffer();
+            initCoord();
+            initGL(context, vertexShaderId, fragmentShaderId);
+        }
 
-        initCoord();
-        initGL(context,vertexShaderId,fragmentShaderId);
     }
 
-    public void initGL(Context context,int vertexShaderId, int fragmentShaderId) {
+    public void initGL(Context context, int vertexShaderId, int fragmentShaderId) {
 
-        String vertexSharder = OpenGLUtils.readRawTextFile(context,vertexShaderId);
-        String fragSharder = OpenGLUtils.readRawTextFile(context,fragmentShaderId);
+        String vertexSharder = OpenGLUtils.readRawTextFile(context, vertexShaderId);
+        String fragSharder = OpenGLUtils.readRawTextFile(context, fragmentShaderId);
         //着色器程序准备好
         program = OpenGLUtils.loadProgram(vertexSharder, fragSharder);
         //获取程序中的变量 索引
@@ -74,30 +75,31 @@ public class AbstractFilter {
 
         //相当于激活一个用来显示图片的画框
         GLES20.glActiveTexture(GLES20.GL_TEXTURE0);
-        GLES20.glBindTexture(GLES20.GL_TEXTURE_2D,texture);
+        GLES20.glBindTexture(GLES20.GL_TEXTURE_2D, texture);
         // 0: 图层ID  GL_TEXTURE0
         // GL_TEXTURE1 ， 1
-        GLES20.glUniform1i(vTexture,0);
+        GLES20.glUniform1i(vTexture, 0);
 
-        // TODO: 2020/12/4 befroeDraw
-        beforeDraw();
-
-
-
+        beforeDraw(filterChain.filterContext);
         //通知画画，
-        GLES20.glDrawArrays(GLES20.GL_TRIANGLE_STRIP,0,4);
+        GLES20.glDrawArrays(GLES20.GL_TRIANGLE_STRIP, 0, 4);
+        afterDraw(filterContext);
 
-        GLES20.glBindTexture(GLES20.GL_TEXTURE_2D,0);
+        GLES20.glBindTexture(GLES20.GL_TEXTURE_2D, 0);
+
 
         return texture;
 
     }
 
 
-    public void beforeDraw() {
+    public void beforeDraw(FilterContext filterContext) {
     }
 
-    public void release(){
+    public void afterDraw(FilterContext filterContext) {
+    }
+
+    public void release() {
         GLES20.glDeleteProgram(program);
     }
 

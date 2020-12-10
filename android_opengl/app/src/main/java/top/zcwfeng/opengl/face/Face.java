@@ -1,5 +1,8 @@
 package top.zcwfeng.opengl.face;
 
+/**
+ * 所有的xy坐标都是我们送去定位的图片，的宽高（480x640我们这里）
+ */
 public class Face {
 
     public int width;
@@ -14,7 +17,15 @@ public class Face {
     public float right_y;
 
 
-    public Face(int width, int height,int imgWidth,int imgHeight, int x, int y, float left_x, float left_y, float right_x, float right_y) {
+    public float nose_x;
+    public float nose_y;
+    public float mouseLeft_x;
+    public float mouseLeft_y;
+    public float mouseRight_x;
+    public float mouseRight_y;
+
+
+    public Face(int width, int height, int imgWidth, int imgHeight, int x, int y, float left_x, float left_y, float right_x, float right_y) {
         this.width = width;
         this.height = height;
         this.imgWidth = imgWidth;

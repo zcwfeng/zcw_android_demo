@@ -21,6 +21,8 @@ import top.zcwfeng.opengl.filter.CameraFilter;
 import top.zcwfeng.opengl.filter.FilterChain;
 import top.zcwfeng.opengl.filter.FilterContext;
 import top.zcwfeng.opengl.filter.ScreenFilter;
+import top.zcwfeng.opengl.filter.StickFilter;
+import top.zcwfeng.opengl.filter.beauty.BeautyFilter;
 import top.zcwfeng.opengl.record.MediaRecorder;
 import top.zcwfeng.opengl.utils.CameraHelper;
 import top.zcwfeng.opengl.utils.OpenGLUtils;
@@ -59,7 +61,10 @@ class CameraRender implements GLSurfaceView.Renderer, Preview.OnPreviewOutputUpd
         List<AbstractFilter> filters = new ArrayList<>();
         filters.add(new CameraFilter(context));
         filters.add(new BigEyeFilter(context));
+        filters.add(new StickFilter(context));
+        filters.add(new BeautyFilter(context));
         filters.add(new ScreenFilter(context));
+
         filterChain = new FilterChain(filters, 0, new FilterContext());
 
         //录制视频的宽、高
@@ -76,7 +81,7 @@ class CameraRender implements GLSurfaceView.Renderer, Preview.OnPreviewOutputUpd
 
     @Override
     public void onDrawFrame(GL10 gl) {
-        //todo 更新纹理
+        // 更新纹理
         mCameraTexure.updateTexImage();
 
         mCameraTexure.getTransformMatrix(mtx);
@@ -84,7 +89,7 @@ class CameraRender implements GLSurfaceView.Renderer, Preview.OnPreviewOutputUpd
         filterChain.setTransformMatrix(mtx);
         filterChain.setFace(cameraHelper.getFace());
         int id = filterChain.proceed(textures[0]);// 这个返回的id就是FBO
-        // TODO: 2020/12/4 录制
+        //  录制
         mRecorder.fireFrame(id,mCameraTexure.getTimestamp());
 
     }
@@ -115,5 +120,9 @@ class CameraRender implements GLSurfaceView.Renderer, Preview.OnPreviewOutputUpd
 
     public void stopRecord() {
         mRecorder.stop();
+    }
+
+    public void setBeautyLevel(float level) {
+        filterChain.filterContext.setBeautyLevel(level);
     }
 }

@@ -9,7 +9,12 @@ opengl 使用
 FBO 
 ![FBO 中间层](./FBO.png)
 
+
+OpengL 世界坐标和相对坐标
+0~1 之间
 # 知识点
+
+
 CameraX 获取图像
 
 GLSL 语法

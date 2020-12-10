@@ -2,6 +2,7 @@ package top.zcwfeng.opengl;
 
 import android.os.Bundle;
 import android.widget.RadioGroup;
+import android.widget.SeekBar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -24,7 +25,26 @@ public class MainActivity extends AppCompatActivity implements
         //速度
         RadioGroup rgSpeed = findViewById(R.id.rg_speed);
         rgSpeed.setOnCheckedChangeListener(this);
+        SeekBar sb = findViewById(R.id.sb);
+        sb.setMax(100);
+        sb.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                if (fromUser){
+                    cameraView.setBeauty(progress*1.0f/seekBar.getMax());
+                }
+            }
 
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
 
     }
 

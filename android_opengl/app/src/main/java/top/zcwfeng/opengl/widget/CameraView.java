@@ -34,6 +34,11 @@ class CameraView extends GLSurfaceView {
 
     }
 
+    public void setBeauty(float level) {
+        renderer.setBeautyLevel(level);
+    }
+
+
     @Override
     public void surfaceDestroyed(SurfaceHolder holder) {
         super.surfaceDestroyed(holder);

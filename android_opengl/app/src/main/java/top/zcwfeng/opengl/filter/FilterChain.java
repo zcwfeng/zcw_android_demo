@@ -9,6 +9,7 @@ public class FilterChain {
     public FilterContext filterContext;
     private List<AbstractFilter> filters;
     private int index;
+    private boolean pause = false;
 
     public FilterChain(List<AbstractFilter> filters, int index, FilterContext filterContext) {
         this.filters = filters;
@@ -19,6 +20,10 @@ public class FilterChain {
 
     public int proceed(int textureId) {
         if (index >= filters.size()) {
+            return textureId;
+        }
+
+        if (pause) {
             return textureId;
         }
 
@@ -37,6 +42,10 @@ public class FilterChain {
 
     public void setFace(Face face) {
         filterContext.setFace(face);
+    }
+
+    public void setPause(boolean pause) {
+        this.pause = pause;
     }
 
     public void release() {

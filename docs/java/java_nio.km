@@ -1,0 +1,455 @@
+{
+    "root": {
+        "data": {
+            "id": "c7orwpko7g00",
+            "created": 1607569727437,
+            "text": "JAVA_NIO",
+            "note": "[参考链接](https://blog.csdn.net/u013256816/article/details/51457215)"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "c7orwxkylco0",
+                    "created": 1607569744869,
+                    "text": "Channel",
+                    "expandState": "collapse"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "c7orxi495q00",
+                            "created": 1607569789571,
+                            "text": "FileChannel"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c7osf1weqd40",
+                                    "created": 1607571164824,
+                                    "text": "RandomAccessFile"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c7osbhuh9r40",
+                                    "created": 1607570886079,
+                                    "text": "fileChannel.read(buffer)",
+                                    "priority": 1
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c7osbqhfz080",
+                                    "created": 1607570904881,
+                                    "text": "buffer.flip()"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c7osd4ivez40",
+                                    "created": 1607571013807,
+                                    "text": "buffer.hasRemaining()"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c7osc9yijfc0",
+                                    "created": 1607570947273,
+                                    "text": "buffer.get()"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c7oscqr471c0",
+                                    "created": 1607570983831,
+                                    "text": "buffer.compac()"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c7osddagn1c0",
+                                    "created": 1607571032890,
+                                    "text": "fileChannel.read(buffer)",
+                                    "priority": 1
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "c7orxqmt6680",
+                            "created": 1607569808108,
+                            "text": "DatagramChannel"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c7orxuri3co0",
+                            "created": 1607569817099,
+                            "text": "SocketChannel",
+                            "note": "NIO的强大功能部分来自于Channel的非阻塞特性\n\n套接字的某些操作可能会无限期地阻塞。例如，对accept()方法的调用可能会因为等待一个客户端连接而阻塞；对read()方法的调用可能会因为没有数据可读而阻塞，直到连接的另一端传来新的数据。总的来说，创建/接收连接或读写数据等I/O调用，都可能无限期地阻塞等待，直到底层的网络实现发生了什么。慢速的，有损耗的网络，或仅仅是简单的网络故障都可能导致任意时间的延迟。然而不幸的是，在调用一个方法之前无法知道其是否阻塞。`NIO的channel抽象的一个重要特征就是可以通过配置它的阻塞行为，以实现非阻塞式的信道。`\n\n```\nchannel.configureBlocking(false)\n```"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c7osuj8s2p40",
+                                    "created": 1607572378039,
+                                    "text": "使用步骤",
+                                    "expandState": "expand"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "c7osupskxqo0",
+                                            "created": 1607572392298,
+                                            "text": "打开SocketChannel",
+                                            "note": "```\nsocketChannel = SocketChannel.open();\n            socketChannel.connect(new InetSocketAddress(\"10.10.195.115\",8080));\n\n```"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "c7oswfwu0i00",
+                                            "created": 1607572527515,
+                                            "text": "读取数据"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "c7oswd9apk00",
+                                            "created": 1607572521738,
+                                            "text": "关闭"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "c7orxxp3paw0",
+                            "created": 1607569823484,
+                            "text": "ServerSocketChannel"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "c7os00oaxq80",
+                    "created": 1607569986694,
+                    "text": "Selector（处理多了Channel）",
+                    "expandState": "collapse"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "c7osxzu3lhs0",
+                            "created": 1607572649249,
+                            "text": "SelectionKey的Register返回属性"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c7osye8aom80",
+                                    "created": 1607572680583,
+                                    "text": " interest集合"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c7osyq2psrc0",
+                                    "created": 1607572706367,
+                                    "text": "ready集合"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c7osyuxaqu80",
+                                    "created": 1607572716923,
+                                    "text": "Channel"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c7oszg3s5wg0",
+                                    "created": 1607572763028,
+                                    "text": "Selector"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c7oszhojw3k0",
+                                    "created": 1607572766460,
+                                    "text": "附加的对象（可选）"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "c7orx3izvhc0",
+                    "created": 1607569757811,
+                    "text": "Buffer",
+                    "expandState": "collapse"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "c7orz17v4mo0",
+                            "created": 1607569909513,
+                            "text": "基本类型",
+                            "expandState": "collapse"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c7os070u0q80",
+                                    "created": 1607570000512,
+                                    "text": "ByteBuffer"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c7os0b46d6g0",
+                                    "created": 1607570009422,
+                                    "text": "CharBuffer"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c7os0e0w9sw0",
+                                    "created": 1607570015754,
+                                    "text": "DoubleBuffer"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c7os0gp8ztc0",
+                                    "created": 1607570021580,
+                                    "text": "FloatBuffer"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c7os0j9x9140",
+                                    "created": 1607570027184,
+                                    "text": "IntBuffer"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c7os0mzzjtc0",
+                                    "created": 1607570035290,
+                                    "text": "LongBuffer"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c7os0p1zn6o0",
+                                    "created": 1607570039764,
+                                    "text": "ShortBuffer"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "c7osfrlpc9s0",
+                            "created": 1607571220773,
+                            "text": "其他类型",
+                            "expandState": "collapse"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c7orzq4zao00",
+                                    "created": 1607569963758,
+                                    "text": "DirectByteBuffer"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c7orzmntbl40",
+                                    "created": 1607569956190,
+                                    "text": "HeapByteBuffer"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c7orzg59o7k0",
+                                    "created": 1607569942008,
+                                    "text": "MappedByteBuffer"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "c7ot23zd2s00",
+                                            "created": 1607572971731,
+                                            "text": "读取大文件，内存映射"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "c7ot2ta3viw0",
+                                            "created": 1607573026801,
+                                            "text": "扩充方法"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "c7ot2w3jfrs0",
+                                                    "created": 1607573032934,
+                                                    "text": "force()"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "c7ot2yvuxcw0",
+                                                    "created": 1607573039000,
+                                                    "text": "load()"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "c7ot31d4q200",
+                                                    "created": 1607573044398,
+                                                    "text": "isLoaded()"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "c7osg7231io0",
+                            "created": 1607571254415,
+                            "text": "使用步骤",
+                            "note": "Buffer顾名思义：缓冲区，实际上是一个容器，一个连续数组。Channel提供从文件、网络读取数据的渠道，但是读写的数据都必须经过Buffer\n\n```\nClient--->\n\tBuffer\n    \t-->Channel<-->Channel-->\n        Buffer\n        \t---->Server\n```\n\n可以把Buffer简单地理解为一组基本数据类型的元素列表，它通过几个变量来保存这个数据的当前位置状态：capacity, position, limit, mark：\n\n|索引\t|说明|\n|-|-|\n|capacity|缓冲区数组的总长度|\n|position|\t下一个要操作的数据元素的位置|\n|limit|\t缓冲区数组中不可操作的下一个元素的位置：limit<=capacity|\n|mark|用于记录当前position的前一个位置或者默认是-1|",
+                            "expandState": "collapse"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c7osgchqc080",
+                                    "created": 1607571266245,
+                                    "text": "分配空间allocate(1024）",
+                                    "progress": 5
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c7osguzqtzs0",
+                                    "created": 1607571306516,
+                                    "text": "写入数据fileChannel.read(buf)",
+                                    "progress": 6
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c7osh7pt9u00",
+                                    "created": 1607571334214,
+                                    "text": "调用flip()",
+                                    "progress": 7
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c7oshfqz9280",
+                                    "created": 1607571351698,
+                                    "text": "从buffer读数据get()",
+                                    "progress": 8
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c7oshrkbb340",
+                                    "created": 1607571377417,
+                                    "text": "调用clear()或compact()",
+                                    "progress": 9
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "c7ot539nuzc0",
+                    "created": 1607573205270,
+                    "text": "其他",
+                    "expandState": "collapse"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "c7ot3t0iemw0",
+                            "created": 1607573104585,
+                            "text": "Scatter/Gatter",
+                            "note": "分散（scatter）从Channel中读取是指在读操作时将读取的数据写入多个buffer中。因此，Channel将从Channel中读取的数据“分散（scatter）”到多个Buffer中。\n\n聚集（gather）写入Channel是指在写操作时将多个buffer的数据写入同一个Channel，因此，Channel 将多个Buffer中的数据“聚集（gather）”后发送到Channel。\n\nscatter / gather经常用于需要将传输的数据分开处理的场合，例如传输一个由消息头和消息体组成的消息，你可能会将消息体和消息头分散到不同的buffer中，这样你可以方便的处理消息头和消息体。\n\n```\nimport java.io.File;\nimport java.io.FileNotFoundException;\nimport java.io.FileOutputStream;\nimport java.io.IOException;\nimport java.io.OutputStream;\nimport java.nio.ByteBuffer;\nimport java.nio.channels.Channel;\nimport java.nio.channels.FileChannel;\n\npublic class ScattingAndGather\n{\n    public static void main(String args[]){\n        gather();\n    }\n\n    public static void gather()\n    {\n        ByteBuffer header = ByteBuffer.allocate(10);\n        ByteBuffer body = ByteBuffer.allocate(10);\n\n        byte [] b1 = {'0', '1'};\n        byte [] b2 = {'2', '3'};\n        header.put(b1);\n        body.put(b2);\n\n        ByteBuffer [] buffs = {header, body};\n\n        try\n        {\n            FileOutputStream os = new FileOutputStream(\"src/scattingAndGather.txt\");\n            FileChannel channel = os.getChannel();\n            channel.write(buffs);\n        }\n        catch (IOException e)\n        {\n            e.printStackTrace();\n        }\n    }\n}\n\n```"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c7ot59ug2og0",
+                            "created": 1607573219587,
+                            "text": "transferFrom & transferTo"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "c7ot5nfsydc0",
+                    "created": 1607573249177,
+                    "text": "Piple"
+                },
+                "children": []
+            }
+        ]
+    },
+    "template": "default",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}

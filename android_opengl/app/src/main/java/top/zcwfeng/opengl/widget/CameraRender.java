@@ -21,6 +21,8 @@ import top.zcwfeng.opengl.filter.CameraFilter;
 import top.zcwfeng.opengl.filter.FilterChain;
 import top.zcwfeng.opengl.filter.FilterContext;
 import top.zcwfeng.opengl.filter.ScreenFilter;
+import top.zcwfeng.opengl.filter.SoulFilter;
+import top.zcwfeng.opengl.filter.SpliteFilter;
 import top.zcwfeng.opengl.filter.StickFilter;
 import top.zcwfeng.opengl.filter.beauty.BeautyFilter;
 import top.zcwfeng.opengl.record.MediaRecorder;
@@ -63,6 +65,8 @@ class CameraRender implements GLSurfaceView.Renderer, Preview.OnPreviewOutputUpd
         filters.add(new BigEyeFilter(context));
         filters.add(new StickFilter(context));
         filters.add(new BeautyFilter(context));
+        filters.add(new SoulFilter(context));
+        filters.add(new SpliteFilter(context));
         filters.add(new ScreenFilter(context));
 
         filterChain = new FilterChain(filters, 0, new FilterContext());

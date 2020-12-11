@@ -27,7 +27,14 @@ public class OpenGLUtils {
             0.0f, 1.0f,
             1.0f, 1.0f
     };
+    // 上下颠倒，着色器左下角0，0
+    public static final float[] TEXURE_180 = {
+            0.0f, 1.0f,
+            1.0f, 1.0f,
+            0.0f, 0.0f,
+            1.0f, 0.0f
 
+    };
 
 
     public static void copyAssets2SdCard(Context context, String src, String dst) {

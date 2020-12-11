@@ -1,10 +1,12 @@
 package top.zcwfeng.opengl.utils;
 
+import android.os.Handler;
 import android.os.HandlerThread;
 import android.util.Size;
 
 import androidx.camera.core.CameraX;
 import androidx.camera.core.ImageAnalysis;
+import androidx.camera.core.ImageAnalysisConfig;
 import androidx.camera.core.ImageProxy;
 import androidx.camera.core.Preview;
 import androidx.camera.core.PreviewConfig;
@@ -27,10 +29,11 @@ public class CameraHelper implements ImageAnalysis.Analyzer, LifecycleObserver {
 
     public CameraHelper(LifecycleOwner lifecycleOwner, Preview.OnPreviewOutputUpdateListener listener) {
         this.listener = listener;
+        lifecycleOwner.getLifecycle().addObserver(this);
         handlerThread = new HandlerThread("Analyze-thread");
         handlerThread.start();
         // 绑定声明周期
-        CameraX.bindToLifecycle(lifecycleOwner, getPreView());
+        CameraX.bindToLifecycle(lifecycleOwner, getPreView(),getImageAnalysis());
     }
 
     // 预览配置
@@ -45,8 +48,20 @@ public class CameraHelper implements ImageAnalysis.Analyzer, LifecycleObserver {
         return preview;
     }
 
+    private ImageAnalysis getImageAnalysis() {
+        ImageAnalysisConfig imageAnalysisConfig = new ImageAnalysisConfig.Builder()
+                .setCallbackHandler(new Handler(handlerThread.getLooper()))
+                .setLensFacing(currentFacing).setTargetResolution(new Size(640, 480))
+                .setImageReaderMode(ImageAnalysis.ImageReaderMode.ACQUIRE_LATEST_IMAGE)
+                .build();
+        ImageAnalysis imageAnalysis = new ImageAnalysis(imageAnalysisConfig);
+        imageAnalysis.setAnalyzer(this);
+        return imageAnalysis;
+    }
+
     @OnLifecycleEvent(Lifecycle.Event.ON_DESTROY)
     public void onDestory(LifecycleOwner owner){
+        faceTracker.stop();
         faceTracker.release();
         owner.getLifecycle().removeObserver(this);
     }
@@ -55,6 +70,8 @@ public class CameraHelper implements ImageAnalysis.Analyzer, LifecycleObserver {
     public void onCreate(LifecycleOwner owner) {
         faceTracker = new FaceTracker("/sdcard/lbpcascade_frontalface.xml",
                 "/sdcard/pd_2_00_pts5.dat");
+        faceTracker.start();
+
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_START)

@@ -83,7 +83,7 @@ public class AbstractFilter {
         beforeDraw(filterChain.filterContext);
         //通知画画，
         GLES20.glDrawArrays(GLES20.GL_TRIANGLE_STRIP, 0, 4);
-        afterDraw(filterContext);
+        afterDraw(filterChain.filterContext);
 
         GLES20.glBindTexture(GLES20.GL_TEXTURE_2D, 0);
 
@@ -100,7 +100,9 @@ public class AbstractFilter {
     }
 
     public void release() {
-        GLES20.glDeleteProgram(program);
+        if(program != -1) {
+            GLES20.glDeleteProgram(program);
+        }
     }
 
 }

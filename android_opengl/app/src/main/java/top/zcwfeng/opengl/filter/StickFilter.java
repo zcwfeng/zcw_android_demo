@@ -29,6 +29,9 @@ class StickFilter extends AbstractFrameFilter {
 
     @Override
     public int onDraw(int texture, FilterChain filterChain) {
+        textureBuffer.clear();
+        textureBuffer.put(OpenGLUtils.TEXURE);
+        textureBuffer.position(0);
         // 父类画摄像头图像
         return super.onDraw(texture, filterChain);
 
@@ -58,10 +61,12 @@ class StickFilter extends AbstractFrameFilter {
         // 两嘴角间距离-鼻子贴纸的宽高
         float mrx = face.mouseRight_x / face.imgWidth * filterContext.width;
         float mlx = face.mouseLeft_x / face.imgWidth * filterContext.width;
-        int width = (int) (mrx - mlx);
+        int width = (int) ((mrx - mlx)*0.75f);
+
         // 嘴角的y到鼻子的y之间差，为贴纸高,左下角
         float mry = (1.0f - face.mouseRight_y / face.imgHeight) * filterContext.height;
-        int height = (int) (y - mry);// 左下角坐标，鼻子-嘴巴
+        int height = (int) ((y - mry)*0.75f);// 左下角坐标，鼻子-嘴巴
+
         GLES20.glViewport((int) x - width / 2, (int) y - height / 2, width, height);
 
         // 画画鼻子---抄摄像头的
@@ -70,6 +75,11 @@ class StickFilter extends AbstractFrameFilter {
         vertexBuffer.position(0);
         GLES20.glVertexAttribPointer(vPosition, 2, GLES20.GL_FLOAT, false, 0, vertexBuffer);
         GLES20.glEnableVertexAttribArray(vPosition);
+
+
+
+        textureBuffer.clear();
+        textureBuffer.put(OpenGLUtils.TEXURE_180);
         textureBuffer.position(0);
         GLES20.glVertexAttribPointer(vCoord, 2, GLES20.GL_FLOAT, false, 0, textureBuffer);
         GLES20.glEnableVertexAttribArray(vCoord);

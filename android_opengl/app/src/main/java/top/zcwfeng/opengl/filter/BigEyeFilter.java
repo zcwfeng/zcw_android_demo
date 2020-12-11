@@ -16,7 +16,6 @@ public class BigEyeFilter extends AbstractFrameFilter {
     private FloatBuffer right;
     int left_eye;
     int right_eye;
-    Face face;
 
     public BigEyeFilter(Context context) {
         super(context, R.raw.base_vert, R.raw.bigeye_frag);
@@ -33,12 +32,7 @@ public class BigEyeFilter extends AbstractFrameFilter {
     }
 
 
-    @Override
-    public int onDraw(int texture, FilterChain filterChain) {
-        FilterContext filterContext = filterChain.filterContext;
-        face = filterContext.face;
-        return super.onDraw(texture, filterChain);
-    }
+
 
     @Override
     public void beforeDraw(FilterContext filterContext) {

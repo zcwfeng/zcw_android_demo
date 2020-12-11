@@ -19,7 +19,12 @@ public abstract class AbstractFrameFilter extends AbstractFilter {
 
 
     public void createFrame(int width, int height) {
-        releaseFrame();
+//        releaseFrame();
+
+        if(frameTextures != null) {
+            return;
+        }
+
         //創建FBO
         /**
          * 1、创建FBO + FBO中的纹理

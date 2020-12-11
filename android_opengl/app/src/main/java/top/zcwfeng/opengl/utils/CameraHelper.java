@@ -19,8 +19,8 @@ import top.zcwfeng.opengl.face.FaceTracker;
 public class CameraHelper implements ImageAnalysis.Analyzer, LifecycleObserver {
 
     private HandlerThread handlerThread;
-    private CameraX.LensFacing currentFacing = CameraX.LensFacing.BACK;
-//    private CameraX.LensFacing currentFacing = CameraX.LensFacing.FRONT;
+//    private CameraX.LensFacing currentFacing = CameraX.LensFacing.BACK;
+    private CameraX.LensFacing currentFacing = CameraX.LensFacing.FRONT;
     private Preview.OnPreviewOutputUpdateListener listener;
     private Face face;
     private FaceTracker faceTracker;

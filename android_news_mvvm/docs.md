@@ -55,3 +55,25 @@ Complete
 ```
 
 或者搜索启动ActivityManger: display 展示启动时间
+
+添加闪屏代码 失败
+
+去掉两个布局PageTitleView 和 TitleView 减少LinearLayout层次
+
+viewpager加载改成viewpager2 懒加载
+
+速度提升
+
+```aidl
+➜  zcw_android_demo git:(master) ✗ adb shell am start -S -W top.zcwfeng.arch_demo/.MainActivity
+Stopping: top.zcwfeng.arch_demo
+Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=top.zcwfeng.arch_demo/.MainActivity }
+Status: ok
+Activity: top.zcwfeng.arch_demo/.MainActivity
+ThisTime: 858
+TotalTime: 858
+WaitTime: 867
+Complete
+
+```
+

@@ -24,6 +24,7 @@ public class PictureTitleView extends BaseCustomView<PictureTitleViewBinding,Pic
 
     @Override
     public int getLayoutId() {
+        // TODO: 4 布局优化 PictureView 去掉外层Layout，
         return R.layout.picture_title_view;
     }
 

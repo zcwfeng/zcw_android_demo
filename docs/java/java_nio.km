@@ -12,7 +12,11 @@
                     "id": "c7orwxkylco0",
                     "created": 1607569744869,
                     "text": "Channel",
-                    "expandState": "collapse"
+                    "expandState": "expand",
+                    "layout_mind_offset": {
+                        "x": -108.74999837949906,
+                        "y": 5.684341886080802e-14
+                    }
                 },
                 "children": [
                     {
@@ -86,7 +90,11 @@
                         "data": {
                             "id": "c7orxqmt6680",
                             "created": 1607569808108,
-                            "text": "DatagramChannel"
+                            "text": "DatagramChannel",
+                            "layout_right_offset": {
+                                "x": -6.2499999068677425,
+                                "y": 2.499999962747154
+                            }
                         },
                         "children": []
                     },
@@ -103,7 +111,7 @@
                                     "id": "c7osuj8s2p40",
                                     "created": 1607572378039,
                                     "text": "使用步骤",
-                                    "expandState": "expand"
+                                    "expandState": "collapse"
                                 },
                                 "children": [
                                     {
@@ -150,7 +158,11 @@
                     "id": "c7os00oaxq80",
                     "created": 1607569986694,
                     "text": "Selector（处理多了Channel）",
-                    "expandState": "collapse"
+                    "expandState": "expand",
+                    "layout_mind_offset": {
+                        "x": 142.4999978765843,
+                        "y": -118.74999823048682
+                    }
                 },
                 "children": [
                     {
@@ -209,7 +221,11 @@
                     "id": "c7orx3izvhc0",
                     "created": 1607569757811,
                     "text": "Buffer",
-                    "expandState": "collapse"
+                    "expandState": "expand",
+                    "layout_mind_offset": {
+                        "x": -29.99999955296505,
+                        "y": -224.9999966472393
+                    }
                 },
                 "children": [
                     {
@@ -217,7 +233,7 @@
                             "id": "c7orz17v4mo0",
                             "created": 1607569909513,
                             "text": "基本类型",
-                            "expandState": "collapse"
+                            "expandState": "expand"
                         },
                         "children": [
                             {
@@ -283,7 +299,7 @@
                             "id": "c7osfrlpc9s0",
                             "created": 1607571220773,
                             "text": "其他类型",
-                            "expandState": "collapse"
+                            "expandState": "expand"
                         },
                         "children": [
                             {
@@ -306,7 +322,8 @@
                                 "data": {
                                     "id": "c7orzg59o7k0",
                                     "created": 1607569942008,
-                                    "text": "MappedByteBuffer"
+                                    "text": "MappedByteBuffer",
+                                    "expandState": "collapse"
                                 },
                                 "children": [
                                     {
@@ -360,7 +377,11 @@
                             "created": 1607571254415,
                             "text": "使用步骤",
                             "note": "Buffer顾名思义：缓冲区，实际上是一个容器，一个连续数组。Channel提供从文件、网络读取数据的渠道，但是读写的数据都必须经过Buffer\n\n```\nClient--->\n\tBuffer\n    \t-->Channel<-->Channel-->\n        Buffer\n        \t---->Server\n```\n\n可以把Buffer简单地理解为一组基本数据类型的元素列表，它通过几个变量来保存这个数据的当前位置状态：capacity, position, limit, mark：\n\n|索引\t|说明|\n|-|-|\n|capacity|缓冲区数组的总长度|\n|position|\t下一个要操作的数据元素的位置|\n|limit|\t缓冲区数组中不可操作的下一个元素的位置：limit<=capacity|\n|mark|用于记录当前position的前一个位置或者默认是-1|",
-                            "expandState": "collapse"
+                            "expandState": "collapse",
+                            "layout_right_offset": {
+                                "x": 254.9999962002039,
+                                "y": -199.99999701976753
+                            }
                         },
                         "children": [
                             {
@@ -417,7 +438,11 @@
                     "id": "c7ot539nuzc0",
                     "created": 1607573205270,
                     "text": "其他",
-                    "expandState": "collapse"
+                    "expandState": "expand",
+                    "layout_mind_offset": {
+                        "x": -178.74999733641744,
+                        "y": -36.24999945983279
+                    }
                 },
                 "children": [
                     {
@@ -443,7 +468,11 @@
                 "data": {
                     "id": "c7ot5nfsydc0",
                     "created": 1607573249177,
-                    "text": "Piple"
+                    "text": "Piple",
+                    "layout_mind_offset": {
+                        "x": -176.24999737367034,
+                        "y": -46.24999931082144
+                    }
                 },
                 "children": []
             }

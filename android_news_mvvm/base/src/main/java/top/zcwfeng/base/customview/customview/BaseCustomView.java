@@ -39,8 +39,10 @@ class BaseCustomView<VIEW extends ViewDataBinding,DATA extends BaseCustomViewMod
     }
 
     public void init(){
+        setPadding(16, 16, 16, 16);
         LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        mBinding = DataBindingUtil.inflate(inflater, getLayoutId(),this,false);
+        // TODO: 4 布局优化 PictureView
+        mBinding = DataBindingUtil.inflate(inflater, getLayoutId(),this,true);
         mBinding.getRoot().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -48,7 +50,7 @@ class BaseCustomView<VIEW extends ViewDataBinding,DATA extends BaseCustomViewMod
             }
         });
 
-        addView(mBinding.getRoot());
+//        addView(mBinding.getRoot());
     }
 
     public void setData(DATA data){

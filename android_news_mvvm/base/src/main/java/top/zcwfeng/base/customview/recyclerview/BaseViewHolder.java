@@ -10,7 +10,7 @@ import top.zcwfeng.base.customview.customview.IBaseCustomView;
 
 public
 class BaseViewHolder extends RecyclerView.ViewHolder {
-    private IBaseCustomView view;
+    private final IBaseCustomView view;
     public BaseViewHolder(@NonNull IBaseCustomView itemView) {
         super((View) itemView);
         view = itemView;

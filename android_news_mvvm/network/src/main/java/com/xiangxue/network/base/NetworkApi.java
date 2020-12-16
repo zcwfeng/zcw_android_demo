@@ -24,7 +24,7 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 public abstract class NetworkApi implements IEnvironment {
     private static INetworkRequiredInfo iNetworkRequiredInfo;
-    private static HashMap<String, Retrofit> retrofitHashMap = new HashMap<>();
+    private static final HashMap<String, Retrofit> retrofitHashMap = new HashMap<>();
     private String mBaseUrl;
     private OkHttpClient mOkHttpClient;
     private static boolean mIsFormal = true;

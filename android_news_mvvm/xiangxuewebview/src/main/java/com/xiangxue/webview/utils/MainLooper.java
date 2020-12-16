@@ -5,7 +5,7 @@ import android.os.Looper;
 
 public class MainLooper extends Handler {
 
-    private static MainLooper instance = new MainLooper(Looper.getMainLooper());
+    private static final MainLooper instance = new MainLooper(Looper.getMainLooper());
 
     protected MainLooper(Looper looper) {
         super(looper);

@@ -11,7 +11,7 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 public class CommonRequestInterceptor implements Interceptor {
-    private INetworkRequiredInfo requiredInfo;
+    private final INetworkRequiredInfo requiredInfo;
     public CommonRequestInterceptor(INetworkRequiredInfo requiredInfo){
         this.requiredInfo = requiredInfo;
     }

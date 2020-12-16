@@ -18,7 +18,7 @@ import top.zcwfeng.news.homefragment.newslist.NewsListFragment;
  */
 public class HeadlineNewsFragmentAdapter extends FragmentPagerAdapter {
     private List<NewsChannelsBean.ChannelList> mChannels;
-    private HashMap<String, Fragment> fragmentHashMap = new HashMap<>();
+    private final HashMap<String, Fragment> fragmentHashMap = new HashMap<>();
 
     public HeadlineNewsFragmentAdapter(FragmentManager fm) {
         super(fm);

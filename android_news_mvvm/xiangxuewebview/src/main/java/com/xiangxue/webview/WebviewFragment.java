@@ -41,7 +41,7 @@ public class WebviewFragment extends BaseWebviewFragment {
             cookieManager.setCookie(url, key+"="+map.get(key));
         }
         String newCookie = cookieManager.getCookie(url);
-        return TextUtils.isEmpty(newCookie) ? false : true;
+        return !TextUtils.isEmpty(newCookie);
     }
 
     @Override

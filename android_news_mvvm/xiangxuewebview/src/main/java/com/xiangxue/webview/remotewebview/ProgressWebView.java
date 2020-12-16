@@ -36,7 +36,7 @@ public class ProgressWebView extends BaseWebView {
     private IndicatorHandler indicatorHandler;
     private WebProgressBar progressBar;
 
-    private Handler handler = new Handler() {
+    private final Handler handler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
             int progress = (int) msg.obj;

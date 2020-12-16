@@ -22,11 +22,11 @@ class BaseMvvmModel<NETWORK_DATA, RESULT_DATA> implements MvvmDataObserve<NETWOR
 
     protected int mPage = 1;
     private boolean mIsLoading;
-    private boolean mIsPaging;
-    private String mCachedPreferenceKey;
+    private final boolean mIsPaging;
+    private final String mCachedPreferenceKey;
     private final int INIT_PAGE_NUMBER;
     //最新安装的时候没有网络的缓存
-    private String mApkPredefineData;
+    private final String mApkPredefineData;
     protected WeakReference<IBaseModelListener> mReferenceBaseModelListener;
 
     public BaseMvvmModel(boolean mIsPaging, String mCachedPreferenceKey, String apkPredefinedData, int... initPageNumber) {
@@ -124,7 +124,7 @@ class BaseMvvmModel<NETWORK_DATA, RESULT_DATA> implements MvvmDataObserve<NETWOR
                         resultData,
                         new PagingResult(
                                 mPage == INIT_PAGE_NUMBER,
-                                resultData == null ? true : ((List) resultData).isEmpty(),
+                                resultData == null || ((List) resultData).isEmpty(),
                                 ((List) resultData).size() > 0));
             } else {
                 listener.onLoadSuccess(this, resultData);

@@ -32,7 +32,7 @@ import static com.xiangxue.webview.command.Command.COMMAND_UPDATE_TITLE_PARAMS_T
 public class ProgressWebChromeClient extends WebChromeClient {
 
     private ValueCallback<Uri[]> mFilePathCallback;
-    private Handler progressHandler;
+    private final Handler progressHandler;
     private String mCameraPhotoPath;
 
     public ProgressWebChromeClient(Handler progressHandler) {

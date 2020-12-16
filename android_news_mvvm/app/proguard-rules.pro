@@ -19,3 +19,24 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+-keepattributes SourceFile,LineNumberTable
+
+#-keep class com.enjoy.helloworldexample.** { *; }
+
+-keep class com.xiangxue.network.beans.**{*;}
+-keep class com.xiangxue.news.homefragment.api.**{*;}
+
+#androidx
+-keep class com.google.android.material.** {*;}
+-keep class androidx.** {*;}
+-keep public class * extends androidx.**
+-keep interface androidx.** {*;}
+
+
+
+################gson##################
+-keep class com.google.gson.** {*;}
+-keep class com.google.**{*;}
+-keep class sun.misc.Unsafe { *; }
+-keep class com.google.gson.stream.** { *; }
+-keep class com.google.gson.examples.android.model.** { *; }

@@ -12,7 +12,7 @@ import com.xiangxue.network.base.INetworkRequiredInfo;
  * 保留所有版权，未经允许请不要分享到互联网和其他人
  */
 public class NetworkRequestInfo implements INetworkRequiredInfo {
-    private Application mApplication;
+    private final Application mApplication;
     public NetworkRequestInfo(Application application){
         this.mApplication = application;
     }

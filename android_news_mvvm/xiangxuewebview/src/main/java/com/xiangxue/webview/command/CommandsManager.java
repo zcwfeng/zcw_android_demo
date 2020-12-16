@@ -12,7 +12,7 @@ public class CommandsManager {
     private static final String TAG = "CommandsManager";
     private static CommandsManager instance;
 
-    private HashMap<String, Command> commands;
+    private final HashMap<String, Command> commands;
 
     public HashMap<String, Command> getCommands() {
         return commands;

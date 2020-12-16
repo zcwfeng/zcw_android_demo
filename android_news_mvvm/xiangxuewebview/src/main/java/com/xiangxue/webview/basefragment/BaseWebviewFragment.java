@@ -132,7 +132,7 @@ public abstract class BaseWebviewFragment extends BaseFragment implements WebVie
     }
 
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (keyCode == event.KEYCODE_BACK && event.getAction() == KeyEvent.ACTION_DOWN) {
+        if (keyCode == KeyEvent.KEYCODE_BACK && event.getAction() == KeyEvent.ACTION_DOWN) {
             return onBackHandle();
         }
         return false;

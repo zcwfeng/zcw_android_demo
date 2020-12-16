@@ -9,8 +9,8 @@ import top.zcwfeng.base.customview.mvvm.viewmodel.BaseMvvmViewModel;
 
 public class NewsListViewModel extends BaseMvvmViewModel<NewsListModel, BaseCustomViewModel> {
 
-    private String mChannelId;
-    private String mChannelName;
+    private final String mChannelId;
+    private final String mChannelName;
 
     public NewsListViewModel(String channelId, String channelName) {
         mChannelId = channelId;
@@ -24,8 +24,8 @@ public class NewsListViewModel extends BaseMvvmViewModel<NewsListModel, BaseCust
 
     // TODO: 2020/10/17 非常重要的工厂类实现
     public static class NewsListViewModelFactory implements ViewModelProvider.Factory {
-        private String mChannelId;
-        private String mChannelName;
+        private final String mChannelId;
+        private final String mChannelName;
 
         public NewsListViewModelFactory(String channelId, String channelName) {
             mChannelId = channelId;

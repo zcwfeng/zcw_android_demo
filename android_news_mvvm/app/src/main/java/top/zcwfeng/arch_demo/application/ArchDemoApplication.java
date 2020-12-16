@@ -48,5 +48,9 @@ public class ArchDemoApplication extends BaseApplication {
 //                .addCallback(new CustomCallback())
 //                .setDefaultCallback(LoadingCallback.class)//设置默认状态页
 //                .commit();
+
+
+//        BlockCanary.install();
+
     }
 }

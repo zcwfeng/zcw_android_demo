@@ -17,7 +17,7 @@ import java.util.concurrent.CountDownLatch;
  * 用于remoteweb process 向 main process 获取binder
  */
 public class MainProcessConnector {
-    private Context mContext;
+    private final Context mContext;
     private IWebToMain iWebToMain;
     private static volatile MainProcessConnector sInstance;
     private CountDownLatch mConnectBinderPoolCountDownLatch;
@@ -53,7 +53,7 @@ public class MainProcessConnector {
         return iWebToMain.asBinder();
     }
 
-    private ServiceConnection mBinderPoolConnection = new ServiceConnection() {   // 5
+    private final ServiceConnection mBinderPoolConnection = new ServiceConnection() {   // 5
 
         @Override
         public void onServiceDisconnected(ComponentName name) {
@@ -72,7 +72,7 @@ public class MainProcessConnector {
         }
     };
 
-    private IBinder.DeathRecipient mBinderPoolDeathRecipient = new IBinder.DeathRecipient() {    // 6
+    private final IBinder.DeathRecipient mBinderPoolDeathRecipient = new IBinder.DeathRecipient() {    // 6
         @Override
         public void binderDied() {
             iWebToMain.asBinder().unlinkToDeath(mBinderPoolDeathRecipient, 0);

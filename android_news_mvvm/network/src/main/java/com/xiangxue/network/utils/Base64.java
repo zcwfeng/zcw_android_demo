@@ -1,16 +1,17 @@
 package com.xiangxue.network.utils;
 
 import java.io.UnsupportedEncodingException;
+import java.nio.charset.StandardCharsets;
 
 public class Base64 {
-	private static char[] base64EncodeChars = new char[] { 'A', 'B', 'C', 'D',
+	private static final char[] base64EncodeChars = new char[] { 'A', 'B', 'C', 'D',
 			'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q',
 			'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd',
 			'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q',
 			'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '0', '1', '2', '3',
 			'4', '5', '6', '7', '8', '9', '+', '/' };
 
-	private static byte[] base64DecodeChars = new byte[] { -1, -1, -1, -1, -1,
+	private static final byte[] base64DecodeChars = new byte[] { -1, -1, -1, -1, -1,
 			-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
 			-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
 			-1, -1, -1, -1, 62, -1, -1, -1, 63, 52, 53, 54, 55, 56, 57, 58, 59,
@@ -55,7 +56,7 @@ public class Base64 {
 
 	public static byte[] decode(String str) throws UnsupportedEncodingException {
 		StringBuffer sb = new StringBuffer();
-		byte[] data = str.getBytes("US-ASCII");
+		byte[] data = str.getBytes(StandardCharsets.US_ASCII);
 		int len = data.length;
 		int i = 0;
 		int b1, b2, b3, b4;
@@ -77,7 +78,7 @@ public class Base64 {
 			do {
 				b3 = data[i++];
 				if (b3 == 61)
-					return sb.toString().getBytes("ISO-8859-1");
+					return sb.toString().getBytes(StandardCharsets.ISO_8859_1);
 				b3 = base64DecodeChars[b3];
 			} while (i < len && b3 == -1);
 			if (b3 == -1)
@@ -87,13 +88,13 @@ public class Base64 {
 			do {
 				b4 = data[i++];
 				if (b4 == 61)
-					return sb.toString().getBytes("ISO-8859-1");
+					return sb.toString().getBytes(StandardCharsets.ISO_8859_1);
 				b4 = base64DecodeChars[b4];
 			} while (i < len && b4 == -1);
 			if (b4 == -1)
 				break;
 			sb.append((char) (((b3 & 0x03) << 6) | b4));
 		}
-		return sb.toString().getBytes("ISO-8859-1");
+		return sb.toString().getBytes(StandardCharsets.ISO_8859_1);
 	}
 }

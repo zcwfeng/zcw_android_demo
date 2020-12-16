@@ -13,7 +13,7 @@ class GenericUtils {
         Type generType = obj.getClass().getGenericSuperclass();
         if(generType instanceof ParameterizedType){
             ParameterizedType parameterizedType = (ParameterizedType) generType;
-            Type types[] = parameterizedType.getActualTypeArguments();
+            Type[] types = parameterizedType.getActualTypeArguments();
 
             if(types != null && types.length > 0) {
                 Type type = types[0];

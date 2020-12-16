@@ -35,7 +35,7 @@ public final class TecentUtil {
             SecretKeySpec secretKey = new SecretKeySpec(secret.getBytes(CONTENT_CHARSET), mac1.getAlgorithm());
             mac1.init(secretKey);
             hash = mac1.doFinal(signStr.getBytes(CONTENT_CHARSET));
-            String sig = new String(Base64.encode(hash));
+            String sig = Base64.encode(hash);
             System.out.println("signValue--->" + sig);
             return sig;
         } catch (NoSuchAlgorithmException e) {

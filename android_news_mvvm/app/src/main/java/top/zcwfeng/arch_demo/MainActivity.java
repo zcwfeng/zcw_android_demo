@@ -30,10 +30,10 @@ import top.zcwfeng.arch_demo.fragments.ServiceFragment;
 import top.zcwfeng.news.homefragment.headlinenews.HeadlineNewsFragment2;
 
 public class MainActivity extends AppCompatActivity {
-    private Fragment mHomeFragment = new HeadlineNewsFragment2();
-    private CategoryFragment mCategoryFragment = new CategoryFragment();
-    private ServiceFragment mServiceFragment = new ServiceFragment();
-    private AccountFragment mAccountFragment = new AccountFragment();
+    private final Fragment mHomeFragment = new HeadlineNewsFragment2();
+    private final CategoryFragment mCategoryFragment = new CategoryFragment();
+    private final ServiceFragment mServiceFragment = new ServiceFragment();
+    private final AccountFragment mAccountFragment = new AccountFragment();
     private ActivityMainBinding viewDataBinding;
 
     @Override
@@ -48,6 +48,17 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         // TODO: 1 启动优化 优化启动白屏
         super.onCreate(savedInstanceState);
+
+        // TODO Test BlockCanery 卡顿分析测试
+//        try {
+//            Thread.sleep(3_000);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
+
+        // TODO: Test Choreographer 掉帧检测猜测，适合线上统计数据
+//        ChoreographerHelper.start();
+
         viewDataBinding = DataBindingUtil.setContentView(this,  R.layout.activity_main);
 
         fromFragment = mCategoryFragment;

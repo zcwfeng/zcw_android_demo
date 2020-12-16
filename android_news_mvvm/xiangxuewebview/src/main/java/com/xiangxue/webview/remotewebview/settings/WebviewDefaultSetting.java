@@ -38,7 +38,7 @@ public class WebviewDefaultSetting {
 
     private void settings(WebView webView) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            webView.enableSlowWholeDocumentDraw();
+            WebView.enableSlowWholeDocumentDraw();
         }
         mWebSettings = webView.getSettings();
         mWebSettings.setJavaScriptEnabled(true);
@@ -103,7 +103,7 @@ public class WebviewDefaultSetting {
         //mWebSettings.setUserAgentString("webprogress/build you agent info");
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            webView.setWebContentsDebuggingEnabled(BuildConfig.DEBUG);
+            WebView.setWebContentsDebuggingEnabled(BuildConfig.DEBUG);
         }
     }
 }

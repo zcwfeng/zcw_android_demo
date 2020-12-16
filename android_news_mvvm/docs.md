@@ -77,3 +77,22 @@ Complete
 
 ```
 
+### Choreographer->ChoreographerHelper
+检测掉帧
+
+### Looper->loop
+printer 检测卡顿
+
+### include merge 优化
+
+### 过度绘制检查，layout background等
+
+# APK 缩小包体积
+
+### 工具 Android Size Analyzer 插件使用
+
+### Lint 工具 unused resource
+
+### 持续优化，pgn-》 svg
+
+### gradle apk split 分包

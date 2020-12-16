@@ -30,11 +30,11 @@ public class XiangxueWebviewClient extends WebViewClient {
 
     private static final String TAG = "XXWebviewCallBack";
     public static final String SCHEME_SMS = "sms:";
-    private WebViewCallBack webViewCallBack;
-    private WebView webView;
+    private final WebViewCallBack webViewCallBack;
+    private final WebView webView;
     boolean isReady;
-    private Map<String, String> mHeaders;
-    private WebviewTouch mWebviewTouch;
+    private final Map<String, String> mHeaders;
+    private final WebviewTouch mWebviewTouch;
 
     public XiangxueWebviewClient(WebView webView, WebViewCallBack webViewCallBack, Map<String, String> headers, WebviewTouch touch){
         this.webViewCallBack = webViewCallBack;

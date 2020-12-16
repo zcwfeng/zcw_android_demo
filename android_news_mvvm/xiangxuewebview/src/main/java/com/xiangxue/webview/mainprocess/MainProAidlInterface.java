@@ -12,7 +12,7 @@ import java.util.Map;
 
 public class MainProAidlInterface extends IWebToMain.Stub {
 
-    private Context context;
+    private final Context context;
     public MainProAidlInterface(Context context) {
         this.context = context;
     }

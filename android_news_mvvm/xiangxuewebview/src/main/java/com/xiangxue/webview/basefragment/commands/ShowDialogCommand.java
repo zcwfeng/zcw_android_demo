@@ -36,7 +36,7 @@ public class ShowDialogCommand implements Command {
                         .setTitle(title)
                         .setMessage(content)
                         .create();
-                dialog.setCanceledOnTouchOutside(canceledOutside == 1 ? true : false);
+                dialog.setCanceledOnTouchOutside(canceledOutside == 1);
                 if (WebUtils.isNotNull(buttons)) {
                     for (int i = 0; i < buttons.size(); i++) {
                         final Map<String, String> button = buttons.get(i);

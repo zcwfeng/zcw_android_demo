@@ -27,7 +27,7 @@ import java.util.Map;
 public class CommandDispatcher {
 
     private static CommandDispatcher instance;
-    private Gson gson = new Gson();
+    private final Gson gson = new Gson();
 
     // 实现跨进程通信的接口
     protected IWebToMain webAidlInterface;

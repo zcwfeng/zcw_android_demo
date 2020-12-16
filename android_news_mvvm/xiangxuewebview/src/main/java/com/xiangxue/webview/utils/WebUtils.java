@@ -15,24 +15,15 @@ public class WebUtils {
 
 
     public static boolean isNotNull(List list) {
-        if (list != null && list.size() > 0) {
-            return true;
-        }
-        return false;
+        return list != null && list.size() > 0;
     }
 
     public static boolean isNotNull(Set set) {
-        if (set != null && set.size() > 0) {
-            return true;
-        }
-        return false;
+        return set != null && set.size() > 0;
     }
 
     public static boolean isNotNull(Map map) {
-        if (map != null && map.size() > 0) {
-            return true;
-        }
-        return false;
+        return map != null && map.size() > 0;
     }
 
 }

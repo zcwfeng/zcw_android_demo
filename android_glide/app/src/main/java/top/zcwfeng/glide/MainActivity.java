@@ -1,5 +1,6 @@
 package top.zcwfeng.glide;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.SparseArray;
 import android.view.LayoutInflater;
@@ -62,6 +63,11 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public MyViewHoler onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
             View view  = LayoutInflater.from(getApplicationContext()).inflate(R.layout.item_image,parent,false);
+            view.setOnClickListener(v->{
+                //-> kotlin Glide 使用原理入口
+                Intent intent = new Intent(MainActivity.this,GlideTest.class);
+                startActivity(intent);
+            });
             return new MyViewHoler(view);
         }
 
@@ -75,6 +81,8 @@ public class MainActivity extends AppCompatActivity {
                     .centerCrop()
                     .placeholder(R.mipmap.ic_launcher)
                     .into(mHolder.mImageView);
+
+
         }
 
 
@@ -82,5 +90,7 @@ public class MainActivity extends AppCompatActivity {
         public int getItemCount() {
             return array.size();
         }
+        
+
     }
 }

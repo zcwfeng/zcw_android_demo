@@ -1,0 +1,1036 @@
+{
+    "root": {
+        "data": {
+            "id": "c87uhc9sshs0",
+            "created": 1609506625526,
+            "text": "Glide"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "c87ui2bssc00",
+                    "created": 1609506682243,
+                    "text": "with"
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "c87ui3yinoo0",
+                    "created": 1609506685794,
+                    "text": "load"
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "c87ui56e2cw0",
+                    "created": 1609506688446,
+                    "text": "into"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "c87usdz44rs0",
+                            "created": 1609507491239,
+                            "text": "RequestBuilder#buildImageViewTarget"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c87ux0il2hs0",
+                                    "created": 1609507853762,
+                                    "text": "ImageViewTargetFactory#buildTarget"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "c87v0f6uyi00",
+                                            "created": 1609508120798,
+                                            "text": "BitmapImageViewTarget"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "c87v0igvjj40",
+                                            "created": 1609508127934,
+                                            "text": "DrawableImageViewTarget"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "c87utyhlllc0",
+                            "created": 1609507614257,
+                            "text": "RequestOptions"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c87uux36q9c0",
+                            "created": 1609507689573,
+                            "text": "Executors.mainThreadExecutor()"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c87v26s1fkg0",
+                            "created": 1609508259216,
+                            "text": "buildRequest",
+                            "priority": 1
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c87v521oaq80",
+                                    "created": 1609508484007,
+                                    "text": "buildRequestRecursive"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "c87v8nh2zgo0",
+                                            "created": 1609508765743,
+                                            "text": "buildThumbnailRequestRecursive"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "c87v8yop57k0",
+                                                    "created": 1609508790148,
+                                                    "text": "obtainRequest",
+                                                    "priority": 2
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "c87v9zmzd0o0",
+                                                            "created": 1609508870586,
+                                                            "text": "SingleRequest.obtain"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "c87va9oul6g0",
+                                                                    "created": 1609508892466,
+                                                                    "text": "SingleRequest"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "c87vg1ioks80",
+                            "created": 1609509344864,
+                            "text": "requestManager",
+                            "expandState": "expand"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c87vga7yyls0",
+                                    "created": 1609509363807,
+                                    "text": "track"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "c87vgp2lxrc0",
+                                            "created": 1609509396135,
+                                            "text": "TargetTracker#track"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "c87vh2xs46g0",
+                                            "created": 1609509426318,
+                                            "text": "RequestTracker#runRequest",
+                                            "priority": 3
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "c87vhowuznc0",
+                                                    "created": 1609509474152,
+                                                    "text": "Request#begin"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "c87vi2ldjps0",
+                                                            "created": 1609509503932,
+                                                            "text": "SingleRequest#begin",
+                                                            "priority": 4
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "c87vk2d1t6o0",
+                                                                    "created": 1609509660157,
+                                                                    "text": "Status.COMPLETE"
+                                                                },
+                                                                "children": [
+                                                                    {
+                                                                        "data": {
+                                                                            "id": "c87vk9ws34o0",
+                                                                            "created": 1609509676587,
+                                                                            "text": "onResourceReady"
+                                                                        },
+                                                                        "children": []
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "data": {
+                                                                    "id": "c87vl3huk9k0",
+                                                                    "created": 1609509740988,
+                                                                    "text": "onSizeReady",
+                                                                    "priority": 5
+                                                                },
+                                                                "children": [
+                                                                    {
+                                                                        "data": {
+                                                                            "id": "c87wdhyhz8g0",
+                                                                            "created": 1609511966666,
+                                                                            "text": "load"
+                                                                        },
+                                                                        "children": [
+                                                                            {
+                                                                                "data": {
+                                                                                    "id": "c87wf5p8ev40",
+                                                                                    "created": 1609512096713,
+                                                                                    "text": "EngineKeyFactory#buildKey"
+                                                                                },
+                                                                                "children": []
+                                                                            },
+                                                                            {
+                                                                                "data": {
+                                                                                    "id": "c87wg0uqezs0",
+                                                                                    "created": 1609512164526,
+                                                                                    "text": "loadFromMemory"
+                                                                                },
+                                                                                "children": []
+                                                                            },
+                                                                            {
+                                                                                "data": {
+                                                                                    "id": "c87wg483gyg0",
+                                                                                    "created": 1609512171864,
+                                                                                    "text": "waitForExistingOrStartNewJob",
+                                                                                    "priority": 6
+                                                                                },
+                                                                                "children": [
+                                                                                    {
+                                                                                        "data": {
+                                                                                            "id": "c87wjnc5l140",
+                                                                                            "created": 1609512448561,
+                                                                                            "text": "根据Key看看缓存是否正在执行，返回LoadStatus"
+                                                                                        },
+                                                                                        "children": []
+                                                                                    },
+                                                                                    {
+                                                                                        "data": {
+                                                                                            "id": "c87wkt0etog0",
+                                                                                            "created": 1609512539276,
+                                                                                            "text": "新任务"
+                                                                                        },
+                                                                                        "children": [
+                                                                                            {
+                                                                                                "data": {
+                                                                                                    "id": "c87wlertddk0",
+                                                                                                    "created": 1609512586645,
+                                                                                                    "text": "构建新任务EngineJob<R> engineJob"
+                                                                                                },
+                                                                                                "children": [
+                                                                                                    {
+                                                                                                        "data": {
+                                                                                                            "id": "c87wloecgqw0",
+                                                                                                            "created": 1609512607599,
+                                                                                                            "text": "添加到jobs任务缓存"
+                                                                                                        },
+                                                                                                        "children": []
+                                                                                                    }
+                                                                                                ]
+                                                                                            },
+                                                                                            {
+                                                                                                "data": {
+                                                                                                    "id": "c87wm8vfdgo0",
+                                                                                                    "created": 1609512652167,
+                                                                                                    "text": "decodeJob"
+                                                                                                },
+                                                                                                "children": [
+                                                                                                    {
+                                                                                                        "data": {
+                                                                                                            "id": "c87wmqqfs3k0",
+                                                                                                            "created": 1609512691048,
+                                                                                                            "text": "执行任务，engineJob.start(decodeJob)"
+                                                                                                        },
+                                                                                                        "children": [
+                                                                                                            {
+                                                                                                                "data": {
+                                                                                                                    "id": "c87wvp6kghs0",
+                                                                                                                    "created": 1609513392947,
+                                                                                                                    "text": "DecodeJob#runWrapper（）",
+                                                                                                                    "priority": 7
+                                                                                                                },
+                                                                                                                "children": [
+                                                                                                                    {
+                                                                                                                        "data": {
+                                                                                                                            "id": "c87ww70dwrk0",
+                                                                                                                            "created": 1609513431755,
+                                                                                                                            "text": "INITIALIZE"
+                                                                                                                        },
+                                                                                                                        "children": [
+                                                                                                                            {
+                                                                                                                                "data": {
+                                                                                                                                    "id": "c87wwt82n200",
+                                                                                                                                    "created": 1609513480109,
+                                                                                                                                    "text": "getNextStage",
+                                                                                                                                    "expandState": "expand"
+                                                                                                                                },
+                                                                                                                                "children": [
+                                                                                                                                    {
+                                                                                                                                        "data": {
+                                                                                                                                            "id": "c87wy6yfe5s0",
+                                                                                                                                            "created": 1609513588365,
+                                                                                                                                            "text": "INITIALIZE"
+                                                                                                                                        },
+                                                                                                                                        "children": [
+                                                                                                                                            {
+                                                                                                                                                "data": {
+                                                                                                                                                    "id": "c87x232at6g0",
+                                                                                                                                                    "created": 1609513893349,
+                                                                                                                                                    "text": "RESOURCE_CACHE设置/getNextStage(Stage.RESOURCE_CACHE)"
+                                                                                                                                                },
+                                                                                                                                                "children": []
+                                                                                                                                            }
+                                                                                                                                        ]
+                                                                                                                                    },
+                                                                                                                                    {
+                                                                                                                                        "data": {
+                                                                                                                                            "id": "c87wy8y8dqw0",
+                                                                                                                                            "created": 1609513592707,
+                                                                                                                                            "text": "RESOURCE_CACHE",
+                                                                                                                                            "priority": null
+                                                                                                                                        },
+                                                                                                                                        "children": [
+                                                                                                                                            {
+                                                                                                                                                "data": {
+                                                                                                                                                    "id": "c87wzseards0",
+                                                                                                                                                    "created": 1609513713401,
+                                                                                                                                                    "text": "回溯，状态基"
+                                                                                                                                                },
+                                                                                                                                                "children": []
+                                                                                                                                            }
+                                                                                                                                        ]
+                                                                                                                                    },
+                                                                                                                                    {
+                                                                                                                                        "data": {
+                                                                                                                                            "id": "c87wyivxxig0",
+                                                                                                                                            "created": 1609513614336,
+                                                                                                                                            "text": "DATA_CACHE",
+                                                                                                                                            "priority": 8
+                                                                                                                                        },
+                                                                                                                                        "children": []
+                                                                                                                                    },
+                                                                                                                                    {
+                                                                                                                                        "data": {
+                                                                                                                                            "id": "c87x68em5080",
+                                                                                                                                            "created": 1609514218434,
+                                                                                                                                            "text": "SOURCE"
+                                                                                                                                        },
+                                                                                                                                        "children": []
+                                                                                                                                    },
+                                                                                                                                    {
+                                                                                                                                        "data": {
+                                                                                                                                            "id": "c87x6e23cdc0",
+                                                                                                                                            "created": 1609514230737,
+                                                                                                                                            "text": "FINISHED"
+                                                                                                                                        },
+                                                                                                                                        "children": []
+                                                                                                                                    }
+                                                                                                                                ]
+                                                                                                                            },
+                                                                                                                            {
+                                                                                                                                "data": {
+                                                                                                                                    "id": "c87wwzzoqbk0",
+                                                                                                                                    "created": 1609513494839,
+                                                                                                                                    "text": "getNextGenerator",
+                                                                                                                                    "priority": 8,
+                                                                                                                                    "expandState": "expand"
+                                                                                                                                },
+                                                                                                                                "children": [
+                                                                                                                                    {
+                                                                                                                                        "data": {
+                                                                                                                                            "id": "c87x1alj5yg0",
+                                                                                                                                            "created": 1609513831385,
+                                                                                                                                            "text": "RESOURCE_CACHE",
+                                                                                                                                            "priority": null
+                                                                                                                                        },
+                                                                                                                                        "children": [
+                                                                                                                                            {
+                                                                                                                                                "data": {
+                                                                                                                                                    "id": "c87x4899l9c0",
+                                                                                                                                                    "created": 1609514061382,
+                                                                                                                                                    "text": "ResourceCacheGenerator"
+                                                                                                                                                },
+                                                                                                                                                "children": []
+                                                                                                                                            }
+                                                                                                                                        ]
+                                                                                                                                    },
+                                                                                                                                    {
+                                                                                                                                        "data": {
+                                                                                                                                            "id": "c87x1cvo1hk0",
+                                                                                                                                            "created": 1609513836351,
+                                                                                                                                            "text": "DATA_CACHE"
+                                                                                                                                        },
+                                                                                                                                        "children": [
+                                                                                                                                            {
+                                                                                                                                                "data": {
+                                                                                                                                                    "id": "c87x4rvq6sg0",
+                                                                                                                                                    "created": 1609514104099,
+                                                                                                                                                    "text": "DataCacheGenerator"
+                                                                                                                                                },
+                                                                                                                                                "children": []
+                                                                                                                                            }
+                                                                                                                                        ]
+                                                                                                                                    },
+                                                                                                                                    {
+                                                                                                                                        "data": {
+                                                                                                                                            "id": "c87x1dmy3u00",
+                                                                                                                                            "created": 1609513838001,
+                                                                                                                                            "text": "SOURCE",
+                                                                                                                                            "priority": 1
+                                                                                                                                        },
+                                                                                                                                        "children": [
+                                                                                                                                            {
+                                                                                                                                                "data": {
+                                                                                                                                                    "id": "c87x4x0cl280",
+                                                                                                                                                    "created": 1609514115262,
+                                                                                                                                                    "text": "SourceGenerator",
+                                                                                                                                                    "priority": 2
+                                                                                                                                                },
+                                                                                                                                                "children": []
+                                                                                                                                            }
+                                                                                                                                        ]
+                                                                                                                                    },
+                                                                                                                                    {
+                                                                                                                                        "data": {
+                                                                                                                                            "id": "c87x1kvcp400",
+                                                                                                                                            "created": 1609513853746,
+                                                                                                                                            "text": "FINISHED"
+                                                                                                                                        },
+                                                                                                                                        "children": []
+                                                                                                                                    }
+                                                                                                                                ]
+                                                                                                                            },
+                                                                                                                            {
+                                                                                                                                "data": {
+                                                                                                                                    "id": "c87wx2ac45c0",
+                                                                                                                                    "created": 1609513499837,
+                                                                                                                                    "text": "runGenerators",
+                                                                                                                                    "priority": 3,
+                                                                                                                                    "expandState": "expand"
+                                                                                                                                },
+                                                                                                                                "children": [
+                                                                                                                                    {
+                                                                                                                                        "data": {
+                                                                                                                                            "id": "c87x98c9udk0",
+                                                                                                                                            "created": 1609514453385,
+                                                                                                                                            "text": "DataCacheGenerator#startNext"
+                                                                                                                                        },
+                                                                                                                                        "children": []
+                                                                                                                                    },
+                                                                                                                                    {
+                                                                                                                                        "data": {
+                                                                                                                                            "id": "c87x9c5abx40",
+                                                                                                                                            "created": 1609514461669,
+                                                                                                                                            "text": "ResourceCacheGenerator#startNext"
+                                                                                                                                        },
+                                                                                                                                        "children": []
+                                                                                                                                    },
+                                                                                                                                    {
+                                                                                                                                        "data": {
+                                                                                                                                            "id": "c87xapp3yps0",
+                                                                                                                                            "created": 1609514569530,
+                                                                                                                                            "text": "SourceGenerator#startNext",
+                                                                                                                                            "priority": 4
+                                                                                                                                        },
+                                                                                                                                        "children": [
+                                                                                                                                            {
+                                                                                                                                                "data": {
+                                                                                                                                                    "id": "c87xdiwg8000",
+                                                                                                                                                    "created": 1609514789829,
+                                                                                                                                                    "text": "getLoadData"
+                                                                                                                                                },
+                                                                                                                                                "children": [
+                                                                                                                                                    {
+                                                                                                                                                        "data": {
+                                                                                                                                                            "id": "c87xerx0rzs0",
+                                                                                                                                                            "created": 1609514887819,
+                                                                                                                                                            "text": "ModelLoader#buildLoadData"
+                                                                                                                                                        },
+                                                                                                                                                        "children": [
+                                                                                                                                                            {
+                                                                                                                                                                "data": {
+                                                                                                                                                                    "id": "c87xllar3rs0",
+                                                                                                                                                                    "created": 1609515421961,
+                                                                                                                                                                    "text": "HttpGlideUrlLoader#buildLoadData",
+                                                                                                                                                                    "expandState": "expand"
+                                                                                                                                                                },
+                                                                                                                                                                "children": [
+                                                                                                                                                                    {
+                                                                                                                                                                        "data": {
+                                                                                                                                                                            "id": "c87xfg8ixkg0",
+                                                                                                                                                                            "created": 1609514940757,
+                                                                                                                                                                            "text": "startNextLoad(LoadData)",
+                                                                                                                                                                            "priority": 5
+                                                                                                                                                                        },
+                                                                                                                                                                        "children": []
+                                                                                                                                                                    },
+                                                                                                                                                                    {
+                                                                                                                                                                        "data": {
+                                                                                                                                                                            "id": "c88rre3prdk0",
+                                                                                                                                                                            "created": 1609600509780,
+                                                                                                                                                                            "text": "new LoadData<>(url, new HttpUrlFetcher(url, timeout))"
+                                                                                                                                                                        },
+                                                                                                                                                                        "children": [
+                                                                                                                                                                            {
+                                                                                                                                                                                "data": {
+                                                                                                                                                                                    "id": "c88rspehxuw0",
+                                                                                                                                                                                    "created": 1609600612741,
+                                                                                                                                                                                    "text": "HttpUrlFetcher#loadData"
+                                                                                                                                                                                },
+                                                                                                                                                                                "children": [
+                                                                                                                                                                                    {
+                                                                                                                                                                                        "data": {
+                                                                                                                                                                                            "id": "c88ruuaiy0o0",
+                                                                                                                                                                                            "created": 1609600780113,
+                                                                                                                                                                                            "text": "HttpUrlFetcher#loadDataWithRedirects"
+                                                                                                                                                                                        },
+                                                                                                                                                                                        "children": [
+                                                                                                                                                                                            {
+                                                                                                                                                                                                "data": {
+                                                                                                                                                                                                    "id": "c88rvz2zeqw0",
+                                                                                                                                                                                                    "created": 1609600868905,
+                                                                                                                                                                                                    "text": "HttpUrlFetcher#getStreamForSuccessfulRequest",
+                                                                                                                                                                                                    "progress": 9
+                                                                                                                                                                                                },
+                                                                                                                                                                                                "children": [
+                                                                                                                                                                                                    {
+                                                                                                                                                                                                        "data": {
+                                                                                                                                                                                                            "id": "c88rxr4orjs0",
+                                                                                                                                                                                                            "created": 1609601008322,
+                                                                                                                                                                                                            "text": "DataCallback#onDataReady"
+                                                                                                                                                                                                        },
+                                                                                                                                                                                                        "children": [
+                                                                                                                                                                                                            {
+                                                                                                                                                                                                                "data": {
+                                                                                                                                                                                                                    "id": "c88ryc5vgiw0",
+                                                                                                                                                                                                                    "created": 1609601054106,
+                                                                                                                                                                                                                    "text": "DataCacheGenerator#onDataReady"
+                                                                                                                                                                                                                },
+                                                                                                                                                                                                                "children": []
+                                                                                                                                                                                                            },
+                                                                                                                                                                                                            {
+                                                                                                                                                                                                                "data": {
+                                                                                                                                                                                                                    "id": "c88ryd4ndm00",
+                                                                                                                                                                                                                    "created": 1609601056209,
+                                                                                                                                                                                                                    "text": "ResourceCacheGenerator#onDataReady"
+                                                                                                                                                                                                                },
+                                                                                                                                                                                                                "children": []
+                                                                                                                                                                                                            },
+                                                                                                                                                                                                            {
+                                                                                                                                                                                                                "data": {
+                                                                                                                                                                                                                    "id": "c88s1b66v280",
+                                                                                                                                                                                                                    "created": 1609601287041,
+                                                                                                                                                                                                                    "text": "SourceGenerator#onDataReady"
+                                                                                                                                                                                                                },
+                                                                                                                                                                                                                "children": [
+                                                                                                                                                                                                                    {
+                                                                                                                                                                                                                        "data": {
+                                                                                                                                                                                                                            "id": "c88s1hszr8o0",
+                                                                                                                                                                                                                            "created": 1609601301481,
+                                                                                                                                                                                                                            "text": "DecodeJob#onDataFetcherReady",
+                                                                                                                                                                                                                            "progress": 9
+                                                                                                                                                                                                                        },
+                                                                                                                                                                                                                        "children": [
+                                                                                                                                                                                                                            {
+                                                                                                                                                                                                                                "data": {
+                                                                                                                                                                                                                                    "id": "c88s315fatc0",
+                                                                                                                                                                                                                                    "created": 1609601421955,
+                                                                                                                                                                                                                                    "text": "DecodeJob#decodeFromRetrievedData",
+                                                                                                                                                                                                                                    "progress": 9
+                                                                                                                                                                                                                                },
+                                                                                                                                                                                                                                "children": [
+                                                                                                                                                                                                                                    {
+                                                                                                                                                                                                                                        "data": {
+                                                                                                                                                                                                                                            "id": "c88s3c6720w0",
+                                                                                                                                                                                                                                            "created": 1609601445946,
+                                                                                                                                                                                                                                            "text": "DecodeJob#decodeFromData 开始解析数据"
+                                                                                                                                                                                                                                        },
+                                                                                                                                                                                                                                        "children": [
+                                                                                                                                                                                                                                            {
+                                                                                                                                                                                                                                                "data": {
+                                                                                                                                                                                                                                                    "id": "c88s4f3rj340",
+                                                                                                                                                                                                                                                    "created": 1609601530694,
+                                                                                                                                                                                                                                                    "text": "DecodeJob#decodeFromFetcher"
+                                                                                                                                                                                                                                                },
+                                                                                                                                                                                                                                                "children": [
+                                                                                                                                                                                                                                                    {
+                                                                                                                                                                                                                                                        "data": {
+                                                                                                                                                                                                                                                            "id": "c88s586gwk80",
+                                                                                                                                                                                                                                                            "created": 1609601593984,
+                                                                                                                                                                                                                                                            "text": "DecodeJob#runLoadPath"
+                                                                                                                                                                                                                                                        },
+                                                                                                                                                                                                                                                        "children": [
+                                                                                                                                                                                                                                                            {
+                                                                                                                                                                                                                                                                "data": {
+                                                                                                                                                                                                                                                                    "id": "c88s5ve0tco0",
+                                                                                                                                                                                                                                                                    "created": 1609601644507,
+                                                                                                                                                                                                                                                                    "text": "LoadPath#load",
+                                                                                                                                                                                                                                                                    "progress": 9
+                                                                                                                                                                                                                                                                },
+                                                                                                                                                                                                                                                                "children": [
+                                                                                                                                                                                                                                                                    {
+                                                                                                                                                                                                                                                                        "data": {
+                                                                                                                                                                                                                                                                            "id": "c88s6s5nisg0",
+                                                                                                                                                                                                                                                                            "created": 1609601715835,
+                                                                                                                                                                                                                                                                            "text": "LoadPath#loadWithExceptionList"
+                                                                                                                                                                                                                                                                        },
+                                                                                                                                                                                                                                                                        "children": [
+                                                                                                                                                                                                                                                                            {
+                                                                                                                                                                                                                                                                                "data": {
+                                                                                                                                                                                                                                                                                    "id": "c88s7giof600",
+                                                                                                                                                                                                                                                                                    "created": 1609601768865,
+                                                                                                                                                                                                                                                                                    "text": "DecodePath#decode",
+                                                                                                                                                                                                                                                                                    "progress": 9
+                                                                                                                                                                                                                                                                                },
+                                                                                                                                                                                                                                                                                "children": [
+                                                                                                                                                                                                                                                                                    {
+                                                                                                                                                                                                                                                                                        "data": {
+                                                                                                                                                                                                                                                                                            "id": "c88s8ct1ry00",
+                                                                                                                                                                                                                                                                                            "created": 1609601839149,
+                                                                                                                                                                                                                                                                                            "text": "decodeResource"
+                                                                                                                                                                                                                                                                                        },
+                                                                                                                                                                                                                                                                                        "children": [
+                                                                                                                                                                                                                                                                                            {
+                                                                                                                                                                                                                                                                                                "data": {
+                                                                                                                                                                                                                                                                                                    "id": "c88s977qy6g0",
+                                                                                                                                                                                                                                                                                                    "created": 1609601905341,
+                                                                                                                                                                                                                                                                                                    "text": "decodeResourceWithList",
+                                                                                                                                                                                                                                                                                                    "progress": 9
+                                                                                                                                                                                                                                                                                                },
+                                                                                                                                                                                                                                                                                                "children": [
+                                                                                                                                                                                                                                                                                                    {
+                                                                                                                                                                                                                                                                                                        "data": {
+                                                                                                                                                                                                                                                                                                            "id": "c88sd4ogswg0",
+                                                                                                                                                                                                                                                                                                            "created": 1609602213279,
+                                                                                                                                                                                                                                                                                                            "text": "StreamBitmapDecoder#decode"
+                                                                                                                                                                                                                                                                                                        },
+                                                                                                                                                                                                                                                                                                        "children": [
+                                                                                                                                                                                                                                                                                                            {
+                                                                                                                                                                                                                                                                                                                "data": {
+                                                                                                                                                                                                                                                                                                                    "id": "c88secaem3c0",
+                                                                                                                                                                                                                                                                                                                    "created": 1609602308207,
+                                                                                                                                                                                                                                                                                                                    "text": "通过压缩downsampler.decode得到Resource<Bitmap>"
+                                                                                                                                                                                                                                                                                                                },
+                                                                                                                                                                                                                                                                                                                "children": []
+                                                                                                                                                                                                                                                                                                            }
+                                                                                                                                                                                                                                                                                                        ]
+                                                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                                                ]
+                                                                                                                                                                                                                                                                                            }
+                                                                                                                                                                                                                                                                                        ]
+                                                                                                                                                                                                                                                                                    },
+                                                                                                                                                                                                                                                                                    {
+                                                                                                                                                                                                                                                                                        "data": {
+                                                                                                                                                                                                                                                                                            "id": "c88s8h2gb340",
+                                                                                                                                                                                                                                                                                            "created": 1609601848425,
+                                                                                                                                                                                                                                                                                            "text": "DecodeCallBack#onResourceDecoded",
+                                                                                                                                                                                                                                                                                            "progress": 9
+                                                                                                                                                                                                                                                                                        },
+                                                                                                                                                                                                                                                                                        "children": [
+                                                                                                                                                                                                                                                                                            {
+                                                                                                                                                                                                                                                                                                "data": {
+                                                                                                                                                                                                                                                                                                    "id": "c88si943x1s0",
+                                                                                                                                                                                                                                                                                                    "created": 1609602614752,
+                                                                                                                                                                                                                                                                                                    "text": "DecodeJob.this.onResourceDecoded"
+                                                                                                                                                                                                                                                                                                },
+                                                                                                                                                                                                                                                                                                "children": []
+                                                                                                                                                                                                                                                                                            }
+                                                                                                                                                                                                                                                                                        ]
+                                                                                                                                                                                                                                                                                    },
+                                                                                                                                                                                                                                                                                    {
+                                                                                                                                                                                                                                                                                        "data": {
+                                                                                                                                                                                                                                                                                            "id": "c88sbfw1sc00",
+                                                                                                                                                                                                                                                                                            "created": 1609602080953,
+                                                                                                                                                                                                                                                                                            "text": "return ResourceTranscoder#transcode",
+                                                                                                                                                                                                                                                                                            "progress": 9
+                                                                                                                                                                                                                                                                                        },
+                                                                                                                                                                                                                                                                                        "children": [
+                                                                                                                                                                                                                                                                                            {
+                                                                                                                                                                                                                                                                                                "data": {
+                                                                                                                                                                                                                                                                                                    "id": "c88spsq2ge80",
+                                                                                                                                                                                                                                                                                                    "created": 1609603205988,
+                                                                                                                                                                                                                                                                                                    "text": "BitmapDrawableTranscoder#transcode"
+                                                                                                                                                                                                                                                                                                },
+                                                                                                                                                                                                                                                                                                "children": [
+                                                                                                                                                                                                                                                                                                    {
+                                                                                                                                                                                                                                                                                                        "data": {
+                                                                                                                                                                                                                                                                                                            "id": "c88sqhgetkg0",
+                                                                                                                                                                                                                                                                                                            "created": 1609603259824,
+                                                                                                                                                                                                                                                                                                            "text": " LazyBitmapDrawableResource.obtain"
+                                                                                                                                                                                                                                                                                                        },
+                                                                                                                                                                                                                                                                                                        "children": [
+                                                                                                                                                                                                                                                                                                            {
+                                                                                                                                                                                                                                                                                                                "data": {
+                                                                                                                                                                                                                                                                                                                    "id": "c88stjnozgw0",
+                                                                                                                                                                                                                                                                                                                    "created": 1609603499710,
+                                                                                                                                                                                                                                                                                                                    "text": "BitmapResource.obtain"
+                                                                                                                                                                                                                                                                                                                },
+                                                                                                                                                                                                                                                                                                                "children": []
+                                                                                                                                                                                                                                                                                                            }
+                                                                                                                                                                                                                                                                                                        ]
+                                                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                                                ]
+                                                                                                                                                                                                                                                                                            }
+                                                                                                                                                                                                                                                                                        ]
+                                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                                ]
+                                                                                                                                                                                                                                                                            }
+                                                                                                                                                                                                                                                                        ]
+                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                ]
+                                                                                                                                                                                                                                                            }
+                                                                                                                                                                                                                                                        ]
+                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                ]
+                                                                                                                                                                                                                                            }
+                                                                                                                                                                                                                                        ]
+                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                ]
+                                                                                                                                                                                                                            },
+                                                                                                                                                                                                                            {
+                                                                                                                                                                                                                                "data": {
+                                                                                                                                                                                                                                    "id": "c88svm1g5nk0",
+                                                                                                                                                                                                                                    "created": 1609603661624,
+                                                                                                                                                                                                                                    "text": "DecodeJob#notifyEncodeAndRelease",
+                                                                                                                                                                                                                                    "progress": 9
+                                                                                                                                                                                                                                },
+                                                                                                                                                                                                                                "children": [
+                                                                                                                                                                                                                                    {
+                                                                                                                                                                                                                                        "data": {
+                                                                                                                                                                                                                                            "id": "c88swtfhwc00",
+                                                                                                                                                                                                                                            "created": 1609603756075,
+                                                                                                                                                                                                                                            "text": "notifyComplete"
+                                                                                                                                                                                                                                        },
+                                                                                                                                                                                                                                        "children": [
+                                                                                                                                                                                                                                            {
+                                                                                                                                                                                                                                                "data": {
+                                                                                                                                                                                                                                                    "id": "c88sz5is8hs0",
+                                                                                                                                                                                                                                                    "created": 1609603939123,
+                                                                                                                                                                                                                                                    "text": "回调EngineJob#onResourceReady"
+                                                                                                                                                                                                                                                },
+                                                                                                                                                                                                                                                "children": [
+                                                                                                                                                                                                                                                    {
+                                                                                                                                                                                                                                                        "data": {
+                                                                                                                                                                                                                                                            "id": "c88t0hhgbj40",
+                                                                                                                                                                                                                                                            "created": 1609604043529,
+                                                                                                                                                                                                                                                            "text": "notifyCallbacksOfResult"
+                                                                                                                                                                                                                                                        },
+                                                                                                                                                                                                                                                        "children": [
+                                                                                                                                                                                                                                                            {
+                                                                                                                                                                                                                                                                "data": {
+                                                                                                                                                                                                                                                                    "id": "c88t0ww8euo0",
+                                                                                                                                                                                                                                                                    "created": 1609604077074,
+                                                                                                                                                                                                                                                                    "text": "回调EngineJobListener#onEngineJobComplete",
+                                                                                                                                                                                                                                                                    "progress": 9
+                                                                                                                                                                                                                                                                },
+                                                                                                                                                                                                                                                                "children": [
+                                                                                                                                                                                                                                                                    {
+                                                                                                                                                                                                                                                                        "data": {
+                                                                                                                                                                                                                                                                            "id": "c88t2r07d200",
+                                                                                                                                                                                                                                                                            "created": 1609604220982,
+                                                                                                                                                                                                                                                                            "text": "收到下游数据，添加到活动缓存activeResources.activate"
+                                                                                                                                                                                                                                                                        },
+                                                                                                                                                                                                                                                                        "children": []
+                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                ]
+                                                                                                                                                                                                                                                            },
+                                                                                                                                                                                                                                                            {
+                                                                                                                                                                                                                                                                "data": {
+                                                                                                                                                                                                                                                                    "id": "c88t1zn50tc0",
+                                                                                                                                                                                                                                                                    "created": 1609604161419,
+                                                                                                                                                                                                                                                                    "text": "遍历资源回调给ImageViewTarget"
+                                                                                                                                                                                                                                                                },
+                                                                                                                                                                                                                                                                "children": [
+                                                                                                                                                                                                                                                                    {
+                                                                                                                                                                                                                                                                        "data": {
+                                                                                                                                                                                                                                                                            "id": "c88t5b1u3ts0",
+                                                                                                                                                                                                                                                                            "created": 1609604421344,
+                                                                                                                                                                                                                                                                            "text": "for (final ResourceCallbackAndExecutor entry : copy) {\n  entry.executor.execute(new CallResourceReady(entry.cb));\n}",
+                                                                                                                                                                                                                                                                            "layout_left_offset": {
+                                                                                                                                                                                                                                                                                "x": -316,
+                                                                                                                                                                                                                                                                                "y": 12.000000000000227
+                                                                                                                                                                                                                                                                            },
+                                                                                                                                                                                                                                                                            "progress": 9
+                                                                                                                                                                                                                                                                        },
+                                                                                                                                                                                                                                                                        "children": [
+                                                                                                                                                                                                                                                                            {
+                                                                                                                                                                                                                                                                                "data": {
+                                                                                                                                                                                                                                                                                    "id": "c88t5zxj7jc0",
+                                                                                                                                                                                                                                                                                    "created": 1609604475504,
+                                                                                                                                                                                                                                                                                    "text": "EngineJob#CallResourceReady"
+                                                                                                                                                                                                                                                                                },
+                                                                                                                                                                                                                                                                                "children": [
+                                                                                                                                                                                                                                                                                    {
+                                                                                                                                                                                                                                                                                        "data": {
+                                                                                                                                                                                                                                                                                            "id": "c88t6tscnwg0",
+                                                                                                                                                                                                                                                                                            "created": 1609604540494,
+                                                                                                                                                                                                                                                                                            "text": "SingleRequest#onResourceReady",
+                                                                                                                                                                                                                                                                                            "progress": 9
+                                                                                                                                                                                                                                                                                        },
+                                                                                                                                                                                                                                                                                        "children": [
+                                                                                                                                                                                                                                                                                            {
+                                                                                                                                                                                                                                                                                                "data": {
+                                                                                                                                                                                                                                                                                                    "id": "c88t7rrj1y00",
+                                                                                                                                                                                                                                                                                                    "created": 1609604614455,
+                                                                                                                                                                                                                                                                                                    "text": "SingleRequest#onResourceReady"
+                                                                                                                                                                                                                                                                                                },
+                                                                                                                                                                                                                                                                                                "children": [
+                                                                                                                                                                                                                                                                                                    {
+                                                                                                                                                                                                                                                                                                        "data": {
+                                                                                                                                                                                                                                                                                                            "id": "c88tbxjw4s00",
+                                                                                                                                                                                                                                                                                                            "created": 1609604940510,
+                                                                                                                                                                                                                                                                                                            "text": "显示target.onResourceReady",
+                                                                                                                                                                                                                                                                                                            "progress": 9
+                                                                                                                                                                                                                                                                                                        },
+                                                                                                                                                                                                                                                                                                        "children": [
+                                                                                                                                                                                                                                                                                                            {
+                                                                                                                                                                                                                                                                                                                "data": {
+                                                                                                                                                                                                                                                                                                                    "id": "c88tcjakep40",
+                                                                                                                                                                                                                                                                                                                    "created": 1609604987836,
+                                                                                                                                                                                                                                                                                                                    "text": "ImageViewTarget#onResourceReady"
+                                                                                                                                                                                                                                                                                                                },
+                                                                                                                                                                                                                                                                                                                "children": [
+                                                                                                                                                                                                                                                                                                                    {
+                                                                                                                                                                                                                                                                                                                        "data": {
+                                                                                                                                                                                                                                                                                                                            "id": "c88td4lqeoo0",
+                                                                                                                                                                                                                                                                                                                            "created": 1609605034223,
+                                                                                                                                                                                                                                                                                                                            "text": "setResourceInternal"
+                                                                                                                                                                                                                                                                                                                        },
+                                                                                                                                                                                                                                                                                                                        "children": [
+                                                                                                                                                                                                                                                                                                                            {
+                                                                                                                                                                                                                                                                                                                                "data": {
+                                                                                                                                                                                                                                                                                                                                    "id": "c88tdecvdtc0",
+                                                                                                                                                                                                                                                                                                                                    "created": 1609605055455,
+                                                                                                                                                                                                                                                                                                                                    "text": "DrawableImageViewTarget#setResource",
+                                                                                                                                                                                                                                                                                                                                    "progress": 9
+                                                                                                                                                                                                                                                                                                                                },
+                                                                                                                                                                                                                                                                                                                                "children": []
+                                                                                                                                                                                                                                                                                                                            }
+                                                                                                                                                                                                                                                                                                                        ]
+                                                                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                                                                ]
+                                                                                                                                                                                                                                                                                                            }
+                                                                                                                                                                                                                                                                                                        ]
+                                                                                                                                                                                                                                                                                                    },
+                                                                                                                                                                                                                                                                                                    {
+                                                                                                                                                                                                                                                                                                        "data": {
+                                                                                                                                                                                                                                                                                                            "id": "c88tc29prww0",
+                                                                                                                                                                                                                                                                                                            "created": 1609604950779,
+                                                                                                                                                                                                                                                                                                            "text": "notifyLoadSuccess"
+                                                                                                                                                                                                                                                                                                        },
+                                                                                                                                                                                                                                                                                                        "children": []
+                                                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                                                ]
+                                                                                                                                                                                                                                                                                            }
+                                                                                                                                                                                                                                                                                        ]
+                                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                                ]
+                                                                                                                                                                                                                                                                            }
+                                                                                                                                                                                                                                                                        ]
+                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                ]
+                                                                                                                                                                                                                                                            }
+                                                                                                                                                                                                                                                        ]
+                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                ]
+                                                                                                                                                                                                                                            }
+                                                                                                                                                                                                                                        ]
+                                                                                                                                                                                                                                    },
+                                                                                                                                                                                                                                    {
+                                                                                                                                                                                                                                        "data": {
+                                                                                                                                                                                                                                            "id": "c88sxl9acfc0",
+                                                                                                                                                                                                                                            "created": 1609603816649,
+                                                                                                                                                                                                                                            "text": "onEncodeComplete"
+                                                                                                                                                                                                                                        },
+                                                                                                                                                                                                                                        "children": []
+                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                ]
+                                                                                                                                                                                                                            }
+                                                                                                                                                                                                                        ]
+                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                ]
+                                                                                                                                                                                                            }
+                                                                                                                                                                                                        ]
+                                                                                                                                                                                                    }
+                                                                                                                                                                                                ]
+                                                                                                                                                                                            }
+                                                                                                                                                                                        ]
+                                                                                                                                                                                    }
+                                                                                                                                                                                ]
+                                                                                                                                                                            }
+                                                                                                                                                                        ]
+                                                                                                                                                                    }
+                                                                                                                                                                ]
+                                                                                                                                                            },
+                                                                                                                                                            {
+                                                                                                                                                                "data": {
+                                                                                                                                                                    "id": "c87xlu3snz40",
+                                                                                                                                                                    "created": 1609515441131,
+                                                                                                                                                                    "text": "其他LoadData..."
+                                                                                                                                                                },
+                                                                                                                                                                "children": []
+                                                                                                                                                            }
+                                                                                                                                                        ]
+                                                                                                                                                    }
+                                                                                                                                                ]
+                                                                                                                                            }
+                                                                                                                                        ]
+                                                                                                                                    }
+                                                                                                                                ]
+                                                                                                                            }
+                                                                                                                        ]
+                                                                                                                    },
+                                                                                                                    {
+                                                                                                                        "data": {
+                                                                                                                            "id": "c87ww92941c0",
+                                                                                                                            "created": 1609513436221,
+                                                                                                                            "text": "SWITCH_TO_SOURCE_SERVICE"
+                                                                                                                        },
+                                                                                                                        "children": [
+                                                                                                                            {
+                                                                                                                                "data": {
+                                                                                                                                    "id": "c87wxc7qr3k0",
+                                                                                                                                    "created": 1609513521448,
+                                                                                                                                    "text": "runGenerators"
+                                                                                                                                },
+                                                                                                                                "children": []
+                                                                                                                            }
+                                                                                                                        ]
+                                                                                                                    },
+                                                                                                                    {
+                                                                                                                        "data": {
+                                                                                                                            "id": "c87wwh5ki5c0",
+                                                                                                                            "created": 1609513453836,
+                                                                                                                            "text": "DECODE_DATA"
+                                                                                                                        },
+                                                                                                                        "children": [
+                                                                                                                            {
+                                                                                                                                "data": {
+                                                                                                                                    "id": "c87wxgxbins0",
+                                                                                                                                    "created": 1609513531702,
+                                                                                                                                    "text": "decodeFromRetrievedData"
+                                                                                                                                },
+                                                                                                                                "children": []
+                                                                                                                            }
+                                                                                                                        ]
+                                                                                                                    }
+                                                                                                                ]
+                                                                                                            }
+                                                                                                        ]
+                                                                                                    }
+                                                                                                ]
+                                                                                            },
+                                                                                            {
+                                                                                                "data": {
+                                                                                                    "id": "c87wn6ibuzc0",
+                                                                                                    "created": 1609512725386,
+                                                                                                    "text": "return new LoadStatus(cb, engineJob)"
+                                                                                                },
+                                                                                                "children": []
+                                                                                            }
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "data": {
+                                                                                    "id": "c87wphobr0g0",
+                                                                                    "created": 1609512906421,
+                                                                                    "text": "onResourceReady(memoryResource, DataSource.MEMORY_CACHE)"
+                                                                                },
+                                                                                "children": []
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "data": {
+                                                                    "id": "c87vl5039rc0",
+                                                                    "created": 1609509744268,
+                                                                    "text": "target.getSize"
+                                                                },
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "data": {
+                                                                    "id": "c87vlhwlw800",
+                                                                    "created": 1609509772355,
+                                                                    "text": "target.onLoadStarted"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "c87vilk8ju00",
+                                                            "created": 1609509545222,
+                                                            "text": "ErrorRequestCoordinator#begin"
+                                                        },
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "c87viuf0cio0",
+                                                            "created": 1609509564497,
+                                                            "text": "ThumbnailRequestCoordinator#gegin"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "default",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}

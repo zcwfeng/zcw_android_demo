@@ -1,11 +1,19 @@
 package top.zcwfeng.glide
 
+import android.graphics.drawable.Drawable
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.widget.ImageView
 import androidx.databinding.DataBindingUtil
 import com.bumptech.glide.Glide
+import com.bumptech.glide.RequestBuilder
+import com.bumptech.glide.RequestManager
+import com.bumptech.glide.load.engine.DiskCacheStrategy
+import com.bumptech.glide.request.target.BaseTarget
+import com.bumptech.glide.request.target.Target
+import com.bumptech.glide.request.target.ViewTarget
 import top.zcwfeng.glide.databinding.ActivityGlideTestBinding
 
 class GlideTest : AppCompatActivity() {
@@ -18,12 +26,24 @@ class GlideTest : AppCompatActivity() {
 
             Glide.with(this)
                     .load(imgUrl)
-                    .skipMemoryCache(false)
+//                    .skipMemoryCache(false)
 //                    .thumbnail()
+                    .diskCacheStrategy(DiskCacheStrategy.AUTOMATIC)
                     .into(binding.contentImg)
 
 
+            /**
+             * 源码拆分
+             */
+            val requestManager:RequestManager = Glide.with(this)
+            val requestBuilder:RequestBuilder<Drawable> = requestManager.load(imgUrl)
+            val target = requestBuilder.into(binding.contentImg)
         }
+
+
+
+
+
     }
 }
 

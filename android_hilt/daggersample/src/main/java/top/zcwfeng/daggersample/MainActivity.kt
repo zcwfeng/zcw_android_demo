@@ -1,5 +1,6 @@
 package top.zcwfeng.daggersample
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import top.zcwfeng.daggersample.data.User
@@ -16,6 +17,11 @@ class MainActivity : AppCompatActivity() {
         (application as DaggerApp).appComponent.inject(this)
 //        binding.userTextView.text = "${user.name}使用 Dagger 的心情是：${user.mood}"
         user.mood = "超级难受"
+
+        binding.clickDaggerDemo.setOnClickListener {
+            startActivity(Intent(this,MainActivity2::class.java))
+
+        }
 
     }
 }

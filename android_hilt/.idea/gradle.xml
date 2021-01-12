@@ -14,6 +14,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/daggersample" />
             <option value="$PROJECT_DIR$/hiltsample" />
+            <option value="$PROJECT_DIR$/httpprocessor" />
             <option value="$PROJECT_DIR$/koinsample" />
           </set>
         </option>

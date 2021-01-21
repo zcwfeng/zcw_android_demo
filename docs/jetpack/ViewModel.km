@@ -1,0 +1,379 @@
+{
+    "root": {
+        "data": {
+            "id": "c8nso69em080",
+            "created": 1611126478077,
+            "text": "ViewModel源码读取"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "c8nss15bqwg0",
+                    "created": 1611126780403,
+                    "text": "nameViewModel = new ViewModelProvider.NewInstanceFactory().create(NameViewModel.class);\nnameViewModel = ViewModelProvider.AndroidViewModelFactory.getInstance(getApplication()).create(NameViewModel.class);\nnameViewModel = new ViewModelProvider(this).get(NameViewModel.class);\nnameViewModel = ViewModelProviders.of(this).get(NameViewModel.class);",
+                    "priority": 1
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "c8nt4n126ts0",
+                            "created": 1611127768405,
+                            "text": "ViewModelStore"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "c8nsslmpups0",
+                    "created": 1611126824991,
+                    "text": "ViewModelProvider",
+                    "priority": 1
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "c8nt7aeku0w0",
+                            "created": 1611127976016,
+                            "text": "ComponentActivity#getViewModelStore"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c8nt97iz4qw0",
+                                    "created": 1611128126480,
+                                    "text": "(不为空第二次)ViewModelStore"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c8nt9ww1zgo0",
+                                    "created": 1611128181691,
+                                    "text": "（为空）Activity#getLastNonConfigurationInstance",
+                                    "priority": 1
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "c8ntbkjde6o0",
+                                            "created": 1611128311531,
+                                            "text": "Activity#NonConfigurationInstances（第一次为null）",
+                                            "priority": 2
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "c8ntcs3t54w0",
+                                                    "created": 1611128406368,
+                                                    "text": "new ViewModelStore()",
+                                                    "priority": 3
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "c8ntc8ho4w00",
+                                            "created": 1611128363671,
+                                            "text": "NonConfigurationInstances#activity"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "c8nszmadvlk0",
+                    "created": 1611127374971,
+                    "text": "LocalActivityManager#dispatchRetainNonConfigurationInstance",
+                    "priority": 1
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "c8nt1m20og80",
+                            "created": 1611127531194,
+                            "text": "ComponentActivity#onRetainNonConfigurationInstance",
+                            "priority": 2,
+                            "expandState": "expand"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c8nufvvp7yw0",
+                                    "created": 1611131470787,
+                                    "text": "Activity"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "c8nuhhgep9c0",
+                                            "created": 1611131596116,
+                                            "text": "NonConfigurationInstances#activity（持有ViewModelStore）"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "c8nsxdk3e3k0",
+                    "created": 1611127199239,
+                    "text": "（旋转屏幕）ComponentActivity#onRetainCustomNonConfigurationInstance"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "c8ntwbl77ts0",
+                            "created": 1611129937698,
+                            "text": "NonConfigurationInstances，存custom"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c8ntwji56uw0",
+                            "created": 1611129954927,
+                            "text": "NonConfigurationInstances，存ViewStore"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "c8ntf05lyaw0",
+                    "created": 1611128580620,
+                    "text": "get(NameViewModel.class)",
+                    "priority": 1
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "c8ntgqrzeb40",
+                            "created": 1611128716933,
+                            "text": "第一次ViewModel为空"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c8nthrm7o9k0",
+                                    "created": 1611128797125,
+                                    "text": "ViewModelProvider#create",
+                                    "priority": 2
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "c8ntinphreo0",
+                                            "created": 1611128866980,
+                                            "text": "FragmentManagerViewModel#create"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "c8ntjivmb7c0",
+                                            "created": 1611128934831,
+                                            "text": "LoaderManagerImpl#LoaderViewModel#create"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "c8ntjxycre80",
+                                            "created": 1611128967648,
+                                            "text": "NavControllerViewModel#create"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "c8ntkwzedls0",
+                                            "created": 1611129043899,
+                                            "text": "ViewModelProvider#NewInstanceFactory#create"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "c8ntnjbkbk80",
+                                            "created": 1611129249252,
+                                            "text": "ViewModelProvider#AndroidViewModelFactory#create"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "c8ntmjpov9c0",
+                                            "created": 1611129171742,
+                                            "text": "SavedStateViewModelFactory#create",
+                                            "priority": 3
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "c8ntq389m740",
+                                                    "created": 1611129449316,
+                                                    "text": "create"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "c8ntr1rk1ts0",
+                                                            "created": 1611129524493,
+                                                            "text": "反射构造方法，ViewModelProvider->newInstance",
+                                                            "priority": 4
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "c8nts5ohp9s0",
+                                                                    "created": 1611129611379,
+                                                                    "text": "反射实例NameViewModel"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "c8ntobr5jw80",
+                                            "created": 1611129311144,
+                                            "text": "AbstractSavedStateViewModelFactory#create"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "c8ntp2cnj2w0",
+                                            "created": 1611129369041,
+                                            "text": "NavControllerViewModel#create"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "c8nthctk6080",
+                            "created": 1611128764917,
+                            "text": "不为空，加入缓存返回"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "c8nulamq5x40",
+                    "created": 1611131894717,
+                    "text": "CommponentActivity()构造方法",
+                    "priority": 1
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "c8nuo1g7wgw0",
+                            "created": 1611132109825,
+                            "text": "getLifeCycle.addObserver",
+                            "priority": 2
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c8nuolepzgo0",
+                                    "created": 1611132153270,
+                                    "text": "onDestroy",
+                                    "priority": 3
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "c8nup8l73f40",
+                                            "created": 1611132203728,
+                                            "text": "未改变转屏配置!isChangingConfigurations"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "c8nuq4kfsaw0",
+                                                    "created": 1611132273339,
+                                                    "text": "清理ViewStore"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "c8nupcxecww0",
+                                            "created": 1611132213173,
+                                            "text": "isChangingConfigurations转屏"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "c8nuqc7grrk0",
+                                                    "created": 1611132289969,
+                                                    "text": "不清理生么也不操做"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "c8nuw1ssk4o0",
+                    "created": 1611132737499,
+                    "text": "AMS"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "c8nuwupjzc80",
+                            "created": 1611132800430,
+                            "text": "（Binder）LocakActivityRecord"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c8nuxeu2a400",
+                                    "created": 1611132844238,
+                                    "text": "onRetainNonConfigurationInstance"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "default",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}

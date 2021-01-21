@@ -1,3 +1,6 @@
+include ':daggersample2'
+include ':httpprocessor_java_hilt'
+include ':httpprocessor_hilt'
 include ':httpprocessor'
 include ':koinsample'
 include ':daggersample'

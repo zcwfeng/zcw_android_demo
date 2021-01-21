@@ -30,6 +30,7 @@ ext{
     paging_version = "2.1.2"
     nav_version = "2.3.0-beta01"
     work_version = "2.4.0"
+    lifecycle_extensions_version = "2.2.0"
 }
 
 

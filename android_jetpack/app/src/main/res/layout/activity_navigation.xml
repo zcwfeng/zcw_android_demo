@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".navigation.NavigationActivity">
 
-    <fragment
+    <!--<fragment
         android:id="@+id/fragment"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="409dp"
@@ -16,5 +16,26 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
+        app:navGraph="@navigation/nav_graph" />-->
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_nav_host"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        android:layout_marginTop="60dp"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toTopOf="@id/nav_view"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:navGraph="@navigation/nav_graph" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:itemTextColor="#ff0000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/menu" />
 </androidx.constraintlayout.widget.ConstraintLayout>

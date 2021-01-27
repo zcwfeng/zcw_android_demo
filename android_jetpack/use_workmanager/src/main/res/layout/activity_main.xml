@@ -32,7 +32,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="测试后台任务四"
+        android:text="测试后台任务四,添加条件"
         android:onClick="testBackgroundWork4"
         />
 
@@ -44,9 +44,10 @@
         />
 
     <Button
+        android:id="@+id/btn6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="测试后台任务六"
+        android:text="测试后台任务六,保存文件SP"
         android:onClick="testBackgroundWork6"
         />
 
@@ -63,5 +64,15 @@
         android:text="bzdiff------差异测试"
         android:onClick="testBackgroundWork7"
         />
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="重置SP"
+        android:onClick="spReset"
+        />
+
+
 
 </LinearLayout>

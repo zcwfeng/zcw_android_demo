@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/mainPage1Fragment"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="1"/>
+    <item
+        android:id="@+id/mainPage2Fragment"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="2"/>
+    <item
+        android:id="@+id/mainPage3Fragment"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="3"/>
+
+</menu>

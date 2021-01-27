@@ -3,10 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#f00"
     tools:context=".navigation.MainPage2Fragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:layout_marginTop="200dp"
         android:id="@+id/fragment2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

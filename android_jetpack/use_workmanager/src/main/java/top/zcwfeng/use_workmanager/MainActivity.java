@@ -1,9 +1,12 @@
 package top.zcwfeng.use_workmanager;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,12 +25,19 @@ import top.zcwfeng.common.constants.Config;
 
 // 场景：非及时任务 （例如：每天同步数据，每天上传一次日志）
 // Room数据库管理（持久性）
-public class MainActivity extends AppCompatActivity {
-
+public class MainActivity extends AppCompatActivity implements SharedPreferences.OnSharedPreferenceChangeListener {
+    Button mbtn6;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mbtn6 = findViewById(R.id.btn6);
+
+
+        // 绑定监听
+        SharedPreferences sp = getSharedPreferences(MainWorker6.SP_NAME, Context.MODE_PRIVATE);
+        sp.registerOnSharedPreferenceChangeListener(this); // 给SP绑定监听
+        updateToUI(); // 第一次初始化一把
     }
 
     /**
@@ -82,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
                 .enqueue();
 
 
-        // 把Request 存入集合
+        // 把Request 存入集合 TODO 并发执行
 //        List<OneTimeWorkRequest> oneTimeWorkRequests = new ArrayList<>();
 //        oneTimeWorkRequests.add(oneTimeWorkRequest2); // 测试：没有并行
 //        oneTimeWorkRequests.add(oneTimeWorkRequest3); // 测试：没有并行
@@ -91,7 +101,6 @@ public class MainActivity extends AppCompatActivity {
 //                .then(oneTimeWorkRequest5)
 //                .enqueue();
 
-        // 并发执行 TODO 作业，同学们自己API 找到并行
     }
 
     public void testBackgroundWork3(View view) {
@@ -157,7 +166,23 @@ public class MainActivity extends AppCompatActivity {
     public void testBackgroundWork5(View view) {
     }
 
+    /**
+     * （你怎么知道，他被杀掉后，还在后台执行？）写入文件的方式（SP）
+     * @param view
+     */
     public void testBackgroundWork6(View view) {
+        // 约束条件
+        Constraints constraints = new Constraints.Builder()
+                .setRequiredNetworkType(NetworkType.CONNECTED) // 约束条件，必须是网络连接
+                .build();
+
+        // 构建Request
+        OneTimeWorkRequest request = new OneTimeWorkRequest.Builder(MainWorker6.class)
+                .setConstraints(constraints)
+                .build();
+
+        // 加入队列
+        WorkManager.getInstance(this).enqueue(request);
     }
 
     @RequiresApi(api = Build.VERSION_CODES.M)
@@ -181,4 +206,23 @@ public class MainActivity extends AppCompatActivity {
                 .enqueue(request); // TODO 2 加入队列执行
     }
 
+    @Override
+    public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
+        updateToUI();
+    }
+
+    // 从SP里面获取值，显示到界面给用户看就行了
+    private final void updateToUI() {
+        SharedPreferences sp = getSharedPreferences(MainWorker6.SP_NAME, Context.MODE_PRIVATE);
+        int resultValue = sp.getInt(MainWorker6.SP_KEY, 0);
+        mbtn6.setText("测试后台任务666 -- " + resultValue);
+
+    }
+
+    // SP归零
+    public void spReset(View view) {
+        SharedPreferences sp = getSharedPreferences(MainWorker6.SP_NAME, Context.MODE_PRIVATE);
+        sp.edit().putInt(MainWorker6.SP_KEY, 0).apply();
+        updateToUI();
+    }
 }

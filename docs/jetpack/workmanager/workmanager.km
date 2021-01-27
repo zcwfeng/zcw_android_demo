@@ -1,0 +1,837 @@
+{
+    "root": {
+        "data": {
+            "id": "c8t0b3htxyo0",
+            "created": 1611655821985,
+            "text": "Jetpack-workmanager"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "c8t0bqpxl800",
+                    "created": 1611655872541,
+                    "text": "WorkManager.getInstance",
+                    "priority": null
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "c8t0c496un40",
+                            "created": 1611655902003,
+                            "text": "WorkManagerImpl.getInstance",
+                            "priority": 2,
+                            "progress": null
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c8t0cht66x40",
+                                    "created": 1611655931510,
+                                    "text": "WorkManagerImpl#initialize\n初始化正常情况已经初始化好了",
+                                    "priority": null,
+                                    "expandState": "collapse"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "c8t0d0johy80",
+                                            "created": 1611655972295,
+                                            "text": "WorkManagerImpl(...new WorkManagerTaskExecutor)",
+                                            "priority": null,
+                                            "expandState": "collapse",
+                                            "progress": null
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "c8t0q1jw9nc0",
+                                                    "created": 1611656993219,
+                                                    "text": "WorkManager#internalInit",
+                                                    "priority": null,
+                                                    "expandState": "expand"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "c8t13n3cdi80",
+                                                            "created": 1611658058841,
+                                                            "text": "WorkDatabasePathHelper#migrateDatabase",
+                                                            "priority": 8
+                                                        },
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "c8t15ll0a3k0",
+                                                            "created": 1611658212284,
+                                                            "text": "条件 ForceStopRunnable#shouldRescheduleWorkers()",
+                                                            "priority": 8
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "c8t15n0fi1c0",
+                                                                    "created": 1611658215393,
+                                                                    "text": "WorkManagerImpl#rescheduleEligibleWork()",
+                                                                    "priority": null,
+                                                                    "progress": 9
+                                                                },
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "data": {
+                                                                    "id": "c8t179b66r40",
+                                                                    "created": 1611658342296,
+                                                                    "text": "WorkManagerImpl#getPreferenceUtils().setNeedsReschedule(false)",
+                                                                    "priority": null,
+                                                                    "progress": 9
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "c8t17u7ds0g0",
+                                                            "created": 1611658387780,
+                                                            "text": "条件 isForceStopped()",
+                                                            "priority": 8
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "c8t183uncfs0",
+                                                                    "created": 1611658408777,
+                                                                    "text": "WorkManagerImpl#rescheduleEligibleWork()"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "c8t18eet3080",
+                                                            "created": 1611658431764,
+                                                            "text": " 条件 needsScheduling",
+                                                            "priority": 8
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "c8t18hwybk80",
+                                                                    "created": 1611658439392,
+                                                                    "text": "Schedulers.schedule"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "c8t1902dq800",
+                                                            "created": 1611658478902,
+                                                            "text": "WorkManagerImpl #onForceStopRunnableCompleted",
+                                                            "priority": 8
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "c8tvaf6qnnk0",
+                            "created": 1611743223479,
+                            "text": "WorkManager#enqueue",
+                            "priority": 3
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c8tvcot0wq80",
+                                    "created": 1611743401146,
+                                    "text": "new WorkContinuationImpl",
+                                    "expandState": "collapse"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "c8tvehzqo740",
+                                            "created": 1611743543042,
+                                            "text": "WorkContinuationImpl #enqueue",
+                                            "expandState": "collapse"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "c8tvfx0urog0",
+                                                    "created": 1611743654126,
+                                                    "text": "WorkManagerTaskExecutor#executeOnBackgroundThread",
+                                                    "expandState": "collapse"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "c8tvgwgl51c0",
+                                                            "created": 1611743731264,
+                                                            "text": "EnqueueRunnable#run",
+                                                            "expandState": "collapse"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "c8tvih36vmo0",
+                                                                    "created": 1611743854531,
+                                                                    "text": "EnqueueRunnable #scheduleWorkInBackground",
+                                                                    "expandState": "collapse"
+                                                                },
+                                                                "children": [
+                                                                    {
+                                                                        "data": {
+                                                                            "id": "c8tvjbgv7800",
+                                                                            "created": 1611743920661,
+                                                                            "text": "Schedulers#schedule\nworkManager.getConfiguration(),\nworkManager.getWorkDatabase(),\nworkManager.getSchedulers());",
+                                                                            "layout_right_offset": {
+                                                                                "x": -18,
+                                                                                "y": -1
+                                                                            }
+                                                                        },
+                                                                        "children": []
+                                                                    },
+                                                                    {
+                                                                        "data": {
+                                                                            "id": "c8tvns3euko0",
+                                                                            "created": 1611744270310,
+                                                                            "text": " WorkDatabase#workSpecDao()"
+                                                                        },
+                                                                        "children": []
+                                                                    },
+                                                                    {
+                                                                        "data": {
+                                                                            "id": "c8tvri1jl2g0",
+                                                                            "created": 1611744561886,
+                                                                            "text": "循环scheduler.schedule(eligibleWorkSpecsArray);\n有两个过滤条件，有条件的约束和无约束\n\tschedule方法可以看出来有三种\nGreedyScheduler     贪婪调度器\nSystemJobScheduler  \nSystemAlarmScheduler",
+                                                                            "expandState": "expand"
+                                                                        },
+                                                                        "children": [
+                                                                            {
+                                                                                "data": {
+                                                                                    "id": "c8twgath1go0",
+                                                                                    "created": 1611746505264,
+                                                                                    "text": "那这个为例GreedyScheduler#schedule",
+                                                                                    "layout_right_offset": {
+                                                                                        "x": -6,
+                                                                                        "y": 118
+                                                                                    },
+                                                                                    "expandState": "expand"
+                                                                                },
+                                                                                "children": [
+                                                                                    {
+                                                                                        "data": {
+                                                                                            "id": "c8twfq9ffbc0",
+                                                                                            "created": 1611746460517,
+                                                                                            "text": "无约束条件",
+                                                                                            "expandState": "collapse"
+                                                                                        },
+                                                                                        "children": [
+                                                                                            {
+                                                                                                "data": {
+                                                                                                    "id": "c8twi7kgl2w0",
+                                                                                                    "created": 1611746654917,
+                                                                                                    "text": "WorkManagerImpl#startWork",
+                                                                                                    "expandState": "expand"
+                                                                                                },
+                                                                                                "children": [
+                                                                                                    {
+                                                                                                        "data": {
+                                                                                                            "id": "c8twkjm2d0w0",
+                                                                                                            "created": 1611746837864,
+                                                                                                            "text": "WorkContinuationImpl#executeBackgroundThread"
+                                                                                                        },
+                                                                                                        "children": [
+                                                                                                            {
+                                                                                                                "data": {
+                                                                                                                    "id": "c8twkyie6b40",
+                                                                                                                    "created": 1611746870294,
+                                                                                                                    "text": "StartWorkRunnable#run"
+                                                                                                                },
+                                                                                                                "children": [
+                                                                                                                    {
+                                                                                                                        "data": {
+                                                                                                                            "id": "c8twlggt01k0",
+                                                                                                                            "created": 1611746909380,
+                                                                                                                            "text": "WorkManagerImpl#Processor#startWork",
+                                                                                                                            "progress": 1
+                                                                                                                        },
+                                                                                                                        "children": [
+                                                                                                                            {
+                                                                                                                                "data": {
+                                                                                                                                    "id": "c8twnbvab280",
+                                                                                                                                    "created": 1611747056100,
+                                                                                                                                    "text": "new WorkerWrapper"
+                                                                                                                                },
+                                                                                                                                "children": [
+                                                                                                                                    {
+                                                                                                                                        "data": {
+                                                                                                                                            "id": "c8twoan8xjk0",
+                                                                                                                                            "created": 1611747131801,
+                                                                                                                                            "text": "run"
+                                                                                                                                        },
+                                                                                                                                        "children": [
+                                                                                                                                            {
+                                                                                                                                                "data": {
+                                                                                                                                                    "id": "c8twopl6h9c0",
+                                                                                                                                                    "created": 1611747164328,
+                                                                                                                                                    "text": "WorkerWrapper#runWorker"
+                                                                                                                                                },
+                                                                                                                                                "children": [
+                                                                                                                                                    {
+                                                                                                                                                        "data": {
+                                                                                                                                                            "id": "c8twqkiabn40",
+                                                                                                                                                            "created": 1611747309997,
+                                                                                                                                                            "text": "Call mWorker.startWork() on the main thread\nListenableWorker#StartWork"
+                                                                                                                                                        },
+                                                                                                                                                        "children": [
+                                                                                                                                                            {
+                                                                                                                                                                "data": {
+                                                                                                                                                                    "id": "c8twrtqkfb40",
+                                                                                                                                                                    "created": 1611747408453,
+                                                                                                                                                                    "text": "调用Worker#startWork\n业务实现的doWork方法",
+                                                                                                                                                                    "progress": 9
+                                                                                                                                                                },
+                                                                                                                                                                "children": []
+                                                                                                                                                            }
+                                                                                                                                                        ]
+                                                                                                                                                    }
+                                                                                                                                                ]
+                                                                                                                                            }
+                                                                                                                                        ]
+                                                                                                                                    }
+                                                                                                                                ]
+                                                                                                                            }
+                                                                                                                        ]
+                                                                                                                    }
+                                                                                                                ]
+                                                                                                            }
+                                                                                                        ]
+                                                                                                    }
+                                                                                                ]
+                                                                                            }
+                                                                                        ]
+                                                                                    },
+                                                                                    {
+                                                                                        "data": {
+                                                                                            "id": "c8twfuate3s0",
+                                                                                            "created": 1611746469308,
+                                                                                            "text": "有约束\n用网络约束作为例子\nNetworkStateProxy类的父类ConstraintProxy\n设置约束后\nAndroidManifetst.xml\n<receiver\n\tandroid:name=\"androidx.work.impl.background\n.systemalarm.ConstraintProxy$NetworkStateProxy\"",
+                                                                                            "layout_right_offset": {
+                                                                                                "x": -4.999999925494194,
+                                                                                                "y": 56.24999916180968
+                                                                                            }
+                                                                                        },
+                                                                                        "children": [
+                                                                                            {
+                                                                                                "data": {
+                                                                                                    "id": "c8txn9yfs7c0",
+                                                                                                    "created": 1611749873047,
+                                                                                                    "text": "onReceive",
+                                                                                                    "layout_right_offset": {
+                                                                                                        "x": 0,
+                                                                                                        "y": 146.24999782070523
+                                                                                                    },
+                                                                                                    "expandState": "collapse"
+                                                                                                },
+                                                                                                "children": [
+                                                                                                    {
+                                                                                                        "data": {
+                                                                                                            "id": "c8txnlx9z1s0",
+                                                                                                            "created": 1611749899098,
+                                                                                                            "text": "CommandHandler#createConstraintsChangedIntent"
+                                                                                                        },
+                                                                                                        "children": []
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "data": {
+                                                                                                            "id": "c8txnzcbws80",
+                                                                                                            "created": 1611749928306,
+                                                                                                            "text": "设置Action，ACTION_CONSTRAINTS_CHANGED"
+                                                                                                        },
+                                                                                                        "children": []
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "data": {
+                                                                                                            "id": "c8txp28rj6o0",
+                                                                                                            "created": 1611750012985,
+                                                                                                            "text": "开启一个服务startService，比如SystemAlarmService",
+                                                                                                            "expandState": "collapse"
+                                                                                                        },
+                                                                                                        "children": [
+                                                                                                            {
+                                                                                                                "data": {
+                                                                                                                    "id": "c8txpezcu480",
+                                                                                                                    "created": 1611750040714,
+                                                                                                                    "text": "SystemAlarmService#onStartCommand"
+                                                                                                                },
+                                                                                                                "children": [
+                                                                                                                    {
+                                                                                                                        "data": {
+                                                                                                                            "id": "c8txr0453hc0",
+                                                                                                                            "created": 1611750165080,
+                                                                                                                            "text": "SystemAlarmDispatcher#add方法 ",
+                                                                                                                            "priority": 1
+                                                                                                                        },
+                                                                                                                        "children": []
+                                                                                                                    },
+                                                                                                                    {
+                                                                                                                        "data": {
+                                                                                                                            "id": "c8txrujwlog0",
+                                                                                                                            "created": 1611750231337,
+                                                                                                                            "text": "SystemAlarmDispatcher#processCommand",
+                                                                                                                            "priority": 2
+                                                                                                                        },
+                                                                                                                        "children": []
+                                                                                                                    },
+                                                                                                                    {
+                                                                                                                        "data": {
+                                                                                                                            "id": "c8txsukdnzk0",
+                                                                                                                            "created": 1611750309730,
+                                                                                                                            "text": "CommandHandler#onHandleIntent(mCurrentIntent, startId,        SystemAlarmDispatcher.this)",
+                                                                                                                            "priority": 3,
+                                                                                                                            "layout_right_offset": {
+                                                                                                                                "x": 1.2499999813735485,
+                                                                                                                                "y": -47.49999929219484
+                                                                                                                            },
+                                                                                                                            "expandState": "collapse"
+                                                                                                                        },
+                                                                                                                        "children": [
+                                                                                                                            {
+                                                                                                                                "data": {
+                                                                                                                                    "id": "c8txutd83yg0",
+                                                                                                                                    "created": 1611750463849,
+                                                                                                                                    "text": "handleConstraintsChanged(intent, startId, dispatcher)",
+                                                                                                                                    "priority": 1
+                                                                                                                                },
+                                                                                                                                "children": []
+                                                                                                                            },
+                                                                                                                            {
+                                                                                                                                "data": {
+                                                                                                                                    "id": "c8txv7b4yc80",
+                                                                                                                                    "created": 1611750494198,
+                                                                                                                                    "text": "changedCommandHandler.handleConstraintsChanged",
+                                                                                                                                    "priority": 2
+                                                                                                                                },
+                                                                                                                                "children": []
+                                                                                                                            },
+                                                                                                                            {
+                                                                                                                                "data": {
+                                                                                                                                    "id": "c8txy05l24w0",
+                                                                                                                                    "created": 1611750713717,
+                                                                                                                                    "text": "CommandHandler.createDelayMetIntent(mContext, workSpecId)\n将Action设置成ACTION_DELAY_MET",
+                                                                                                                                    "priority": 3
+                                                                                                                                },
+                                                                                                                                "children": []
+                                                                                                                            },
+                                                                                                                            {
+                                                                                                                                "data": {
+                                                                                                                                    "id": "c8txz6g19cg0",
+                                                                                                                                    "created": 1611750805774,
+                                                                                                                                    "text": "切回CommandHandler类，再次执行流程\nonStartCommand->onHandleIntent\n执行ACTION_DELAY_MET 分支",
+                                                                                                                                    "priority": 4,
+                                                                                                                                    "expandState": "collapse"
+                                                                                                                                },
+                                                                                                                                "children": [
+                                                                                                                                    {
+                                                                                                                                        "data": {
+                                                                                                                                            "id": "c8ty1xlbmw00",
+                                                                                                                                            "created": 1611751021595,
+                                                                                                                                            "text": "CommandHandler#handleDelayMet",
+                                                                                                                                            "priority": 1
+                                                                                                                                        },
+                                                                                                                                        "children": []
+                                                                                                                                    },
+                                                                                                                                    {
+                                                                                                                                        "data": {
+                                                                                                                                            "id": "c8ty2q5npqo0",
+                                                                                                                                            "created": 1611751083774,
+                                                                                                                                            "text": "DelayMetCommandHandler.handleProcessWork",
+                                                                                                                                            "priority": 2
+                                                                                                                                        },
+                                                                                                                                        "children": []
+                                                                                                                                    },
+                                                                                                                                    {
+                                                                                                                                        "data": {
+                                                                                                                                            "id": "c8ty3oomzeg0",
+                                                                                                                                            "created": 1611751158933,
+                                                                                                                                            "text": "DelayMetCommandHandler#onAllConstraintsMet",
+                                                                                                                                            "priority": 3
+                                                                                                                                        },
+                                                                                                                                        "children": []
+                                                                                                                                    },
+                                                                                                                                    {
+                                                                                                                                        "data": {
+                                                                                                                                            "id": "c8ty5ib09r40",
+                                                                                                                                            "created": 1611751301776,
+                                                                                                                                            "text": "SystemAlarmDispatcher#Processor#startWork",
+                                                                                                                                            "priority": 4,
+                                                                                                                                            "progress": 1
+                                                                                                                                        },
+                                                                                                                                        "children": []
+                                                                                                                                    },
+                                                                                                                                    {
+                                                                                                                                        "data": {
+                                                                                                                                            "id": "c8ty7222z400",
+                                                                                                                                            "created": 1611751423136,
+                                                                                                                                            "text": "Processor类->startWork中创建WorkerWrapper()并放入线程沲中去执行()\n\tWorkerWrapper类的run方法\n进入runWork方法 \nmInnerFuture = mWorker.startWork();\n（Worker类）result = mWorker.doWork();\n到此我们的任务被执行",
+                                                                                                                                            "layout_right_offset": {
+                                                                                                                                                "x": 1.2499999813735485,
+                                                                                                                                                "y": 23.74999964609742
+                                                                                                                                            },
+                                                                                                                                            "priority": 5,
+                                                                                                                                            "progress": 9
+                                                                                                                                        },
+                                                                                                                                        "children": []
+                                                                                                                                    }
+                                                                                                                                ]
+                                                                                                                            }
+                                                                                                                        ]
+                                                                                                                    }
+                                                                                                                ]
+                                                                                                            }
+                                                                                                        ]
+                                                                                                    }
+                                                                                                ]
+                                                                                            }
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "c8tu13qf2cw0",
+                            "created": 1611739672160,
+                            "text": "初始化",
+                            "priority": 1
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c8tu16c6w8g0",
+                                    "created": 1611739677830,
+                                    "text": "APK 配置清单AndroidManifest.xml\nandroidx.work.impl.WorkManagerInitializer",
+                                    "layout_right_offset": {
+                                        "x": -22,
+                                        "y": 63
+                                    },
+                                    "expandState": "collapse"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "c8tu2lfz6tc0",
+                                            "created": 1611739789075,
+                                            "text": "WorkManagerImpl#initialize",
+                                            "priority": 1
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "c8tuaj8svlc0",
+                                                    "created": 1611740411201,
+                                                    "text": "sDelegatedInstance = new WorkManagerImpl",
+                                                    "priority": 3
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "c8tug4ccr2w0",
+                                                            "created": 1611740848949,
+                                                            "text": "WorkDatabase#create"
+                                                        },
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "c8tuk7la6vk0",
+                                                            "created": 1611741169475,
+                                                            "text": "new Processor"
+                                                        },
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "c8tuj31e9go0",
+                                                            "created": 1611741081202,
+                                                            "text": "createSchedulers",
+                                                            "priority": null
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "c8tul1zbu7k0",
+                                                                    "created": 1611741235628,
+                                                                    "text": "Schedulers#createBestAvailableBackgroundScheduler"
+                                                                },
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "data": {
+                                                                    "id": "c8tul7o6pbk0",
+                                                                    "created": 1611741248015,
+                                                                    "text": "new GreedyScheduler",
+                                                                    "progress": 9
+                                                                },
+                                                                "children": [
+                                                                    {
+                                                                        "data": {
+                                                                            "id": "c8tumiwlqao0",
+                                                                            "created": 1611741350833,
+                                                                            "text": "WorkConstraintsTracker",
+                                                                            "expandState": "collapse"
+                                                                        },
+                                                                        "children": [
+                                                                            {
+                                                                                "data": {
+                                                                                    "id": "c8tumkpx1xc0",
+                                                                                    "created": 1611741354783,
+                                                                                    "text": "BatteryChargingController"
+                                                                                },
+                                                                                "children": []
+                                                                            },
+                                                                            {
+                                                                                "data": {
+                                                                                    "id": "c8tumuyzkug0",
+                                                                                    "created": 1611741377099,
+                                                                                    "text": "BatteryNotLowController"
+                                                                                },
+                                                                                "children": []
+                                                                            },
+                                                                            {
+                                                                                "data": {
+                                                                                    "id": "c8tumvnijcg0",
+                                                                                    "created": 1611741378582,
+                                                                                    "text": "StorageNotLowController"
+                                                                                },
+                                                                                "children": []
+                                                                            },
+                                                                            {
+                                                                                "data": {
+                                                                                    "id": "c8tumwadnuo0",
+                                                                                    "created": 1611741379964,
+                                                                                    "text": "NetworkConnectedController"
+                                                                                },
+                                                                                "children": []
+                                                                            },
+                                                                            {
+                                                                                "data": {
+                                                                                    "id": "c8tumwratmg0",
+                                                                                    "created": 1611741380987,
+                                                                                    "text": "NetworkUnmeteredController"
+                                                                                },
+                                                                                "children": []
+                                                                            },
+                                                                            {
+                                                                                "data": {
+                                                                                    "id": "c8tun8zqhz40",
+                                                                                    "created": 1611741407619,
+                                                                                    "text": "NetworkNotRoamingController"
+                                                                                },
+                                                                                "children": []
+                                                                            },
+                                                                            {
+                                                                                "data": {
+                                                                                    "id": "c8tung1fryg0",
+                                                                                    "created": 1611741422959,
+                                                                                    "text": "NetworkMeteredController"
+                                                                                },
+                                                                                "children": []
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "data": {
+                                                                            "id": "c8tunzrah5s0",
+                                                                            "created": 1611741465881,
+                                                                            "text": "DelayedWorkTracker"
+                                                                        },
+                                                                        "children": []
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "c8tukcvqjr40",
+                                                            "created": 1611741180992,
+                                                            "text": "internalInit",
+                                                            "priority": 4
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "c8tuq3f4zlk0",
+                                                                    "created": 1611741630582,
+                                                                    "text": "WorkManagerTaskExecutor#executeOnBackgroundThread",
+                                                                    "priority": 5
+                                                                },
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "data": {
+                                                                    "id": "c8tuqemuiw80",
+                                                                    "created": 1611741654993,
+                                                                    "text": "SerialExecutor#execute",
+                                                                    "priority": 6
+                                                                },
+                                                                "children": [
+                                                                    {
+                                                                        "data": {
+                                                                            "id": "c8tur5zchao0",
+                                                                            "created": 1611741714521,
+                                                                            "text": "SerialExecutor#scheduleNext",
+                                                                            "priority": 7,
+                                                                            "expandState": "collapse"
+                                                                        },
+                                                                        "children": [
+                                                                            {
+                                                                                "data": {
+                                                                                    "id": "c8tus8r6lko0",
+                                                                                    "created": 1611741798922,
+                                                                                    "text": "WorkManagerTaskExecutor#execute",
+                                                                                    "expandState": "collapse"
+                                                                                },
+                                                                                "children": [
+                                                                                    {
+                                                                                        "data": {
+                                                                                            "id": "c8tuscefsu80",
+                                                                                            "created": 1611741806859,
+                                                                                            "text": "WorkManagerTaskExecutor.this.postToMainThread"
+                                                                                        },
+                                                                                        "children": []
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "data": {
+                                                                                    "id": "c8tusoroa4g0",
+                                                                                    "created": 1611741833781,
+                                                                                    "text": "ArchTaskExecutor#sMainThreadExecutor#execute\npostToMainThread"
+                                                                                },
+                                                                                "children": []
+                                                                            },
+                                                                            {
+                                                                                "data": {
+                                                                                    "id": "c8tutv42yn40",
+                                                                                    "created": 1611741925956,
+                                                                                    "text": "ArchTaskExecutor#sIOThreadExecutor#execute\nexecuteOnDiskIO"
+                                                                                },
+                                                                                "children": []
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "c8tub0chdgg0",
+                                                    "created": 1611740448428,
+                                                    "text": "new WorkManagerTaskExecutor"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "c8tubf01v1k0",
+                                                    "created": 1611740480328,
+                                                    "text": "new SerialExecutor"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "c8tu2pk5ybc0",
+                                            "created": 1611739798035,
+                                            "text": "Configuration#build()",
+                                            "priority": 2,
+                                            "expandState": "collapse"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "c8tu5iuqzpk0",
+                                                    "created": 1611740018530,
+                                                    "text": "Executor mExecutor=Executors.newFixedThreadPool\n初始化 线程池"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "c8tu6jjhs200",
+                                                    "created": 1611740098390,
+                                                    "text": "Executor mTaskExecutor=Executors.newFixedThreadPool\n初始化 任务线程池"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "c8tu8ncwt4g0",
+                                                    "created": 1611740263428,
+                                                    "text": "WorkerFactory#getDefaultWorkerFactory"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "c8tu8xs8c6w0",
+                                                    "created": 1611740286122,
+                                                    "text": "InputMergerFactory#getDefaultInputMergerFactory()"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "c8tu97fgrk80",
+                                                    "created": 1611740307118,
+                                                    "text": "DefaultRunnableScheduler()"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "default",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}

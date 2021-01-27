@@ -1,0 +1,248 @@
+{
+    "root": {
+        "data": {
+            "id": "c8pja18xhf40",
+            "created": 1611303099991,
+            "text": "Jetpack-Navigation"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "c8pjfx4z6oo0",
+                    "created": 1611303561229,
+                    "text": "NavHostFragment"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "c8pjk74uodk0",
+                            "created": 1611303896446,
+                            "text": "create",
+                            "expandState": "expand",
+                            "priority": 1
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c8pjh1sh4340",
+                                    "created": 1611303649722,
+                                    "text": "初始化Bundle",
+                                    "priority": 2
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "c8pjhuo6aio0",
+                                            "created": 1611303712588,
+                                            "text": "graphResId 设置，保存KEY_GRAPH_ID"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "c8pjijwapc00",
+                                            "created": 1611303767499,
+                                            "text": "startDestinationArgs，保存目标参数，KEY_START_DESTINATION_ARGS"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "c8pjlbf022w0",
+                                    "created": 1611303984131,
+                                    "text": "new NavHostFragment",
+                                    "priority": 3
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "c8plyn6lte80",
+                            "created": 1611310670699,
+                            "text": "onInflate",
+                            "priority": 4
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c8plzuaw0tc0",
+                                    "created": 1611310764560,
+                                    "text": "graphId赋值---app:navGraph=\"@navigation/nav_graph\""
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c8plzxct1mw0",
+                                    "created": 1611310771206,
+                                    "text": "defaultNavHost配置赋值---app:defaultNavHost=\"true\""
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "c8pqt3q909k0",
+                            "created": 1611324342080,
+                            "text": "onCreate",
+                            "priority": 5
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c8pqv3gpzs00",
+                                    "created": 1611324498232,
+                                    "text": "初始化new NavHostController"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c8prvb4j9bs0",
+                                    "created": 1611327336019,
+                                    "text": "onCreateNavController（）",
+                                    "priority": 6
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "c8prwieyue80",
+                                            "created": 1611327430252,
+                                            "text": "createFragmentNavigator（）",
+                                            "priority": 7
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "c8prwt52x9k0",
+                                                    "created": 1611327453599,
+                                                    "text": "new FragmentNavigator",
+                                                    "priority": 8
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "c8prywqn5x40",
+                                                    "created": 1611327618161,
+                                                    "text": "new DialogFragmentNavigator"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "c8pqu4epvk80",
+                                    "created": 1611324421924,
+                                    "text": "if (savedInstanceState != null)\n旋转屏幕等Bundle保存信息，用来回溯数据"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c8pqu9wpr4w0",
+                                    "created": 1611324433896,
+                                    "text": "设置导航图id：graphId",
+                                    "layout_right_offset": {
+                                        "x": -11.249999832361937,
+                                        "y": 14.999999776482582
+                                    }
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "c8q80zlxbug0",
+                                            "created": 1611372918893,
+                                            "text": "NavController#onGraphCreated"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "c8q81n0hqmg0",
+                                                    "created": 1611372969840,
+                                                    "text": "NavController#navigate"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "c8psfbrucyo0",
+                            "created": 1611328904712,
+                            "text": "onCreateView",
+                            "priority": 9
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c8psfr20bz40",
+                                    "created": 1611328937978,
+                                    "text": "new FragmentContainerView"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "c8psffm6usg0",
+                            "created": 1611328913077,
+                            "text": "onViewGrate"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c8pshvtdkkg0",
+                                    "created": 1611329105069,
+                                    "text": "Navigation.setViewNavController"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "c8psiwkyokg0",
+                            "created": 1611329185101,
+                            "text": "onPrimaryNavigationFragmentChanged"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "c8plww8hra80",
+                    "created": 1611310533676,
+                    "text": "声明周期流程"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "c8plx1f50ug0",
+                            "created": 1611310544962,
+                            "text": "onInflate  ---->onAttach--->onCreate--->\nonCreateNavController--->createFragmentNavigator\n--->onCreateView--->onViewCreated-\n-->onPrimaryNavigationFragmentChanged"
+                        },
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "default",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}

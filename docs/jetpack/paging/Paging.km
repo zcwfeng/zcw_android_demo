@@ -1,0 +1,555 @@
+{
+    "root": {
+        "data": {
+            "id": "c8r3xyn5fu80",
+            "created": 1611462957215,
+            "text": "Jetpack-Paging"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "c8r3y6apv200",
+                    "created": 1611462973877,
+                    "text": "类结构",
+                    "expandState": "collapse"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "c8r3ypcvu6w0",
+                            "created": 1611463015367,
+                            "text": "abstract DataSource",
+                            "expandState": "expand"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c8r3z7xu51k0",
+                                    "created": 1611463055816,
+                                    "text": "abstract 子类 ContiguousDataSource"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "c8r3zzhktnk0",
+                                            "created": 1611463115783,
+                                            "text": "abstract 子类 PageKeyedDataSource",
+                                            "note": "```\nPageKeyedDataSource<Key, Value>：适用于目标数据根据页信息请求数据的场景，即Key字段是页相关的信息。比如请求的数据的参数中包含类似next / pervious页数的信息。\n```\n\n如果页面需要实现上一页、下一页，需要将请求的Token传递到下一步时使用"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "c8r413zuzko0",
+                                            "created": 1611463203960,
+                                            "text": "abstract 子类 ItemKeyedDataSource",
+                                            "note": "```\nItemKeyedDataSource<Key, Value>：适用于目标数据的加载依赖特定item的信息， 即Key字段包含的是Item中的信息，比如需要根据第N项的信息加载第N+1项的数据，传参中需要传入第N项的ID时，该场景多出现于论坛类应用评论信息的请求。\n```\n\n程序需要根据上一条数据信息（ID）获取下一条数据时使用"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "c8r41sde9q80",
+                                                    "created": 1611463257021,
+                                                    "text": "子类 ContiguousWithoutPlaceholdersWrapper"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "c8r3zev76340",
+                                    "created": 1611463070894,
+                                    "text": "abstract 子类 PositionalDataSource",
+                                    "note": "\n```\nPositionalDataSource<T>：适用于目标数据总数固定，通过特定的位置加载数据，这里Key是Integer类型的位置信息，T即Value。 比如从数据库中的1200条开始加在20条数据。\n```\n需要从数据存储中选择的任何位置获取数据页；例如，请求可能返回以位置1200开头的20个数据项"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "c8r423zy49k0",
+                                            "created": 1611463282329,
+                                            "text": "子类 WrapperPositionalDataSource"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "c8r42bpil9c0",
+                                            "created": 1611463299113,
+                                            "text": "子类 ListDataSource"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "c8r42h1r9go0",
+                                            "created": 1611463310737,
+                                            "text": "abstract 子类 TiledDataSource"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "c8r42ntkvmw0",
+                                            "created": 1611463325480,
+                                            "text": "abstract 子类 LimitOffsetDataSource"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "c8r4s8gkj9k0",
+                    "created": 1611465329510,
+                    "text": "角色",
+                    "expandState": "collapse"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "c8r4sw0z1880",
+                            "created": 1611465380809,
+                            "text": "角色1 数据源"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c8r4uyshfog0",
+                                    "created": 1611465543555,
+                                    "text": "数据的来源，可以有多种来源渠道，例如：“网络数据”，“本地数据”，“数据库数据”",
+                                    "note": "DataSource.Factory：工厂类提供DataSource的实例，在自定义DataSource时使用"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "c8r4t65axjc0",
+                            "created": 1611465402839,
+                            "text": "角色2 数据工厂"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c8r4vbbxwds0",
+                                    "created": 1611465570853,
+                                    "text": " 管理 数据源 的工厂，为了后续的扩展"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "c8r4taygrmo0",
+                            "created": 1611465413309,
+                            "text": "角色3 数据模型:"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c8r4u0yyjyw0",
+                                    "created": 1611465469936,
+                                    "text": "数据模型其实就是 ViewModel，用来管理数据",
+                                    "note": "PagedList: 数据源获取的数据最终靠PagedList来承载。\n对于PagedList,我们可以这样来理解，它就是一页数据的集合。\n每请求一页，就是新的一个PagedList对象。\n\n\n数据集散中心，根据需要向DataSource索取加载数据，并将得到的数据传递到PagedListAdapter"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "c8r4tg4nni80",
+                            "created": 1611465424568,
+                            "text": "角色4 适配器："
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c8r4tgb0u600",
+                                    "created": 1611465424953,
+                                    "text": "RecyclerView的Adapter需要继承PagedListAdapter",
+                                    "note": "LiveData观察到的数据，把感应到的数据 给 适配器，适配器又绑定了 RecyclerView，那么RecyclerView的列表数据就改变了\n\n数据适配器，这里除了起到普通界面加载适配器的作用外，更重要的是根据滑动显示的坐标，起到了确定什么时候要求向PagedList加载数据"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "c8r4x6ztsl40",
+                            "created": 1611465718141,
+                            "text": "Paging的各个角色职责:",
+                            "note": "```\nDataSource：数据的来源\nDataSource.Factory：工厂类提供DataSource的实例，在自定义DataSource时使用\nPagedList：数据集散中心，根据需要向DataSource索取加载数据，并将得到的数据传递到PagedListAdapter\nPagedListAdapter：数据适配器，这里除了起到普通界面加载适配器的作用外，更重要的是根据滑动显示的坐标，起到了确定什么时候要求向PagedList加载数据\nDiffUtil.ItemCallback：判断数据是否发生改变以确定界面是否更新\n\n```"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "c8r4stdw8e00",
+                    "created": 1611465375060,
+                    "text": "源码分析",
+                    "expandState": "collapse"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "c8r50j3y3gw0",
+                            "created": 1611465979604,
+                            "text": "LivePagedListBuilder(xxx).build()",
+                            "priority": 1
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c8r560w3rxk0",
+                                    "created": 1611466410133,
+                                    "text": "create() 创建LiveData\nComputableLiveData<PagedList<Value>>",
+                                    "note": "\n参数：\n\n```\n\nfinal Key initialLoadKey,\nfinal PagedList.Config config,\nfinal PagedList.BoundaryCallback boundaryCallback,\nfinal DataSource.Factory<Key, Value> dataSourceFactory,\nfinal Executor notifyExecutor,\nfinal Executor fetchExecutor) \n            \n```",
+                                    "layout_left_offset": {
+                                        "x": -109.99999836087227,
+                                        "y": 7.499999888241291
+                                    },
+                                    "priority": 2
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "c8r7x86zj5c0",
+                                            "created": 1611474184081,
+                                            "text": "compute()\n返回PagedList ",
+                                            "priority": 3
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "c8r9klu7itk0",
+                                                    "created": 1611478837269,
+                                                    "text": " DataSource.Factory#create\n创建DataSource",
+                                                    "priority": 4
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "c8r9m440qe00",
+                                                            "created": 1611478955408,
+                                                            "text": "DataSoure#addInvalidatedCallback",
+                                                            "priority": 5
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "c8r9mi972o00",
+                                                                    "created": 1611478986196,
+                                                                    "text": "PagedList.Builder#build()"
+                                                                },
+                                                                "children": [
+                                                                    {
+                                                                        "data": {
+                                                                            "id": "c8r9myqksb40",
+                                                                            "created": 1611479022076,
+                                                                            "text": "PagedList#create",
+                                                                            "priority": 6
+                                                                        },
+                                                                        "children": [
+                                                                            {
+                                                                                "data": {
+                                                                                    "id": "c8r9negog340",
+                                                                                    "created": 1611479056306,
+                                                                                    "text": "if (dataSource.isContiguous() || !config.enablePlaceholders)\nnew ContiguousPagedList\n创建 ContiguousPagedList\n\nmEnablePlaceholders 默认true\nisContigous==true 并且 config.enablePlaceHolders==true\n------------------------------------------------------\nPagedList#wrapAsContiguousWithoutPlaceholders\n包裹PositionalDataSource\n生成ContiguousDataSource包装类\nisContigous==false 并且 config.enablePlaceHolders==false",
+                                                                                    "layout_left_offset": {
+                                                                                        "x": 5.249998416751623,
+                                                                                        "y": -38.749999422580146
+                                                                                    },
+                                                                                    "note": "\nContiguousDataSource#isContiguous\n```\nboolean isContiguous() {\n        return true;\n}\n```\n\nPositionalDataSource#isContiguous\n\n```\n boolean isContiguous() {\n        return false;\n    }\n```\nTiledDataSource#isContiguous\n```\nboolean isContiguous() {\n        return false;\n    }\n```",
+                                                                                    "priority": 7
+                                                                                },
+                                                                                "children": [
+                                                                                    {
+                                                                                        "data": {
+                                                                                            "id": "c8raeig0jaw0",
+                                                                                            "created": 1611481180805,
+                                                                                            "text": "ItemKeyedDataSource#dispatchLoadInitial"
+                                                                                        },
+                                                                                        "children": []
+                                                                                    },
+                                                                                    {
+                                                                                        "data": {
+                                                                                            "id": "c8raffwz88g0",
+                                                                                            "created": 1611481253665,
+                                                                                            "text": "PageKeyedDataSource#dispatchLoadInitial"
+                                                                                        },
+                                                                                        "children": [
+                                                                                            {
+                                                                                                "data": {
+                                                                                                    "id": "c8rz4weesdk0",
+                                                                                                    "created": 1611550955289,
+                                                                                                    "text": "LoadInitialCallbackImpl实例化\nPageResult.Receiver 传入"
+                                                                                                },
+                                                                                                "children": [
+                                                                                                    {
+                                                                                                        "data": {
+                                                                                                            "id": "c8rzgnwh7rk0",
+                                                                                                            "created": 1611551877160,
+                                                                                                            "text": "loadInitial（LoadInitialCallbackImpl 回调）\n留给数据仓库调用实现，例子",
+                                                                                                            "note": "实现\n```\n// loadInitial 初始加载数据\n    @Override\n    public void loadInitial(@NonNull LoadInitialParams<Integer> params, @NonNull LoadInitialCallback<Integer, Person> callback) {\n        List<Person> dataList = dataRepository.initData(params.requestedLoadSize);\n        callback.onResult(dataList, null, 2);\n    }\n```"
+                                                                                                        },
+                                                                                                        "children": [
+                                                                                                            {
+                                                                                                                "data": {
+                                                                                                                    "id": "c8rzkb591ig0",
+                                                                                                                    "created": 1611552162849,
+                                                                                                                    "text": "调用回调\nPageKeyedDataSource#onResult\n\nLoadInitialCallbackImpl#onResult实现细节",
+                                                                                                                    "layout_left_offset": {
+                                                                                                                        "x": -49,
+                                                                                                                        "y": -42
+                                                                                                                    },
+                                                                                                                    "priority": 8
+                                                                                                                },
+                                                                                                                "children": [
+                                                                                                                    {
+                                                                                                                        "data": {
+                                                                                                                            "id": "c8rzva1apmg0",
+                                                                                                                            "created": 1611553022439,
+                                                                                                                            "text": "PageKeyedDataSource #LoadCallbackHelper#dispatchResultToReceiver"
+                                                                                                                        },
+                                                                                                                        "children": [
+                                                                                                                            {
+                                                                                                                                "data": {
+                                                                                                                                    "id": "c8rzweb6z4w0",
+                                                                                                                                    "created": 1611553110109,
+                                                                                                                                    "text": "executor != null Runnable 线程\nPageResult.Receiver#mReceiver#onPageResult",
+                                                                                                                                    "layout_left_offset": {
+                                                                                                                                        "x": 1,
+                                                                                                                                        "y": -4
+                                                                                                                                    }
+                                                                                                                                },
+                                                                                                                                "children": [
+                                                                                                                                    {
+                                                                                                                                        "data": {
+                                                                                                                                            "id": "c8s0clymwyw0",
+                                                                                                                                            "created": 1611554380591,
+                                                                                                                                            "text": "ContiguousPagedList#onPageResult",
+                                                                                                                                            "priority": 9
+                                                                                                                                        },
+                                                                                                                                        "children": [
+                                                                                                                                            {
+                                                                                                                                                "data": {
+                                                                                                                                                    "id": "c8s0eypdujk0",
+                                                                                                                                                    "created": 1611554565058,
+                                                                                                                                                    "text": "resultType\n==0,,1,2"
+                                                                                                                                                },
+                                                                                                                                                "children": [
+                                                                                                                                                    {
+                                                                                                                                                        "data": {
+                                                                                                                                                            "id": "c8s0n39vjrk0",
+                                                                                                                                                            "created": 1611555201917,
+                                                                                                                                                            "text": "PageList#mStorage#init"
+                                                                                                                                                        },
+                                                                                                                                                        "children": [
+                                                                                                                                                            {
+                                                                                                                                                                "data": {
+                                                                                                                                                                    "id": "c8s0tc1ri4g0",
+                                                                                                                                                                    "created": 1611555691203,
+                                                                                                                                                                    "text": "..."
+                                                                                                                                                                },
+                                                                                                                                                                "children": []
+                                                                                                                                                            }
+                                                                                                                                                        ]
+                                                                                                                                                    },
+                                                                                                                                                    {
+                                                                                                                                                        "data": {
+                                                                                                                                                            "id": "c8s0ovqm1oo0",
+                                                                                                                                                            "created": 1611555342243,
+                                                                                                                                                            "text": "PageList#mStorage#appendPage"
+                                                                                                                                                        },
+                                                                                                                                                        "children": [
+                                                                                                                                                            {
+                                                                                                                                                                "data": {
+                                                                                                                                                                    "id": "c8s0t9gxu1c0",
+                                                                                                                                                                    "created": 1611555685590,
+                                                                                                                                                                    "text": "..."
+                                                                                                                                                                },
+                                                                                                                                                                "children": []
+                                                                                                                                                            }
+                                                                                                                                                        ]
+                                                                                                                                                    },
+                                                                                                                                                    {
+                                                                                                                                                        "data": {
+                                                                                                                                                            "id": "c8s0p16riig0",
+                                                                                                                                                            "created": 1611555354104,
+                                                                                                                                                            "text": "PageList#mStorage#prependPage"
+                                                                                                                                                        },
+                                                                                                                                                        "children": [
+                                                                                                                                                            {
+                                                                                                                                                                "data": {
+                                                                                                                                                                    "id": "c8s0se4m7600",
+                                                                                                                                                                    "created": 1611555617365,
+                                                                                                                                                                    "text": "PageStorage#Callback#onPagePrepended"
+                                                                                                                                                                },
+                                                                                                                                                                "children": [
+                                                                                                                                                                    {
+                                                                                                                                                                        "data": {
+                                                                                                                                                                            "id": "c8s0t3ys2vs0",
+                                                                                                                                                                            "created": 1611555673608,
+                                                                                                                                                                            "text": "PageList#notifyInserted"
+                                                                                                                                                                        },
+                                                                                                                                                                        "children": [
+                                                                                                                                                                            {
+                                                                                                                                                                                "data": {
+                                                                                                                                                                                    "id": "c8s0tzolhhk0",
+                                                                                                                                                                                    "created": 1611555742649,
+                                                                                                                                                                                    "text": "AsyncPagedListDiffer#onInserted"
+                                                                                                                                                                                },
+                                                                                                                                                                                "children": [
+                                                                                                                                                                                    {
+                                                                                                                                                                                        "data": {
+                                                                                                                                                                                            "id": "c8s0w4aowag0",
+                                                                                                                                                                                            "created": 1611555909421,
+                                                                                                                                                                                            "text": "RecyclerView#notifyItemRangeInserted",
+                                                                                                                                                                                            "progress": 1
+                                                                                                                                                                                        },
+                                                                                                                                                                                        "children": []
+                                                                                                                                                                                    }
+                                                                                                                                                                                ]
+                                                                                                                                                                            }
+                                                                                                                                                                        ]
+                                                                                                                                                                    }
+                                                                                                                                                                ]
+                                                                                                                                                            }
+                                                                                                                                                        ]
+                                                                                                                                                    }
+                                                                                                                                                ]
+                                                                                                                                            }
+                                                                                                                                        ]
+                                                                                                                                    },
+                                                                                                                                    {
+                                                                                                                                        "data": {
+                                                                                                                                            "id": "c8s0dm2x8io0",
+                                                                                                                                            "created": 1611554459214,
+                                                                                                                                            "text": "TiledPagedList#onPageResult"
+                                                                                                                                        },
+                                                                                                                                        "children": [
+                                                                                                                                            {
+                                                                                                                                                "data": {
+                                                                                                                                                    "id": "c8s0h3938340",
+                                                                                                                                                    "created": 1611554731685,
+                                                                                                                                                    "text": "resultType\n== 1，2"
+                                                                                                                                                },
+                                                                                                                                                "children": [
+                                                                                                                                                    {
+                                                                                                                                                        "data": {
+                                                                                                                                                            "id": "c8s0tev4ooo0",
+                                                                                                                                                            "created": 1611555697332,
+                                                                                                                                                            "text": "..."
+                                                                                                                                                        },
+                                                                                                                                                        "children": []
+                                                                                                                                                    }
+                                                                                                                                                ]
+                                                                                                                                            }
+                                                                                                                                        ]
+                                                                                                                                    }
+                                                                                                                                ]
+                                                                                                                            }
+                                                                                                                        ]
+                                                                                                                    }
+                                                                                                                ]
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "data": {
+                                                                                                                    "id": "c8rznofso800",
+                                                                                                                    "created": 1611552426878,
+                                                                                                                    "text": "WrapperPageKeyedDataSource#onResult回调"
+                                                                                                                },
+                                                                                                                "children": []
+                                                                                                            }
+                                                                                                        ]
+                                                                                                    }
+                                                                                                ]
+                                                                                            }
+                                                                                        ]
+                                                                                    },
+                                                                                    {
+                                                                                        "data": {
+                                                                                            "id": "c8rahi5lsm80",
+                                                                                            "created": 1611481415268,
+                                                                                            "text": "PositionalDataSource#ContiguousWithoutPlaceholdersWrapper#dispatchLoadInitial"
+                                                                                        },
+                                                                                        "children": []
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                "data": {
+                                                                                    "id": "c8r9nq65gi80",
+                                                                                    "created": 1611479081791,
+                                                                                    "text": "创建TiledPagedList\nnew TiledPagedList\nisContigous==false 并且config.enablePlaceHolders==true",
+                                                                                    "priority": 7,
+                                                                                    "layout_left_offset": {
+                                                                                        "x": -24,
+                                                                                        "y": 93
+                                                                                    },
+                                                                                    "expandState": "collapse"
+                                                                                },
+                                                                                "children": [
+                                                                                    {
+                                                                                        "data": {
+                                                                                            "id": "c8ra9fwp6qo0",
+                                                                                            "created": 1611480783463,
+                                                                                            "text": "mLiveData.postValue(value)赋值PageList"
+                                                                                        },
+                                                                                        "children": []
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "c8r9f2gn3uw0",
+                                            "created": 1611478403269,
+                                            "text": "LIvieData#onActive",
+                                            "priority": 3,
+                                            "expandState": "expand"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "c8r9ild8eg80",
+                                                    "created": 1611478679514,
+                                                    "text": "ComputableLiveData #mExecutor.execute(mRefreshRunnable)"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "default",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}

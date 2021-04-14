@@ -19,8 +19,8 @@ class RecyclerViewActivity : AppCompatActivity() {
         rv_list.layoutManager = LinearLayoutManager(this)
         rv_list.addItemDecoration(StarDecoration(this))
         rv_list.adapter = StarAdapter(starList,this)
-
     }
+
 
     private fun initData() {
 

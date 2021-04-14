@@ -13,5 +13,7 @@ public class ExampleUnitTest {
     @Test
     public void addition_isCorrect() {
         assertEquals(4, 2 + 2);
+        double d = 0xabcd&1314L;
+        System.out.println(String.format("%.2f%%d",d));
     }
 }

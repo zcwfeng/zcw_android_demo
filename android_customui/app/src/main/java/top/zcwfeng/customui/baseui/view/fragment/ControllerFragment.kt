@@ -36,7 +36,9 @@ class ControllerFragment : ListFragment() {
                 "PhotoView 多点触摸",
                 "Example WeakHandler Use",
                 "Socket Client",
-                "Socket 心跳演示")
+                "Socket 心跳演示",
+                "RecyclerView 顶部和底部阴影问题",
+                "Text&EditText 测试代码")
         var arrayAdapter = activity?.let { ArrayAdapter(it, R.layout.simple_list_item_1, array) }
         listAdapter = arrayAdapter
     }
@@ -97,6 +99,16 @@ class ControllerFragment : ListFragment() {
             14 -> {
 
                 val intent = Intent(activity, SimpleSocketHeartbeatActivity::class.java)
+                startActivity(intent)
+            }
+            15 -> {
+
+                val intent = Intent(activity, RecyclerVIewTopAndBottom::class.java)
+                startActivity(intent)
+            }
+            16 -> {
+
+                val intent = Intent(activity, TextOrEditTextActivity::class.java)
                 startActivity(intent)
             }
         }

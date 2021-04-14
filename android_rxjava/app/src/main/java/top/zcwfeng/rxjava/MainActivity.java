@@ -13,7 +13,6 @@ import android.text.TextPaint;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -37,7 +36,7 @@ import top.zcwfeng.rxjava.use.UseActivity;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "RxAndroidSamples";
-//    final static String PATH = "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1794202421,3172844000&fm=26&gp=0.jpg";
+    //    final static String PATH = "https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1794202421,3172844000&fm=26&gp=0.jpg";
     final static String PATH = "https://raw.githubusercontent.com/zcwfeng/zcw_android_demo/master/docs/rx/Rx_mind.png";
     private ImageView image;
     private ProgressDialog progressDialog;
@@ -48,15 +47,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         image = findViewById(R.id.action_image);
 
-        Snackbar.make(getWindow().getDecorView(),"SnackBar Test....", Snackbar.LENGTH_LONG).show();
+        Snackbar.make(getWindow().getDecorView(), "SnackBar Test....", Snackbar.LENGTH_LONG).show();
     }
 
-    public void startUserActivity(View view){
+    public void startUserActivity(View view) {
         Intent intent = new Intent(this, UseActivity.class);
         startActivity(intent);
     }
 
-    public void myRxDesignPatternObserve(View view){
+    public void myRxDesignPatternObserve(View view) {
         String msg = "重大消息Android程序员必需要跟进学习Kotliin了！！!";
         // 创建公众号服务
         top.zcwfeng.rxjava.designpattern.Observable wechatServerObservable =
@@ -81,12 +80,17 @@ public class MainActivity extends AppCompatActivity {
 
     public void button_run_scheduler(View view) {
         rxJavaDownloadImageAction(view);
+
+        
+
     }
+
+
 
     // 抽取订阅,切换线程 封装上游数据
     //.subscribeOn(Schedulers.io())
     //.observeOn(AndroidSchedulers.mainThread());
-    public static final <UD> ObservableTransformer<UD,UD> upstreamData(){
+    public static final <UD> ObservableTransformer<UD, UD> upstreamData() {
         return new ObservableTransformer<UD, UD>() {
             @Override
             public ObservableSource<UD> apply(Observable<UD> upstream) {
@@ -102,16 +106,16 @@ public class MainActivity extends AppCompatActivity {
         };
     }
 
-    private final Bitmap drawWaterMark(Bitmap bitmap,String text,Paint paint,int paddingLeft,int paddingTop) {
+    private final Bitmap drawWaterMark(Bitmap bitmap, String text, Paint paint, int paddingLeft, int paddingTop) {
         Bitmap.Config bitmapCofing = bitmap.getConfig();
         paint.setDither(true);//获取清晰的采样图片
         paint.setFilterBitmap(true);// 过滤
-        if(bitmapCofing == null){
+        if (bitmapCofing == null) {
             bitmapCofing = Bitmap.Config.ARGB_8888;
         }
-        bitmap = bitmap.copy(bitmapCofing,true);
+        bitmap = bitmap.copy(bitmapCofing, true);
         Canvas canvas = new Canvas(bitmap);
-        canvas.drawText(text,paddingLeft,paddingTop,paint);
+        canvas.drawText(text, paddingLeft, paddingTop, paint);
         return bitmap;
     }
 
@@ -143,14 +147,13 @@ public class MainActivity extends AppCompatActivity {
                 })
 
 
-
                 .map(new Function<Bitmap, Bitmap>() {
                     @Override
                     public Bitmap apply(Bitmap bitmap) throws Exception {
                         Paint paint = new TextPaint();
                         paint.setTextSize(88);
                         paint.setColor(Color.RED);
-                        Bitmap filterBitmap = drawWaterMark(bitmap,"RxJava",paint,88,88);
+                        Bitmap filterBitmap = drawWaterMark(bitmap, "RxJava", paint, 88, 88);
                         return filterBitmap;
                     }
                 })

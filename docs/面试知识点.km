@@ -1,0 +1,2747 @@
+{
+    "root": {
+        "data": {
+            "id": "c9iqmm9zz0g0",
+            "created": 1614269072650,
+            "text": "知识点",
+            "progress": 5
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "c9iqwo8a94g0",
+                    "created": 1614269860542,
+                    "text": "Android知识点",
+                    "expandState": "collapse",
+                    "progress": 5,
+                    "priority": 1
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "c9iqtmwlpc80",
+                            "created": 1614269622566,
+                            "text": "Android性能优化"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c9iqukm3wig0",
+                            "created": 1614269695942,
+                            "text": "动态代理"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c9iqugmzp400",
+                            "created": 1614269687289,
+                            "text": "app启动流程"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c9iqubcvvy80",
+                            "created": 1614269675794,
+                            "text": "Android虚拟机与类加载机制"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c9iqu71sm2o0",
+                            "created": 1614269666416,
+                            "text": "垃圾回收机制"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c9iqtuzkqa00",
+                            "created": 1614269640160,
+                            "text": "JVM内存管理"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c9iqtrajqqo0",
+                            "created": 1614269632117,
+                            "text": "ANR问题分析"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c9iqtj3p3vc0",
+                            "created": 1614269614288,
+                            "text": "Binder通信",
+                            "progress": 9,
+                            "expandState": "collapse"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c9xkr79ovnk0",
+                                    "created": 1615775904491,
+                                    "text": "Binder是什么",
+                                    "expandState": "collapse"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "c9xko51s7bc0",
+                                            "created": 1615775664567,
+                                            "text": "机制，模型角度"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "c9xkogo1lz40",
+                                                    "created": 1615775689858,
+                                                    "text": "Android实现跨进程(IPC)的方式"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "c9xkp3fca000",
+                                                    "created": 1615775739398,
+                                                    "text": "在Android中实现跨进程通信"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "c9xkp90z6i80",
+                                            "created": 1615775751590,
+                                            "text": "模型的结构和组成"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "c9xkpgnslns0",
+                                                    "created": 1615775768207,
+                                                    "text": "虚拟的物理设备驱动"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "c9xkpomk0o80",
+                                                    "created": 1615775785546,
+                                                    "text": "链接Service进程，Client进程和ServiceManager进程"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "c9xkq1javc00",
+                                            "created": 1615775813648,
+                                            "text": "代码实现角度"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "c9xkq95btao0",
+                                                    "created": 1615775830217,
+                                                    "text": "Binder是一个类，实现了IBinder接口"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "c9xkqg2ijko0",
+                                                    "created": 1615775845284,
+                                                    "text": "将Binder模型用代码的形式具体实现在Android中"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "c9xkssc3cww0",
+                                    "created": 1615776028713,
+                                    "text": "知识储备"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "c9xksy4p3og0",
+                                            "created": 1615776041327,
+                                            "text": "进程空间划分"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "c9xktdf80fk0",
+                                                    "created": 1615776074615,
+                                                    "text": "用户空间，数据空间不共享",
+                                                    "expandState": "collapse"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "c9xmjg7evwg0",
+                                                            "created": 1615780939251,
+                                                            "text": "client进程，Server进程，ServerManger\n都是用户进程空间，不能直接相互交互"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "c9xktxmxtx40",
+                                                    "created": 1615776118617,
+                                                    "text": "内核空间，可共享空间",
+                                                    "expandState": "collapse"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "c9xmkfws1xk0",
+                                                            "created": 1615781016972,
+                                                            "text": "Binder驱动，内核空间，进程与进程之间交互"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "c9xkvfed5uo0",
+                                            "created": 1615776235645,
+                                            "text": "进程隔离&跨进程通信"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "c9xmapxr5s00",
+                                                    "created": 1615780255157,
+                                                    "text": "实现mmap系统调用",
+                                                    "expandState": "collapse"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "c9xmb26ve140",
+                                                            "created": 1615780281830,
+                                                            "text": "Binder连接两个进程，拷贝数据只需要1次"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "c9xmby3r1xc0",
+                                                    "created": 1615780351299,
+                                                    "text": "C/S模式",
+                                                    "note": "1. Server 进程 ---->Binder驱动（注册服务）----> ServiceManager管理\n\n2. Client 进程 ---->Binder驱动 （获取服务）----> ServiceManager管理\n\n3. Client 进程----->Binder 驱动（调用服务使用）\n\nBinder驱动\n\n1. 传递数据，通过内存映射\n\n2. 实现线程控制，Binder的线程池，由Binder驱动自身管理。（线程默认最大16，如使用ContentProvider时，CRUD方法之恩能同时有16个线程）\n\n3. 持有每个Server进程在内核空间的Binder实体，给Client进程提供Binder实体的引用\n\n\n\n\n\nServiceManager 类似路由，查找调用\n\n\n"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "c9xmowziq4g0",
+                                            "created": 1615781367600,
+                                            "text": "实现原理",
+                                            "expandState": "collapse"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "c9xmp3jecdk0",
+                                                    "created": 1615781381863,
+                                                    "text": "1.注册服务，Server进程通过Binder驱动\n向ServerManager注册服务",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "c9xmqutwg680",
+                                                            "created": 1615781519635,
+                                                            "text": "Server进程创建Binder对象",
+                                                            "expandState": "collapse"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9xmrh3f4zk0",
+                                                                    "created": 1615781568100,
+                                                                    "text": "①Binder实体是Server进程\n在Binder中的存在形式"
+                                                                },
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9xmrx6lk9s0",
+                                                                    "created": 1615781603121,
+                                                                    "text": "②Binder对象保存Server\n和ServerManager的信息\n(保存在内核控件中)"
+                                                                },
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9xmseryv8g0",
+                                                                    "created": 1615781641418,
+                                                                    "text": "③Binder驱动通过\n内核空间的实体找到\n用户空间的Server对象"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "c9xmw5eluco0",
+                                                            "created": 1615781934476,
+                                                            "text": "代码实现",
+                                                            "progress": 9,
+                                                            "expandState": "expand"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9xmwldlckg0",
+                                                                    "created": 1615781969243,
+                                                                    "text": "步骤1：Binder binder = new Stub()"
+                                                                },
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9xmx1ji63s0",
+                                                                    "created": 1615782004430,
+                                                                    "text": "步骤二：创建IInterface接口的匿名类，实现\npublic IBinder asBinder()方法",
+                                                                    "note": "```\n    // 创建前，需要预先定义 继承了IInterface\n    IInterface plus = new IPlus() {\n        // 确定Client进程需要调用的方法\n        public int add(int a, int b) {\n            return a + b;\n        }\n\n        // 实现IInterface接口中唯一的方法\n        public IBinder asBinder() {\n            return null;\n        }\n\n    };\n```"
+                                                                },
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9xmyakkz340",
+                                                                    "created": 1615782102449,
+                                                                    "text": "步骤三：binder.attachInterface\n(plus，\"add two int\"); 传入Binder中\nMap<String,IIterface>对象.\nBinder对象后期可以通过，queryLocalIInterface()\n获得传入的对象plus"
+                                                                },
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9xn67e3afs0",
+                                                                    "created": 1615782722440,
+                                                                    "text": "stub extends也就是Binder"
+                                                                },
+                                                                "children": [
+                                                                    {
+                                                                        "data": {
+                                                                            "id": "c9xn6fis8hk0",
+                                                                            "created": 1615782740138,
+                                                                            "text": "① 复写onTransact"
+                                                                        },
+                                                                        "children": []
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9xn7pvxdvc0",
+                                                                    "created": 1615782841065,
+                                                                    "text": "Binder implements IBinder\n远程操作接口",
+                                                                    "expandState": "expand"
+                                                                },
+                                                                "children": [
+                                                                    {
+                                                                        "data": {
+                                                                            "id": "c9xn8h38aio0",
+                                                                            "created": 1615782900279,
+                                                                            "text": "①attachIterface（IInterface\nplus,String descriptor)"
+                                                                        },
+                                                                        "children": []
+                                                                    },
+                                                                    {
+                                                                        "data": {
+                                                                            "id": "c9xn9d702m80",
+                                                                            "created": 1615782970164,
+                                                                            "text": "②. IInterface queryLocalInterface(\nString descriptor) "
+                                                                        },
+                                                                        "children": []
+                                                                    },
+                                                                    {
+                                                                        "data": {
+                                                                            "id": "c9xnaq8f0y80",
+                                                                            "created": 1615783076912,
+                                                                            "text": "③onTransact\n（int code，Parceldata，Parcelreply，int flags）"
+                                                                        },
+                                                                        "children": []
+                                                                    },
+                                                                    {
+                                                                        "data": {
+                                                                            "id": "c9xnc3bm7yo0",
+                                                                            "created": 1615783183768,
+                                                                            "text": "④ final class BinderProxy implements IBinder\nServer进程创建Binder对象的代理，Binder内部"
+                                                                        },
+                                                                        "children": []
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9xndabo7cg0",
+                                                                    "created": 1615783277373,
+                                                                    "text": "IInterface和接口继承IPlus"
+                                                                },
+                                                                "children": [
+                                                                    {
+                                                                        "data": {
+                                                                            "id": "c9xndrtfjyo0",
+                                                                            "created": 1615783315452,
+                                                                            "text": "①定义 IInterface\nIBinder asBinder（）方法"
+                                                                        },
+                                                                        "children": []
+                                                                    },
+                                                                    {
+                                                                        "data": {
+                                                                            "id": "c9xnen6znio0",
+                                                                            "created": 1615783383752,
+                                                                            "text": "② IPplus extends IInterface\n定义相关业务方法add"
+                                                                        },
+                                                                        "children": []
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "c9xmwaq739c0",
+                                                    "created": 1615781946060,
+                                                    "text": "2.获取服务",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "c9xng2eygxc0",
+                                                            "created": 1615783495250,
+                                                            "text": "Client进程，通过Binder驱动向\nServerManager获取service",
+                                                            "expandState": "collapse"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9xnhsmr0bk0",
+                                                                    "created": 1615783630682,
+                                                                    "text": "① Client进程参数\n发送到Server进程"
+                                                                },
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9xni9agh000",
+                                                                    "created": 1615783666944,
+                                                                    "text": "② Server进程调用目标方法"
+                                                                },
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9xnilhzth40",
+                                                                    "created": 1615783693521,
+                                                                    "text": "③ Server进程将目标方法结果\n返回给Client进程"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "c9xnjlxml4o0",
+                                                            "created": 1615783772830,
+                                                            "text": "代码实现",
+                                                            "progress": 9,
+                                                            "expandState": "expand"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9xnk5m28u80",
+                                                                    "created": 1615783815666,
+                                                                    "text": "① data.writeInterfaceToken\n将数据写入Parcel "
+                                                                },
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9xnko4icyg0",
+                                                                    "created": 1615783855964,
+                                                                    "text": "② binderProxy.transact\n(Stub.data,data,reply,0)\n调用代理对象transact()方法发送数据"
+                                                                },
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9xnkxmk6ts0",
+                                                                    "created": 1615783876646,
+                                                                    "text": "③ Client进程的线程暂时挂起\nserver如果耗时，不要放到主线程"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "c9xnom79gzs0",
+                                                            "created": 1615784165234,
+                                                            "text": "注意BinderProxy对象transact，\n客户端发送和Server返回发送都是代理对象调用"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "c9xnqjvp0mo0",
+                                    "created": 1615784316909,
+                                    "text": "Binder优点"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "c9xnqqq8trc0",
+                                            "created": 1615784331817,
+                                            "text": "高效",
+                                            "expandState": "collapse"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "c9xnsyhi23c0",
+                                                    "created": 1615784505431,
+                                                    "text": "Binder拷贝数据只需要1次\n管道，消息队列，Socket都需要2次"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "c9xnti74mu80",
+                                                    "created": 1615784548339,
+                                                    "text": "通过驱动在内核空间拷贝，不需要额外的同步处理"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "c9xnqtwod8o0",
+                                            "created": 1615784338736,
+                                            "text": "安全性高"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "c9xnrt7ne2g0",
+                                                    "created": 1615784415587,
+                                                    "text": "为每个进程分配UID/PID来识别用户身份"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "c9xns6qdjfc0",
+                                                    "created": 1615784445017,
+                                                    "text": "Binder通信对UID/PID 进行有效检测"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "c9xnqy446j40",
+                                            "created": 1615784347893,
+                                            "text": "使用简单C/S架构"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "c9xnr8r879s0",
+                                                    "created": 1615784371058,
+                                                    "text": "CS架构，面向对象调用，使用Binder\n和调用本地对象实例一样"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "c9iqtgqn3qw0",
+                            "created": 1614269609145,
+                            "text": "多线程"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c9iqtckr1680",
+                            "created": 1614269600082,
+                            "text": "跨进程通信"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c9iqt8jlsrc0",
+                            "created": 1614269591305,
+                            "text": "自定义View"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c9iqsvroq9s0",
+                            "created": 1614269563496,
+                            "text": "View绘制原理"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c9iqsl24o5k0",
+                            "created": 1614269540183,
+                            "text": "Handler原理"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c9iqsq3vb0o0",
+                            "created": 1614269551172,
+                            "text": "View事件分发"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "c9iqxbfqyds0",
+                    "created": 1614269911059,
+                    "text": "软件设计原则",
+                    "expandState": "collapse",
+                    "progress": 8
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "c9iqxfmm84g0",
+                            "created": 1614269920182,
+                            "text": "单一职责原则，一个方法只负责一件事",
+                            "note": "原则思想：一个方法只负责一件事情。\n描述：单一职责原则很简单，一个方法 一个类只负责一个职责，各个职责的程序改动，不影响其它程序。 这是常识，几乎所有程序员都会遵循这个原则。\n优点：降低类和类的耦合，提高可读性，增加可维护性和可拓展性，降低可变性的风险。"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c9iqxgh7xm80",
+                            "created": 1614269922032,
+                            "text": "里氏替换原则，种瓜得瓜",
+                            "note": "原则思想：使用的基类可以在任何地方使用继承的子类，完美的替换基类。\n描述：子类可以扩展父类的功能，但不能改变父类原有的功能。子类可以实现父类的抽象方法，但不能覆盖父类的非抽象方法，子类中可以增加自己特有的方法。\n优点：增加程序的健壮性，即使增加了子类，原有的子类还可以继续运行，互不影响。"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c9iqxgyfqvk0",
+                            "created": 1614269923073,
+                            "text": "依赖倒置原则，高层次不依赖底层，都依赖抽象，不依赖实现",
+                            "note": "原则思想：高层次的模块不应该依赖于低层次的模块，他们都应该依赖于抽象，抽象不应该依赖于具体实现，具体实现应该依赖于抽象。\n描述：类A直接依赖类B，假如要将类A改为依赖类C，则必须通过修改类A的代码来达成。这种场景下，类A一般是高层模块，负责复杂的业务逻辑；类B和类C是低层模块，负责基本的原子操作；假如修改类A，会给程序带来不必要的风险。\n优点：可以减少需求变化带来的工作量，做并行开发更加友好。",
+                            "progress": 9
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c9iqxhj1wpk0",
+                            "created": 1614269924320,
+                            "text": "开闭原则，通过扩展解决变化，不修改原来的结构",
+                            "note": "原则思想：尽量通过扩展软件实体来解决需求变化，而不是通过修改已有的代码来完成变化\n描述：一个软件产品在生命周期内，都会发生变化，既然变化是一个既定的事实，我们就应该在设计的时候尽量适应这些变化，以提高项目的稳定性和灵活性。\n优点：单一原则告诉我们，每个类都有自己负责的职责，里氏替换原则不能破坏继承关系的体系。"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c9iqxi5lymg0",
+                            "created": 1614269925684,
+                            "text": "迪米特原则，只跟我认识的打交道",
+                            "note": "原则思想：一个对象应当对其他对象有尽可能少地了解，简称类间解耦\n描述：一个类尽量减少自己对其他对象的依赖，原则是低耦合，高内聚，只有使各个模块之间的耦合尽量的低，才能提高代码的复用率。\n优点：低耦合，高内聚。",
+                            "progress": 9
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c9iqxil3i080",
+                            "created": 1614269926620,
+                            "text": "接口隔离原则，类和类之间应该建立最小的接口上",
+                            "note": "原则思想：类和类之间应该建立在最小接口的上。\n描述：类A通过接口依赖B，类C通过接口依赖D，如果接口类A和类B不是最小的接口，则依赖的类B和类D必须要实现他们不需要的方法。\n优点：提高程序的灵活度，提高内聚，减少对外交互，使得最小的接口做最多的事情。",
+                            "progress": 9
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "c9ir7c14tgo0",
+                    "created": 1614270695994,
+                    "text": "设计模式",
+                    "expandState": "collapse",
+                    "progress": 5,
+                    "priority": 1
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "c9ir7e95un40",
+                            "created": 1614270700833,
+                            "text": "创建型模式",
+                            "expandState": "collapse"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c9irawswo5c0",
+                                    "created": 1614270976301,
+                                    "text": "单利模式"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c9iraz0j9k00",
+                                    "created": 1614270981116,
+                                    "text": "构建模式"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c9irb4yqf400",
+                                    "created": 1614270994068,
+                                    "text": "原型模式",
+                                    "progress": 9
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c9ird6ul9zk0",
+                                    "created": 1614271154899,
+                                    "text": "抽象工厂模式",
+                                    "progress": 9
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c9irda1ls200",
+                                    "created": 1614271161854,
+                                    "text": "工厂方法模式",
+                                    "progress": 9
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "c9ir7k1qauo0",
+                            "created": 1614270713444,
+                            "text": "行为模式 ",
+                            "expandState": "collapse"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c9irebyliug0",
+                                    "created": 1614271244390,
+                                    "text": "策略模式",
+                                    "progress": 9
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c9ireeatq5c0",
+                                    "created": 1614271249483,
+                                    "text": "状态模式",
+                                    "progress": 9
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c9irf21zba00",
+                                    "created": 1614271301191,
+                                    "text": "责任链模式"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c9irfbm7hyw0",
+                                    "created": 1614271322005,
+                                    "text": "解释器模式"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c9irffrrvfc0",
+                                    "created": 1614271331048,
+                                    "text": "命令模式"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c9irfjpymko0",
+                                    "created": 1614271339646,
+                                    "text": "观察者模式"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c9irfntp8740",
+                                    "created": 1614271348579,
+                                    "text": "备忘录模式"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c9irfu3dyu80",
+                                    "created": 1614271362226,
+                                    "text": "迭代器模式"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c9irfy6l52g0",
+                                    "created": 1614271371126,
+                                    "text": "模板方法模式"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c9irg2vpfs00",
+                                    "created": 1614271381352,
+                                    "text": "访问者模式"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c9irg6tc0yo0",
+                                    "created": 1614271389916,
+                                    "text": "中介者模式"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "c9ir7ku5ju00",
+                            "created": 1614270715163,
+                            "text": "结构设计模式",
+                            "expandState": "collapse"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c9irgfobxx40",
+                                    "created": 1614271409204,
+                                    "text": "装饰者模式"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c9irggrajrk0",
+                                    "created": 1614271411560,
+                                    "text": "代理模式"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c9irghenaxs0",
+                                    "created": 1614271412972,
+                                    "text": "组合模式"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c9irghv1cy80",
+                                    "created": 1614271413963,
+                                    "text": "桥连接模式"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c9irgic13sg0",
+                                    "created": 1614271414991,
+                                    "text": "适配器模式"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c9irgiturko0",
+                                    "created": 1614271416069,
+                                    "text": "外观模式",
+                                    "progress": 9
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c9irhgi5jy00",
+                                    "created": 1614271489372,
+                                    "text": "享元模式（蝇量模式）",
+                                    "progress": 9,
+                                    "priority": null
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "c9qdzamle1c0",
+                    "created": 1615045871249,
+                    "text": "JVM",
+                    "expandState": "collapse",
+                    "progress": 5
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "c9qe0wkxzi80",
+                            "created": 1615045997403,
+                            "text": "运行时数据区（内存）",
+                            "expandState": "collapse"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c9qe39qgylk0",
+                                    "created": 1615046182763,
+                                    "text": "线程共享"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "c9qe3xl5yog0",
+                                            "created": 1615046234685,
+                                            "text": "堆"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "c9qe3z38mvk0",
+                                            "created": 1615046237955,
+                                            "text": "方法区（元空间），常量，静态变量，类信息"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "c9qe3bywz4w0",
+                                    "created": 1615046187628,
+                                    "text": "线程私有",
+                                    "expandState": "expand"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "c9qe3fjveyo0",
+                                            "created": 1615046195425,
+                                            "text": "栈（线程）虚拟机栈",
+                                            "note": "# main 线程\n\n\n程序计数器\n\n# -------------\n\nFILO栈（线程）\n\n# ============\nwork（）栈帧\n\n******\n局部变量表\n*******\n操作数栈\n*****\n动态链接\n*****\n方法出口\n\n# ===========\n\n# ===========\n\nmain()栈帧\n\n# ===========\n\n# ------------\n\n"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "c9qe3nd2m8o0",
+                                            "created": 1615046212428,
+                                            "text": "本地方法栈"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "c9qe2alz28w0",
+                                            "created": 1615046106304,
+                                            "text": "程序计数器",
+                                            "note": "时间片轮转机制"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "c9qe1k1suyo0",
+                            "created": 1615046048488,
+                            "text": "本地库接口"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c9qe1n1ajuo0",
+                            "created": 1615046054988,
+                            "text": "类装载子系统"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c9qe1utfvvs0",
+                            "created": 1615046071927,
+                            "text": "class字节码执行引擎"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "c9taok1mbb40",
+                    "created": 1615341246283,
+                    "text": "网络面试",
+                    "expandState": "collapse",
+                    "progress": 9
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "c9taow5jhcw0",
+                            "created": 1615341272642,
+                            "text": "HTTP协议",
+                            "note": "# Hyper Text Transfer Protocol\n\nURI 传输和建立连接，Uniform Resource Identifiers\n\nURI > 包含 URL \n\nURL 查找某个资源的信息，Uniform Resource Locator\n\nURL 组成：1. 协议部分，2，域名部分，3. 端口 4. 虚拟目录 5. 文件部分（不写默认） 6. （锚部分）7. （参数）\n\n# GET 请求\n\n第一部分：请求行，要访问资源版本如HTTP/1.1\n第二部分：请求头，服务器需要的附加信息\n第三部分：空行，请求头后面的空行必须\n第四部分：请求数据，也叫主体，可以添加任其他数据\n\n# POST 请求\n第一部分：请求行，标识POST，HTTP版本\n第二部分：请求头\n第三部分：空行\n第四部分：请求数据\n\n# HTTP响应\n\n第一部分：状态行\n第二部分：消息报头\n第三部分：空行\n第四部分：响应正文\n\nHTTP 状态码：\n1xx:信息，服务器收到请求，需要请求者继续执行操作\n200： OK 成功\n3xx：重定向，需要进一步的操作以完成请求\n4xx 客户端错误，请求包含语法错误或无法完成请求\n5xx：服务器错误，服务器在处理请求的过程中发生了错误"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c9tbtftis2o0",
+                            "created": 1615344450017,
+                            "text": "TCP/IP协议",
+                            "note": "# 分层\n4层：应用，，传输，网络，网络接口\n7层：应用，表示，回话，传输，网络，数据链路，物理\n\n# 分层协议\n\n应用层：FTP,HTTP,DNS,TELNET\n传输：TCP 和 UDP\n网络：IP协议，ARP，RARP，ICMP\n网络接口：数据帧的发送和接收\n\n# 三次握手\n\n客户端-> 服务端\nSYN-Send:客户端SYN=1,seq=x\n\nSYN-RECVD:服务端SYN= 1，ACK=1，seq=y,ack=x+1\n\nESTAB-LISHED:客户端 ACK=1,ack = y+1,seq = x + 1\n\n可靠：\n双方互相保存序列号，维护序列号保证重发机制\n\n# 四次挥手\n\n客户端->服务端\nFIN_WAIT:客户端 FIN=1,seq=u\nCLOSE_WAIT:服务端ACK=1,ack=u+1\n\nCLOSE_WAIT:服务端FIN=1,ACK=1,seq=w,ack=u+1\n\nFIN_WAIT_2: 最大超时2MSL\n(如果等到FIN)客户端 ACK=1,seq=u+1,ack=w+1\n\n\n\nFIN信号发给服务端，服务端可能没有关闭，先发送一个ACK，告诉FIN我收到了，报文全部发送完毕，服务端发\n送FIN，没有一起发送，全双工表现\n\n网络最大存活时间MSL\nTIME_WAIT 经过2MSL 最大等待时间\nCLient 发送ACK后进入TimeWait，Client倒计时，2MSL时候，还没有接到FIN推断ACK已经成功接收，结束TCP连接\n# 连接建立，客户端出问题\nTCP有一个保活器，服务端会发送探测报文，一定时间连续10个探测没反应就会关闭连接"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c9tcnr93kc00",
+                            "created": 1615346825829,
+                            "text": "请求到渲染界面过程",
+                            "note": "DNS 解析：url->dns找得到ip->根据ip找服务器\n\n客户端或者浏览器 与 服务端交互：\n\n涉及到：TCP/IP协议，DNS，TCP，IP，HTTP"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c9tcqjydvzs0",
+                            "created": 1615347045036,
+                            "text": "TCP&UDP",
+                            "note": "TCP 面向连接，UDP 面向无连接\nTCP 数据报文头，序列号，确认号，UDP 结构相对简单\nTCP 面向的是字节流，UDP 基于数据报文\nTCP 保证数据正确性 UDP 可能是丢包\nTCP 保证数据的顺序，UDP 不保证\n"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c9tcsznn34g0",
+                            "created": 1615347235943,
+                            "text": "几种请求方法",
+                            "note": "GET 获取资源，没body，幂等性（发起一次或者多次，返回结果是一致）\nPOST 增加或者修改资源，有body\nPUT 修改资源，有body，幂等性\nDELETE 删除资源，幂等性\n"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c9tcvyfdr340",
+                            "created": 1615347468359,
+                            "text": "几个问题",
+                            "note": "# 一个 HTTP 请求完成后断开?什么情况下会断开?\n\n\nhttp1.0 发送完一个HTTP相应后，断开TCP\n\n但是解决方案，服务端设置 Header  Connection: keep-alive\n\n完成HTTP响应不要断开，好处TCP不需要重新简历TCP链接，SSL的开销也可以避免\n\n# 一个TCP 链接可以对应几个HTTP请求吗？\n\n如上答案是可以的\n\n# 一个 TCP 连接中 HTTP 请求发送可以一起发送么(比如一起发 三个请求，再三个响应一起接收)?\n\nhttp1.1 存在问题，单个TCP链接同一时刻只能处理一个请求，两个请求声明周期不能重叠。\n\nPiplining 开关默认关闭，打开可以，但是有问题\n会造成连接头阻塞，Head-of-line Blocking\n服务端收到请求，按照先后顺序响应，如果第一个请求耗费时间，后面就需要等第一个结束\n\nHttp2 提供Multiplexing 多路传输，可以完成多个HTTP请求。\n现实HTTP2都是建立在HTTPS上实现\n具体的看业务和后端支持情况。\n\n\n\n\n\n\n",
+                            "progress": 9
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "c9td6z0fbfs0",
+                    "created": 1615348331638,
+                    "text": "Java面试题",
+                    "expandState": "collapse",
+                    "progress": 5
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "c9td73r4ddc0",
+                            "created": 1615348341959,
+                            "text": "HashMap",
+                            "note": "# HashMap 的主要用途\n```\nHashMap基于Map接口实现<key,value>存储结构，允许null，同时无序，线程不安全\n\n底层实现，数组+链表+红黑树（1.8）\n\n查找数据根据Key的hashcode 计算具体存储位置\n\nHashMap最多只允许一条key=null的记录\n\nHashMap增删改查效率不错，是ArrayList和LinkedList的折中实现\n\n阈值threshold 容量\n\n`细节`\n\n底层数组：Node<K,V> table，充当哈希表的作用，存储hash的位置元素Node<K,V> 数组长度总是2的N次幂\n\n负载因子：loadFactor，默认是0.75\n\n\n1.根据插入Key的hash值，通过（n-1)& hash 「当前元素的hash值&hash表长度-1」---hash值%hash表长度，计算存储位置table[i],如果没有元素，直接放在table[i],如果存在。判断当前hash值和key是否一致，如果一致，则是修改value，覆盖value\n\n2.如果存在table[i],但是hash值和当前操作值不一致，证明出现了hash冲突\n判断头结点是否是treeNode，是的话按照红黑树方式增加节点。\n如果不是就是单链表，节点插入到链表最后的位置。\n判断当前链表长度是不是大于等于8，如果是把链表转换成红黑树。\n\n3.插入成功判断当前，存储键值对的数量，大于threhold阈值扩容，\n\n4.扩容\n假设底层hash表大小16，负载0.75，存储个数 16 * 0.75 = 12 ，等于12的时候出发扩容。\n\n负载因子越大，HashMap的装载程度越高，发生hash碰撞的几率就越大，链表拉长，效率变慢\n\n负载因子小，链表稀疏，控件浪费，查询效率高。\n\n使用时候，我们会预估key-value的容量size，通过size/loadFactor 计算需要初始化的容量 initialCapacity，可以避免存放到达阈值threshold频繁调用resize方法扩容\n\n```\n\n# 使用HashMap使用什么对象作为Key比较好，为什么\n\n不可变对象，因为可变对象的hash值可能被改变，造成再次进行hash &(length-1) 取模运算位置改变导致数据丢失。\n\n所以尽量选择Integer,String等不可变类型。\n\n# HashMap不安全，多线成操作会怎样\n\n当我们对HashMap遍历，不能对HashMap添加，删除等更改操作，否则抛出ConcurrentModificationException。如果线程安全考虑使用\nConcurrentHashMap，多线程HashMap扩容resize可能导致死循环。\n\n# HashMap和HashTable的区别\n\n1.整体结构\nHashMap允许key为null，对value没处理\nHashTabl的key和value都不允许为null，直接返回NPE\n\n2.容量设定和扩容机制不一样\nHashMap默认16，扩容一定是2的n次方\nHashTable默认是11，扩容是原来的2被再加上1 扩容---「(oldCapacity << 1)+1」\n\n3.hash分布方式\n\nHashMap是key经过计算hash值，利用hash & (length-1) 取膜运算，HashTable容量不一定是2的n次方，不适用\n\n\n",
+                            "progress": 9
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c9tebpydigw0",
+                            "created": 1615351524853,
+                            "text": "ArrayList",
+                            "note": "1. 实现四大接口。List,RandomAcess,Cloneable,Serializable\n2. 存储的是Object数组合集\n3. DEFAULT_CAPACITY 默认容量10\n4. 线程不安全，结构性修改，也就是大小增删修改，外部需要同步处理。\n5. 扩容，插入前会判断\n6. 防止无意的未同步访问\n\n```\n        List list = Collections.synchronizedList(new ArrayList());\n```\n\n\n\n"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c9tebsf7sxs0",
+                            "created": 1615351530225,
+                            "text": "LinkedList",
+                            "note": "1. 双向链表\n2. 线程不安全，非同步。防止不经意同步。Collections.syncronizedList包装\n```\nList list2 = Collections.synchronizedList(new LinkedList());\n```\n\n3. 优点：① 同时也是链表有点。插入删除复杂度O(1). ②  可以动态改变大小，缺点：没有良好的空间结构局部性，对于缓存不友好的数据结构。\n\n\n\n4. 查询，两个指针，判断查找节点index是在前半部分还是后半部分，前半部分，从头指针向后遍历，后半部分，尾指针向前遍历。时间复杂度O(N)"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c9tebudxjxs0",
+                            "created": 1615351534501,
+                            "text": "HashSet",
+                            "note": "1. 底层通过HashMap保证不重复\n\n2. LinkedHashSet 使用的是LinkedHashMap\n\n3. 无序的因为HashMap的key无需\n\n4. 允许null，因为HashMap的key允许有一个null\n\n5. 非线程安全\n\n6. 没有get方法"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c9tebwtnngg0",
+                            "created": 1615351539805,
+                            "text": "内存模型",
+                            "note": "# 高速缓存\n\ncpu（CPU寄存器）<---> CPU高速缓存 <---> 主内存RAM\n\n缓存一致性问题：\n多个处理器的运算任务涉及统一块主内存时，可能导致内存不一致。为此需要个个处理器遵循一定协议，维护一致性。\n\ncpu（CPU寄存器）<---> CPU高速缓存 <---> 缓存一致性协议 <---> 主内存RAM\n\n# java 内存模型 JMM（java memory model)\n\n> 定义程序中各个变量的访问规则， 即在虚拟机中将变量存储到内存和从内存中取出变量这样的底层细节\n\n变量(Variables)与 Java 编程中所说的变量有所区别，它包括了实例字段、静态字 段和构成数值对象的元素，但不包括局部变量与方法参数，\n\n因为后者是线程私有 的。(如果局部变量是一个 reference 类型，它引用的对象在 Java 堆中可被各个线 程共享，但是 reference 本身在 Java 栈的局部变量表中，它是线程私有的)。\n\n> 工作内存 每条线程都有自己的工作内存(Working Memory，又称本地内 存，可与前面介绍的处理器高速缓存类比)，线程的工作内存中保存了该 线程使用到的变量的主内存中的共享变量的副本拷贝。\n\n工作内存是 JMM 的一个抽象概念，并不真实存在。它涵盖了缓存，写缓冲区，寄存器以及 其他的硬件和编译器优化。\n\n# JVM 内存操作的并发问题\n\n1. 工作内存数据一致性 各个线程操作数据时会保存使用到的主内存中的 共享变量副本，当多个线程的运算任务都涉及同一个共享变量时，将导致 各自的的共享变量副本不一致，如果真的发生这种情况，数据同步回主内存以谁的副本数据为准? Java 内存模型主要通过一系列的数据同步协 议、规则来保证数据的一致性\n\n2. 指令重排序优化 Java 中重排序通常是编译器或运行时环境为了优化程 序性能而采取的对指令进行重新排序执行的一种手段。重排序分为两类: 编译期重排序和运行期重排序，分别对应编译时和运行时环境。 同样的， 指令重排序不是随意重排序，它需要满足以下两个条件\n\n* 1 在单线程环境下不能改变程序运行的结果 即时编译器(和处理器)需要 保证程序能够遵守 as-if-serial 属性。通俗地说，就是在单线程情况下，要给 程序一个顺序执行的假象。即经过重排序的执行结果要与顺序执行的结果保 持一致。\n\n* 2 存在数据依赖关系的不允许重排序\n\n多线程环境下，如果线程处理逻辑之间存在依赖关系，有可能因为指令重排序导致运行结果与预期不同,可以声明用volatile关键字\n\n3. Java 内存间的交互操作\n\n# 内存交互的基本操作\n\n关于主内存与工作内存之间的具体交互协议，即一个变量如何从主内存拷贝到工 作内存、如何从工作内存同步回主内存之类的实现细节，Java 内存模型中定义了 下面介绍 8 种操作来完成。\n\n虚拟机实现时必须保证下面介绍的每种操作都是原子的，不可再分的(对于 double 和 long 型的变量来说，load、store、read、和 write 操作在某些平台上允 许有例外）\n。。。\n# Java 内存模型运行规则\n\n> 内存交互基本操作的 3 个特性\n原子性(Atomicity) 即一个操作或者多个操作 要么全部执行并且执行的 过程不会被任何因素打断，要么就都不执行。\n可见性(Visibility) 是指当多个线程访问同一个变量时，一个线程修改了这 个变量的值，其他线程能够立即看得到修改的值。依赖主内存 作为传递媒介的方式来实现可见性。\n有序性(Ordering) 有序性规则表现在以下两种场景: 线程内和线程间\no 线程内 从某个线程的角度看方法的执行，指令会按照一种叫“串行” (as-if-serial)的方式执行，此种方式已经应用于顺序编程语言。\no 线程间 这个线程“观察”到其他线程并发地执行非同步的代码时，由于指令 重排序优化，任何代码都有可能交叉执行。唯一起作用的约束是:对于同步 方法，同步块(synchronized 关键字修饰)以及 volatile 字段的操作仍维持相对 有序。\n\n> happens-before 关系\n\n# 内存屏障 （底层操作）\n\n。。。。内容太多，参考我博客\nhttps://www.jianshu.com/writer#/notebooks/46215602/notes/85056065/preview\n\nJMM 内存模型\n\n",
+                            "progress": 8
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c9tebywqcgw0",
+                            "created": 1615351544345,
+                            "text": "垃圾回收算法"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c9tecfm8rwg0",
+                            "created": 1615351580716,
+                            "text": "垃圾回收机制"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c9teci7k22g0",
+                            "created": 1615351586358,
+                            "text": "类加载过程"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c9teckqtfrc0",
+                            "created": 1615351591877,
+                            "text": "反射"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c9tecm681i00",
+                            "created": 1615351594985,
+                            "text": "多线程和线程池",
+                            "note": "六脉神剑"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c9tedew96400",
+                            "created": 1615351657509,
+                            "text": "断点续传",
+                            "note": "“断点续传”最最基础的原理，用大白话说就是:我们要在下载行为出现中断 的时候，记录下中断的位置信息，然后在下次行为中读取。\n\n\nJava 已经为我们提供了 这样的一个类，那就是 RandomAccessFile。\n\n```\npackage top.zcwfeng.java;\n\nimport java.io.File;\nimport java.io.FileInputStream;\nimport java.io.FileNotFoundException;\nimport java.io.FileOutputStream;\nimport java.io.IOException;\nimport java.io.RandomAccessFile;\n\npublic class Test {\n    private static int position = -1;\n\n    public static void main(String[] args) {\n// 源文件与目标文件\n        File sourceFile = new File(\"D:/\", \"test.txt\");\n        File targetFile = new File(\"E:/\", \"test.txt\"); // 输入输出流\n        FileInputStream fis = null;\n        FileOutputStream fos = null;\n// 数据缓冲区\n        byte[] buf = new byte[1];\n        try {\n            fis = new FileInputStream(sourceFile);\n            fos = new FileOutputStream(targetFile); // 数据读写\n            while (fis.read(buf) != -1) {\n                fos.write(buf);\n// 当已经上传了 3 字节的文件内容时，网络中断了，抛出异常\n                if (targetFile.length() == 3) {\n                    position = 3;\n                    throw new FileAccessException();\n                }\n            }\n        } catch (FileAccessException e) {\n            keepGoing(sourceFile, targetFile, position);\n        } catch (FileNotFoundException e) {\n            System.out.println(\"指定文件不存在\");\n        } catch (IOException e) {\n// TODO: handle exception\n        } finally {\n            try {\n                if (fis != null)\n                    fis.close();\n                if (fis != null)\n                    fis.close();\n                if (fos != null)\n                    fos.close();\n            } catch (IOException e) {\n                e.printStackTrace();\n            }\n        }\n    }\n\n    private static void keepGoing(File source, File target, int position) {\n        try {\n            Thread.sleep(10000);\n        } catch (InterruptedException e) {\n// TODO Auto-generated catch block\n            e.printStackTrace();\n        }\n        try {\n            RandomAccessFile readFile = new RandomAccessFile(source, \"rw\");\n            RandomAccessFile writeFile = new RandomAccessFile(target, \"rw\");\n            readFile.seek(position);\n            writeFile.seek(position);\n// 数据缓冲区\n            byte[] buf = new byte[1];\n// 数据读写\n            while (readFile.read(buf) != -1) {\n                writeFile.write(buf);\n            }\n        } catch (FileNotFoundException e) {\n// 关闭输入输出流\n\n\n// TODO Auto-generated catch block\n            e.printStackTrace();\n        } catch (IOException e) {\n// TODO Auto-generated catch block\n            e.printStackTrace();\n        }\n    }\n\n}\n\nclass FileAccessException extends Exception {\n}\n```"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c9tedguclxc0",
+                            "created": 1615351661747,
+                            "text": "Java四大引用",
+                            "note": "1. 强，软，弱，虚引用\n女儿，妻子，父母---强，软，弱\n\n2. 软引用，在内存不够用的时候才会被回收。\n\n3. 弱引用，垃圾回收器扫描到，一旦发现只有弱引用对象，无论是否内存足够都会回收。\n"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c9tedmcwzig0",
+                            "created": 1615351673754,
+                            "text": "泛型"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c9tedwfpppc0",
+                            "created": 1615351695691,
+                            "text": "Syncronized和Lock",
+                            "note": "1. 锁类型\n\n可重入锁：在执行对象所有同步方法不用再次获得。\n\n可中断锁：等待获取锁的过程中中断\n\n公平锁：按等待获取锁的线程的等待时间获取，等待时间长的具有优先获取锁的全力\n\n读写锁：对资源读取和写入的时候是分开为2部分处理，读取可以多线程一起读。写的时候必须同步的写。\n\n2. Syncronized\n\n> 修饰普通方法和静态方法区别\n\n对象锁是用于对象实例方法或者一个对象上。\n\n类锁用于类的静态方法，或者一个类的class上。\n\n类的对象实例可以有多个，实例对象锁互相互不干扰。\n\n但每个类只有一个class对象，每个类只有一个锁。\n\n> 可见性\n\n一个线程改变了变量，其他线程立马可以看到修改的值。\n\n由于线程变量都必须工作在自己的内存，而不能直接读写主内存变量，对于共享变量v他么是先操作自己的内存，再同步主内存，有一定的时间差，线程A和B不具备可见性。\n\nvolatile可以解决这个问题，除了上面的可见性外，volatile 阻止局部指令重排，保证顺序性。\n\n3. syncronized原理\n涉及两条指令，monitorenter，moniterexit\n反编译后，比普通方法多了一个ACC_SYNCRONIZED 标记。\n线程先判断标记是否被设置，先获取monitor，获取成功执行方法体，执行期间其他线程复发获得monitor\n\n\n",
+                            "progress": 8,
+                            "priority": null
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c9teegxwwio0",
+                            "created": 1615351740327,
+                            "text": "接口抽象类设计",
+                            "note": "1. 抽象类，适合做模板。拥有一些方法，并且想让他们有默认的实现。基本功能不断在变的情况。\n\n2. 接口，多重继承，必须使用接口\n\n3. 类是对事物的抽象，抽象类是对类的抽象，接口是对抽象类的抽象。\n\n4. 接口用于 抽象事物的特性，抽象类用于代码复用。\n\n"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "c9tef5wao2o0",
+                    "created": 1615351794649,
+                    "text": "Android开源框架",
+                    "progress": 5,
+                    "expandState": "collapse",
+                    "priority": 1
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "c9xqzofk6y80",
+                            "created": 1615793495424,
+                            "text": "RxJava",
+                            "note": "Github: https://github.com/ReactiveX/RxJava\n\nhttps://github.com/ReactiveX/RxAndroid\n\nRxJava 本质压缩一句话，异步操作库\n\n好用并且流行的原因：简洁（针对思维和处理业务）\n\n\n\n",
+                            "progress": 9,
+                            "expandState": "collapse"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c9y0j3pf76o0",
+                                    "created": 1615820407581,
+                                    "text": "操作符",
+                                    "progress": 5,
+                                    "expandState": "expand",
+                                    "layout_left_offset": {
+                                        "x": -7,
+                                        "y": 33
+                                    }
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "c9yg0x31mjs0",
+                                            "created": 1615864120370,
+                                            "text": "变换原理",
+                                            "note": "RxJava 内部基于同一个基础变换\nlisft(）\n\n```\n  // 注意:这不是 lift() 的源码，而是将源码中与性能、兼容性、扩展性有关的代码剔除后的核心代码。\n    // 如果需要看源码，可以去 RxJava 的 GitHub 仓库下载。\n    public <R> Observable<R> lift(Operator<? extends R, ? super T> operator) {\n        return Observable.create(new OnSubscribe<R>() {\n            @Override\n            public void call(Subscriber subscriber) {\n                Subscriber newSubscriber = operator.call(subscriber);\n                newSubscriber.onStart();\n                onSubscribe.call(newSubscriber);\n            }\n        });\n    }\n```\n\n1. 生成了新的Observable，创建Observable所用的参数OnSubscribe，它的回调call（）和Observable.subscribe() 不是一样的\n\n2. 当含有lift()时候·\n\n① lift()创建了一个Observable后，加上之前的Observable，已经有两个Observable了。\n\n② `新Observable` 和`新OnSubscribe`  加上之前原始 Observable中的OnSubscribe，也就有了两个OnSubscribe\n\n③ 当用户调用lift()后的Observable的subscribe()的时候，使用的是lift()返回的`新的Observable`,于是出发的onSubscribe.call(subscriber),也是用`新的Observable`中的`新OnSubscribe`---<就是在lift()中生成的OnSubscribe>\n\n④ 这个`新的OnSubscribe`的call（）方法中的onSubscribe,就是指的原始Observable中的原始OnSubscribe对象，在这个call()方法里，`新OnSubscribe`利用operator.call(subscriber) 生成了`新的Subscriber`。\nOperator 就是在这里，通过自己call()方法将`新Subscriber`和 原始Subscriber进行关联，并插入到自己的“变换代码”中实现变换。\n然后用`新Subscribe`向原始Observer进行订阅【有点类似代理，通过拦截和处理实现序列的变换】\n\n> 总结\n在 Observable 执行了 lift(Operator) 方法之后，会返 回一个新的 Observable，这个新的 Observable 会像一个代理一样，负责接收原始的 Observable 发出的事件，并在处理后发送给 Subscriber。",
+                                            "expandState": "collapse"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "c9yhtz1xmeg0",
+                                                    "created": 1615869218328,
+                                                    "text": "lift（）\n针对事件项和事件序列"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "c9ylezgjcmg0",
+                                                    "created": 1615879328188,
+                                                    "text": "compose(Transformer)\n对Observable自身整体的变换"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "c9yhlvd6izk0",
+                                            "created": 1615868583387,
+                                            "text": "Rxjava操作符应用",
+                                            "expandState": "expand"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "c9ywpqcczds0",
+                                                    "created": 1615911202559,
+                                                    "text": "创建操作符",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "c9ywpqccs4g0",
+                                                            "created": 1615911202560,
+                                                            "text": "复杂数据遍历"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9ywpqcdouo0",
+                                                                    "created": 1615911202560,
+                                                                    "text": "just"
+                                                                },
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9ywpqcei080",
+                                                                    "created": 1615911202561,
+                                                                    "text": "fromArray"
+                                                                },
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9ywpqce3pk0",
+                                                                    "created": 1615911202561,
+                                                                    "text": "fromIterable"
+                                                                },
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9ywpqcee3k0",
+                                                                    "created": 1615911202561,
+                                                                    "text": "range"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "c9ywpqceank0",
+                                                            "created": 1615911202561,
+                                                            "text": "定时任务",
+                                                            "expandState": "expand"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9ywpqcewqw0",
+                                                                    "created": 1615911202562,
+                                                                    "text": "interval"
+                                                                },
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9ywpqcf42o0",
+                                                                    "created": 1615911202562,
+                                                                    "text": "intervalRange"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "c9ywpqceucg0",
+                                                            "created": 1615911202562,
+                                                            "text": "嵌套回调异步事件"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9ywpqcfq7c0",
+                                                                    "created": 1615911202563,
+                                                                    "text": "create"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "c9ywpqcffts0",
+                                                            "created": 1615911202563,
+                                                            "text": "延迟任务"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9ywpqcfb3s0",
+                                                                    "created": 1615911202563,
+                                                                    "text": "defer"
+                                                                },
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9ywpqcf71c0",
+                                                                    "created": 1615911202563,
+                                                                    "text": "timer"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "c9ywpqcg8940",
+                                                    "created": 1615911202564,
+                                                    "text": "变换操作符",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "c9ywpqcg3m80",
+                                                            "created": 1615911202564,
+                                                            "text": "变换"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9ywpqcg4vs0",
+                                                                    "created": 1615911202564,
+                                                                    "text": "map"
+                                                                },
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9ywpqcgats0",
+                                                                    "created": 1615911202564,
+                                                                    "text": "flatMap"
+                                                                },
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9ywpqcfxy80",
+                                                                    "created": 1615911202564,
+                                                                    "text": "concatMap"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "c9ywpqcgaq00",
+                                                    "created": 1615911202564,
+                                                    "text": "合并操作符",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "c9ywpqcgtqg0",
+                                                            "created": 1615911202565,
+                                                            "text": "组合多个被观察者，合并事件"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9ywpqcgq6o0",
+                                                                    "created": 1615911202565,
+                                                                    "text": "concatArray(发送事件--串行)"
+                                                                },
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9ywpqcghk00",
+                                                                    "created": 1615911202565,
+                                                                    "text": "concatDelayError"
+                                                                },
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9ywpqcgqsw0",
+                                                                    "created": 1615911202565,
+                                                                    "text": "megerArray(发送事件--并行)"
+                                                                },
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9ywpqcgu6g0",
+                                                                    "created": 1615911202565,
+                                                                    "text": "megerArrayDelayError"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "c9ywpqcgv1s0",
+                                                            "created": 1615911202565,
+                                                            "text": "组合多个被观察者，合并为一个被观察者"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9ywpqcgqcg0",
+                                                                    "created": 1615911202565,
+                                                                    "text": "zip"
+                                                                },
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9ywpqch5q80",
+                                                                    "created": 1615911202566,
+                                                                    "text": "combineLatest"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "c9ywpqchac80",
+                                                            "created": 1615911202566,
+                                                            "text": "发送事件前追加其他事件"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9ywpqch88o0",
+                                                                    "created": 1615911202567,
+                                                                    "text": "startWithArray"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "c9ywpqci2mg0",
+                                                            "created": 1615911202567,
+                                                            "text": "组合多个事件为一个事件"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9ywpqci1go0",
+                                                                    "created": 1615911202567,
+                                                                    "text": "reduce"
+                                                                },
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9ywpqchqjs0",
+                                                                    "created": 1615911202567,
+                                                                    "text": "collect"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "c9ywpqchzjs0",
+                                                            "created": 1615911202567,
+                                                            "text": "汇总发送事件数量"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9ywpqchz140",
+                                                                    "created": 1615911202567,
+                                                                    "text": "count"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "c9ywpqci78w0",
+                                                    "created": 1615911202568,
+                                                    "text": "过滤操作符",
+                                                    "expandState": "collapse"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "c9ywpqcijvk0",
+                                                            "created": 1615911202568,
+                                                            "text": "指定过滤条件，过滤需要的事件/数据"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9ywpqci9cw0",
+                                                                    "created": 1615911202568,
+                                                                    "text": "filter"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "c9ywpqcijcg0",
+                                                            "created": 1615911202568,
+                                                            "text": "过滤指定类型的事件/数据"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9ywpqcjiq00",
+                                                                    "created": 1615911202570,
+                                                                    "text": "ofType"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "c9ywpqcjotc0",
+                                                            "created": 1615911202570,
+                                                            "text": "过滤条件不满足的事件/数据"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9ywpqcjjm00",
+                                                                    "created": 1615911202570,
+                                                                    "text": "skip"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "c9ywpqcjgv40",
+                                                            "created": 1615911202570,
+                                                            "text": "过滤掉重复的事件/数据"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9ywpqckexk0",
+                                                                    "created": 1615911202571,
+                                                                    "text": "distinct"
+                                                                },
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9ywpqck6m00",
+                                                                    "created": 1615911202571,
+                                                                    "text": "distinctUntilChanged"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "c9ywpqckff40",
+                                                            "created": 1615911202571,
+                                                            "text": "按时间或者数量过滤事件/数据"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9ywpqck94o0",
+                                                                    "created": 1615911202571,
+                                                                    "text": "take"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "c9ywpqclwds0",
+                                                            "created": 1615911202574,
+                                                            "text": "过滤指定位置的事件"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9ywpqcm20w0",
+                                                                    "created": 1615911202574,
+                                                                    "text": "elementAt"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "c9ywpqcm2u00",
+                                                            "created": 1615911202574,
+                                                            "text": "按事件段过滤事件"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9ywpqcmpew0",
+                                                                    "created": 1615911202575,
+                                                                    "text": "throttleFirst"
+                                                                },
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9ywpqcmtrs0",
+                                                                    "created": 1615911202575,
+                                                                    "text": "throttleLast"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "c9ywpqcmomw0",
+                                                    "created": 1615911202575,
+                                                    "text": "条件操作符",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "c9ywpqcmcq80",
+                                                            "created": 1615911202575,
+                                                            "text": "判断所有事件是否满足"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9ywpqcmw4g0",
+                                                                    "created": 1615911202576,
+                                                                    "text": "all"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "c9ywpqcndxk0",
+                                                            "created": 1615911202576,
+                                                            "text": "发送的事件判断条件不满足时，就会终止后续事件接收"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9ywpqcnxso0",
+                                                                    "created": 1615911202577,
+                                                                    "text": "takeWhile"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "c9ywpqco2js0",
+                                                            "created": 1615911202578,
+                                                            "text": "发送的事件判断条件不满足时，才接收后续的事件"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9ywpqcobnk0",
+                                                                    "created": 1615911202578,
+                                                                    "text": "skipWhile"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "c9ywpqcodh40",
+                                                            "created": 1615911202578,
+                                                            "text": "过滤事件(同filter)"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9ywpqco97k0",
+                                                                    "created": 1615911202578,
+                                                                    "text": "takeUntil"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "c9ywpqco7d40",
+                                                            "created": 1615911202578,
+                                                            "text": "接收判断条件满足之外的事件"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9ywpqcokmg0",
+                                                                    "created": 1615911202578,
+                                                                    "text": "skipUntil"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "c9ywpqcochc0",
+                                                            "created": 1615911202578,
+                                                            "text": "判断2个被观察者发生的事件是否一样"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9ywpqcoo1s0",
+                                                                    "created": 1615911202579,
+                                                                    "text": "sequenceEqual"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "c9ywpqcp2fc0",
+                                                            "created": 1615911202579,
+                                                            "text": "判断发送的数据里面是否包含指定数据"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9ywpqcozpc0",
+                                                                    "created": 1615911202579,
+                                                                    "text": "contains"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "c9ywpqcp6jk0",
+                                                            "created": 1615911202579,
+                                                            "text": "判断发送的数据是否为空"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9ywpqcoygw0",
+                                                                    "created": 1615911202579,
+                                                                    "text": "isEmpty"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "c9ywpqcoxpk0",
+                                                            "created": 1615911202579,
+                                                            "text": "多个被观察者，只接收\"第一个成功发送数据的被观察者\""
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9ywpqcp29k0",
+                                                                    "created": 1615911202579,
+                                                                    "text": "amb"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "c9ywpqcp25c0",
+                                                    "created": 1615911202579,
+                                                    "text": "其他功能操作符",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "c9ywpqcp9dk0",
+                                                            "created": 1615911202580,
+                                                            "text": "常用的do系列操作符",
+                                                            "expandState": "expand"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9ywpqcpef40",
+                                                                    "created": 1615911202580,
+                                                                    "text": "doOnEach"
+                                                                },
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9ywpqcpd3k0",
+                                                                    "created": 1615911202580,
+                                                                    "text": "doOnSubscribe"
+                                                                },
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9ywpqcpjls0",
+                                                                    "created": 1615911202580,
+                                                                    "text": "doOnNext"
+                                                                },
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9ywpqcpp9c0",
+                                                                    "created": 1615911202580,
+                                                                    "text": "doAfterNext"
+                                                                },
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9ywpqcppq00",
+                                                                    "created": 1615911202580,
+                                                                    "text": "doOnComplete"
+                                                                },
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9ywpqcpi5s0",
+                                                                    "created": 1615911202580,
+                                                                    "text": "doOnErro"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "c9ywpqcpeq00",
+                                                            "created": 1615911202580,
+                                                            "text": "错误/异常处理",
+                                                            "expandState": "expand"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9ywpqcpn340",
+                                                                    "created": 1615911202580,
+                                                                    "text": "抓捕异常并反馈特殊的结果&正常终止"
+                                                                },
+                                                                "children": [
+                                                                    {
+                                                                        "data": {
+                                                                            "id": "c9ywpqcqa8o0",
+                                                                            "created": 1615911202581,
+                                                                            "text": "onErrorRetuturn"
+                                                                        },
+                                                                        "children": []
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9ywpqcq89s0",
+                                                                    "created": 1615911202581,
+                                                                    "text": "抓捕异常并返回一个新的事件"
+                                                                },
+                                                                "children": [
+                                                                    {
+                                                                        "data": {
+                                                                            "id": "c9ywpqcqark0",
+                                                                            "created": 1615911202581,
+                                                                            "text": "onErrorResumeNext"
+                                                                        },
+                                                                        "children": []
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9ywpqcq2pc0",
+                                                                    "created": 1615911202581,
+                                                                    "text": "异常重试"
+                                                                },
+                                                                "children": [
+                                                                    {
+                                                                        "data": {
+                                                                            "id": "c9ywpqcqcqo0",
+                                                                            "created": 1615911202581,
+                                                                            "text": "retry"
+                                                                        },
+                                                                        "children": []
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "c9ywpqcq2i00",
+                                                            "created": 1615911202581,
+                                                            "text": "事件重发",
+                                                            "expandState": "expand"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9ywpqcqtsw0",
+                                                                    "created": 1615911202582,
+                                                                    "text": "repeat"
+                                                                },
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9ywpqcqx600",
+                                                                    "created": 1615911202582,
+                                                                    "text": "repeatWhen"
+                                                                },
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9ywpqcr5140",
+                                                                    "created": 1615911202583,
+                                                                    "text": "repeatUntil"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "c9ywpqcr3vk0",
+                                                            "created": 1615911202583,
+                                                            "text": "延迟发送被观察者的事件",
+                                                            "expandState": "expand"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9ywpqcrbh40",
+                                                                    "created": 1615911202583,
+                                                                    "text": "delay"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "c9ywpqcrqgo0",
+                                                            "created": 1615911202584,
+                                                            "text": "发送事件超时处理",
+                                                            "expandState": "expand"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "c9ywpqcs3600",
+                                                                    "created": 1615911202584,
+                                                                    "text": "timeout"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "c9yes39yjag0",
+                                    "created": 1615860607462,
+                                    "text": "RxJava扩展的观察者模式",
+                                    "expandState": "collapse",
+                                    "progress": 9,
+                                    "layout_left_offset": {
+                                        "x": -17,
+                                        "y": 26
+                                    }
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "c9yetbhvndk0",
+                                            "created": 1615860703719,
+                                            "text": "Observable（被观察者）",
+                                            "expandState": "collapse"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "c9yf9ggac480",
+                                                    "created": 1615861968333,
+                                                    "text": "OnSubscribe参数对象\n相当于计划表，被订阅后\ncall()方法自动背调用，事件按顺序触发",
+                                                    "layout_left_offset": {
+                                                        "x": 3,
+                                                        "y": -35
+                                                    }
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "c9yfbcsvp400",
+                                                    "created": 1615862117116,
+                                                    "text": "create()\nRxJava最基本的创造事件序列的方法\n基于这个方法，提供了一些方法|\n来快捷创建事件队列",
+                                                    "layout_left_offset": {
+                                                        "x": -18,
+                                                        "y": -18
+                                                    }
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "c9yete7bmgg0",
+                                            "created": 1615860709611,
+                                            "text": "Observer（观察者）",
+                                            "expandState": "collapse"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "c9yf3zcet880",
+                                                    "created": 1615861539273,
+                                                    "text": "Subscriber，扩展Observer",
+                                                    "expandState": "collapse"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "c9yf6t2lmjc0",
+                                                            "created": 1615861760712,
+                                                            "text": "增加onStart() 方法\nsubscribe刚开始未发送之前\n做一些准备工作",
+                                                            "layout_left_offset": {
+                                                                "x": -49,
+                                                                "y": -15
+                                                            }
+                                                        },
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "c9yf73mu8rk0",
+                                                            "created": 1615861783703,
+                                                            "text": "unsubscribe（）取消订阅\nsubscribe之后Observable持有Observer引用\n不使用的时候释放，如onPause，onStop中",
+                                                            "layout_left_offset": {
+                                                                "x": -33,
+                                                                "y": 8
+                                                            }
+                                                        },
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "c9ym4d8fwhk0",
+                                                            "created": 1615881317277,
+                                                            "text": "doOnSubScribe（）\n和onStart一样，subscribe()调用后，\n发送事件前调用。\n区别，可以指定线程",
+                                                            "layout_left_offset": {
+                                                                "x": -41,
+                                                                "y": 24
+                                                            },
+                                                            "note": "```\nSubscriber 的 onStart() 可以用作流程开始前的初始化。\n    然而 onStart() 由于在 subscribe() 发生时就被调用了，因此不能指定线程，而是只 能执行在 subscribe() 被调用时的线程。\n    这就导致如果 onStart() 中含有对线程有要求的代码(例如在界面上显示一个 ProgressBar，这必须在主线程执行)，\n    将会有 线程非法的风险，因为有时你无法预测 subscribe() 将会在什么线程执行。\n    \n而与 Subscriber.onStart() 相对应的，有一个方法 Observable.doOnSubscribe()\n    它和Subscriber.onStart()同样是在 subscribe() 调用后而且在事件发送前执行，但区别在于它可以指定线程。\n    默认情况下， doOnSubscribe() 执行在 subscribe() 发生的线程;\n    而如果在 doOnSubscribe() 之后有 subscribeOn() 的话，它将执行在离它最近的 subscribeOn()所指定的线程。\n```\n\n```\nObservable.create(onSubscribe)\n                .subscribeOn(Schedulers.io())\n                .doOnSubscribe(new Action0() {\n                    @Override\n                    public void call() {\n                        progressBar.setVisibility(View.VISIBLE); // 需要在主线程执行\n                    }\n                }).subscribeOn(AndroidSchedulers.mainThread()) // 指定主线程 \n                .observeOn(AndroidSchedulers.mainThread())\n                .subscribe(subscriber);\n```\n\ndoOnSubscribe() 后面跟着subscribeOn(),就能指定准备工程的线程l"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "c9yeufop77s0",
+                                            "created": 1615860791203,
+                                            "text": "subscrib（订阅）",
+                                            "note": "observable.subscribe(observer); // 或者: observable.subscribe(subscriber);\n\nObservable 和 Observer搭建链条关系\n\n\n```\n    // 注意:这不是 subscribe() 的源码，而是将源码中与性能、兼容性、扩展性有关的代码剔除后的核心代码。 \n    // 如果需要看源码，可以去 RxJava 的 GitHub 仓库下载。\n    public Subscription subscribe(Subscriber subscriber) {\n        subscriber.onStart();\n        onSubscribe.call(subscriber);\n        return subscriber;\n    }\n```\n\nsubscribe() 做了三件事\n\n1. 调用Subscribe.onStart().是一个可选的。subscribe刚开始未发送之前做一些准备工作\n2. 调用Subscribe.call(subscriber).事件开始发送的逻辑。只有在被订阅subscribe（）时执行（创建的时候不会立即开始）\n3. 将传入的Subscriber 作为Subscribtion 返回，为了方便unsubscribe（）"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "c9yewiz0puo0",
+                                            "created": 1615860955086,
+                                            "text": "回调事件",
+                                            "expandState": "collapse"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "c9yewn4i4eg0",
+                                                    "created": 1615860964124,
+                                                    "text": "onComplete（）"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "c9yewr9dgio0",
+                                                    "created": 1615860973126,
+                                                    "text": "onError()"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "c9yewtz8wvk0",
+                                                    "created": 1615860979044,
+                                                    "text": "onNext（）"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "c9yfhyp57t40",
+                                    "created": 1615862634964,
+                                    "text": "Scheduler线程控制",
+                                    "expandState": "collapse",
+                                    "progress": 9
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "c9yfr6tbylc0",
+                                            "created": 1615863357909,
+                                            "text": "分类",
+                                            "expandState": "collapse"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "c9yfijedzvs0",
+                                                    "created": 1615862680026,
+                                                    "text": "Schedulers.immediate()\n直接在当前线程执行，不指定线程"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "c9yfj3hrulk0",
+                                                    "created": 1615862723767,
+                                                    "text": "Schedulers.newThread()\n总是启用新线程运行，\n并在新线程操作"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "c9yfjztyhcw0",
+                                                    "created": 1615862794161,
+                                                    "text": "Schedurers.io()\nI/O操作，内部是一个无数量上限\n的线程池，可以重用空闲线程。\n不要把计算工作放在IO，\n避免创建不必要的线程"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "c9yfmbo5x200",
+                                                    "created": 1615862976660,
+                                                    "text": "Schdulers.computation()\n计算所使用的Scheduler。\n指的是CPU密集型计算，\n例如图形的计算，会被IO限制的操作。\n线程池大小为CPU的核数。\n不能放IO操作，否则IO操作等待时间浪费CPU"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "c9yfoxfrw6w0",
+                                                    "created": 1615863180770,
+                                                    "text": "AndroidSchedulers.mainThread()\nAndroid专用操作，\n指定操作在Android主线程"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "c9yfrh8z6eg0",
+                                            "created": 1615863380623,
+                                            "text": "控制方法",
+                                            "expandState": "expand",
+                                            "note": "```\nObservable.just(1, 2, 3, 4)\n                .subscribeOn(Schedulers.io())\n                // 指定 subscribe() 发生在 IO 线程\n                .observeOn(AndroidSchedulers.mainThread())\n                // 指定 Subscriber 的回调发生在主线程\n                .subscribe(new Action1<Integer>() {\n                    @Override\n                    public void call(Integer number) {\n                        Log.d(\"zcw\", \"number:\" + number);\n                    }\n                });\n```\n\n内部原理也是基于lift()的\n\n\n1. subscribeOn()和observeOn() 都做了线程切换。\n\n2. subscribeOn() 的线程切换发生在OnSubscribe中，（也就是在她通知上一级OnSubscribe还没有开始发送）subscribeOn()的线程控制可以从事件发出的开端造成影像；\n\n3. observerOn() 线程切换发生在内建的Subscriber 中，（发生在给下一级Subscriber发送事件时候），observerOn()控制的是它后面的线程。\n\n可以有多次切换。subscribeOn，observeOn.\n但是当使用了锁哥subscribeOn，只有第一个subscribeOn起作用\n"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "c9yfrpi3kc80",
+                                                    "created": 1615863398589,
+                                                    "text": "subscribeOn()\n事件产生线程，subscribe()发生的线程",
+                                                    "layout_left_offset": {
+                                                        "x": -3,
+                                                        "y": -9
+                                                    }
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "c9yfsmyk6xk0",
+                                                    "created": 1615863471418,
+                                                    "text": "observerOn()\n事件消费的线程，Subscriber所在线程",
+                                                    "layout_left_offset": {
+                                                        "x": -6,
+                                                        "y": 7
+                                                    }
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "c9yfyq65k3s0",
+                                    "created": 1615863948593,
+                                    "text": "接口说明",
+                                    "expandState": "collapse"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "c9yfz2psjsg0",
+                                            "created": 1615863975902,
+                                            "text": "FuncX\n有返回值的接口"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "c9yfzchdx280",
+                                            "created": 1615863997161,
+                                            "text": "ActionX\n无返回值的接口"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "c9xqzrlr0u00",
+                            "created": 1615793502329,
+                            "text": "Retrofit"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c9xxt21tyr40",
+                            "created": 1615812724289,
+                            "text": "OKHttp"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "c9wc9i0x08w0",
+                    "created": 1615650388515,
+                    "text": "加密算法",
+                    "progress": 9,
+                    "expandState": "collapse"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "c9wcee7640w0",
+                            "created": 1615650772006,
+                            "text": "对称加密",
+                            "expandState": "expand",
+                            "note": "RC2和RC4是由 Ron rivest为RSA数据安全公司( RSADI)而设计的可变钥长的加密算法,其中“RC”代表“Ron’ s Code。\n\n* RC4是一种可变钥长的流密码算法,比DES快10倍,RC2和RC4的速度都与钥长无关。\n\nRSA数据安全公司声称他们的算法与DES一样安全(同等钥长情况下),但他们拒绝公开算法,使人们对此产生怀疑。他们愿意给分析者提供算法的细节,RSA数据安全公司的首席科学家B. Kalish宣布RC2能抗差分密码分析(没有S盒),流算法RC4能抗差分分析。然而值得注意的是RC2和RC4都没能象DES那样经受得住20年激烈的密码分析。\n\n\n假设算法是安全的,并且蛮力攻击是找到密钥最有效的方法,那么算法的安全性取决于钥长。如果采用长密钥,则该算法比DES安全,如果采用短密钥,则安全性比DES差。"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c9wceoefiyo0",
+                                    "created": 1615650794213,
+                                    "text": "3DES"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c9wcn9lgx1k0",
+                                    "created": 1615651467265,
+                                    "text": "块式，明文按分组加密",
+                                    "expandState": "expand"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "c9wcejcx1080",
+                                            "created": 1615650783238,
+                                            "text": "DES",
+                                            "note": "# 密钥短，使用时间长，硬件计算快于软件"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "c9wcmyit0y00",
+                                            "created": 1615651443159,
+                                            "text": "IDEA",
+                                            "note": "# 个人使用不受专利限制，可抵抗差分攻击，基于三个群。"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "c9wcehtlmkg0",
+                                            "created": 1615650779893,
+                                            "text": "AES",
+                                            "note": "# 可变密钥长，可变分组长。"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "c9wco8xcnxk0",
+                                    "created": 1615651544170,
+                                    "text": "流式加密，不需填充明文，密钥长度可变",
+                                    "expandState": "expand"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "c9wcet1exlc0",
+                                            "created": 1615650804310,
+                                            "text": "RC4"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "c9wcrbt90xk0",
+                                    "created": 1615651785545,
+                                    "text": "可变秘钥长度，块式",
+                                    "expandState": "expand",
+                                    "note": "可变秘钥长度，块式",
+                                    "priority": null
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "c9wceqdl0d40",
+                                            "created": 1615650798516,
+                                            "text": "RC2"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "c9wcewj7mww0",
+                            "created": 1615650811917,
+                            "text": "非对称加密",
+                            "expandState": "expand"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c9wcf0x3eao0",
+                                    "created": 1615650821463,
+                                    "text": "RSA"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c9wcf2k6jgo0",
+                                    "created": 1615650825036,
+                                    "text": "DSA"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c9wcf3tafts0",
+                                    "created": 1615650827763,
+                                    "text": "ECC"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "c9wcfchkz400",
+                            "created": 1615650846647,
+                            "text": "单向散列函数加密",
+                            "expandState": "expand"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c9wcfkhmvlc0",
+                                    "created": 1615650864064,
+                                    "text": "MD5"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c9wcfngj1r40",
+                                    "created": 1615650870527,
+                                    "text": "SHA"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "c9wd8su7bcw0",
+                    "created": 1615653154799,
+                    "text": "算法面试",
+                    "expandState": "collapse",
+                    "progress": 5,
+                    "priority": 1
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "c9wd8yzntko0",
+                            "created": 1615653168190,
+                            "text": "数组哈希"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "calf1m3uv7k0",
+                            "created": 1618197232733,
+                            "text": "二叉树"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "calf1q43n2g0",
+                            "created": 1618197241454,
+                            "text": "矩阵"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "c9xxeqc68w80",
+                    "created": 1615811601695,
+                    "text": "Android面试题",
+                    "expandState": "expand",
+                    "priority": 1
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "c9xxeug2c0w0",
+                            "created": 1615811610637,
+                            "text": "如何优化自定义View",
+                            "note": "1. 为了加速view，对于频繁调用的方法，要紧量减少不必要的代码。先从onDraw开始，需要特别注意不要在这里做分配内存的事，因为它会导致GC，从而导致卡顿。\n\n2. 在初始化或者动画间隙做分配内存的动作，不要在动画正在执行的时候做内存分配。\n\n3. 尽可能减少onDraw的次数，大多数导致onDraw都是调用invalidate（），尽量减少调用invalidate()次数。如果可能的话，尽量调用4个参数的invalidate（）方法，而不是没有参数的invalidate（）。没有参数的invalidate（）会强制重绘证个view"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "calf2agtozc0",
+                    "created": 1618197285759,
+                    "text": "音视频",
+                    "priority": 1
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "calf2kxl49k0",
+                            "created": 1618197308541,
+                            "text": "webrtc",
+                            "progress": null,
+                            "priority": 1
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "calf2vtqli80",
+                            "created": 1618197332253,
+                            "text": "C/C++"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "calf3chs3t40",
+                            "created": 1618197368535,
+                            "text": "JNI/NDK"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "calf3gl1fr40",
+                            "created": 1618197377439,
+                            "text": "RTMP"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "calf3iduy740",
+                            "created": 1618197381359,
+                            "text": "媒体格式"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "calf3mgdl400",
+                            "created": 1618197390218,
+                            "text": "OpenGL"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "calf3p70tiw0",
+                            "created": 1618197396183,
+                            "text": "OpenCV"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "calfvn98zu00",
+                    "created": 1618199586160,
+                    "text": "安全"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "calfvq9z89s0",
+                            "created": 1618199592735,
+                            "text": "Kali安全工具与渗透"
+                        },
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "default",
+    "theme": "classic",
+    "version": "1.4.43"
+}

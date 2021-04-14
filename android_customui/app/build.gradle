@@ -55,6 +55,7 @@ dependencies {
     // aspectJ 测试
     api project(':aspectj')
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     // 内存检测工具
     debugImplementation('com.squareup.leakcanary:leakcanary-android:2.3')
     implementation 'com.squareup.leakcanary:leakcanary-object-watcher-android:2.3'
@@ -80,5 +81,6 @@ dependencies {
     //MMKV 使用
     implementation 'com.tencent:mmkv-static:1.2.2'
 
+    implementation 'com.wx.wheelview:wheelview:1.3.3'
 
 }

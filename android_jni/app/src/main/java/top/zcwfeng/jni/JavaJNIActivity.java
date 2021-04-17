@@ -1,10 +1,12 @@
 package top.zcwfeng.jni;
 
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class JavaJNIActivity extends AppCompatActivity {
@@ -90,6 +92,11 @@ public class JavaJNIActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         delQuote();
+    }
+
+    @Override
+    public void onConfigurationChanged(@NonNull Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
     }
 
     @Override

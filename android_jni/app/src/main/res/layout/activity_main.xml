@@ -13,6 +13,13 @@
         android:text="JavaJNISample" />
 
     <Button
+        android:id="@+id/fmod_demo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ff0000"
+        android:text="Fmod 调音师实战" />
+
+    <Button
         android:id="@+id/sample_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -304,7 +304,7 @@ Java_top_zcwfeng_jni_ImageProcess_getIdNumber(JNIEnv *env, jclass type, jobject 
     //imshow("gray", dst);
 
     //二值化
-    threshold(dst, dst, 100, 255, CV_THRESH_BINARY);
+    threshold(dst, dst, 100, 255, THRESH_BINARY);
     //imshow("threshold", dst);
 
     //加水膨胀，发酵
@@ -391,3 +391,4 @@ Java_top_zcwfeng_jni_BsPatchUtils_path(JNIEnv *env, jclass _jclass, jstring old_
     env->ReleaseStringUTFChars(path, argv[3]);
     return result;
 }
+

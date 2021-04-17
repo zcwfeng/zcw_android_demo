@@ -22,6 +22,10 @@ class MainActivity : AppCompatActivity() {
             var intent = Intent(this, JavaJNIActivity::class.java)
             startActivity(intent)
         }
+        fmod_demo.setOnClickListener{
+            var intent = Intent(this, FmodVoiceActivity::class.java)
+            startActivity(intent)
+        }
 
         // Example of a call to a native method
         sample_text.text = stringFromJNI()

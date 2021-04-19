@@ -1,10 +1,10 @@
 //
 // Created by 张传伟 on 2021/4/16.
 //
-#include <jni.h>
+
 #include <fmod/fmod.hpp>
 #include <string>
-#include <android/log.h>
+#include "common_head.h"
 
 #ifndef ANDROID_JNI_FMOD_DEMO_H
 #define ANDROID_JNI_FMOD_DEMO_H
@@ -24,10 +24,6 @@ extern "C" {
 #define top_zcwfeng_jni_FmodVoiceActivity_MODE_GAOGUAI 4L
 #undef top_zcwfeng_jni_FmodVoiceActivity_MODE_KONGLING
 #define top_zcwfeng_jni_FmodVoiceActivity_MODE_KONGLING 5L
-#define LOG_TAG "native_zcw"
-#define LOGI(...) __android_log_print(ANDROID_LOG_INFO,LOG_TAG,__VA_ARGS__)
-#define LOGD(...) __android_log_print(ANDROID_LOG_WARN,LOG_TAG,__VA_ARGS__)
-#define LOGE(...) __android_log_print(ANDROID_LOG_ERROR,LOG_TAG,__VA_ARGS__)
 
 extern "C"
 JNIEXPORT void JNICALL

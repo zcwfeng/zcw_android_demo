@@ -1,56 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".JavaJNIActivity">
-    <TextView
-        android:id="@+id/name_text"
-        android:text="David"
+    android:layout_height="match_parent">
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".JavaJNIActivity">
 
-    <TextView
-        android:id="@+id/age_text"
-        android:text="0"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"/>
+        <TextView
+            android:id="@+id/name_text"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:text="David" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="test01ArrayAction"
-        android:text="ArrayAction"
-        />
+        <TextView
+            android:id="@+id/age_text"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="0" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="test02putObject"
-        android:text="putObject"
-        />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="test01ArrayAction"
+            android:text="ArrayAction" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="test03insertObject"
-        android:text="insertObject"
-        />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="test02putObject"
+            android:text="putObject" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="test04Quote"
-        android:text="Quote"
-        />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="test03insertObject"
+            android:text="insertObject" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="test05DelQuote"
-        android:text="DelQuote"
-        />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="test04Quote"
+            android:text="Quote" />
 
-</LinearLayout>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="test05DelQuote"
+            android:text="DelQuote" />
+
+        <Button
+            android:id="@+id/jni_regist_1"
+            style="@style/MenuBtnTextStyle"
+            android:onClick="jni_click"
+            android:text="Dynamic Regist 1" />
+
+        <Button
+            android:id="@+id/jni_regist_2"
+            style="@style/MenuBtnTextStyle"
+            android:onClick="jni_click"
+            android:text="Dynamic Regist 2" />
+
+        <Button
+            android:id="@+id/jni_thread_1"
+            style="@style/MenuBtnTextStyle"
+            android:onClick="jni_click"
+            android:text="JNI线程" />
+
+        <Button
+            android:id="@+id/jni_thread_2"
+            style="@style/MenuBtnTextStyle"
+            android:onClick="jni_click"
+            android:text="JNI线程 细节" />
+
+        <Button
+            android:id="@+id/jni_thread_3"
+            style="@style/MenuBtnTextStyle"
+            android:onClick="jni_click"
+            android:text="跳转到下一个组件，必须是同一次运行时操作" />
+
+
+    </LinearLayout>
+</ScrollView>

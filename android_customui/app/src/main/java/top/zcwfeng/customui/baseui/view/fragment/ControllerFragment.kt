@@ -38,7 +38,8 @@ class ControllerFragment : ListFragment() {
                 "Socket Client",
                 "Socket 心跳演示",
                 "RecyclerView 顶部和底部阴影问题",
-                "Text&EditText 测试代码")
+                "Text&EditText 测试代码",
+                "DialogFragment 测试代码")
         var arrayAdapter = activity?.let { ArrayAdapter(it, R.layout.simple_list_item_1, array) }
         listAdapter = arrayAdapter
     }
@@ -110,6 +111,11 @@ class ControllerFragment : ListFragment() {
 
                 val intent = Intent(activity, TextOrEditTextActivity::class.java)
                 startActivity(intent)
+            }
+            17 -> {
+
+                val firstDialog = CustomDialogFragment()
+                activity?.let { firstDialog.showNow(it.supportFragmentManager,"CustomDialogFragment") }
             }
         }
     }

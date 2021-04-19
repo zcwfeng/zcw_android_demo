@@ -21,4 +21,13 @@
         <item name="android:layout_gravity">center_horizontal</item>
     </style>
 
+    <style name="MenuBtnTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:textSize">25dp</item>
+        <item name="android:textColor">#f00</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+    </style>
+
 </resources>

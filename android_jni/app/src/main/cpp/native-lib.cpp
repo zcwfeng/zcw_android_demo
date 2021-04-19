@@ -1,17 +1,10 @@
-//#include <jni.h>
 #include <string>
 #include <android/bitmap.h>
 #include <android/native_window.h>
 #include <android/native_window_jni.h>
 #include <opencv2/opencv.hpp>
-#include <android/log.h>
 #include "top_zcwfeng_jni_JavaJNIActivity.h"
-
-#define LOG_TAG "native_zcw"
-
-#define LOGI(...) __android_log_print(ANDROID_LOG_INFO,LOG_TAG,__VA_ARGS__)
-#define LOGD(...) __android_log_print(ANDROID_LOG_WARN,LOG_TAG,__VA_ARGS__)
-#define LOGE(...) __android_log_print(ANDROID_LOG_ERROR,LOG_TAG,__VA_ARGS__)
+#include "common_head.h"
 
 #define DEFAULT_CARD_WIDTH 640
 #define DEFAULT_CARD_HEIGHT 400

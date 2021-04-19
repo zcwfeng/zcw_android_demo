@@ -13,6 +13,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".JNIActivityThreadTest"></activity>
         <activity android:name=".FmodVoiceActivity" />
         <activity android:name=".JavaJNIActivity" />
         <activity android:name=".OpenCVIDCard" />

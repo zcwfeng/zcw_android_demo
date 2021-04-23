@@ -1,8 +1,8 @@
 //
 // Created by 张传伟 on 2021/4/19.
 //
-#include "../../../../../../../../../../Android/android_SDK/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include/android/log.h"
-#include "../../../../../../../../../../Android/android_SDK/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include/jni.h"
+#include <android/log.h>
+#include <jni.h>
 #ifndef ANDROID_JNI_COMMON_HEAD_H
 #define ANDROID_JNI_COMMON_HEAD_H
 #define LOG_TAG "native_zcw"

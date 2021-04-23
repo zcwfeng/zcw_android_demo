@@ -54,6 +54,8 @@
             android:onClick="test05DelQuote"
             android:text="DelQuote" />
 
+
+
         <Button
             android:id="@+id/jni_regist_1"
             style="@style/MenuBtnTextStyle"
@@ -83,7 +85,26 @@
             style="@style/MenuBtnTextStyle"
             android:onClick="jni_click"
             android:text="跳转到下一个组件，必须是同一次运行时操作" />
+        <Button
+            android:textColor="#00f"
+            android:id="@+id/jni_qsort"
+            style="@style/MenuBtnTextStyle"
+            android:onClick="jni_click"
+            android:text="JNI qsort 数组排序" />
 
+        <Button
+            android:textColor="#00f"
+            android:id="@+id/jni_cache"
+            style="@style/MenuBtnTextStyle"
+            android:onClick="jni_click"
+            android:text="JNI 静态缓存策略" />
+
+        <Button
+            android:textColor="#00f"
+            android:id="@+id/jni_exception"
+            style="@style/MenuBtnTextStyle"
+            android:onClick="jni_click"
+            android:text="Native 异常捕获" />
 
     </LinearLayout>
 </ScrollView>

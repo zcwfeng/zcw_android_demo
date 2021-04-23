@@ -4,11 +4,13 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
+import android.os.Parcel
 import android.util.Log
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.FileProvider
 import kotlinx.android.synthetic.main.activity_main.*
+import top.zcwfeng.jni.customparcel.KTParcel
+import top.zcwfeng.jni.customparcel.ZParcel
 import java.io.File
 
 
@@ -47,7 +49,24 @@ class MainActivity : AppCompatActivity() {
             patch()
 
         }
+        parcelAnalyzeDemo();
+    }
 
+    private fun parcelAnalyzeDemo() {
+        val parcel = Parcel.obtain()
+        parcel.writeInt(50)
+        parcel.writeInt(40)
+        parcel.setDataPosition(0)
+        var a = parcel.readInt()
+        var b = parcel.readInt()
+        Log.d("MainActivity", String.format("KT OS Parcel:a=%d,b=%d", a, b))
+        val p = KTParcel.obtain()
+        p.writeInt(50)
+        p.writeInt(40)
+        p.setDataPosition(0)
+        a = p.readInt()
+        b = p.readInt()
+        Log.d("MainActivity", String.format("KT Custom Parcel:a=%d,b=%d", a, b))
     }
 
     /**

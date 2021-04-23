@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".baseui.view.activity.GLSurfaceViewActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ff0"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/myview"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:background="#000"
+            android:orientation="horizontal" >
+            <View
+                android:background="#29f"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+        <android.opengl.GLSurfaceView
+            android:id="@+id/gl_surfaceview"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:background="#f00" >
+            <View
+                android:background="#29f"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </android.opengl.GLSurfaceView>
+
+
+
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

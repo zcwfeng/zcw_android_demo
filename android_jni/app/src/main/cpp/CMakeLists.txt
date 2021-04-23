@@ -9,10 +9,12 @@ include_directories("include")
 aux_source_directory(${CMAKE_SOURCE_DIR} my_source_path)
 aux_source_directory("${CMAKE_SOURCE_DIR}/bzip2" SOURCES)
 aux_source_directory("${CMAKE_SOURCE_DIR}/opencv2" SOURCES2)
+aux_source_directory("${CMAKE_SOURCE_DIR}/parcel_custom" SOURCES3)
+
 # 方法2
 #file(GLOB ${my_source_path} *.h *.cpp *.c)
 
-add_library(native-lib SHARED ${my_source_path} ${SOURCES} ${SOURCES2})
+add_library(native-lib SHARED ${my_source_path} ${SOURCES} ${SOURCES2} ${SOURCES3})
 
 #add_library(native-lib SHARED ${allCpp} )
 

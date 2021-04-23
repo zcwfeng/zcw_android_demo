@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".baseui.dispatch.ScrollViewAndWheelView"></activity>
+        <activity android:name=".baseui.view.activity.GLSurfaceViewActivity"></activity>
+        <activity android:name=".baseui.dispatch.ScrollViewAndWheelView" />
         <activity android:name=".baseui.view.activity.TextOrEditTextActivity" />
         <activity android:name=".baseui.view.activity.RecyclerVIewTopAndBottom" />
         <activity android:name=".baseui.view.activity.SimpleSocketHeartbeatActivity" />

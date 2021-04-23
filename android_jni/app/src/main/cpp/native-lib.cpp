@@ -5,6 +5,8 @@
 #include <opencv2/opencv.hpp>
 #include "top_zcwfeng_jni_JavaJNIActivity.h"
 #include "common_head.h"
+#include "top_zcwfeng_jni_customparcel_ZParcel.h"
+#include "parcel_custom/Parcel.h"
 
 #define DEFAULT_CARD_WIDTH 640
 #define DEFAULT_CARD_HEIGHT 400
@@ -201,16 +203,16 @@ Java_top_zcwfeng_jni_JavaJNIActivity_testQuote(JNIEnv *env, jobject thiz) {
     }
 
     jmethodID init = env->GetMethodID(dogClass, "<init>", "()V");
-    jobject dog = env->NewObject(dogClass,init);
+    jobject dog = env->NewObject(dogClass, init);
 
     init = env->GetMethodID(dogClass, "<init>", "(I)V");
-    dog = env->NewObject(dogClass,init,101);
+    dog = env->NewObject(dogClass, init, 101);
 
     init = env->GetMethodID(dogClass, "<init>", "(II)V");
-    dog = env->NewObject(dogClass,init,100,200);
+    dog = env->NewObject(dogClass, init, 100, 200);
 
     init = env->GetMethodID(dogClass, "<init>", "(III)V");
-    dog = env->NewObject(dogClass,init,301,401,501);
+    dog = env->NewObject(dogClass, init, 301, 401, 501);
 
     env->DeleteLocalRef(dog);
 }
@@ -233,7 +235,104 @@ Java_top_zcwfeng_jni_JavaJNIActivity_delQuote(JNIEnv *env, jobject thiz) {
     show();
 }
 
+int comparator(const jint *number1, const jint *number2) {
+    return *number1 - *number2;
+}
+// 内置函数
+extern "C"
+JNIEXPORT void JNICALL
+Java_top_zcwfeng_jni_JavaJNIActivity_sort(JNIEnv *env, jobject thiz, jintArray arr) {
+    // 转换
+    jint *intArray = env->GetIntArrayElements(arr, nullptr);
+    int len = env->GetArrayLength(arr);
+
+
+    //    void qsort(void* __base, size_t __nmemb, size_t __size, int (*__comparator)(const void* __lhs, const void* __rhs));
+    // 第一个参数:void* 数组的首地址
+    // 第二个参数:数组的大小长度
+    // 第三个参数:数组元素数据类型的大小
+    // 第四个参数:数组的一个比较方法指针(Comparable)
+    qsort(intArray, len, sizeof(int),
+          reinterpret_cast<int (*)(const void *, const void *)>(comparator));
+    // 同步数组的数据给 java 数组 intArray 并不是 arr ，可以简单的理解为 copy
+    // 0 : 既要同步数据给 arr ,又要释放 intArray，会排序
+    // JNI_COMMIT: 会同步数据给 arr ，但是不会释放 intArray，会排序
+    // JNI_ABORT: 不同步数据给 arr ，但是会释放 intArray，所以上层看到就并不会排序
+    env->ReleaseIntArrayElements(arr, intArray, JNI_COMMIT);
+
+}
+
 // TODO:END TEST
+
+
+extern "C"
+JNIEXPORT jlong JNICALL
+Java_top_zcwfeng_jni_customparcel_ZParcel_nativeCreate(JNIEnv *env, jclass clazz) {
+    LOGD("Java_top_zcwfeng_jni_customparcel_ZParcel_nativeCreate");
+    Parcel *parcel = new Parcel();
+    return reinterpret_cast<jlong>(parcel);
+}
+extern "C"
+JNIEXPORT jint JNICALL
+Java_top_zcwfeng_jni_customparcel_ZParcel_nativeReadInt(JNIEnv *env,
+                                                        jclass clazz,
+                                                        jlong native_ptr) {
+    LOGD("Java_top_zcwfeng_jni_customparcel_ZParcel_nativeReadInt");
+    Parcel *parcel = reinterpret_cast<Parcel *>(native_ptr);
+    return parcel->readInt();
+
+}
+extern "C"
+JNIEXPORT void JNICALL
+Java_top_zcwfeng_jni_customparcel_ZParcel_nativeSetDataPosition(JNIEnv *env,
+                                                                jclass clazz,
+                                                                jlong native_ptr,
+                                                                jint pos) {
+    LOGD("Java_top_zcwfeng_jni_customparcel_ZParcel_nativeSetDataPosition");
+    Parcel *parcel = reinterpret_cast<Parcel *>(native_ptr);
+    parcel->setDataPosition(pos);
+}
+extern "C"
+JNIEXPORT void JNICALL
+Java_top_zcwfeng_jni_customparcel_ZParcel_nativeWriteInt(JNIEnv *env, jclass clazz,
+                                                         jlong native_ptr, jint val) {
+    LOGD("Java_top_zcwfeng_jni_customparcel_ZParcel_nativeWriteInt");
+    Parcel *parcel = reinterpret_cast<Parcel *>(native_ptr);
+    parcel->writeInt(val);
+}
+
+//////KT
+extern "C"
+JNIEXPORT jlong JNICALL
+Java_top_zcwfeng_jni_customparcel_KTParcel_nativeCreate(JNIEnv *env, jobject thiz) {
+    Parcel *parcel = new Parcel();
+    return reinterpret_cast<jlong>(parcel);
+}
+extern "C"
+JNIEXPORT jint JNICALL
+Java_top_zcwfeng_jni_customparcel_KTParcel_nativeReadInt(JNIEnv *env, jobject thiz,
+                                                         jlong native_ptr) {
+    Parcel *parcel = reinterpret_cast<Parcel *>(native_ptr);
+    return parcel->readInt();}
+
+extern "C"
+JNIEXPORT void JNICALL
+Java_top_zcwfeng_jni_customparcel_KTParcel_nativeSetDataPosition(JNIEnv *env, jobject thiz,
+                                                                 jlong native_ptr, jint pos) {
+    Parcel *parcel = reinterpret_cast<Parcel *>(native_ptr);
+    parcel->setDataPosition(pos);
+}
+
+extern "C"
+JNIEXPORT void JNICALL
+Java_top_zcwfeng_jni_customparcel_KTParcel_nativeWriteInt(JNIEnv *env, jobject thiz,
+                                                          jlong native_ptr, jint val) {
+    Parcel *parcel = reinterpret_cast<Parcel *>(native_ptr);
+    parcel->writeInt(val);
+}
+
+
+////////custom parcel JNI
 
 
 

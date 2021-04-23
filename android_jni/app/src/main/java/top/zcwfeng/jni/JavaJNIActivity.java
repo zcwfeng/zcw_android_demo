@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.Looper;
+import android.os.Parcel;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
@@ -11,6 +12,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+
+import top.zcwfeng.jni.customparcel.ZParcel;
 
 public class JavaJNIActivity extends AppCompatActivity {
 
@@ -101,17 +104,63 @@ public class JavaJNIActivity extends AppCompatActivity {
     public native void dynamicJavaM01();
 
     public native int dynamicJavaM02(String value);
+
     // 第二部分 JNI线程 区域 =========================================
     public native void naitveThread(); //Java层 调用 Native层 的函数，完成JNI线程
+
     public native void closeThread(); // 释放全局引用
 
     // 第三部分 纠结纠结细节 区域 ==================================================
     public native void nativeFun1();
+
     public native void nativeFun2();
+
     public static native void staticFun3();
-    public static native void staticFun4();
+
+    public native void staticFun4();
 
     //----------------------JNI 线程---------------------
+
+    public native void sort(int[] arr);
+    //----------------------JNI 内置函数---------------------
+
+    static String name1 = "T1";
+    static String name2 = "T2";
+    static String name3 = "T3";
+    static String name4 = "T4";
+    static String name5 = "T5";
+    // 省略很多行类似...
+    // 普通的局部缓存，弊端演示
+    public static native void localCache(String name);
+
+    // 静态缓存
+    public static native void initStaticCache();
+    public static native void staticCache(String name);
+    public static native void clearStaticCache();
+
+//    {
+//        initStaticCache();
+//    }
+
+    //----------------------JNI 缓存cache---------------------
+    public static native void exception();
+
+    public static native void exception2() throws NoSuchFieldException;
+
+    public static native void exception3();
+
+    // 专门给 C++（native层） 调用的函数,手动造异常测试
+    public static void show() throws Exception {
+        Log.d(TAG, "show: 1111");
+        Log.d(TAG, "show: 1111");
+        Log.d(TAG, "show: 1111");
+        Log.d(TAG, "show: 1111");
+        Log.d(TAG, "show: 1111");
+
+        throw new NullPointerException("我是Java中show 抛出的异常，我的show方法里面发送了Java逻辑错误");
+    }
+
+    //----------------------JNI 异常捕获---------------------
 
 
     @Override
@@ -119,6 +168,9 @@ public class JavaJNIActivity extends AppCompatActivity {
         super.onDestroy();
         delQuote();
         closeThread();
+        clearStaticCache();
+
+
     }
 
     @Override
@@ -141,6 +193,28 @@ public class JavaJNIActivity extends AppCompatActivity {
         tva.setText(age + "");
 
         callAddMethod();
+
+        parcelAnalyzeDemo();
+    }
+
+    private void parcelAnalyzeDemo() {
+        Parcel parcel = Parcel.obtain();
+        parcel.writeInt(50);
+        parcel.writeInt(40);
+        parcel.setDataPosition(0);
+        int a = parcel.readInt();
+        int b = parcel.readInt();
+
+        Log.d(TAG, String.format("OS Parcel:a=%d,b=%d", a,b));
+
+        ZParcel p = ZParcel.obtain();
+        p.writeInt(50);
+        p.writeInt(40);
+        p.setDataPosition(0);
+        a = p.readInt();
+        b = p.readInt();
+        Log.d(TAG, String.format("Custom Parcel:a=%d,b=%d", a,b));
+
     }
 
     public void jni_click(View view) {
@@ -168,12 +242,50 @@ public class JavaJNIActivity extends AppCompatActivity {
                 break;
             case R.id.jni_thread_3:
                 startActivity(new Intent(this, JNIActivityThreadTest.class));
+                break;
+            case R.id.jni_cache:
 
+
+                // 演示频繁调用很多次
+                localCache("zcwfeng");
+                localCache("zcwfeng");
+                localCache("zcwfeng");
+                localCache("zcwfeng");
+                localCache("zcwfeng");
+
+                initStaticCache();
+
+                staticCache("okokokok");
+                staticCache("okokokok");
+                staticCache("okokokok");
+                staticCache("okokokok");
+                staticCache("okokokok");
+
+
+                break;
+            case R.id.jni_exception:
+                exception();
+                try {
+                    exception2();
+                } catch (NoSuchFieldException e) {
+                    e.printStackTrace();
+                    Log.d(TAG, "jni_click: Java层的execption2......");
+                }
+                exception3();
+                break;
+            case R.id.jni_qsort:
+                int[] arr = new int[]{11, 22, -3, 2, 4, 6, -15};
+                sort(arr);
+                for (int num : arr
+                ) {
+                    Log.d(TAG, num + "\t");
+                }
                 break;
             default:
                 break;
         }
     }
+
 
 
 

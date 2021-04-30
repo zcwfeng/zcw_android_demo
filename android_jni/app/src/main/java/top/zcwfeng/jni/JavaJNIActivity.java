@@ -36,6 +36,8 @@ public class JavaJNIActivity extends AppCompatActivity {
     public String name = "David";
     public static int age = 0;
 
+    public native void testLibBuild();
+
     // java交互
     public native void changeName();
 
@@ -195,6 +197,8 @@ public class JavaJNIActivity extends AppCompatActivity {
         callAddMethod();
 
         parcelAnalyzeDemo();
+
+        testLibBuild();
     }
 
     private void parcelAnalyzeDemo() {

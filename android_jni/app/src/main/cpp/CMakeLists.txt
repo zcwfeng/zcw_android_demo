@@ -27,7 +27,9 @@ add_library(native-lib SHARED ${my_source_path} ${SOURCES} ${SOURCES2} ${SOURCES
 #        PROPERTIES IMPORTED_LOCATION
 #        ${CMAKE_SOURCE_DIR}/src/main/jniLibs/${CMAKE_ANDROID_ARCH_ABI}/libopencv_java4.so)
 
-
+# 静态库libgetndk.a
+add_library(getndk STATIC IMPORTED)
+set_target_properties(getndk PROPERTIES IMPORTED_LOCATION ${CMAKE_SOURCE_DIR}/libgetndk.a)
 
 # 类似
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -L${CMAKE_SOURCE_DIR}/../jniLibs/${CMAKE_ANDROID_ARCH_ABI}")
@@ -42,6 +44,7 @@ target_link_libraries( # Specifies the target library.
         opencv_java3
         fmod
         fmodL
+        getndk # 链接此静态库 到 总库 libnative-lib.so
         )
 
 # 调试用 set 函数 可以调优设置

@@ -12,8 +12,21 @@
 #define DEFAULT_CARD_HEIGHT 400
 #define  FIX_IDCARD_SIZE Size(DEFAULT_CARD_WIDTH,DEFAULT_CARD_HEIGHT)
 #define FIX_TEMPLATE_SIZE  Size(153, 28)
+// 测试自家打的so或者.a
+// 运行后自己找实现
+extern "C"{
+    extern int get();
+}
+
 
 //TODO:END TEST 实现
+
+extern "C"
+JNIEXPORT void JNICALL
+Java_top_zcwfeng_jni_JavaJNIActivity_testLibBuild(JNIEnv *env, jobject thiz) {
+   LOGI("自家打包so/.a--->%d", get());
+}
+
 extern "C"
 JNIEXPORT // 标记该方法可以被外部调用
 jstring // Java <---> native 转换用的

@@ -22,25 +22,27 @@ class ControllerFragment : ListFragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val array = arrayOf(
-                "Simple文字渐变",  //0
-                "文字测量演示",  //1
-                "ViewPager+文字变色",  //2
-                "过渡绘制演示",  //3
-                "文字绘制补充说明",
-                "画大鱼",
-                "绘制练习",
-                "RecyclerView 吸顶",
-                "RecyclerView 缓存分析",
-                "RecyclerView SlideCard",
-                "ViewPager&ViewPager2",
-                "PhotoView 多点触摸",
-                "Example WeakHandler Use",
-                "Socket Client",
-                "Socket 心跳演示",
-                "RecyclerView 顶部和底部阴影问题",
-                "Text&EditText 测试代码",
-                "DialogFragment 测试代码",
-                "GLSurfaceView 演示")
+            "Simple文字渐变",  //0
+            "文字测量演示",  //1
+            "ViewPager+文字变色",  //2
+            "过渡绘制演示",  //3
+            "文字绘制补充说明",
+            "画大鱼",
+            "绘制练习",
+            "RecyclerView 吸顶",
+            "RecyclerView 缓存分析",
+            "RecyclerView SlideCard",
+            "ViewPager&ViewPager2",
+            "PhotoView 多点触摸",
+            "Example WeakHandler Use",
+            "Socket Client",
+            "Socket 心跳演示",
+            "RecyclerView 顶部和底部阴影问题",
+            "Text&EditText 测试代码",
+            "DialogFragment 测试代码",
+            "GLSurfaceView 演示",
+            "android:fitsSystemWindows属性"
+        )
         var arrayAdapter = activity?.let { ArrayAdapter(it, R.layout.simple_list_item_1, array) }
         listAdapter = arrayAdapter
     }
@@ -116,11 +118,21 @@ class ControllerFragment : ListFragment() {
             17 -> {
 
                 val firstDialog = CustomDialogFragment()
-                activity?.let { firstDialog.showNow(it.supportFragmentManager, "CustomDialogFragment") }
+                activity?.let {
+                    firstDialog.showNow(
+                        it.supportFragmentManager,
+                        "CustomDialogFragment"
+                    )
+                }
             }
             18 -> {
 
                 val intent = Intent(activity, GLSurfaceViewActivity::class.java)
+                startActivity(intent)
+            }
+            19 -> {
+
+                val intent = Intent(activity, FitSystemWindows::class.java)
                 startActivity(intent)
             }
         }

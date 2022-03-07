@@ -2,49 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="top.zcwfeng.customui">
 
-    <application
-        android:name=".MyAppApplication"
-        android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:networkSecurityConfig="@xml/network_security_config"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".baseui.view.activity.GLSurfaceViewActivity"></activity>
-        <activity android:name=".baseui.dispatch.ScrollViewAndWheelView" />
-        <activity android:name=".baseui.view.activity.TextOrEditTextActivity" />
-        <activity android:name=".baseui.view.activity.RecyclerVIewTopAndBottom" />
-        <activity android:name=".baseui.view.activity.SimpleSocketHeartbeatActivity" />
-        <activity android:name=".baseui.view.activity.SocetClientActiityJava" />
-        <activity android:name=".baseui.view.activity.ExampleWeakHandlerActivity" />
-        <activity android:name=".baseui.view.activity.PhotoViewActivity" />
-        <activity android:name=".baseui.view.activity.ViewPager2Activity" />
-        <activity android:name=".baseui.view.activity.SlideCardActivity" />
-        <activity android:name=".baseui.view.activity.RecyclerViewCacheActivity" />
-        <activity android:name=".baseui.view.activity.RecyclerViewActivity" />
-        <activity android:name=".baseui.view.activity.DrawStudyActivity" />
-        <activity android:name=".baseui.view.activity.BigFishActivity" />
-        <activity android:name=".baseui.view.activity.ViewPagerActivity" />
-        <activity android:name=".baseui.view.activity.SimpleColorChangeActivity" />
-        <activity android:name=".baseui.view.ViewEntranceActivity" />
-        <activity android:name=".baseui.dispatch.DispatchActivity" />
-        <activity android:name=".leakcanarytest.TestLeakCanary" />
-        <activity android:name=".demo.LayoutActivity" />
-        <activity android:name=".demo.DemoSpan" />
-        <activity android:name=".baseui.srl_vp.SRL_VP_main" />
-        <activity android:name=".MainUIEntranceActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
-        <service
-            android:name=".socketdemo.SocketService"
-            android:process=":remote" />
-    </application>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -67,7 +24,54 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-
     <uses-permission android:name="android.permission.PHONE_STATE" />
+
+    <application
+        android:name=".MyAppApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:theme="@style/AppTheme_light_immersive"
+            android:name=".baseui.view.activity.FitSystemWindows"
+            android:exported="false" />
+        <activity android:name=".baseui.view.activity.GLSurfaceViewActivity" />
+        <activity android:name=".baseui.dispatch.ScrollViewAndWheelView" />
+        <activity android:name=".baseui.view.activity.TextOrEditTextActivity" />
+        <activity android:name=".baseui.view.activity.RecyclerVIewTopAndBottom" />
+        <activity android:name=".baseui.view.activity.SimpleSocketHeartbeatActivity" />
+        <activity android:name=".baseui.view.activity.SocetClientActiityJava" />
+        <activity android:name=".baseui.view.activity.ExampleWeakHandlerActivity" />
+        <activity android:name=".baseui.view.activity.PhotoViewActivity" />
+        <activity android:name=".baseui.view.activity.ViewPager2Activity" />
+        <activity android:name=".baseui.view.activity.SlideCardActivity" />
+        <activity android:name=".baseui.view.activity.RecyclerViewCacheActivity" />
+        <activity android:name=".baseui.view.activity.RecyclerViewActivity" />
+        <activity android:name=".baseui.view.activity.DrawStudyActivity" />
+        <activity android:name=".baseui.view.activity.BigFishActivity" />
+        <activity android:name=".baseui.view.activity.ViewPagerActivity" />
+        <activity android:name=".baseui.view.activity.SimpleColorChangeActivity" />
+        <activity android:name=".baseui.view.ViewEntranceActivity"/>
+        <activity android:name=".baseui.dispatch.DispatchActivity" />
+        <activity android:name=".leakcanarytest.TestLeakCanary" />
+        <activity android:name=".demo.LayoutActivity" />
+        <activity android:name=".demo.DemoSpan" />
+        <activity android:name=".baseui.srl_vp.SRL_VP_main" />
+        <activity android:name=".MainUIEntranceActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".socketdemo.SocketService"
+            android:process=":remote" />
+    </application>
 
 </manifest>

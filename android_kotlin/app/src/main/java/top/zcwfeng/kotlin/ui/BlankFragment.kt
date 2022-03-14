@@ -36,8 +36,8 @@ class BlankFragment : Fragment() {
 
 
         isDatabindingInitial() {
-            databinding?.myName = myName
-            databinding?.btnKotlin.setOnClickListener {
+            databinding.myName = myName
+            databinding.btnKotlin.setOnClickListener {
                 rollDice(it)
             }
         }
@@ -97,7 +97,7 @@ class BlankFragment : Fragment() {
         isDatabindingInitial {
             databinding.apply {
 
-                databinding.textName.setText("Finshy")
+                databinding.textName.text = "Finshy"
                 databinding.diceImage.setImageResource(drawableResource)
                 invalidateAll()
             }

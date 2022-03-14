@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.commit
 import androidx.lifecycle.lifecycleScope
+import top.zcwfeng.CoroutinStudyActivity
 import top.zcwfeng.kotlin.databinding.ActivityMainBinding
 import top.zcwfeng.kotlin.ui.BlankFragment
 
@@ -24,8 +25,8 @@ class MainActivity : AppCompatActivity() {
 
             addToBackStack("blank")
             setCustomAnimations(
-                R.anim.fragment_fade_enter,
-                R.anim.fragment_close_exit
+                R.anim.slide_in_from_right_anim,
+                R.anim.slide_out_to_left_anim
             )
             add(R.id.fragment_container, blankFragment, "blankFrg")
             show(blankFragment)
@@ -91,9 +92,7 @@ class MainActivity : AppCompatActivity() {
 
 
     fun goConstrantLayout(view: View) {
-//        var intent:Intent = Intent(this,Main2Activity().javaClass)
-//        startActivity(intent)
-        var intent = Intent(this, Main2Activity::class.java)
+        var intent:Intent = Intent(this,Main2Activity().javaClass)
         startActivity(intent)
     }
 

@@ -12,7 +12,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/layout/activity_fit_system_windows.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/activity_layout_test.xml" value="0.45" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_text_or_edit_text.xml" value="0.21354166666666666" />
         <entry key="app/src/main/res/layout/activity_view_entrance.xml" value="0.21354166666666666" />
         <entry key="app/src/main/res/layout/fragment_test.xml" value="0.21354166666666666" />
       </map>

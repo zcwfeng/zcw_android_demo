@@ -36,9 +36,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:theme="@style/AppTheme_light_immersive"
-            android:name=".baseui.view.activity.FitSystemWindows"
+            android:name=".baseui.view.activity.LayoutTestActivity"
             android:exported="false" />
+        <activity
+            android:name=".baseui.view.activity.FitSystemWindows"
+            android:exported="false"
+            android:theme="@style/AppTheme_light_immersive" />
         <activity android:name=".baseui.view.activity.GLSurfaceViewActivity" />
         <activity android:name=".baseui.dispatch.ScrollViewAndWheelView" />
         <activity android:name=".baseui.view.activity.TextOrEditTextActivity" />
@@ -55,7 +58,7 @@
         <activity android:name=".baseui.view.activity.BigFishActivity" />
         <activity android:name=".baseui.view.activity.ViewPagerActivity" />
         <activity android:name=".baseui.view.activity.SimpleColorChangeActivity" />
-        <activity android:name=".baseui.view.ViewEntranceActivity"/>
+        <activity android:name=".baseui.view.ViewEntranceActivity" />
         <activity android:name=".baseui.dispatch.DispatchActivity" />
         <activity android:name=".leakcanarytest.TestLeakCanary" />
         <activity android:name=".demo.LayoutActivity" />

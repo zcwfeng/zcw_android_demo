@@ -26,7 +26,7 @@ class AidlClient : AppCompatActivity() {
             val persons = aidl?.personList
             Log.e("zcw:::Client","persons->${persons}")
         } catch (e: Exception) {
-            Log.e("zcw:::Client",e.message)
+            Log.e("zcw:::Client", e.message ?: "message error")
         }
     }
 

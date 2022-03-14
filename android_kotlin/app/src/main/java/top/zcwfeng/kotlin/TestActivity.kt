@@ -2,6 +2,7 @@ package top.zcwfeng.kotlin
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.lifecycleScope
 import io.reactivex.Single
 import io.reactivex.SingleObserver
@@ -11,7 +12,6 @@ import io.reactivex.disposables.Disposable
 import io.reactivex.functions.BiFunction
 import io.reactivex.functions.Consumer
 import io.reactivex.schedulers.Schedulers
-import kotlinx.android.synthetic.main.activity_test.*
 import kotlinx.coroutines.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -20,19 +20,20 @@ import retrofit2.Retrofit
 import retrofit2.adapter.rxjava3.RxJava3CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 import top.zcwfeng.kotlin.coroutine.model.Repo
+import top.zcwfeng.kotlin.databinding.ActivityTestBinding
 import java.util.concurrent.Executor
 import java.util.concurrent.Executors
 
 class TestActivity : AppCompatActivity() {
     val jobs = listOf<Any>()
 
-    val scopeme:CoroutineScope = MainScope()//主线程 第一种
+    val scopeme: CoroutineScope = MainScope()//主线程 第一种
 
-    val disposables:CompositeDisposable = CompositeDisposable()
+    val disposables: CompositeDisposable = CompositeDisposable()
+    lateinit var databinding: ActivityTestBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_test)
-
+        databinding = DataBindingUtil.setContentView(this, R.layout.activity_test)
         val retrofit = Retrofit.Builder()
             .baseUrl("https://api.github.com")
             .addConverterFactory(GsonConverterFactory.create())
@@ -92,7 +93,7 @@ class TestActivity : AppCompatActivity() {
         scopeme.launch {
             val repos = async { api.listReposKt("rengwuxian") }
             val repos2 = async { api.listReposKt("google") }
-            test_tv.text = "${repos.await()[0]?.name}-${repos2.await()[0]?.name}"
+            databinding.testTv.text = "${repos.await()[0]?.name}-${repos2.await()[0]?.name}"
         }
 
         scopeme.cancel()
@@ -159,7 +160,6 @@ class TestActivity : AppCompatActivity() {
 //                    test_tv.text = e.message
 //                }
 //            })
-
 
 
     }

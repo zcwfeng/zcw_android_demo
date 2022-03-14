@@ -12,12 +12,12 @@ class LoginPresenterImpl(var loginView: LoginView?) : LoginPresenter,
     private val loginModel: LoginModel = LoginModelImpl()
 
     override fun login(context: Context, username: String, password: String) {
-        loginModel?.login(context,username,password,this);
+        loginModel.login(context,username,password,this);
     }
 
     override fun unAttachView() {
         loginView = null
-        loginModel?.cancelRequest()
+        loginModel.cancelRequest()
     }
 
     override fun loginSuccess(data: LoginRegisterResponse?) {

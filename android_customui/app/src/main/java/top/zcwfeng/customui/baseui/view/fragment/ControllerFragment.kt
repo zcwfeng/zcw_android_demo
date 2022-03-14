@@ -41,7 +41,8 @@ class ControllerFragment : ListFragment() {
             "Text&EditText 测试代码",
             "DialogFragment 测试代码",
             "GLSurfaceView 演示",
-            "android:fitsSystemWindows属性"
+            "android:fitsSystemWindows属性",
+            "Layout 测试用"
         )
         var arrayAdapter = activity?.let { ArrayAdapter(it, R.layout.simple_list_item_1, array) }
         listAdapter = arrayAdapter
@@ -133,6 +134,10 @@ class ControllerFragment : ListFragment() {
             19 -> {
 
                 val intent = Intent(activity, FitSystemWindows::class.java)
+                startActivity(intent)
+            }
+            20 -> {
+                val intent = Intent(activity, LayoutTestActivity::class.java)
                 startActivity(intent)
             }
         }

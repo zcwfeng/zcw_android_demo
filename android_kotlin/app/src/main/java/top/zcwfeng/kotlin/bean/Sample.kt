@@ -1,7 +1,5 @@
 package top.zcwfeng.kotlin.bean
 
-import kotlinx.android.synthetic.main.activity_main2.view.*
-import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
@@ -13,7 +11,7 @@ fun main() {
 
 
     val ps = listOf(11, 22, 33, 33)
-    val max = ps.maxBy { it.inc() }
+    val max = ps.maxByOrNull { it.inc() }
     println("max;$max")
 
     val user1 = User("jane","doe")
